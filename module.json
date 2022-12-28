@@ -1,39 +1,76 @@
 {
-    "title": "Beaver's Potions",
-    "description": "A Content Module",
-    "id": "beavers-potions",
-    "version": "1.0.0",
-    "authors": [
+  "title": "Beaver's Potions",
+  "description": "A Content Module",
+  "id": "beavers-potions",
+  "version": "1.0.0",
+  "authors": [
+    {
+      "name": "angryBeaver",
+      "url": "https://github.com/angrybeaver"
+    }
+  ],
+  "languages": [
+  ],
+  "scripts": [
+  ],
+  "esmodules": [
+    "src/main.js"
+  ],
+  "styles": [
+  ],
+  "dependencies": [
+    {
+      "name": "ActiveAuras",
+      "type": "module"
+    },
+    {
+      "name": "dae",
+      "type": "module"
+    },
+    {
+      "name": "dfreds-convenient-effects",
+      "type": "module"
+    },
+    {
+      "name": "itemacro",
+      "type": "module"
+    },
+    {
+      "name": "midi-qol",
+      "type": "module"
+    },
+    {
+      "name": "times-up",
+      "type": "module"
+    }
+  ],
+  "packs": [
+    {
+      "entity": "Item",
+      "label": "potions",
+      "name": "potions",
+      "path": "./packs/potions.db",
+      "module": "beavers-potions",
+      "type": "Item",
+      "private": false
+    }
+  ],
+  "url": "https://github.com/AngryBeaver/beavers-potions",
+  "manifest": "https://github.com/AngryBeaver/beavers-potions/releases/latest/download/module.json",
+  "download": "https://github.com/AngryBeaver/beavers-potions/releases/latest/download/beavers-potions.zip",
+  "relationships": {
+    "systems": [
       {
-        "name": "angryBeaver",
-        "url": "https://github.com/angrybeaver"
-      }
-    ],
-    "languages": [
-    ],
-    "scripts": [
-    ],
-    "esmodules": [
-      "src/main.js"
-    ],
-    "styles": [
-    ],
-    "packs": [
-    ],
-    "url": "https://github.com/AngryBeaver/beavers-potions",
-    "manifest": "https://github.com/AngryBeaver/beavers-potions/releases/latest/download/module.json",
-    "download": "https://github.com/AngryBeaver/beavers-potions/releases/latest/download/beavers-potions.zip",
-    "relationships": {
-      "systems": [{
         "id": "dnd5e",
         "type": "system",
         "compatibility": {
           "verified": "2.0.0"
         }
-      }]
-    },
-    "compatibility": {
-      "minimum": "10",
-      "verified": "10"
-    }
+      }
+    ]
+  },
+  "compatibility": {
+    "minimum": "10",
+    "verified": "10"
   }
+}
