@@ -2,7 +2,7 @@
   "title": "Beaver's Potions",
   "description": "A Content Module",
   "id": "beavers-potions",
-  "version": "1.0.1",
+  "version": "1.0.3",
   "authors": [
     {
       "name": "angryBeaver",
@@ -45,6 +45,15 @@
     }
   ],
   "packs": [
+    {
+      "entity": "Item",
+      "label": "tables",
+      "name": "tables",
+      "path": "./packs/tables.db",
+      "module": "beavers-potions",
+      "type": "Item",
+      "private": false
+    },
     {
       "entity": "Item",
       "label": "potions",
