@@ -62,6 +62,15 @@
       "module": "beavers-potions",
       "type": "Item",
       "private": false
+    },
+    {
+      "entity": "Item",
+      "label": "recipes",
+      "name": "recipes",
+      "path": "./packs/recipes.db",
+      "module": "beavers-potions",
+      "type": "Item",
+      "private": false
     }
   ],
   "url": "https://github.com/AngryBeaver/beavers-potions",
