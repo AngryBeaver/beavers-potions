@@ -64,7 +64,7 @@ Most potions are functional when its effects can be expressed programmatically.
 
 ### beaver's crafting
 This is the companion module for beaver's crafting and comes with example recipes for all potions.
-Just import the potions into your world and the recipes will be functional.
+This module does not require beaver's crafting you just can use the potions but if you have beavers-crafting you can import the recipes into your world and they will be functional.
 
 ## Credits
 Copy organizational structur from midi-qol (gulpfile,package.json,tsconcig.json)
