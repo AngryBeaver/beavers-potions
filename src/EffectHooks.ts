@@ -12,13 +12,13 @@ export function reflectDamage(actor, damageItem){
         damage = Math.max(damage-actor.system.attributes.hp.temp,0);
         actor.update({
             "system.attributes.hp.temp": tempHP
-        }).then(data => console.log(data));
+        });
     }
     if(damage > 0 && actor.system.attributes.hp.temp > 0){
         let value = Math.max(actor.system.attributes.hp.value-damage,0);
         actor.update({
             "system.attributes.hp.value":value
-        }).then(data=>console.log(data));
+        });
     }
 }
 
