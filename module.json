@@ -2,7 +2,7 @@
   "title": "Beaver's Potions",
   "description": "A Content Module",
   "id": "beavers-potions",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "authors": [
     {
       "name": "angryBeaver",
@@ -82,9 +82,9 @@
       {
         "id": "times-up",
         "type": "module",
-        "manifest": "https://gitlab.com/tposney/times-up/raw/master/package/module.json",
+        "manifest": "https://gitlab.com/tposney/times-up/raw/v10/package/module.json",
         "compatibility": {
-          "verified": "0.1.0"
+          "verified": "10.0.2"
         }
       },
       {
@@ -92,7 +92,7 @@
         "type": "module",
         "manifest": "https://gitlab.com/tposney/dae/raw/v10/package/module.json",
         "compatibility": {
-          "verified": "0.5.6"
+          "verified": "10.0.14"
         }
       },
       {
