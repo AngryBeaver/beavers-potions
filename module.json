@@ -2,7 +2,7 @@
   "title": "Beaver's Potions",
   "description": "A Content Module",
   "id": "beavers-potions",
-  "version": "1.0.3",
+  "version": "1.0.5",
   "authors": [
     {
       "name": "angryBeaver",
@@ -17,12 +17,6 @@
     "src/main.js"
   ],
   "styles": [
-  ],
-  "dependencies": [
-    {
-      "name": "midi-qol",
-      "type": "module"
-    }
   ],
   "packs": [
     {
@@ -71,9 +65,61 @@
         "id": "dnd5e",
         "type": "system",
         "compatibility": {
-          "verified": "2.0.0"
+          "verified": "2.0.3"
         }
       }
+    ],
+    "requires": [
+      {
+        "id": "midi-qol",
+        "type": "module",
+        "manifest": "https://gitlab.com/tposney/midi-qol/raw/master/package/module.json",
+        "compatibility": {
+          "verified": "10.0.23"
+        }
+      },
+      {
+        "id": "times-up",
+        "type": "module",
+        "manifest": "https://gitlab.com/tposney/times-up/raw/master/package/module.json",
+        "compatibility": {
+          "verified": "0.1.0"
+        }
+      },
+      {
+        "id": "dae",
+        "type": "module",
+        "manifest": "https://gitlab.com/tposney/dae/raw/master/package/module.json",
+        "compatibility": {
+          "verified": "0.5.6"
+        }
+      },
+      {
+        "id": "itemacro",
+        "type": "module",
+        "manifest": "https://github.com/Kekilla0/Item-Macro/releases/latest/download/module.json",
+        "compatibility": {
+          "verified": "1.8.0"
+        }
+      },
+      {
+        "id": "dfreds-convenient-effects",
+        "type": "module",
+        "manifest": "https://github.com/DFreds/dfreds-convenient-effects/releases/latest/download/module.json",
+        "compatibility": {
+          "verified": "2.1.2"
+        }
+      },
+      {
+        "id": "ActiveAuras",
+        "type": "module",
+        "manifest": "https://raw.githubusercontent.com/Kandashi/Active-Auras/releases/latest/download/module.json",
+        "compatibility": {
+          "verified": "0.5.4"
+        }
+      }
+
+
     ]
   },
   "compatibility": {
