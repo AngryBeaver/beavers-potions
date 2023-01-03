@@ -56,7 +56,8 @@ Most potions are functional when its effects can be expressed programmatically.
 ## Fan Content
 Beavers Potions is unofficial Fan Content permitted under the Fan Content Policy. Not approved/endorsed by Wizards. Portions of the materials used are property of Wizards of the Coast. ©Wizards of the Coast LLC.
 
-## dependencies
+## Dependencies
+### required
 - itemacro
 - midi-qol
 - times-up
@@ -64,7 +65,7 @@ Beavers Potions is unofficial Fan Content permitted under the Fan Content Policy
 - dfreds-convenient-effects
 - ActiveAuras
 
-optional
+### optional
 - tokenmagic
 - beavers-crafting
 
