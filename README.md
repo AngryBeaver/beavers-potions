@@ -53,7 +53,6 @@ Most potions are functional when its effects can be expressed programmatically.
 49. Tree Friend
 50. Weightless
 
-
 ## dependencies
 - itemacro
 - midi-qol
@@ -61,6 +60,10 @@ Most potions are functional when its effects can be expressed programmatically.
 - dae
 - dfreds-convenient-effects
 - ActiveAuras
+
+optional
+- tokenmagic
+- beavers-crafting
 
 ### beaver's crafting
 This is the companion module for beaver's crafting and comes with example recipes for all potions.
