@@ -2,7 +2,7 @@
   "title": "Beaver's Potions",
   "description": "A Content Module",
   "id": "beavers-potions",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "authors": [
     {
       "name": "angryBeaver",
@@ -74,7 +74,7 @@
       {
         "id": "midi-qol",
         "type": "module",
-        "manifest": "https://gitlab.com/tposney/midi-qol/raw/master/package/module.json",
+        "manifest": "https://gitlab.com/tposney/midi-qol/raw/v10/package/module.json",
         "compatibility": {
           "verified": "10.0.23"
         }
@@ -90,7 +90,7 @@
       {
         "id": "dae",
         "type": "module",
-        "manifest": "https://gitlab.com/tposney/dae/raw/master/package/module.json",
+        "manifest": "https://gitlab.com/tposney/dae/raw/v10/package/module.json",
         "compatibility": {
           "verified": "0.5.6"
         }
@@ -114,7 +114,7 @@
       {
         "id": "ActiveAuras",
         "type": "module",
-        "manifest": "https://raw.githubusercontent.com/Kandashi/Active-Auras/releases/latest/download/module.json",
+        "manifest": "https://raw.githubusercontent.com/Kandashi/Active-Auras/main/module.json",
         "compatibility": {
           "verified": "0.5.4"
         }
