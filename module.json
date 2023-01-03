@@ -20,27 +20,7 @@
   ],
   "dependencies": [
     {
-      "name": "ActiveAuras",
-      "type": "module"
-    },
-    {
-      "name": "dae",
-      "type": "module"
-    },
-    {
-      "name": "dfreds-convenient-effects",
-      "type": "module"
-    },
-    {
-      "name": "itemacro",
-      "type": "module"
-    },
-    {
       "name": "midi-qol",
-      "type": "module"
-    },
-    {
-      "name": "times-up",
       "type": "module"
     }
   ],
