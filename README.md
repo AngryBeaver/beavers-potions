@@ -53,6 +53,9 @@ Most potions are functional when its effects can be expressed programmatically.
 49. Tree Friend
 50. Weightless
 
+## Fan Content
+Beavers Potions is unofficial Fan Content permitted under the Fan Content Policy. Not approved/endorsed by Wizards. Portions of the materials used are property of Wizards of the Coast. ©Wizards of the Coast LLC.
+
 ## dependencies
 - itemacro
 - midi-qol
@@ -68,6 +71,8 @@ optional
 ### beaver's crafting
 This is the companion module for beaver's crafting and comes with example recipes for all potions.
 This module does not require beaver's crafting you just can use the potions but if you have beavers-crafting you can import the recipes into your world and they will be functional.
+
+
 
 ## Credits
 Copy organizational structur from midi-qol (gulpfile,package.json,tsconcig.json)
