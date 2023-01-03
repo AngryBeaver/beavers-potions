@@ -76,4 +76,4 @@ This module does not require beaver's crafting you just can use the potions but 
 
 
 ## Credits
-Copy organizational structur from midi-qol (gulpfile,package.json,tsconcig.json)
+Copy organisational structur from midi-qol (gulpfile,package.json,tsconcig.json)
