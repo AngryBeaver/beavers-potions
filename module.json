@@ -25,7 +25,7 @@
       "name": "tables",
       "path": "./packs/tables.db",
       "module": "beavers-potions",
-      "type": "Item",
+      "type": "RollTable",
       "private": false
     },
     {
