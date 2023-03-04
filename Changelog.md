@@ -1,5 +1,6 @@
 # 1.0.10
 - upgrade recipes to beaver's crafting 3.0.0
+⚠️you need to reimport the recipes
 
 # 1.0.9
 - fix gather essence
