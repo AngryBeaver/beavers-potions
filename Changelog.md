@@ -1,3 +1,6 @@
+# 1.0.10
+- upgrade recipes to beaver's crafting 3.0.0
+
 # 1.0.9
 - fix gather essence
 - change: shield of energy 
