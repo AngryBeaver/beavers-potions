@@ -3,7 +3,7 @@
 	"title": "Beaver's Potions",
 	"version": "1.0.10",
 	"description": "Potions",
-	"devDir": "C:\\Users\\Riess\\AppData\\Local\\FoundryVTT\\Data\\modules",
+	"devDir": "D:\\Vtts\\v11\\Data\\modules",
 	"main": "src/main.js",
 	"scripts": {
 		"build": "npx gulp",
