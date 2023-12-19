@@ -2,7 +2,7 @@
   "title": "Beaver's Potions",
   "description": "A Content Module",
   "id": "beavers-potions",
-  "version": "1.0.10",
+  "version": "1.0.11",
   "authors": [
     {
       "name": "angryBeaver",
@@ -23,7 +23,7 @@
       "entity": "Item",
       "label": "tables",
       "name": "tables",
-      "path": "./packs/tables.db",
+      "path": "./packs/tables",
       "module": "beavers-potions",
       "type": "RollTable",
       "private": false
@@ -32,7 +32,7 @@
       "entity": "Item",
       "label": "potions",
       "name": "potions",
-      "path": "./packs/potions.db",
+      "path": "./packs/potions",
       "module": "beavers-potions",
       "type": "Item",
       "private": false
@@ -41,7 +41,7 @@
       "entity": "Item",
       "label": "ingredients",
       "name": "ingredients",
-      "path": "./packs/ingredients.db",
+      "path": "./packs/ingredients",
       "module": "beavers-potions",
       "type": "Item",
       "private": false
@@ -50,7 +50,7 @@
       "entity": "Item",
       "label": "recipes",
       "name": "recipes",
-      "path": "./packs/recipes.db",
+      "path": "./packs/recipes",
       "module": "beavers-potions",
       "type": "Item",
       "private": false
@@ -66,7 +66,7 @@
         "type": "system",
         "compatibility": {
           "minimum": "2.0.0",
-          "verified": "2.1.4"
+          "verified": "2.4.1"
         }
       }
     ],
@@ -74,25 +74,25 @@
       {
         "id": "midi-qol",
         "type": "module",
-        "manifest": "https://gitlab.com/tposney/midi-qol/raw/v10/package/module.json",
+        "manifest": "https://gitlab.com/tposney/midi-qol/raw/v11/package/module.json",
         "compatibility": {
-          "verified": "10.0.23"
+          "verified": "11.3.5"
         }
       },
       {
         "id": "times-up",
         "type": "module",
-        "manifest": "https://gitlab.com/tposney/times-up/raw/v10/package/module.json",
+        "manifest": "https://gitlab.com/tposney/times-up/raw/v11/package/module.json",
         "compatibility": {
-          "verified": "10.0.2"
+          "verified": "11.1.1"
         }
       },
       {
         "id": "dae",
         "type": "module",
-        "manifest": "https://gitlab.com/tposney/dae/raw/v10/package/module.json",
+        "manifest": "https://gitlab.com/tposney/dae/raw/v11/package/module.json",
         "compatibility": {
-          "verified": "10.0.14"
+          "verified": "11.1.7"
         }
       },
       {
@@ -100,7 +100,7 @@
         "type": "module",
         "manifest": "https://github.com/Kekilla0/Item-Macro/releases/latest/download/module.json",
         "compatibility": {
-          "verified": "1.8.0"
+          "verified": "1.10.5"
         }
       },
       {
@@ -108,7 +108,7 @@
         "type": "module",
         "manifest": "https://github.com/DFreds/dfreds-convenient-effects/releases/latest/download/module.json",
         "compatibility": {
-          "verified": "2.1.2"
+          "verified": "6.0.0"
         }
       },
       {
@@ -116,7 +116,7 @@
         "type": "module",
         "manifest": "https://raw.githubusercontent.com/Kandashi/Active-Auras/main/module.json",
         "compatibility": {
-          "verified": "0.5.4"
+          "verified": "0.9.2"
         }
       }
 
@@ -124,7 +124,7 @@
     ]
   },
   "compatibility": {
-    "minimum": "10",
-    "verified": "10"
+    "minimum": "11",
+    "verified": "11"
   }
 }
