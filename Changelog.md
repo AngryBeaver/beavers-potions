@@ -1,4 +1,4 @@
-# 1.0.12
+# 2.0.2
 - upgrade recipes to beaver's crafting 4.0.0
 ⚠️ you need to reimport the recipes
 # 1.0.10
