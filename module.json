@@ -2,7 +2,7 @@
   "title": "Beaver's Potions",
   "description": "A Content Module",
   "id": "beavers-potions",
-  "version": "1.0.11",
+  "version": "1.0.12",
   "authors": [
     {
       "name": "angryBeaver",
@@ -125,6 +125,6 @@
   },
   "compatibility": {
     "minimum": "11",
-    "verified": "11"
+    "verified": "12"
   }
 }
