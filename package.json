@@ -3,8 +3,8 @@
 	"title": "Beaver's Potions",
 	"version": "1.0.12",
 	"description": "Potions",
-	"#devDir": "c:\\vtts\\v12.331\\Data\\modules",
-	"devDir": "c:\\vtts\\v11.315\\Data\\modules",
+	"devDir": "c:\\vtts\\v12.331\\Data\\modules",
+	"#devDir": "c:\\vtts\\v11.315\\Data\\modules",
 	"main": "src/main.js",
 	"scripts": {
 		"build": "npx gulp",
