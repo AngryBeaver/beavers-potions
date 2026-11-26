@@ -10,6 +10,11 @@ Most of them do what they describe when they are drunk; the others put a reminde
 
 Needs Foundry 14 and dnd5e 6.
 
+## Screenshots
+| Frost Armor | Batman | Cure Undead |
+|---|---|---|
+| ![Frost Armor](pictures/frost-armor.png) | ![Batman](pictures/batman.png) | ![Cure Undead](pictures/cure-undead.png) |
+
 ## Compendiums
 - **Potions**: the 50 potions
 - **Ingredients**: 22 mushrooms, Magical Essence, and the "Any Mushroom" / "Any Potion" choices for recipes
