@@ -1,0 +1,159 @@
+{
+  "name": "Batman",
+  "type": "loot",
+  "img": "icons/sundries/scrolls/scroll-worn-tan.webp",
+  "system": {
+    "description": {
+      "value": "<p>You need beavers-crafting module.</p>",
+      "chat": ""
+    },
+    "source": {
+      "custom": "Recipe"
+    },
+    "quantity": 1,
+    "weight": {
+      "value": 0,
+      "units": "lb"
+    },
+    "price": {
+      "value": 0,
+      "denomination": "gp"
+    },
+    "rarity": "rare",
+    "identified": true,
+    "type": {
+      "value": "",
+      "subtype": ""
+    },
+    "unidentified": {
+      "description": ""
+    },
+    "container": null,
+    "properties": []
+  },
+  "effects": [],
+  "flags": {
+    "beavers-crafting": {
+      "recipe": {
+        "currency": {
+          "value": 250,
+          "name": "gp"
+        },
+        "input": {
+          "1": {
+            "key": {
+              "quantity": 5,
+              "id": "abVFmDAfMIxApd1c",
+              "uuid": "Compendium.world.ingredients3.abVFmDAfMIxApd1c",
+              "img": "modules/beavers-crafting/icons/mushroom/47.png",
+              "type": "Item",
+              "name": "Jelly Bag Cap",
+              "itemType": "consumable",
+              "flags": {
+                "beavers-crafting": {}
+              }
+            }
+          },
+          "2": {
+            "key": {
+              "quantity": 5,
+              "id": "Q8Mlg9WpuW6zKqes",
+              "uuid": "Compendium.world.ingredients3.Q8Mlg9WpuW6zKqes",
+              "img": "modules/beavers-crafting/icons/mushroom/14.png",
+              "type": "Item",
+              "name": "Gloat Glow",
+              "itemType": "consumable",
+              "flags": {
+                "beavers-crafting": {}
+              }
+            }
+          },
+          "3": {
+            "key": {
+              "quantity": 5,
+              "id": "F1SSWiF1VvLWDvoK",
+              "uuid": "Compendium.world.ingredients3.F1SSWiF1VvLWDvoK",
+              "img": "modules/beavers-crafting/icons/mushroom/26.png",
+              "type": "Item",
+              "name": "Blue Bill",
+              "itemType": "consumable",
+              "flags": {
+                "beavers-crafting": {}
+              }
+            }
+          },
+          "4": {
+            "key": {
+              "quantity": 2,
+              "id": "dozjFH55CR4npT6F",
+              "uuid": "Compendium.beavers-crafting.ingredients.dozjFH55CR4npT6F",
+              "img": "icons/tools/laboratory/bowl-powder-purple.webp",
+              "type": "Item",
+              "name": "Magical Essence",
+              "itemType": "loot",
+              "flags": {
+                "beavers-crafting": {}
+              }
+            }
+          }
+        },
+        "output": {
+          "1": {
+            "key": {
+              "quantity": 1,
+              "id": "UOYRzlUw2HSELs9u",
+              "uuid": "Compendium.beavers-potions.potions.UOYRzlUw2HSELs9u",
+              "img": "icons/consumables/potions/bottle-conical-corked-tied-blue.webp",
+              "type": "Item",
+              "name": "Batman",
+              "itemType": "consumable",
+              "flags": {
+                "beavers-crafting": {}
+              }
+            }
+          }
+        },
+        "instruction": "",
+        "required": {},
+        "beaversTests": {
+          "fails": 1,
+          "consume": true,
+          "ands": {
+            "1": {
+              "ors": {
+                "1": {
+                  "type": "SkillTest",
+                  "data": {
+                    "dc": 12,
+                    "skill": "nat"
+                  }
+                }
+              },
+              "hits": 1
+            }
+          }
+        }
+      },
+      "subtype": "Recipe"
+    },
+    "core": {}
+  },
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.331",
+    "systemId": "dnd5e",
+    "systemVersion": "3.3.1",
+    "createdTime": 1725004640871,
+    "modifiedTime": 1725007141211,
+    "lastModifiedBy": "jklU6hJSPXST02AA"
+  },
+  "_id": "d4fqiVR0OnZofgX0",
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "jklU6hJSPXST02AA": 3
+  },
+  "_key": "!items!d4fqiVR0OnZofgX0"
+}

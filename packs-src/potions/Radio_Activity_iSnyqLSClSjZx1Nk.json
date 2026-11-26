@@ -1,0 +1,262 @@
+{
+  "name": "Radio Activity",
+  "type": "consumable",
+  "img": "icons/consumables/potions/bottle-conical-fumes-green.webp",
+  "system": {
+    "description": {
+      "value": "<p>You begin to glow for 5 rounds creating a 25ft aura of green light around you. <br /><span style=\"font-family:Signika, sans-serif\">Each creature including yourself must make a Constitution saving throw if it starts its turn within 25ft of you. </span><br /><span style=\"font-family:Signika, sans-serif\">A target takes 3d6 radiant damage on a failed save, or half as much damage on a successful one.</span></p>",
+      "chat": "",
+      "unidentified": ""
+    },
+    "source": {
+      "custom": ""
+    },
+    "quantity": 1,
+    "weight": 0.1,
+    "price": {
+      "value": 750,
+      "denomination": "gp"
+    },
+    "attunement": 0,
+    "equipped": false,
+    "rarity": "rare",
+    "identified": true,
+    "activation": {
+      "type": "action",
+      "cost": 1,
+      "condition": ""
+    },
+    "duration": {
+      "value": "5",
+      "units": "round"
+    },
+    "cover": null,
+    "crewed": false,
+    "target": {
+      "value": 1,
+      "width": null,
+      "units": "",
+      "type": "creature",
+      "prompt": true
+    },
+    "range": {
+      "value": null,
+      "long": null,
+      "units": ""
+    },
+    "uses": {
+      "value": 1,
+      "max": "1",
+      "per": "charges",
+      "recovery": "",
+      "autoDestroy": true,
+      "prompt": true
+    },
+    "consume": {
+      "type": "",
+      "target": "",
+      "amount": null,
+      "scale": false
+    },
+    "ability": null,
+    "actionType": "",
+    "attackBonus": "",
+    "chatFlavor": "",
+    "critical": {
+      "threshold": null,
+      "damage": ""
+    },
+    "damage": {
+      "parts": [],
+      "versatile": ""
+    },
+    "formula": "",
+    "save": {
+      "ability": "",
+      "dc": null,
+      "scaling": "spell"
+    },
+    "consumableType": "potion",
+    "properties": {}
+  },
+  "effects": [
+    {
+      "icon": "icons/magic/death/undead-skeleton-fire-green.webp",
+      "changes": [
+        {
+          "key": "macro.itemMacro",
+          "mode": 0,
+          "value": "",
+          "priority": 20
+        }
+      ],
+      "transfer": false,
+      "_id": "loE2TV12jDNzRrWn",
+      "disabled": false,
+      "duration": {
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "rounds": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "origin": null,
+      "tint": null,
+      "flags": {
+        "dae": {
+          "selfTarget": false,
+          "selfTargetAlways": false,
+          "stackable": "noneName",
+          "durationExpression": "",
+          "specialDuration": [],
+          "macroRepeat": "none"
+        },
+        "core": {
+          "statusId": ""
+        },
+        "ActiveAuras": {
+          "isAura": false,
+          "aura": "None",
+          "radius": null,
+          "alignment": "",
+          "type": "",
+          "ignoreSelf": false,
+          "height": false,
+          "hidden": false,
+          "displayTemp": false,
+          "hostile": false,
+          "onlyOnce": false
+        }
+      },
+      "name": "Radio Activity",
+      "description": "",
+      "statuses": [],
+      "_key": "!items.effects!iSnyqLSClSjZx1Nk.loE2TV12jDNzRrWn"
+    },
+    {
+      "icon": "icons/magic/light/beam-rays-green-small.webp",
+      "changes": [
+        {
+          "key": "flags.midi-qol.OverTime",
+          "mode": 0,
+          "value": "turn=start,\nlabel=RadiantAura,\nsaveAbility=wis,\nsaveDC=14,\nrollType=save,\nsaveMagic=true,\ndamageBeforeSave=false, \ndamageRoll=3d6,\ndamageType=radiant,\nsaveDamage=halfdamage,\nsaveRemove=false",
+          "priority": 0
+        },
+        {
+          "key": "macro.tokenMagic",
+          "mode": 0,
+          "value": "glow",
+          "priority": 20
+        }
+      ],
+      "transfer": false,
+      "_id": "SZ70h5YmrVeStsGV",
+      "disabled": false,
+      "duration": {
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "rounds": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "origin": "Item.iSnyqLSClSjZx1Nk",
+      "tint": null,
+      "flags": {
+        "dae": {
+          "selfTarget": false,
+          "selfTargetAlways": false,
+          "stackable": "noneName",
+          "durationExpression": "",
+          "macroRepeat": "startEveryTurn",
+          "specialDuration": []
+        },
+        "core": {
+          "statusId": "",
+          "sourceId": "Actor.t9fEEQaI8deIzxwe.Item.J5iUgR3b4cEyn1az.ActiveEffect.dWiGi2kJkwt3deKZ"
+        },
+        "ActiveAuras": {
+          "isAura": true,
+          "aura": "All",
+          "radius": 25,
+          "alignment": "",
+          "type": "",
+          "ignoreSelf": false,
+          "height": false,
+          "hidden": false,
+          "displayTemp": false,
+          "hostile": false,
+          "onlyOnce": true
+        },
+        "times-up": {
+          "isPassive": false
+        }
+      },
+      "name": "RadiantAura",
+      "description": "",
+      "statuses": [],
+      "_key": "!items.effects!iSnyqLSClSjZx1Nk.SZ70h5YmrVeStsGV"
+    }
+  ],
+  "flags": {
+    "core": {},
+    "magicitems": {
+      "enabled": false,
+      "equipped": false,
+      "attuned": false,
+      "charges": "0",
+      "chargeType": "c1",
+      "destroy": false,
+      "destroyFlavorText": "reaches 0 charges: it crumbles into ashes and is destroyed.",
+      "rechargeable": false,
+      "recharge": "0",
+      "rechargeType": "t1",
+      "rechargeUnit": "r1",
+      "sorting": "l"
+    },
+    "itemacro": {
+      "macro": {
+        "name": "Radio Activity",
+        "type": "script",
+        "scope": "global",
+        "command": "if(args[0] === \"on\"){\n  const token = await fromUuid(args[1].tokenUuid);\n  token.update({\n    light:{\n      dim:25,\n      bright:25,\n      color:\"#4be756\",\n      angel:360,\n      alpha:1,\n      animation:{\n        type:'starlight',\n        speed:5,\n        intensity:5,\n        reverse:false\n      }\n    }\n  });\n}\nif(args[0] === \"off\"){\n  const token = await fromUuid(args[1].tokenUuid);\n  token.update({\n    light:{dim:0,bright:0}\n  });\n}",
+        "author": "r8M7z5xqyZDxng8W",
+        "_id": null,
+        "img": "icons/svg/dice-target.svg",
+        "folder": null,
+        "sort": 0,
+        "ownership": {
+          "default": 0
+        },
+        "flags": {},
+        "_stats": {
+          "systemId": null,
+          "systemVersion": null,
+          "coreVersion": null,
+          "createdTime": null,
+          "modifiedTime": null,
+          "lastModifiedBy": null
+        }
+      }
+    }
+  },
+  "_stats": {
+    "systemId": "dnd5e",
+    "systemVersion": "2.4.1",
+    "coreVersion": "11.315",
+    "createdTime": 1666288212883,
+    "modifiedTime": 1702947838758,
+    "lastModifiedBy": "1enA27CLCptznVn9"
+  },
+  "_id": "iSnyqLSClSjZx1Nk",
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "1enA27CLCptznVn9": 3
+  },
+  "_key": "!items!iSnyqLSClSjZx1Nk"
+}

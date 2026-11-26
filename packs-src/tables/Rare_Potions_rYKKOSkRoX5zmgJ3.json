@@ -1,0 +1,205 @@
+{
+  "name": "Rare Potions",
+  "img": "icons/tools/laboratory/vials-blue-pink.webp",
+  "description": "",
+  "results": [
+    {
+      "type": 2,
+      "weight": 1,
+      "range": [
+        1,
+        1
+      ],
+      "drawn": false,
+      "text": "Casters Overtime Greater",
+      "img": "icons/consumables/potions/bottle-metal-yellow-gray.webp",
+      "documentCollection": "beavers-potions.potions",
+      "documentId": "TPY2dFuG7d6kXgXx",
+      "_id": "SchP3caBbtgq3Y6B",
+      "flags": {},
+      "_key": "!tables.results!rYKKOSkRoX5zmgJ3.SchP3caBbtgq3Y6B"
+    },
+    {
+      "type": 2,
+      "weight": 1,
+      "range": [
+        2,
+        2
+      ],
+      "drawn": false,
+      "text": "Aid Greater",
+      "img": "icons/consumables/potions/bottle-round-label-cork-red.webp",
+      "documentCollection": "beavers-potions.potions",
+      "documentId": "exyGaiw1Es8u37QE",
+      "_id": "CTw3tKH7TpVNbWfq",
+      "flags": {},
+      "_key": "!tables.results!rYKKOSkRoX5zmgJ3.CTw3tKH7TpVNbWfq"
+    },
+    {
+      "type": 2,
+      "weight": 1,
+      "range": [
+        3,
+        3
+      ],
+      "drawn": false,
+      "text": "Batman",
+      "img": "icons/consumables/potions/bottle-conical-corked-tied-blue.webp",
+      "documentCollection": "beavers-potions.potions",
+      "documentId": "UOYRzlUw2HSELs9u",
+      "_id": "AKqoIaG2uAU8ryEB",
+      "flags": {},
+      "_key": "!tables.results!rYKKOSkRoX5zmgJ3.AKqoIaG2uAU8ryEB"
+    },
+    {
+      "type": 2,
+      "weight": 1,
+      "range": [
+        4,
+        4
+      ],
+      "drawn": false,
+      "text": "Blur",
+      "img": "icons/consumables/potions/bottle-round-label-cork-blue.webp",
+      "documentCollection": "beavers-potions.potions",
+      "documentId": "GC5EmcU3FzX8o4Mi",
+      "_id": "WqQOvKfaw99A9dsf",
+      "flags": {},
+      "_key": "!tables.results!rYKKOSkRoX5zmgJ3.WqQOvKfaw99A9dsf"
+    },
+    {
+      "type": 2,
+      "weight": 1,
+      "range": [
+        5,
+        5
+      ],
+      "drawn": false,
+      "text": "FrostArmor Greater",
+      "img": "icons/consumables/potions/bottle-corked-blue.webp",
+      "documentCollection": "beavers-potions.potions",
+      "documentId": "YywpTHDQ09DN7aLd",
+      "_id": "xoMjoeULjShMl2vs",
+      "flags": {},
+      "_key": "!tables.results!rYKKOSkRoX5zmgJ3.xoMjoeULjShMl2vs"
+    },
+    {
+      "type": 2,
+      "weight": 1,
+      "range": [
+        6,
+        6
+      ],
+      "drawn": false,
+      "text": "Life Shell Greater",
+      "img": "icons/consumables/potions/flask-corked-green.webp",
+      "documentCollection": "beavers-potions.potions",
+      "documentId": "xtDv7zBzlF30hSGU",
+      "_id": "jMqk889XK5vOMZMc",
+      "flags": {},
+      "_key": "!tables.results!rYKKOSkRoX5zmgJ3.jMqk889XK5vOMZMc"
+    },
+    {
+      "type": 2,
+      "weight": 1,
+      "range": [
+        7,
+        7
+      ],
+      "drawn": false,
+      "text": "Live Essence",
+      "img": "icons/consumables/potions/bottle-round-corked-orante-red.webp",
+      "documentCollection": "beavers-potions.potions",
+      "documentId": "IGqhyVesOoWIt6Tg",
+      "_id": "psEqE0fA8Q6hp9ok",
+      "flags": {},
+      "_key": "!tables.results!rYKKOSkRoX5zmgJ3.psEqE0fA8Q6hp9ok"
+    },
+    {
+      "type": 2,
+      "weight": 1,
+      "range": [
+        8,
+        8
+      ],
+      "drawn": false,
+      "text": "Shild of Energy",
+      "img": "icons/consumables/potions/bottle-round-empty-glass.webp",
+      "documentCollection": "beavers-potions.potions",
+      "documentId": "xVqhoLAtPeYxYe9P",
+      "_id": "T8RYq90pl4AYR6Oc",
+      "flags": {},
+      "_key": "!tables.results!rYKKOSkRoX5zmgJ3.T8RYq90pl4AYR6Oc"
+    },
+    {
+      "type": 2,
+      "weight": 1,
+      "range": [
+        9,
+        9
+      ],
+      "drawn": false,
+      "text": "Time Stop",
+      "img": "icons/consumables/potions/bottle-conical-corked-yellow.webp",
+      "documentCollection": "beavers-potions.potions",
+      "documentId": "nUgpaHq1LHC9QGLu",
+      "_id": "UxXiGFtXbhU2HL71",
+      "flags": {},
+      "_key": "!tables.results!rYKKOSkRoX5zmgJ3.UxXiGFtXbhU2HL71"
+    },
+    {
+      "type": 2,
+      "weight": 1,
+      "range": [
+        10,
+        10
+      ],
+      "drawn": false,
+      "text": "Radio Activity",
+      "img": "icons/consumables/potions/bottle-conical-fumes-green.webp",
+      "documentCollection": "beavers-potions.potions",
+      "documentId": "iSnyqLSClSjZx1Nk",
+      "_id": "4VHI9YiamfFix5wX",
+      "flags": {},
+      "_key": "!tables.results!rYKKOSkRoX5zmgJ3.4VHI9YiamfFix5wX"
+    },
+    {
+      "type": 2,
+      "weight": 1,
+      "range": [
+        11,
+        11
+      ],
+      "drawn": false,
+      "text": "Potion of Superior Healing",
+      "img": "icons/consumables/potions/bottle-round-corked-red.webp",
+      "documentCollection": "dnd5e.items",
+      "documentId": "5m9ErO9In8Uc5yyf",
+      "_id": "9oUk3ULJqn0tYavY",
+      "flags": {},
+      "_key": "!tables.results!rYKKOSkRoX5zmgJ3.9oUk3ULJqn0tYavY"
+    }
+  ],
+  "formula": "1d11",
+  "replacement": true,
+  "displayRoll": true,
+  "flags": {
+    "core": {}
+  },
+  "_stats": {
+    "systemId": "dnd5e",
+    "systemVersion": "2.4.1",
+    "coreVersion": "11.315",
+    "createdTime": 1672477816141,
+    "modifiedTime": 1702947754179,
+    "lastModifiedBy": "1enA27CLCptznVn9"
+  },
+  "_id": "rYKKOSkRoX5zmgJ3",
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "1enA27CLCptznVn9": 3
+  },
+  "_key": "!tables!rYKKOSkRoX5zmgJ3"
+}

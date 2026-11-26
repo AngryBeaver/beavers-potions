@@ -1,0 +1,179 @@
+{
+  "name": "Time Stop",
+  "type": "consumable",
+  "img": "icons/consumables/potions/bottle-conical-corked-yellow.webp",
+  "system": {
+    "description": {
+      "value": "<p>You stop the time effecting you for 5 rounds.<br /><br />For the rest of the World you freeze in place you can not be moved or changed in any possiblity (including damage). For yourself no time has passed, you just happen to be 5 rounds further in the future.</p>",
+      "chat": "",
+      "unidentified": ""
+    },
+    "source": {
+      "custom": ""
+    },
+    "quantity": 1,
+    "weight": 0.1,
+    "price": {
+      "value": 750,
+      "denomination": "gp"
+    },
+    "attunement": 0,
+    "equipped": false,
+    "rarity": "rare",
+    "identified": true,
+    "activation": {
+      "type": "action",
+      "cost": 1,
+      "condition": ""
+    },
+    "duration": {
+      "value": "5",
+      "units": "round"
+    },
+    "cover": null,
+    "crewed": false,
+    "target": {
+      "value": 1,
+      "width": null,
+      "units": "",
+      "type": "creature",
+      "prompt": true
+    },
+    "range": {
+      "value": null,
+      "long": null,
+      "units": "touch"
+    },
+    "uses": {
+      "value": 1,
+      "max": "1",
+      "per": "charges",
+      "recovery": "",
+      "autoDestroy": true,
+      "prompt": true
+    },
+    "consume": {
+      "type": "",
+      "target": "",
+      "amount": null,
+      "scale": false
+    },
+    "ability": null,
+    "actionType": "",
+    "attackBonus": "",
+    "chatFlavor": "",
+    "critical": {
+      "threshold": null,
+      "damage": ""
+    },
+    "damage": {
+      "parts": [],
+      "versatile": ""
+    },
+    "formula": "",
+    "save": {
+      "ability": "",
+      "dc": null,
+      "scaling": "spell"
+    },
+    "consumableType": "potion",
+    "properties": {}
+  },
+  "effects": [
+    {
+      "icon": "icons/magic/time/hourglass-tilted-glowing-gold.webp",
+      "origin": "Item.nUgpaHq1LHC9QGLu",
+      "duration": {
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "rounds": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "disabled": false,
+      "_id": "t3S3BlpPXVlEs2Z2",
+      "changes": [
+        {
+          "key": "system.attributes.movement.all",
+          "mode": 0,
+          "value": "0",
+          "priority": 20
+        },
+        {
+          "key": "system.traits.di.all",
+          "mode": 0,
+          "value": "1",
+          "priority": 20
+        }
+      ],
+      "tint": null,
+      "transfer": false,
+      "flags": {
+        "times-up": {},
+        "dae": {
+          "selfTarget": false,
+          "selfTargetAlways": false,
+          "stackable": "noneName",
+          "durationExpression": "",
+          "macroRepeat": "none",
+          "specialDuration": []
+        },
+        "core": {
+          "statusId": ""
+        },
+        "ActiveAuras": {
+          "isAura": false,
+          "aura": "None",
+          "radius": null,
+          "alignment": "",
+          "type": "",
+          "ignoreSelf": false,
+          "height": false,
+          "hidden": false,
+          "displayTemp": false,
+          "hostile": false,
+          "onlyOnce": false
+        }
+      },
+      "name": "Timeless",
+      "description": "",
+      "statuses": [],
+      "_key": "!items.effects!nUgpaHq1LHC9QGLu.t3S3BlpPXVlEs2Z2"
+    }
+  ],
+  "flags": {
+    "magicitems": {
+      "enabled": false,
+      "equipped": false,
+      "attuned": false,
+      "charges": "0",
+      "chargeType": "c1",
+      "destroy": false,
+      "destroyFlavorText": "reaches 0 charges: it crumbles into ashes and is destroyed.",
+      "rechargeable": false,
+      "recharge": "0",
+      "rechargeType": "t1",
+      "rechargeUnit": "r1",
+      "sorting": "l"
+    },
+    "core": {}
+  },
+  "_stats": {
+    "systemId": "dnd5e",
+    "systemVersion": "2.4.1",
+    "coreVersion": "11.315",
+    "createdTime": 1671625615893,
+    "modifiedTime": 1702947838758,
+    "lastModifiedBy": "1enA27CLCptznVn9"
+  },
+  "_id": "nUgpaHq1LHC9QGLu",
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "1enA27CLCptznVn9": 3
+  },
+  "_key": "!items!nUgpaHq1LHC9QGLu"
+}

@@ -1,0 +1,172 @@
+{
+  "name": "Healing Supreme",
+  "type": "loot",
+  "img": "icons/sundries/scrolls/scroll-worn-tan.webp",
+  "system": {
+    "description": {
+      "value": "<p>You need beavers-crafting module.</p>",
+      "chat": ""
+    },
+    "source": {
+      "custom": "Recipe"
+    },
+    "quantity": 1,
+    "weight": {
+      "value": 0,
+      "units": "lb"
+    },
+    "price": {
+      "value": 0,
+      "denomination": "gp"
+    },
+    "rarity": "veryRare",
+    "identified": true,
+    "type": {
+      "value": "",
+      "subtype": ""
+    },
+    "unidentified": {
+      "description": ""
+    },
+    "container": null,
+    "properties": []
+  },
+  "effects": [],
+  "flags": {
+    "beavers-crafting": {
+      "recipe": {
+        "currency": {
+          "value": 500,
+          "name": "gp"
+        },
+        "required": {},
+        "input": {
+          "1": {
+            "key": {
+              "id": "90BJIBWtxLN3SMHn",
+              "uuid": "Compendium.beavers-crafting.ingredients.90BJIBWtxLN3SMHn",
+              "img": "modules/beavers-crafting/icons/mushroom/23.png",
+              "type": "Item",
+              "name": "Penny Bun",
+              "quantity": 5,
+              "itemType": "consumable",
+              "flags": {
+                "beavers-crafting": {}
+              }
+            }
+          },
+          "2": {
+            "key": {
+              "id": "MNUTlx4UjXSRzW25",
+              "uuid": "Compendium.beavers-crafting.ingredients.MNUTlx4UjXSRzW25",
+              "img": "modules/beavers-crafting/icons/mushroom/15.png",
+              "type": "Item",
+              "name": "Guepinia",
+              "quantity": 5,
+              "itemType": "consumable",
+              "flags": {
+                "beavers-crafting": {}
+              }
+            }
+          },
+          "3": {
+            "key": {
+              "id": "nrssiAqJHHCV1vyv",
+              "uuid": "Compendium.beavers-crafting.ingredients.nrssiAqJHHCV1vyv",
+              "img": "modules/beavers-crafting/icons/mushroom/24.png",
+              "type": "Item",
+              "name": "Yellow Stoned",
+              "quantity": 5,
+              "itemType": "consumable",
+              "flags": {
+                "beavers-crafting": {}
+              }
+            }
+          },
+          "4": {
+            "key": {
+              "id": "qK9o4MD82WmUgXP8",
+              "uuid": "Compendium.beavers-crafting.ingredients.qK9o4MD82WmUgXP8",
+              "img": "modules/beavers-crafting/icons/mushroom/13.png",
+              "type": "Item",
+              "name": "Vanilla Mob",
+              "quantity": 5,
+              "itemType": "consumable",
+              "flags": {
+                "beavers-crafting": {}
+              }
+            }
+          },
+          "5": {
+            "key": {
+              "id": "dozjFH55CR4npT6F",
+              "uuid": "Compendium.beavers-crafting.ingredients.dozjFH55CR4npT6F",
+              "img": "icons/tools/laboratory/bowl-powder-purple.webp",
+              "type": "Item",
+              "name": "Magical Essence",
+              "quantity": 3,
+              "itemType": "loot",
+              "flags": {
+                "beavers-crafting": {}
+              }
+            }
+          }
+        },
+        "output": {
+          "1": {
+            "key": {
+              "id": "JFiSlgcm3uSSBM5t",
+              "uuid": "Compendium.dnd5e.items.JFiSlgcm3uSSBM5t",
+              "img": "icons/consumables/potions/potion-flask-stopped-red.webp",
+              "type": "Item",
+              "name": "Potion of Supreme Healing",
+              "quantity": 1,
+              "itemType": "consumable",
+              "flags": {
+                "beavers-crafting": {}
+              }
+            }
+          }
+        },
+        "beaversTests": {
+          "fails": 1,
+          "consume": true,
+          "ands": {
+            "1": {
+              "ors": {
+                "1": {
+                  "type": "SkillTest",
+                  "data": {
+                    "dc": 13,
+                    "skill": "med"
+                  }
+                }
+              },
+              "hits": 1
+            }
+          }
+        }
+      },
+      "subtype": "Recipe"
+    },
+    "core": {}
+  },
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.331",
+    "systemId": "dnd5e",
+    "systemVersion": "3.3.1",
+    "createdTime": 1725004640871,
+    "modifiedTime": 1725007141211,
+    "lastModifiedBy": "jklU6hJSPXST02AA"
+  },
+  "_id": "8yD1yiMGeL6TwqXs",
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "jklU6hJSPXST02AA": 3
+  },
+  "_key": "!items!8yD1yiMGeL6TwqXs"
+}

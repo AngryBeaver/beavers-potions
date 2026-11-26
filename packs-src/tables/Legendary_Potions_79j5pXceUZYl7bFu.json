@@ -1,0 +1,93 @@
+{
+  "name": "Legendary Potions",
+  "img": "icons/tools/laboratory/vials-blue-pink.webp",
+  "description": "",
+  "results": [
+    {
+      "type": 2,
+      "weight": 1,
+      "range": [
+        1,
+        1
+      ],
+      "drawn": false,
+      "text": "Clone Army",
+      "img": "icons/consumables/potions/bottle-round-flask-fumes-purple.webp",
+      "documentCollection": "beavers-potions.potions",
+      "documentId": "XShdKZEf6oqbyIOh",
+      "_id": "6MqEWOJRGhOUFWWV",
+      "flags": {},
+      "_key": "!tables.results!79j5pXceUZYl7bFu.6MqEWOJRGhOUFWWV"
+    },
+    {
+      "type": 2,
+      "weight": 1,
+      "range": [
+        2,
+        2
+      ],
+      "drawn": false,
+      "text": "Time Travel",
+      "img": "icons/consumables/potions/bottle-conical-corked-yellow.webp",
+      "documentCollection": "beavers-potions.potions",
+      "documentId": "WQ0Sfdnn0c5sQI2Q",
+      "_id": "D005iQcHAXuJYf2i",
+      "flags": {},
+      "_key": "!tables.results!79j5pXceUZYl7bFu.D005iQcHAXuJYf2i"
+    },
+    {
+      "type": 2,
+      "weight": 1,
+      "range": [
+        3,
+        3
+      ],
+      "drawn": false,
+      "text": "Overload Attunement",
+      "img": "icons/consumables/potions/bottle-corked-red.webp",
+      "documentCollection": "beavers-potions.potions",
+      "documentId": "tr3gjUhvmWpYrGJ0",
+      "_id": "I5x0zsaFjLfXbMAs",
+      "flags": {},
+      "_key": "!tables.results!79j5pXceUZYl7bFu.I5x0zsaFjLfXbMAs"
+    },
+    {
+      "type": 2,
+      "weight": 1,
+      "range": [
+        4,
+        4
+      ],
+      "drawn": false,
+      "text": "Ice Devil",
+      "img": "icons/consumables/potions/bottle-ornate-bat-teal.webp",
+      "documentCollection": "beavers-potions.potions",
+      "documentId": "VnjrJ7YTYshlbm01",
+      "_id": "6Y3d68OptYPG416Y",
+      "flags": {},
+      "_key": "!tables.results!79j5pXceUZYl7bFu.6Y3d68OptYPG416Y"
+    }
+  ],
+  "formula": "1d4",
+  "replacement": true,
+  "displayRoll": true,
+  "flags": {
+    "core": {}
+  },
+  "_stats": {
+    "systemId": "dnd5e",
+    "systemVersion": "2.4.1",
+    "coreVersion": "11.315",
+    "createdTime": 1672477816141,
+    "modifiedTime": 1702947754179,
+    "lastModifiedBy": "1enA27CLCptznVn9"
+  },
+  "_id": "79j5pXceUZYl7bFu",
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "1enA27CLCptznVn9": 3
+  },
+  "_key": "!tables!79j5pXceUZYl7bFu"
+}

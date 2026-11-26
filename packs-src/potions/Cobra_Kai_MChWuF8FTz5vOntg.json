@@ -1,0 +1,197 @@
+{
+  "name": "Cobra Kai",
+  "type": "consumable",
+  "img": "icons/consumables/potions/bottle-conical-corked-cyan.webp",
+  "system": {
+    "description": {
+      "value": "<p><span style=\"font-family:Signika, sans-serif\">Polymorphs you into a viper for 6 hours.</span></p>",
+      "chat": "",
+      "unidentified": ""
+    },
+    "source": {
+      "custom": ""
+    },
+    "quantity": 1,
+    "weight": 0.1,
+    "price": {
+      "value": 50,
+      "denomination": "gp"
+    },
+    "attunement": 0,
+    "equipped": false,
+    "rarity": "common",
+    "identified": true,
+    "activation": {
+      "type": "action",
+      "cost": 1,
+      "condition": ""
+    },
+    "duration": {
+      "value": "6",
+      "units": "hour"
+    },
+    "cover": null,
+    "crewed": false,
+    "target": {
+      "value": 1,
+      "width": null,
+      "units": "",
+      "type": "creature",
+      "prompt": true
+    },
+    "range": {
+      "value": null,
+      "long": null,
+      "units": ""
+    },
+    "uses": {
+      "value": 1,
+      "max": "1",
+      "per": "charges",
+      "recovery": "",
+      "autoDestroy": true,
+      "prompt": true
+    },
+    "consume": {
+      "type": "",
+      "target": "",
+      "amount": null,
+      "scale": false
+    },
+    "ability": null,
+    "actionType": "",
+    "attackBonus": "",
+    "chatFlavor": "",
+    "critical": {
+      "threshold": null,
+      "damage": ""
+    },
+    "damage": {
+      "parts": [],
+      "versatile": ""
+    },
+    "formula": "",
+    "save": {
+      "ability": "",
+      "dc": null,
+      "scaling": "spell"
+    },
+    "consumableType": "potion",
+    "properties": {}
+  },
+  "effects": [
+    {
+      "icon": "icons/consumables/potions/bottle-conical-corked-cyan.webp",
+      "changes": [
+        {
+          "key": "macro.itemMacro",
+          "mode": 0,
+          "value": "",
+          "priority": 20
+        }
+      ],
+      "transfer": false,
+      "_id": "l6SOiRZ0ubmOpt4G",
+      "disabled": false,
+      "duration": {
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "rounds": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "origin": null,
+      "tint": null,
+      "flags": {
+        "dae": {
+          "selfTarget": false,
+          "selfTargetAlways": false,
+          "stackable": "none",
+          "durationExpression": "",
+          "specialDuration": [],
+          "macroRepeat": "none"
+        },
+        "core": {
+          "statusId": ""
+        },
+        "ActiveAuras": {
+          "isAura": false,
+          "aura": "None",
+          "radius": null,
+          "alignment": "",
+          "type": "",
+          "ignoreSelf": false,
+          "height": false,
+          "hidden": false,
+          "displayTemp": false,
+          "hostile": false,
+          "onlyOnce": false
+        }
+      },
+      "name": "Cobra Kai",
+      "description": "",
+      "statuses": [],
+      "_key": "!items.effects!MChWuF8FTz5vOntg.l6SOiRZ0ubmOpt4G"
+    }
+  ],
+  "flags": {
+    "core": {},
+    "magicitems": {
+      "enabled": false,
+      "equipped": false,
+      "attuned": false,
+      "charges": "0",
+      "chargeType": "c1",
+      "destroy": false,
+      "destroyFlavorText": "reaches 0 charges: it crumbles into ashes and is destroyed.",
+      "rechargeable": false,
+      "recharge": "0",
+      "rechargeType": "t1",
+      "rechargeUnit": "r1",
+      "sorting": "l"
+    },
+    "itemacro": {
+      "macro": {
+        "name": "Cobra Kai",
+        "type": "script",
+        "scope": "global",
+        "command": "if(args[0] === \"on\"){\n  const actor = await fromUuid(args[1].actorUuid);\n  const snakeActor = await game.packs.get(\"dnd5e.monsters\").getDocument(\"D5rwVIxmfFrdyyxT\");\n  const polymorphedActor = await actor.transformInto(snakeActor);\n  const actorUpdate = {};\n  actorUpdate[\"flags.beavers-potions.polymorphed\"] = polymorphedActor[0]._actor.uuid\n  await actor.update(actorUpdate);\n  await polymorphedActor[0]._actor.update(actorUpdate);\n}\nif(args[0] === \"off\"){\n  const actor = await fromUuid(args[1].actorUuid);\n  console.log(actor);\n  console.log(actor.flags[\"beavers-potions\"].polymorphed);\n  const polymorphedActor = await fromUuid(actor.flags[\"beavers-potions\"].polymorphed);\n  console.log(polymorphedActor);\n  await polymorphedActor.revertOriginalForm()\n}",
+        "author": "r8M7z5xqyZDxng8W",
+        "_id": null,
+        "img": "icons/svg/dice-target.svg",
+        "folder": null,
+        "sort": 0,
+        "ownership": {
+          "default": 0
+        },
+        "flags": {},
+        "_stats": {
+          "systemId": null,
+          "systemVersion": null,
+          "coreVersion": null,
+          "createdTime": null,
+          "modifiedTime": null,
+          "lastModifiedBy": null
+        }
+      }
+    }
+  },
+  "_stats": {
+    "systemId": "dnd5e",
+    "systemVersion": "2.4.1",
+    "coreVersion": "11.315",
+    "createdTime": 1666288212883,
+    "modifiedTime": 1702947838758,
+    "lastModifiedBy": "1enA27CLCptznVn9"
+  },
+  "_id": "MChWuF8FTz5vOntg",
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "1enA27CLCptznVn9": 3
+  },
+  "_key": "!items!MChWuF8FTz5vOntg"
+}

@@ -1,0 +1,144 @@
+{
+  "name": "Specialist ( Mage )",
+  "type": "loot",
+  "img": "icons/sundries/scrolls/scroll-worn-tan.webp",
+  "system": {
+    "description": {
+      "value": "<p>You need beavers-crafting module.</p>",
+      "chat": ""
+    },
+    "source": {
+      "custom": "Recipe"
+    },
+    "quantity": 1,
+    "weight": {
+      "value": 0,
+      "units": "lb"
+    },
+    "price": {
+      "value": 0,
+      "denomination": "gp"
+    },
+    "rarity": "uncommon",
+    "identified": true,
+    "type": {
+      "value": "",
+      "subtype": ""
+    },
+    "unidentified": {
+      "description": ""
+    },
+    "container": null,
+    "properties": []
+  },
+  "effects": [],
+  "flags": {
+    "beavers-crafting": {
+      "recipe": {
+        "currency": {
+          "value": 50,
+          "name": "gp"
+        },
+        "required": {},
+        "input": {
+          "1": {
+            "key": {
+              "id": "dVFbblELstFhBgeW",
+              "uuid": "Compendium.beavers-crafting.ingredients.dVFbblELstFhBgeW",
+              "img": "modules/beavers-crafting/icons/mushroom/46.png",
+              "type": "Item",
+              "name": "Rainblow",
+              "quantity": 5,
+              "itemType": "consumable",
+              "flags": {
+                "beavers-crafting": {}
+              }
+            }
+          },
+          "2": {
+            "key": {
+              "id": "F1SSWiF1VvLWDvoK",
+              "uuid": "Compendium.beavers-crafting.ingredients.F1SSWiF1VvLWDvoK",
+              "img": "modules/beavers-crafting/icons/mushroom/26.png",
+              "type": "Item",
+              "name": "Blue Bill",
+              "quantity": 5,
+              "itemType": "consumable",
+              "flags": {
+                "beavers-crafting": {}
+              }
+            }
+          },
+          "3": {
+            "key": {
+              "id": "dozjFH55CR4npT6F",
+              "uuid": "Compendium.beavers-crafting.ingredients.dozjFH55CR4npT6F",
+              "img": "icons/tools/laboratory/bowl-powder-purple.webp",
+              "type": "Item",
+              "name": "Magical Essence",
+              "quantity": 1,
+              "itemType": "loot",
+              "flags": {
+                "beavers-crafting": {}
+              }
+            }
+          }
+        },
+        "output": {
+          "1": {
+            "key": {
+              "id": "j641yloHOUgLIBwM",
+              "uuid": "Compendium.beavers-potions.potions.j641yloHOUgLIBwM",
+              "img": "icons/consumables/potions/bottle-pear-corked-labeled-green.webp",
+              "type": "Item",
+              "name": "Specialist ( Mage )",
+              "quantity": 1,
+              "itemType": "consumable",
+              "flags": {
+                "beavers-crafting": {}
+              }
+            }
+          }
+        },
+        "beaversTests": {
+          "fails": 1,
+          "consume": true,
+          "ands": {
+            "1": {
+              "ors": {
+                "1": {
+                  "type": "SkillTest",
+                  "data": {
+                    "dc": 10,
+                    "skill": "arc"
+                  }
+                }
+              },
+              "hits": 1
+            }
+          }
+        }
+      },
+      "subtype": "Recipe"
+    },
+    "core": {}
+  },
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.331",
+    "systemId": "dnd5e",
+    "systemVersion": "3.3.1",
+    "createdTime": 1725004640871,
+    "modifiedTime": 1725007141211,
+    "lastModifiedBy": "jklU6hJSPXST02AA"
+  },
+  "_id": "S50ESLGzxno3r4Zr",
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "jklU6hJSPXST02AA": 3
+  },
+  "_key": "!items!S50ESLGzxno3r4Zr"
+}

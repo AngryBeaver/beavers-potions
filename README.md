@@ -79,5 +79,12 @@ This module does not require beaver's crafting you just can use the potions but 
 
 
 
-## Credits
-Copy organisational structur from midi-qol (gulpfile,package.json,tsconcig.json)
+## Development
+- `pnpm install`
+- `pnpm build` builds the module into `dist/`, `pnpm devbuild` / `pnpm devwatch` into the Foundry install of `devDir` (package.json)
+- the compendiums live as JSON in `packs-src/<pack>/` and are compiled into LevelDB packs on build.
+  After editing them in Foundry, run `pnpm packs:extract` (close the world first) to bring the changes back into `packs-src`.
+
+## Release
+A commit on main whose message starts with `release v1.2.3` builds version 1.2.3, publishes it as GitHub release and on foundryvtt.com
+(needs the `FOUNDRY_RELEASE_TOKEN` secret) and bumps package.json.

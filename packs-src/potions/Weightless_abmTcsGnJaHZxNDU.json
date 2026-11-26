@@ -1,0 +1,169 @@
+{
+  "name": "Weightless",
+  "type": "consumable",
+  "img": "icons/consumables/potions/bottle-bulb-empty-glass.webp",
+  "system": {
+    "description": {
+      "value": "<p>Your body becomes weightless for 1 minute. As long as you do not carry anything (including clothes) you are no longer pulled down to earth.</p>",
+      "chat": "",
+      "unidentified": ""
+    },
+    "source": {
+      "custom": ""
+    },
+    "quantity": 1,
+    "weight": 0.1,
+    "price": {
+      "value": 50,
+      "denomination": "gp"
+    },
+    "attunement": 0,
+    "equipped": false,
+    "rarity": "common",
+    "identified": true,
+    "activation": {
+      "type": "action",
+      "cost": 1,
+      "condition": ""
+    },
+    "duration": {
+      "value": "1",
+      "units": "minute"
+    },
+    "cover": null,
+    "crewed": false,
+    "target": {
+      "value": 1,
+      "width": null,
+      "units": "",
+      "type": "creature",
+      "prompt": true
+    },
+    "range": {
+      "value": null,
+      "long": null,
+      "units": "touch"
+    },
+    "uses": {
+      "value": 1,
+      "max": "1",
+      "per": "charges",
+      "recovery": "",
+      "autoDestroy": true,
+      "prompt": true
+    },
+    "consume": {
+      "type": "",
+      "target": "",
+      "amount": null,
+      "scale": false
+    },
+    "ability": null,
+    "actionType": "",
+    "attackBonus": "",
+    "chatFlavor": "",
+    "critical": {
+      "threshold": null,
+      "damage": ""
+    },
+    "damage": {
+      "parts": [],
+      "versatile": ""
+    },
+    "formula": "",
+    "save": {
+      "ability": "",
+      "dc": null,
+      "scaling": "spell"
+    },
+    "consumableType": "potion",
+    "properties": {}
+  },
+  "effects": [
+    {
+      "icon": "icons/commodities/flowers/dandelion-pod-white.webp",
+      "changes": [],
+      "transfer": false,
+      "_id": "il5PfQMCSfYIFxri",
+      "disabled": false,
+      "duration": {
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "rounds": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "origin": "Item.abmTcsGnJaHZxNDU",
+      "tint": null,
+      "flags": {
+        "dae": {
+          "selfTarget": false,
+          "selfTargetAlways": false,
+          "stackable": "none",
+          "durationExpression": "",
+          "specialDuration": [],
+          "macroRepeat": "none"
+        },
+        "core": {
+          "statusId": "",
+          "sourceId": "Item.abmTcsGnJaHZxNDU.ActiveEffect.gtGe0AyWbk22YFMW"
+        },
+        "ActiveAuras": {
+          "isAura": false,
+          "aura": "None",
+          "radius": null,
+          "alignment": "",
+          "type": "",
+          "ignoreSelf": false,
+          "height": false,
+          "hidden": false,
+          "displayTemp": false,
+          "hostile": false,
+          "onlyOnce": false
+        },
+        "times-up": {
+          "isPassive": false
+        }
+      },
+      "name": "Weightless",
+      "description": "",
+      "statuses": [],
+      "_key": "!items.effects!abmTcsGnJaHZxNDU.il5PfQMCSfYIFxri"
+    }
+  ],
+  "flags": {
+    "magicitems": {
+      "enabled": false,
+      "equipped": false,
+      "attuned": false,
+      "charges": "0",
+      "chargeType": "c1",
+      "destroy": false,
+      "destroyFlavorText": "reaches 0 charges: it crumbles into ashes and is destroyed.",
+      "rechargeable": false,
+      "recharge": "0",
+      "rechargeType": "t1",
+      "rechargeUnit": "r1",
+      "sorting": "l"
+    },
+    "core": {}
+  },
+  "_stats": {
+    "systemId": "dnd5e",
+    "systemVersion": "2.4.1",
+    "coreVersion": "11.315",
+    "createdTime": 1669920101137,
+    "modifiedTime": 1702947838758,
+    "lastModifiedBy": "1enA27CLCptznVn9"
+  },
+  "_id": "abmTcsGnJaHZxNDU",
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "1enA27CLCptznVn9": 3
+  },
+  "_key": "!items!abmTcsGnJaHZxNDU"
+}

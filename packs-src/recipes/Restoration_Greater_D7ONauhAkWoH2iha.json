@@ -1,0 +1,157 @@
+{
+  "name": "Restoration Greater",
+  "type": "loot",
+  "img": "icons/sundries/scrolls/scroll-worn-tan.webp",
+  "system": {
+    "description": {
+      "value": "<p>You need beavers-crafting module.</p>",
+      "chat": ""
+    },
+    "source": {
+      "custom": "Recipe"
+    },
+    "quantity": 1,
+    "weight": {
+      "value": 0,
+      "units": "lb"
+    },
+    "price": {
+      "value": 0,
+      "denomination": "gp"
+    },
+    "rarity": "veryRare",
+    "identified": true,
+    "type": {
+      "value": "",
+      "subtype": ""
+    },
+    "unidentified": {
+      "description": ""
+    },
+    "container": null,
+    "properties": []
+  },
+  "effects": [],
+  "flags": {
+    "beavers-crafting": {
+      "recipe": {
+        "currency": {
+          "value": 500,
+          "name": "gp"
+        },
+        "required": {},
+        "input": {
+          "1": {
+            "key": {
+              "id": "iw2D0a2gXp3lu7iJ",
+              "uuid": "Compendium.world.ingredients3.iw2D0a2gXp3lu7iJ",
+              "img": "modules/beavers-crafting/icons/mushroom/38.png",
+              "type": "Item",
+              "name": "Ghoule Groats",
+              "quantity": 5,
+              "itemType": "consumable",
+              "flags": {
+                "beavers-crafting": {}
+              }
+            }
+          },
+          "2": {
+            "key": {
+              "id": "qX7GnE8q1YsDKhr7",
+              "uuid": "Compendium.world.ingredients3.qX7GnE8q1YsDKhr7",
+              "img": "modules/beavers-crafting/icons/mushroom/35.png",
+              "type": "Item",
+              "name": "EldStuff Boxed",
+              "quantity": 5,
+              "itemType": "consumable",
+              "flags": {
+                "beavers-crafting": {}
+              }
+            }
+          },
+          "3": {
+            "key": {
+              "id": "F1SSWiF1VvLWDvoK",
+              "uuid": "Compendium.world.ingredients3.F1SSWiF1VvLWDvoK",
+              "img": "modules/beavers-crafting/icons/mushroom/26.png",
+              "type": "Item",
+              "name": "Blue Bill",
+              "quantity": 5,
+              "itemType": "consumable",
+              "flags": {
+                "beavers-crafting": {}
+              }
+            }
+          },
+          "4": {
+            "key": {
+              "id": "EBn04GlzYZdMi23m",
+              "uuid": "Compendium.world.ingredients3.EBn04GlzYZdMi23m",
+              "img": "modules/beavers-crafting/icons/mushroom/49.png",
+              "type": "Item",
+              "name": "Astrid Lindworm",
+              "quantity": 5,
+              "itemType": "consumable",
+              "flags": {
+                "beavers-crafting": {}
+              }
+            }
+          },
+          "5": {
+            "key": {
+              "id": "dozjFH55CR4npT6F",
+              "uuid": "Compendium.beavers-crafting.ingredients.dozjFH55CR4npT6F",
+              "img": "icons/tools/laboratory/bowl-powder-purple.webp",
+              "type": "Item",
+              "name": "Magical Essence",
+              "quantity": 3,
+              "itemType": "loot",
+              "flags": {
+                "beavers-crafting": {}
+              }
+            }
+          }
+        },
+        "output": {},
+        "beaversTests": {
+          "fails": 1,
+          "consume": true,
+          "ands": {
+            "1": {
+              "ors": {
+                "1": {
+                  "type": "SkillTest",
+                  "data": {
+                    "dc": 13,
+                    "skill": "med"
+                  }
+                }
+              },
+              "hits": 1
+            }
+          }
+        }
+      },
+      "subtype": "Recipe"
+    },
+    "core": {}
+  },
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.331",
+    "systemId": "dnd5e",
+    "systemVersion": "3.3.1",
+    "createdTime": 1725004640871,
+    "modifiedTime": 1725007141211,
+    "lastModifiedBy": "jklU6hJSPXST02AA"
+  },
+  "_id": "D7ONauhAkWoH2iha",
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "jklU6hJSPXST02AA": 3
+  },
+  "_key": "!items!D7ONauhAkWoH2iha"
+}

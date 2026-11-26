@@ -1,0 +1,212 @@
+{
+  "name": "Messenger's Potion",
+  "type": "consumable",
+  "img": "icons/consumables/potions/bottle-conical-corked-labeled-shell-cyan.webp",
+  "system": {
+    "description": {
+      "value": "<p><span style=\"font-family:Signika, sans-serif\">Doubles your movement speed for 3 hours, then causes two levels of exhaustion.</span></p>",
+      "chat": "",
+      "unidentified": ""
+    },
+    "source": {
+      "custom": ""
+    },
+    "quantity": 1,
+    "weight": 0.1,
+    "price": {
+      "value": 250,
+      "denomination": "gp"
+    },
+    "attunement": 0,
+    "equipped": false,
+    "rarity": "uncommon",
+    "identified": true,
+    "activation": {
+      "type": "action",
+      "cost": 1,
+      "condition": ""
+    },
+    "duration": {
+      "value": "3",
+      "units": "hour"
+    },
+    "cover": null,
+    "crewed": false,
+    "target": {
+      "value": 1,
+      "width": null,
+      "units": "",
+      "type": "creature",
+      "prompt": true
+    },
+    "range": {
+      "value": null,
+      "long": null,
+      "units": ""
+    },
+    "uses": {
+      "value": 1,
+      "max": "1",
+      "per": "charges",
+      "recovery": "",
+      "autoDestroy": true,
+      "prompt": true
+    },
+    "consume": {
+      "type": "",
+      "target": "",
+      "amount": null,
+      "scale": false
+    },
+    "ability": null,
+    "actionType": "",
+    "attackBonus": "",
+    "chatFlavor": "",
+    "critical": {
+      "threshold": null,
+      "damage": ""
+    },
+    "damage": {
+      "parts": [],
+      "versatile": ""
+    },
+    "formula": "",
+    "save": {
+      "ability": "",
+      "dc": null,
+      "scaling": "spell"
+    },
+    "consumableType": "potion",
+    "properties": {}
+  },
+  "effects": [
+    {
+      "icon": "icons/skills/movement/feet-winged-sandals-tan.webp",
+      "changes": [
+        {
+          "key": "system.attributes.movement.all",
+          "mode": 0,
+          "value": "*2",
+          "priority": 20
+        },
+        {
+          "key": "macro.itemMacro",
+          "mode": 0,
+          "value": "",
+          "priority": 20
+        }
+      ],
+      "transfer": false,
+      "_id": "cJN4ogjoWPERE0uH",
+      "disabled": false,
+      "duration": {
+        "startTime": null,
+        "seconds": null,
+        "combat": null,
+        "rounds": null,
+        "turns": null,
+        "startRound": null,
+        "startTurn": null
+      },
+      "origin": "Item.Sp3E9go1b56yNnBX",
+      "tint": null,
+      "flags": {
+        "dae": {
+          "selfTarget": false,
+          "selfTargetAlways": false,
+          "stackable": "none",
+          "durationExpression": "",
+          "specialDuration": [],
+          "macroRepeat": "none"
+        },
+        "core": {
+          "statusId": "",
+          "sourceId": "Item.Sp3E9go1b56yNnBX.ActiveEffect.DtFD8R45qyPwByfH"
+        },
+        "effectmacro": {
+          "onDelete": {
+            "script": "test"
+          }
+        },
+        "ActiveAuras": {
+          "isAura": false,
+          "aura": "None",
+          "radius": null,
+          "alignment": "",
+          "type": "",
+          "ignoreSelf": false,
+          "height": false,
+          "hidden": false,
+          "displayTemp": false,
+          "hostile": false,
+          "onlyOnce": false
+        },
+        "times-up": {
+          "isPassive": false
+        }
+      },
+      "name": "Messenger's Potion",
+      "description": "",
+      "statuses": [],
+      "_key": "!items.effects!Sp3E9go1b56yNnBX.cJN4ogjoWPERE0uH"
+    }
+  ],
+  "flags": {
+    "core": {},
+    "itemacro": {
+      "macro": {
+        "name": "Messenger's Potion",
+        "type": "script",
+        "scope": "global",
+        "command": "if(args[0] === \"off\"){\n  const actor = await fromUuid(args[1].actorUuid);\n  const prevActiveEffect = actor.effects.find((ae)=> ae.label.startsWith(\"Exhaustion\"));\n  let effectName = \"Exhaustion 2\";\n  if(prevActiveEffect !== undefined){\n    if(prevActiveEffect.label.endsWith(\"1\")){effectName=\"Exhaustion 3\";}\n    else if(prevActiveEffect.label.endsWith(\"2\")){effectName=\"Exhaustion 4\";}\n    else if(prevActiveEffect.label.endsWith(\"3\")){effectName=\"Exhaustion 5\";}\n    else {effectName=\"Dead\";}\n    prevActiveEffect.delete();\n  }\n  const activeEffect = game.dfreds.effectInterface.findEffectByName(effectName);\n  await actor.createEmbeddedDocuments('ActiveEffect', [activeEffect.convertToActiveEffectData()]);\n}",
+        "author": "r8M7z5xqyZDxng8W",
+        "_id": null,
+        "img": "icons/svg/dice-target.svg",
+        "folder": null,
+        "sort": 0,
+        "ownership": {
+          "default": 0
+        },
+        "flags": {},
+        "_stats": {
+          "systemId": null,
+          "systemVersion": null,
+          "coreVersion": null,
+          "createdTime": null,
+          "modifiedTime": null,
+          "lastModifiedBy": null
+        }
+      }
+    },
+    "magicitems": {
+      "enabled": false,
+      "equipped": false,
+      "attuned": false,
+      "charges": "0",
+      "chargeType": "c1",
+      "destroy": false,
+      "destroyFlavorText": "reaches 0 charges: it crumbles into ashes and is destroyed.",
+      "rechargeable": false,
+      "recharge": "0",
+      "rechargeType": "t1",
+      "rechargeUnit": "r1",
+      "sorting": "l"
+    }
+  },
+  "_stats": {
+    "systemId": "dnd5e",
+    "systemVersion": "2.4.1",
+    "coreVersion": "11.315",
+    "createdTime": 1666288212883,
+    "modifiedTime": 1702947838758,
+    "lastModifiedBy": "1enA27CLCptznVn9"
+  },
+  "_id": "Sp3E9go1b56yNnBX",
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "1enA27CLCptznVn9": 3
+  },
+  "_key": "!items!Sp3E9go1b56yNnBX"
+}

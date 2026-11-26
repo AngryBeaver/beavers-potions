@@ -1,59 +1,61 @@
 {
-  "title": "Beaver's Potions",
-  "description": "A Content Module",
-  "id": "beavers-potions",
-  "version": "2.0.2",
+  "title": "{{title}}",
+  "description": "{{description}}",
+  "id": "{{name}}",
+  "version": "{{version}}",
   "authors": [
     {
       "name": "angryBeaver",
       "url": "https://github.com/angrybeaver"
     }
   ],
-  "languages": [
-  ],
-  "scripts": [
-  ],
-  "esmodules": [
-    "src/main.js"
-  ],
-  "styles": [
-  ],
+  "languages": [],
+  "esmodules": "{{sources}}",
+  "styles": "{{css}}",
   "packs": [
     {
-      "entity": "Item",
       "label": "tables",
       "name": "tables",
-      "path": "./packs/tables",
-      "module": "beavers-potions",
+      "path": "packs/tables",
+      "system": "dnd5e",
       "type": "RollTable",
-      "private": false
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      }
     },
     {
-      "entity": "Item",
       "label": "potions",
       "name": "potions",
-      "path": "./packs/potions",
-      "module": "beavers-potions",
+      "path": "packs/potions",
+      "system": "dnd5e",
       "type": "Item",
-      "private": false
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      }
     },
     {
-      "entity": "Item",
       "label": "ingredients",
       "name": "ingredients",
-      "path": "./packs/ingredients",
-      "module": "beavers-potions",
+      "path": "packs/ingredients",
+      "system": "dnd5e",
       "type": "Item",
-      "private": false
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      }
     },
     {
-      "entity": "Item",
       "label": "recipes",
       "name": "recipes",
-      "path": "./packs/recipes",
-      "module": "beavers-potions",
+      "path": "packs/recipes",
+      "system": "dnd5e",
       "type": "Item",
-      "private": false
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      }
     }
   ],
   "url": "https://github.com/AngryBeaver/beavers-potions",
@@ -119,8 +121,6 @@
           "verified": "0.9.2"
         }
       }
-
-
     ]
   },
   "compatibility": {

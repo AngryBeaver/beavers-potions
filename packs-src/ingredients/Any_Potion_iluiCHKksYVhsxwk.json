@@ -1,0 +1,62 @@
+{
+  "name": "Any Potion",
+  "type": "loot",
+  "img": "modules/beavers-crafting/icons/anyOf.png",
+  "system": {
+    "description": {
+      "value": "",
+      "chat": ""
+    },
+    "source": {
+      "custom": ""
+    },
+    "quantity": 1,
+    "weight": {
+      "value": 0,
+      "units": "lb"
+    },
+    "price": {
+      "value": 0,
+      "denomination": "gp"
+    },
+    "rarity": "common",
+    "identified": true,
+    "type": {
+      "value": "",
+      "subtype": ""
+    },
+    "unidentified": {
+      "description": ""
+    },
+    "container": null,
+    "properties": []
+  },
+  "effects": [],
+  "flags": {
+    "beavers-crafting": {
+      "anyOf": {
+        "macro": "return item.type === \"consumable\" && (item.system.consumableType === \"potion\" || item.system.type.value === \"potion\")"
+      },
+      "subtype": "AnyOf"
+    },
+    "core": {}
+  },
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.331",
+    "systemId": "dnd5e",
+    "systemVersion": "3.3.1",
+    "createdTime": 1725005941258,
+    "modifiedTime": 1725005941258,
+    "lastModifiedBy": "jklU6hJSPXST02AA"
+  },
+  "_id": "iluiCHKksYVhsxwk",
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "jklU6hJSPXST02AA": 3
+  },
+  "_key": "!items!iluiCHKksYVhsxwk"
+}

@@ -1,0 +1,125 @@
+{
+  "name": "Very Rare Potions",
+  "img": "icons/tools/laboratory/vials-blue-pink.webp",
+  "description": "",
+  "results": [
+    {
+      "type": 2,
+      "weight": 1,
+      "range": [
+        1,
+        1
+      ],
+      "drawn": false,
+      "text": "Distortion",
+      "img": "icons/consumables/potions/bottle-round-label-cork-yellow.webp",
+      "documentCollection": "beavers-potions.potions",
+      "documentId": "R4hEpzqaIBuxT7Pb",
+      "_id": "u1VsxCaH6hEzkfiQ",
+      "flags": {},
+      "_key": "!tables.results!aq3NJ4xfyf3HhNXc.u1VsxCaH6hEzkfiQ"
+    },
+    {
+      "type": 2,
+      "weight": 1,
+      "range": [
+        2,
+        2
+      ],
+      "drawn": false,
+      "text": "Protection From Death",
+      "img": "icons/consumables/potions/flask-corked-red-glow.webp",
+      "documentCollection": "beavers-potions.potions",
+      "documentId": "rwiqgjX2sHoB5H3k",
+      "_id": "lUnQWAJang6ZYlmb",
+      "flags": {},
+      "_key": "!tables.results!aq3NJ4xfyf3HhNXc.lUnQWAJang6ZYlmb"
+    },
+    {
+      "type": 2,
+      "weight": 1,
+      "range": [
+        3,
+        3
+      ],
+      "drawn": false,
+      "text": "Reflect Damage",
+      "img": "icons/consumables/potions/bottle-round-corked-red.webp",
+      "documentCollection": "beavers-potions.potions",
+      "documentId": "y6zSFJYIKPOiZnI7",
+      "_id": "Vd6qGpxEsjqjh6zH",
+      "flags": {},
+      "_key": "!tables.results!aq3NJ4xfyf3HhNXc.Vd6qGpxEsjqjh6zH"
+    },
+    {
+      "type": 2,
+      "weight": 1,
+      "range": [
+        4,
+        4
+      ],
+      "drawn": false,
+      "text": "Restoration Greater",
+      "img": "icons/consumables/potions/bottle-round-label-cork-green.webp",
+      "documentCollection": "beavers-potions.potions",
+      "documentId": "OaJjAk4crpXHRTPv",
+      "_id": "Um77D3WumOivcgXN",
+      "flags": {},
+      "_key": "!tables.results!aq3NJ4xfyf3HhNXc.Um77D3WumOivcgXN"
+    },
+    {
+      "type": 2,
+      "weight": 1,
+      "range": [
+        5,
+        5
+      ],
+      "drawn": false,
+      "text": "Casters Overtime Supreme",
+      "img": "icons/consumables/potions/bottle-metal-yellow-gray.webp",
+      "documentCollection": "beavers-potions.potions",
+      "documentId": "vXJxudEhpp6hpdOe",
+      "_id": "fv5Is5Cmla9JpKKN",
+      "flags": {},
+      "_key": "!tables.results!aq3NJ4xfyf3HhNXc.fv5Is5Cmla9JpKKN"
+    },
+    {
+      "type": 1,
+      "weight": 1,
+      "range": [
+        6,
+        6
+      ],
+      "drawn": false,
+      "text": "Regeneration",
+      "img": "icons/consumables/potions/conical-ornate-purple.webp",
+      "documentCollection": "Item",
+      "documentId": "BxtFA7sMSWIML0aG",
+      "_id": "GZeYhljvOVaUVg2P",
+      "flags": {},
+      "_key": "!tables.results!aq3NJ4xfyf3HhNXc.GZeYhljvOVaUVg2P"
+    }
+  ],
+  "formula": "1d6",
+  "replacement": true,
+  "displayRoll": true,
+  "flags": {
+    "core": {}
+  },
+  "_stats": {
+    "systemId": "dnd5e",
+    "systemVersion": "2.4.1",
+    "coreVersion": "11.315",
+    "createdTime": 1672477816141,
+    "modifiedTime": 1702947754179,
+    "lastModifiedBy": "1enA27CLCptznVn9"
+  },
+  "_id": "aq3NJ4xfyf3HhNXc",
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "1enA27CLCptznVn9": 3
+  },
+  "_key": "!tables!aq3NJ4xfyf3HhNXc"
+}

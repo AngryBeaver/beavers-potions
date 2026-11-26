@@ -1,0 +1,158 @@
+{
+  "name": "Frost Armor Greater",
+  "type": "loot",
+  "img": "icons/sundries/scrolls/scroll-worn-tan.webp",
+  "system": {
+    "description": {
+      "value": "<p>You need beavers-crafting module.</p>",
+      "chat": ""
+    },
+    "source": {
+      "custom": "Recipe"
+    },
+    "quantity": 1,
+    "weight": {
+      "value": 0,
+      "units": "lb"
+    },
+    "price": {
+      "value": 0,
+      "denomination": "gp"
+    },
+    "rarity": "rare",
+    "identified": true,
+    "type": {
+      "value": "",
+      "subtype": ""
+    },
+    "unidentified": {
+      "description": ""
+    },
+    "container": null,
+    "properties": []
+  },
+  "effects": [],
+  "flags": {
+    "beavers-crafting": {
+      "recipe": {
+        "currency": {
+          "value": 250,
+          "name": "gp"
+        },
+        "required": {},
+        "input": {
+          "1": {
+            "key": {
+              "id": "qK9o4MD82WmUgXP8",
+              "uuid": "Compendium.world.ingredients3.qK9o4MD82WmUgXP8",
+              "img": "modules/beavers-crafting/icons/mushroom/13.png",
+              "type": "Item",
+              "name": "Vanilla Mob",
+              "quantity": 5,
+              "itemType": "consumable",
+              "flags": {
+                "beavers-crafting": {}
+              }
+            }
+          },
+          "2": {
+            "key": {
+              "id": "1GPYa56eLe6yUgoU",
+              "uuid": "Compendium.world.ingredients3.1GPYa56eLe6yUgoU",
+              "img": "modules/beavers-crafting/icons/mushroom/16.png",
+              "type": "Item",
+              "name": "Shrimp Brain",
+              "quantity": 5,
+              "itemType": "consumable",
+              "flags": {
+                "beavers-crafting": {}
+              }
+            }
+          },
+          "3": {
+            "key": {
+              "id": "OOFUAGixSqsgyT29",
+              "uuid": "Compendium.world.ingredients3.OOFUAGixSqsgyT29",
+              "img": "modules/beavers-crafting/icons/mushroom/36.png",
+              "type": "Item",
+              "name": "Hansel and Gretel",
+              "quantity": 5,
+              "itemType": "consumable",
+              "flags": {
+                "beavers-crafting": {}
+              }
+            }
+          },
+          "4": {
+            "key": {
+              "id": "dozjFH55CR4npT6F",
+              "uuid": "Compendium.beavers-crafting.ingredients.dozjFH55CR4npT6F",
+              "img": "icons/tools/laboratory/bowl-powder-purple.webp",
+              "type": "Item",
+              "name": "Magical Essence",
+              "quantity": 2,
+              "itemType": "loot",
+              "flags": {
+                "beavers-crafting": {}
+              }
+            }
+          }
+        },
+        "output": {
+          "1": {
+            "key": {
+              "id": "YywpTHDQ09DN7aLd",
+              "uuid": "Compendium.beavers-potions.potions.YywpTHDQ09DN7aLd",
+              "img": "icons/consumables/potions/bottle-corked-blue.webp",
+              "type": "Item",
+              "name": "FrostArmor Greater",
+              "quantity": 1,
+              "itemType": "consumable",
+              "flags": {
+                "beavers-crafting": {}
+              }
+            }
+          }
+        },
+        "beaversTests": {
+          "fails": 1,
+          "consume": true,
+          "ands": {
+            "1": {
+              "ors": {
+                "1": {
+                  "type": "SkillTest",
+                  "data": {
+                    "dc": 12,
+                    "skill": "arc"
+                  }
+                }
+              },
+              "hits": 1
+            }
+          }
+        }
+      },
+      "subtype": "Recipe"
+    },
+    "core": {}
+  },
+  "_stats": {
+    "compendiumSource": null,
+    "duplicateSource": null,
+    "coreVersion": "12.331",
+    "systemId": "dnd5e",
+    "systemVersion": "3.3.1",
+    "createdTime": 1725004640871,
+    "modifiedTime": 1725007141211,
+    "lastModifiedBy": "jklU6hJSPXST02AA"
+  },
+  "_id": "F6OhvQrbAYAt8yH1",
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0,
+    "jklU6hJSPXST02AA": 3
+  },
+  "_key": "!items!F6OhvQrbAYAt8yH1"
+}

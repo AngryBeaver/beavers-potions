@@ -1,3 +1,7 @@
+# next
+- build with esbuild instead of gulp, compendiums are stored as JSON sources (packs-src) and compiled on build
+- GitHub actions for lint/build and release
+
 # 2.0.2
 - upgrade recipes to beaver's crafting 4.0.0
 ⚠️ you need to reimport the recipes

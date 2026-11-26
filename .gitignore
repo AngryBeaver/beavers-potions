@@ -1,6 +1,7 @@
 node_modules
 /foundryconfig.json
-/beavers-crafting.iml
+/beavers-potions.iml
 /.idea/
 /dist/
 /package/
+/packs/
