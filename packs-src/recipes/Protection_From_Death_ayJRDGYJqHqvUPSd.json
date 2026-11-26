@@ -1,14 +1,20 @@
 {
+  "_id": "ayJRDGYJqHqvUPSd",
+  "_key": "!items!ayJRDGYJqHqvUPSd",
   "name": "Protection From Death",
   "type": "loot",
   "img": "icons/sundries/scrolls/scroll-worn-tan.webp",
   "system": {
     "description": {
-      "value": "<p>You need beavers-crafting module.</p>",
+      "value": "<p>A recipe of Beaver's Potions, it needs the module Beaver's Crafting.</p><p>Brewing: Religion check DC 13.</p>",
       "chat": ""
     },
+    "identifier": "recipe-protection-from-death",
     "source": {
-      "custom": "Recipe"
+      "custom": "Beaver's Potions",
+      "rules": "2014",
+      "book": "",
+      "license": ""
     },
     "quantity": 1,
     "weight": {
@@ -19,120 +25,106 @@
       "value": 0,
       "denomination": "gp"
     },
-    "rarity": "veryRare",
+    "rarity": "",
     "identified": true,
     "type": {
       "value": "",
       "subtype": ""
     },
-    "unidentified": {
-      "description": ""
-    },
-    "container": null,
     "properties": []
   },
   "effects": [],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
   "flags": {
     "beavers-crafting": {
+      "subtype": "Recipe",
       "recipe": {
-        "currency": {
-          "value": 500,
-          "name": "gp"
-        },
         "required": {},
         "input": {
           "1": {
-            "key": {
+            "Compendium-beavers-potions-ingredients-Item-qX7GnE8q1YsDKhr7": {
               "id": "qX7GnE8q1YsDKhr7",
-              "uuid": "Compendium.world.ingredients3.qX7GnE8q1YsDKhr7",
-              "img": "modules/beavers-crafting/icons/mushroom/35.png",
-              "type": "Item",
+              "uuid": "Compendium.beavers-potions.ingredients.Item.qX7GnE8q1YsDKhr7",
+              "img": "icons/consumables/mushrooms/crimini-button-brown.webp",
               "name": "EldStuff Boxed",
-              "quantity": 5,
-              "itemType": "consumable",
-              "flags": {
-                "beavers-crafting": {}
-              }
+              "type": "Item",
+              "itemType": "loot",
+              "quantity": 5
             }
           },
           "2": {
-            "key": {
+            "Compendium-beavers-potions-ingredients-Item-OOFUAGixSqsgyT29": {
               "id": "OOFUAGixSqsgyT29",
-              "uuid": "Compendium.world.ingredients3.OOFUAGixSqsgyT29",
-              "img": "modules/beavers-crafting/icons/mushroom/36.png",
-              "type": "Item",
+              "uuid": "Compendium.beavers-potions.ingredients.Item.OOFUAGixSqsgyT29",
+              "img": "icons/consumables/mushrooms/campanulate-bell-red-white.webp",
               "name": "Hansel and Gretel",
-              "quantity": 5,
-              "itemType": "consumable",
-              "flags": {
-                "beavers-crafting": {}
-              }
+              "type": "Item",
+              "itemType": "loot",
+              "quantity": 5
             }
           },
           "3": {
-            "key": {
+            "Compendium-beavers-potions-ingredients-Item-MNUTlx4UjXSRzW25": {
               "id": "MNUTlx4UjXSRzW25",
-              "uuid": "Compendium.world.ingredients3.MNUTlx4UjXSRzW25",
-              "img": "modules/beavers-crafting/icons/mushroom/15.png",
-              "type": "Item",
+              "uuid": "Compendium.beavers-potions.ingredients.Item.MNUTlx4UjXSRzW25",
+              "img": "icons/consumables/mushrooms/conical-bell-orange-white.webp",
               "name": "Guepinia",
-              "quantity": 5,
-              "itemType": "consumable",
-              "flags": {
-                "beavers-crafting": {}
-              }
+              "type": "Item",
+              "itemType": "loot",
+              "quantity": 5
             }
           },
           "4": {
-            "key": {
+            "Compendium-beavers-potions-ingredients-Item-Q8Mlg9WpuW6zKqes": {
               "id": "Q8Mlg9WpuW6zKqes",
-              "uuid": "Compendium.world.ingredients3.Q8Mlg9WpuW6zKqes",
-              "img": "modules/beavers-crafting/icons/mushroom/14.png",
-              "type": "Item",
+              "uuid": "Compendium.beavers-potions.ingredients.Item.Q8Mlg9WpuW6zKqes",
+              "img": "icons/consumables/mushrooms/umbontae-hot-pink.webp",
               "name": "Gloat Glow",
-              "quantity": 5,
-              "itemType": "consumable",
-              "flags": {
-                "beavers-crafting": {}
-              }
+              "type": "Item",
+              "itemType": "loot",
+              "quantity": 5
             }
           },
           "5": {
-            "key": {
+            "Compendium-beavers-potions-ingredients-Item-dozjFH55CR4npT6F": {
               "id": "dozjFH55CR4npT6F",
-              "uuid": "Compendium.beavers-crafting.ingredients.dozjFH55CR4npT6F",
+              "uuid": "Compendium.beavers-potions.ingredients.Item.dozjFH55CR4npT6F",
               "img": "icons/tools/laboratory/bowl-powder-purple.webp",
-              "type": "Item",
               "name": "Magical Essence",
-              "quantity": 3,
+              "type": "Item",
               "itemType": "loot",
-              "flags": {
-                "beavers-crafting": {}
-              }
+              "quantity": 3
             }
           }
         },
         "output": {
           "1": {
-            "key": {
+            "Compendium-beavers-potions-potions-Item-rwiqgjX2sHoB5H3k": {
               "id": "rwiqgjX2sHoB5H3k",
-              "uuid": "Compendium.beavers-potions.potions.rwiqgjX2sHoB5H3k",
+              "uuid": "Compendium.beavers-potions.potions.Item.rwiqgjX2sHoB5H3k",
               "img": "icons/consumables/potions/flask-corked-red-glow.webp",
-              "type": "Item",
               "name": "Protection From Death",
-              "quantity": 1,
+              "type": "Item",
               "itemType": "consumable",
-              "flags": {
-                "beavers-crafting": {}
-              }
+              "quantity": 1
             }
           }
+        },
+        "currency": {
+          "name": "gp",
+          "value": 500
         },
         "beaversTests": {
           "fails": 1,
           "consume": true,
+          "failsInARow": false,
           "ands": {
             "1": {
+              "hits": 1,
               "ors": {
                 "1": {
                   "type": "SkillTest",
@@ -141,32 +133,14 @@
                     "skill": "rel"
                   }
                 }
-              },
-              "hits": 1
+              }
             }
           }
-        }
-      },
-      "subtype": "Recipe"
-    },
-    "core": {}
-  },
-  "_stats": {
-    "compendiumSource": null,
-    "duplicateSource": null,
-    "coreVersion": "12.331",
-    "systemId": "dnd5e",
-    "systemVersion": "3.3.1",
-    "createdTime": 1725004640871,
-    "modifiedTime": 1725007141211,
-    "lastModifiedBy": "jklU6hJSPXST02AA"
-  },
-  "_id": "ayJRDGYJqHqvUPSd",
-  "folder": null,
-  "sort": 0,
-  "ownership": {
-    "default": 0,
-    "jklU6hJSPXST02AA": 3
-  },
-  "_key": "!items!ayJRDGYJqHqvUPSd"
+        },
+        "macro": "",
+        "folder": "Beaver's Potions",
+        "kind": "recipe"
+      }
+    }
+  }
 }

@@ -1,14 +1,20 @@
 {
+  "_id": "W4ZaZLBPC3bEg19y",
+  "_key": "!items!W4ZaZLBPC3bEg19y",
   "name": "Cure Undead",
   "type": "loot",
   "img": "icons/sundries/scrolls/scroll-worn-tan.webp",
   "system": {
     "description": {
-      "value": "<p>You need beavers-crafting module.</p>",
+      "value": "<p>A recipe of Beaver's Potions, it needs the module Beaver's Crafting.</p><p>Brewing: Religion check DC 8.</p>",
       "chat": ""
     },
+    "identifier": "recipe-cure-undead",
     "source": {
-      "custom": "Recipe"
+      "custom": "Beaver's Potions",
+      "rules": "2014",
+      "book": "",
+      "license": ""
     },
     "quantity": 1,
     "weight": {
@@ -19,64 +25,62 @@
       "value": 0,
       "denomination": "gp"
     },
-    "rarity": "common",
+    "rarity": "",
     "identified": true,
     "type": {
       "value": "",
       "subtype": ""
     },
-    "unidentified": {
-      "description": ""
-    },
-    "container": null,
     "properties": []
   },
   "effects": [],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
   "flags": {
     "beavers-crafting": {
+      "subtype": "Recipe",
       "recipe": {
-        "currency": {
-          "value": 5,
-          "name": "gp"
-        },
         "required": {},
         "input": {
           "1": {
-            "key": {
+            "Compendium-beavers-potions-ingredients-Item-iw2D0a2gXp3lu7iJ": {
               "id": "iw2D0a2gXp3lu7iJ",
-              "uuid": "Compendium.beavers-crafting.ingredients.iw2D0a2gXp3lu7iJ",
-              "img": "modules/beavers-crafting/icons/mushroom/38.png",
-              "type": "Item",
+              "uuid": "Compendium.beavers-potions.ingredients.Item.iw2D0a2gXp3lu7iJ",
+              "img": "icons/consumables/mushrooms/convex-green-brown.webp",
               "name": "Ghoule Groats",
-              "quantity": 5,
-              "itemType": "consumable",
-              "flags": {
-                "beavers-crafting": {}
-              }
+              "type": "Item",
+              "itemType": "loot",
+              "quantity": 5
             }
           }
         },
         "output": {
           "1": {
-            "key": {
+            "Compendium-beavers-potions-potions-Item-tEG8DYWsIjsnq89H": {
               "id": "tEG8DYWsIjsnq89H",
-              "uuid": "Compendium.beavers-potions.potions.tEG8DYWsIjsnq89H",
+              "uuid": "Compendium.beavers-potions.potions.Item.tEG8DYWsIjsnq89H",
               "img": "icons/consumables/potions/bottle-conical-corked-labeled-skull-poison-green.webp",
-              "type": "Item",
               "name": "Cure Undead",
-              "quantity": 1,
+              "type": "Item",
               "itemType": "consumable",
-              "flags": {
-                "beavers-crafting": {}
-              }
+              "quantity": 1
             }
           }
+        },
+        "currency": {
+          "name": "gp",
+          "value": 5
         },
         "beaversTests": {
           "fails": 1,
           "consume": true,
+          "failsInARow": false,
           "ands": {
             "1": {
+              "hits": 1,
               "ors": {
                 "1": {
                   "type": "SkillTest",
@@ -85,32 +89,14 @@
                     "skill": "rel"
                   }
                 }
-              },
-              "hits": 1
+              }
             }
           }
-        }
-      },
-      "subtype": "Recipe"
-    },
-    "core": {}
-  },
-  "_stats": {
-    "compendiumSource": null,
-    "duplicateSource": null,
-    "coreVersion": "12.331",
-    "systemId": "dnd5e",
-    "systemVersion": "3.3.1",
-    "createdTime": 1725004640871,
-    "modifiedTime": 1725007141211,
-    "lastModifiedBy": "jklU6hJSPXST02AA"
-  },
-  "_id": "W4ZaZLBPC3bEg19y",
-  "folder": null,
-  "sort": 0,
-  "ownership": {
-    "default": 0,
-    "jklU6hJSPXST02AA": 3
-  },
-  "_key": "!items!W4ZaZLBPC3bEg19y"
+        },
+        "macro": "",
+        "folder": "Beaver's Potions",
+        "kind": "recipe"
+      }
+    }
+  }
 }

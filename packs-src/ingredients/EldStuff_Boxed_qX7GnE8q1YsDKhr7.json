@@ -1,0 +1,51 @@
+{
+  "_id": "qX7GnE8q1YsDKhr7",
+  "_key": "!items!qX7GnE8q1YsDKhr7",
+  "name": "EldStuff Boxed",
+  "type": "loot",
+  "img": "icons/consumables/mushrooms/crimini-button-brown.webp",
+  "system": {
+    "description": {
+      "value": "<p>A mushroom, an ingredient of Beaver's Potions.</p>",
+      "chat": ""
+    },
+    "identifier": "eldstuff-boxed",
+    "source": {
+      "custom": "Beaver's Potions",
+      "rules": "2014",
+      "book": "",
+      "license": ""
+    },
+    "quantity": 1,
+    "weight": {
+      "value": 0.1,
+      "units": "lb"
+    },
+    "price": {
+      "value": 0,
+      "denomination": "gp"
+    },
+    "rarity": "common",
+    "identified": true,
+    "unidentified": {
+      "description": ""
+    },
+    "container": null,
+    "type": {
+      "value": "material",
+      "subtype": ""
+    },
+    "properties": []
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "beavers-potions": {
+      "ingredient": "mushroom"
+    }
+  }
+}

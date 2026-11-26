@@ -1,14 +1,20 @@
 {
+  "_id": "WlN9m1NIGvHqAnbu",
+  "_key": "!items!WlN9m1NIGvHqAnbu",
   "name": "Clone Army",
   "type": "loot",
   "img": "icons/sundries/scrolls/scroll-worn-tan.webp",
   "system": {
     "description": {
-      "value": "<p>You need beavers-crafting module.</p>",
+      "value": "<p>A recipe of Beaver's Potions, it needs the module Beaver's Crafting.</p><p>Brewing: Religion check DC 14.</p>",
       "chat": ""
     },
+    "identifier": "recipe-clone-army",
     "source": {
-      "custom": "Recipe"
+      "custom": "Beaver's Potions",
+      "rules": "2014",
+      "book": "",
+      "license": ""
     },
     "quantity": 1,
     "weight": {
@@ -19,134 +25,117 @@
       "value": 0,
       "denomination": "gp"
     },
-    "rarity": "legendary",
+    "rarity": "",
     "identified": true,
     "type": {
       "value": "",
       "subtype": ""
     },
-    "unidentified": {
-      "description": ""
-    },
-    "container": null,
     "properties": []
   },
   "effects": [],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
   "flags": {
     "beavers-crafting": {
+      "subtype": "Recipe",
       "recipe": {
-        "currency": {
-          "value": 750,
-          "name": "gp"
-        },
         "required": {},
         "input": {
           "1": {
-            "key": {
+            "Compendium-beavers-potions-ingredients-Item-yaAARBHnqhZCn3kG": {
               "id": "yaAARBHnqhZCn3kG",
-              "uuid": "Compendium.world.ingredients3.yaAARBHnqhZCn3kG",
-              "img": "modules/beavers-crafting/icons/mushroom/33.png",
-              "type": "Item",
+              "uuid": "Compendium.beavers-potions.ingredients.Item.yaAARBHnqhZCn3kG",
+              "img": "icons/consumables/mushrooms/cluster-red-brown.webp",
               "name": "Bongo Wombo",
-              "quantity": 5,
-              "itemType": "consumable",
-              "flags": {
-                "beavers-crafting": {}
-              }
+              "type": "Item",
+              "itemType": "loot",
+              "quantity": 5
             }
           },
           "2": {
-            "key": {
+            "Compendium-beavers-potions-ingredients-Item-tqfcqsuPQRChhdj7": {
               "id": "tqfcqsuPQRChhdj7",
-              "uuid": "Compendium.world.ingredients3.tqfcqsuPQRChhdj7",
-              "img": "modules/beavers-crafting/icons/mushroom/12.png",
-              "type": "Item",
+              "uuid": "Compendium.beavers-potions.ingredients.Item.tqfcqsuPQRChhdj7",
+              "img": "icons/consumables/mushrooms/convex-tan.webp",
               "name": "Husk Puff",
-              "quantity": 5,
-              "itemType": "consumable",
-              "flags": {
-                "beavers-crafting": {}
-              }
+              "type": "Item",
+              "itemType": "loot",
+              "quantity": 5
             }
           },
           "3": {
-            "key": {
+            "Compendium-beavers-potions-ingredients-Item-Q8Mlg9WpuW6zKqes": {
               "id": "Q8Mlg9WpuW6zKqes",
-              "uuid": "Compendium.world.ingredients3.Q8Mlg9WpuW6zKqes",
-              "img": "modules/beavers-crafting/icons/mushroom/14.png",
-              "type": "Item",
+              "uuid": "Compendium.beavers-potions.ingredients.Item.Q8Mlg9WpuW6zKqes",
+              "img": "icons/consumables/mushrooms/umbontae-hot-pink.webp",
               "name": "Gloat Glow",
-              "quantity": 5,
-              "itemType": "consumable",
-              "flags": {
-                "beavers-crafting": {}
-              }
+              "type": "Item",
+              "itemType": "loot",
+              "quantity": 5
             }
           },
           "4": {
-            "key": {
+            "Compendium-beavers-potions-ingredients-Item-nrssiAqJHHCV1vyv": {
               "id": "nrssiAqJHHCV1vyv",
-              "uuid": "Compendium.world.ingredients3.nrssiAqJHHCV1vyv",
-              "img": "modules/beavers-crafting/icons/mushroom/24.png",
-              "type": "Item",
+              "uuid": "Compendium.beavers-potions.ingredients.Item.nrssiAqJHHCV1vyv",
+              "img": "icons/consumables/mushrooms/conical-bell-yellow.webp",
               "name": "Yellow Stoned",
-              "quantity": 5,
-              "itemType": "consumable",
-              "flags": {
-                "beavers-crafting": {}
-              }
+              "type": "Item",
+              "itemType": "loot",
+              "quantity": 5
             }
           },
           "5": {
-            "key": {
+            "Compendium-beavers-potions-ingredients-Item-qK9o4MD82WmUgXP8": {
               "id": "qK9o4MD82WmUgXP8",
-              "uuid": "Compendium.world.ingredients3.qK9o4MD82WmUgXP8",
-              "img": "modules/beavers-crafting/icons/mushroom/13.png",
-              "type": "Item",
+              "uuid": "Compendium.beavers-potions.ingredients.Item.qK9o4MD82WmUgXP8",
+              "img": "icons/consumables/mushrooms/bell-shiitake-brown.webp",
               "name": "Vanilla Mob",
-              "quantity": 5,
-              "itemType": "consumable",
-              "flags": {
-                "beavers-crafting": {}
-              }
+              "type": "Item",
+              "itemType": "loot",
+              "quantity": 5
             }
           },
           "6": {
-            "key": {
+            "Compendium-beavers-potions-ingredients-Item-dozjFH55CR4npT6F": {
               "id": "dozjFH55CR4npT6F",
-              "uuid": "Compendium.beavers-crafting.ingredients.dozjFH55CR4npT6F",
+              "uuid": "Compendium.beavers-potions.ingredients.Item.dozjFH55CR4npT6F",
               "img": "icons/tools/laboratory/bowl-powder-purple.webp",
-              "type": "Item",
               "name": "Magical Essence",
-              "quantity": 5,
+              "type": "Item",
               "itemType": "loot",
-              "flags": {
-                "beavers-crafting": {}
-              }
+              "quantity": 5
             }
           }
         },
         "output": {
           "1": {
-            "key": {
+            "Compendium-beavers-potions-potions-Item-XShdKZEf6oqbyIOh": {
               "id": "XShdKZEf6oqbyIOh",
-              "uuid": "Compendium.beavers-potions.potions.XShdKZEf6oqbyIOh",
+              "uuid": "Compendium.beavers-potions.potions.Item.XShdKZEf6oqbyIOh",
               "img": "icons/consumables/potions/bottle-round-flask-fumes-purple.webp",
-              "type": "Item",
               "name": "Clone Army",
-              "quantity": 1,
+              "type": "Item",
               "itemType": "consumable",
-              "flags": {
-                "beavers-crafting": {}
-              }
+              "quantity": 1
             }
           }
+        },
+        "currency": {
+          "name": "gp",
+          "value": 750
         },
         "beaversTests": {
           "fails": 1,
           "consume": true,
+          "failsInARow": false,
           "ands": {
             "1": {
+              "hits": 1,
               "ors": {
                 "1": {
                   "type": "SkillTest",
@@ -155,32 +144,14 @@
                     "skill": "rel"
                   }
                 }
-              },
-              "hits": 1
+              }
             }
           }
-        }
-      },
-      "subtype": "Recipe"
-    },
-    "core": {}
-  },
-  "_stats": {
-    "compendiumSource": null,
-    "duplicateSource": null,
-    "coreVersion": "12.331",
-    "systemId": "dnd5e",
-    "systemVersion": "3.3.1",
-    "createdTime": 1725004640871,
-    "modifiedTime": 1725007141211,
-    "lastModifiedBy": "jklU6hJSPXST02AA"
-  },
-  "_id": "WlN9m1NIGvHqAnbu",
-  "folder": null,
-  "sort": 0,
-  "ownership": {
-    "default": 0,
-    "jklU6hJSPXST02AA": 3
-  },
-  "_key": "!items!WlN9m1NIGvHqAnbu"
+        },
+        "macro": "",
+        "folder": "Beaver's Potions",
+        "kind": "recipe"
+      }
+    }
+  }
 }

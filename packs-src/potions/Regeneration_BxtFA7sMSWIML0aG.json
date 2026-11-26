@@ -1,219 +1,174 @@
 {
+  "_id": "BxtFA7sMSWIML0aG",
+  "_key": "!items!BxtFA7sMSWIML0aG",
   "name": "Regeneration",
   "type": "consumable",
   "img": "icons/consumables/potions/conical-ornate-purple.webp",
   "system": {
     "description": {
-      "value": "<p><span style=\"font-family:Roboto, Helvetica, sans-serif\">You regenerate 10 hp each round for one minute.<br /></span></p>",
-      "chat": "",
-      "unidentified": ""
+      "value": "<p>You regenerate 10 hit points at the start of each of your turns for one minute.</p>",
+      "chat": ""
     },
+    "identifier": "regeneration",
     "source": {
-      "custom": ""
+      "custom": "Beaver's Potions",
+      "rules": "2014",
+      "book": "",
+      "license": ""
     },
     "quantity": 1,
-    "weight": 0.1,
+    "weight": {
+      "value": 0.5,
+      "units": "lb"
+    },
     "price": {
       "value": 2500,
       "denomination": "gp"
     },
-    "attunement": 0,
-    "equipped": false,
     "rarity": "veryRare",
     "identified": true,
-    "activation": {
-      "type": "action",
-      "cost": 1,
-      "condition": ""
+    "unidentified": {
+      "description": ""
     },
-    "duration": {
-      "value": "10",
-      "units": "round"
+    "container": null,
+    "attunement": "",
+    "attuned": false,
+    "equipped": false,
+    "type": {
+      "value": "potion",
+      "subtype": ""
     },
-    "cover": null,
-    "crewed": false,
-    "target": {
-      "value": 1,
-      "width": null,
-      "units": "",
-      "type": "creature",
-      "prompt": true
-    },
-    "range": {
-      "value": null,
-      "long": null,
-      "units": "touch"
-    },
+    "properties": [
+      "mgc"
+    ],
     "uses": {
-      "value": 1,
+      "spent": 0,
       "max": "1",
-      "per": "charges",
-      "recovery": "",
-      "autoDestroy": true,
-      "prompt": true
+      "recovery": [],
+      "autoDestroy": true
     },
-    "consume": {
-      "type": "",
-      "target": "",
-      "amount": null,
-      "scale": false
-    },
-    "ability": "",
-    "actionType": "save",
-    "attackBonus": "",
-    "chatFlavor": "",
-    "critical": {
-      "threshold": null,
-      "damage": ""
-    },
-    "damage": {
-      "parts": [],
-      "versatile": ""
-    },
-    "formula": "",
-    "save": {
-      "ability": "",
-      "dc": 13,
-      "scaling": "flat"
-    },
-    "consumableType": "potion",
-    "properties": {}
+    "activities": {
+      "bpactBxtFA7sDrin": {
+        "_id": "bpactBxtFA7sDrin",
+        "type": "utility",
+        "name": "Drink",
+        "sort": 0,
+        "activation": {
+          "type": "action",
+          "value": null,
+          "override": false,
+          "condition": ""
+        },
+        "consumption": {
+          "scaling": {
+            "allowed": false
+          },
+          "spellSlot": true,
+          "targets": [
+            {
+              "type": "itemUses",
+              "value": "1",
+              "target": ""
+            }
+          ]
+        },
+        "description": {
+          "chatFlavor": ""
+        },
+        "duration": {
+          "units": "round",
+          "value": "10",
+          "concentration": false,
+          "override": false
+        },
+        "effects": [
+          {
+            "_id": "bpfxBxtFA7sM0000",
+            "level": {
+              "min": null,
+              "max": null
+            }
+          }
+        ],
+        "range": {
+          "units": "self",
+          "override": false,
+          "special": ""
+        },
+        "target": {
+          "template": {
+            "contiguous": false,
+            "units": "ft",
+            "type": ""
+          },
+          "affects": {
+            "choice": false,
+            "count": "",
+            "type": "self"
+          },
+          "override": false,
+          "prompt": false
+        },
+        "uses": {
+          "spent": 0,
+          "recovery": [],
+          "max": ""
+        },
+        "img": "",
+        "visibility": {
+          "requireMagic": false,
+          "level": {
+            "min": null,
+            "max": null
+          },
+          "identifier": ""
+        }
+      }
+    }
   },
   "effects": [
     {
-      "icon": "icons/consumables/potions/conical-ornate-purple.webp",
-      "origin": "Item.BxtFA7sMSWIML0aG",
-      "duration": {
-        "startTime": null,
-        "seconds": null,
-        "combat": null,
-        "rounds": null,
-        "turns": null,
-        "startRound": null,
-        "startTurn": null
+      "_id": "bpfxBxtFA7sM0000",
+      "_key": "!items.effects!BxtFA7sMSWIML0aG.bpfxBxtFA7sM0000",
+      "name": "Regeneration",
+      "img": "icons/consumables/potions/conical-ornate-purple.webp",
+      "type": "base",
+      "description": "<p>You regenerate 10 hit points at the start of each of your turns for one minute.</p>",
+      "system": {
+        "changes": [],
+        "magical": true
       },
       "disabled": false,
-      "_id": "KJUrliNtUstqVS25",
-      "changes": [
-        {
-          "key": "flags.midi-qol.OverTime",
-          "mode": 0,
-          "value": "turn=start,\nlabel=Regeneration, \ndamageRoll=10,\ndamageType=healing",
-          "priority": 20
-        }
-      ],
-      "tint": null,
       "transfer": false,
+      "duration": {
+        "value": 10,
+        "units": "rounds",
+        "expiry": "turnStart",
+        "expired": false
+      },
+      "statuses": [],
       "flags": {
-        "times-up": {},
-        "dae": {
-          "selfTarget": false,
-          "selfTargetAlways": false,
-          "stackable": "none",
-          "durationExpression": "",
-          "macroRepeat": "startEveryTurn",
-          "specialDuration": []
-        },
-        "core": {
-          "statusId": ""
-        },
-        "ActiveAuras": {
-          "isAura": false,
-          "aura": "None",
-          "radius": null,
-          "alignment": "",
-          "type": "",
-          "ignoreSelf": false,
-          "height": false,
-          "hidden": false,
-          "displayTemp": false,
-          "hostile": false,
-          "onlyOnce": false
+        "beavers-potions": {
+          "turnStart": {
+            "heal": "10"
+          }
         }
       },
-      "name": "Regeneration",
-      "description": "",
-      "statuses": [],
-      "_key": "!items.effects!BxtFA7sMSWIML0aG.KJUrliNtUstqVS25"
+      "tint": "#ffffff",
+      "showIcon": 1,
+      "origin": null,
+      "start": null,
+      "sort": 0
     }
   ],
-  "flags": {
-    "magicitems": {
-      "enabled": false,
-      "equipped": false,
-      "attuned": false,
-      "charges": "0",
-      "chargeType": "c1",
-      "destroy": false,
-      "destroyFlavorText": "reaches 0 charges: it crumbles into ashes and is destroyed.",
-      "rechargeable": false,
-      "recharge": "0",
-      "rechargeType": "t1",
-      "rechargeUnit": "r1",
-      "sorting": "l",
-      "destroyCheck": "d1",
-      "destroyType": "dt1",
-      "spells": {}
-    },
-    "itemacro": {
-      "macro": {
-        "name": "FrostArmor Greater",
-        "type": "script",
-        "scope": "global",
-        "command": "const tempHp = (2*args[1]);\nconsole.log(args);\nif(args[0] === \"on\"){\n  const actorData = await fromUuid(args[2].actorUuid);\n  const actorUpdate = {};\n  actorUpdate[\"flags.beavers-potions.frostArmor.base\"] = actorData.system.attributes.hp.temp;\n  actorUpdate[\"flags.beavers-potions.frostArmor.next\"] = actorData.system.attributes.hp.temp + tempHp;\n  actorUpdate[\"system.attributes.hp.temp\"] = actorUpdate[\"flags.beavers-potions.frostArmor.next\"];\n  await actor.update(actorUpdate);\n}\nif(args[0] === \"each\"){\n  const actorData = await fromUuid(args[2].actorUuid);\n  if(actorData.system.attributes.hp.temp<actorData.flags[\"beavers-potions\"].frostArmor.next){\n    const actorUpdate = {};\n    actorUpdate[\"system.attributes.hp.temp\"] = actorData.flags[\"beavers-potions\"].frostArmor.next;\n    await actor.update(actorUpdate);\n  }\n}\nif(args[0] === \"off\"){\n  const actorData = await fromUuid(args[2].actorUuid);\n  const actorUpdate = {};\n  if(actorData.system.attributes.hp.temp<=actorData.flags[\"beavers-potions\"].frostArmor.next && \n    actorData.system.attributes.hp.temp>actorData.flags[\"beavers-potions\"].frostArmor.base\n  ){\n    actorUpdate[\"system.attributes.hp.temp\"] = actorData.flags[\"beavers-potions\"].frostArmor.base\n    await actor.update(actorUpdate);\n  }else \n  if(actorData.system.attributes.hp.temp>actorData.flags[\"beavers-potions\"].frostArmor.next){\n    const diff = actorData.flags[\"beavers-potions\"].frostArmor.next-actorData.flags[\"beavers-potions\"].frostArmor.base;\n    actorUpdate[\"system.attributes.hp.temp\"] = actorData.system.attributes.hp.temp-diff; \n    await actor.update(actorUpdate);\n  }\n}",
-        "author": "r8M7z5xqyZDxng8W",
-        "_id": null,
-        "img": "icons/svg/dice-target.svg",
-        "folder": null,
-        "sort": 0,
-        "ownership": {
-          "default": 0
-        },
-        "flags": {},
-        "_stats": {
-          "systemId": null,
-          "systemVersion": null,
-          "coreVersion": null,
-          "createdTime": null,
-          "modifiedTime": null,
-          "lastModifiedBy": null
-        }
-      }
-    },
-    "midi-qol": {
-      "effectActivation": false,
-      "onUseMacroName": ""
-    },
-    "midiProperties": {
-      "nodam": false,
-      "fulldam": false,
-      "halfdam": false,
-      "autoFailFriendly": false,
-      "rollOther": false,
-      "critOther": false,
-      "offHandWeapon": false,
-      "magicdam": false,
-      "magiceffect": false,
-      "concentration": false,
-      "toggleEffect": false,
-      "ignoreTotalCover": false
-    },
-    "core": {}
-  },
-  "_stats": {
-    "systemId": "dnd5e",
-    "systemVersion": "2.4.1",
-    "coreVersion": "11.315",
-    "createdTime": 1669920101137,
-    "modifiedTime": 1702947838758,
-    "lastModifiedBy": "1enA27CLCptznVn9"
-  },
-  "_id": "BxtFA7sMSWIML0aG",
   "folder": null,
   "sort": 0,
   "ownership": {
-    "default": 0,
-    "1enA27CLCptznVn9": 3
+    "default": 0
   },
-  "_key": "!items!BxtFA7sMSWIML0aG"
+  "flags": {
+    "beavers-potions": {
+      "potion": true
+    }
+  }
 }

@@ -1,14 +1,20 @@
 {
+  "_id": "FYEuonYJtrpvwvYn",
+  "_key": "!items!FYEuonYJtrpvwvYn",
   "name": "Comprehend Languages",
   "type": "loot",
   "img": "icons/sundries/scrolls/scroll-worn-tan.webp",
   "system": {
     "description": {
-      "value": "<p>You need beavers-crafting module.</p>",
+      "value": "<p>A recipe of Beaver's Potions, it needs the module Beaver's Crafting.</p><p>Brewing: History check DC 8.</p>",
       "chat": ""
     },
+    "identifier": "recipe-comprehend-languages",
     "source": {
-      "custom": "Recipe"
+      "custom": "Beaver's Potions",
+      "rules": "2014",
+      "book": "",
+      "license": ""
     },
     "quantity": 1,
     "weight": {
@@ -19,64 +25,62 @@
       "value": 0,
       "denomination": "gp"
     },
-    "rarity": "common",
+    "rarity": "",
     "identified": true,
     "type": {
       "value": "",
       "subtype": ""
     },
-    "unidentified": {
-      "description": ""
-    },
-    "container": null,
     "properties": []
   },
   "effects": [],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
   "flags": {
     "beavers-crafting": {
+      "subtype": "Recipe",
       "recipe": {
-        "currency": {
-          "value": 5,
-          "name": "gp"
-        },
         "required": {},
         "input": {
           "1": {
-            "key": {
+            "Compendium-beavers-potions-ingredients-Item-XFwqSg3NggqCvxlu": {
               "id": "XFwqSg3NggqCvxlu",
-              "uuid": "Compendium.beavers-crafting.ingredients.XFwqSg3NggqCvxlu",
-              "img": "modules/beavers-crafting/icons/mushroom/11.png",
-              "type": "Item",
+              "uuid": "Compendium.beavers-potions.ingredients.Item.XFwqSg3NggqCvxlu",
+              "img": "icons/consumables/mushrooms/mushroom-spotted-red.webp",
               "name": "Fly Agaric",
-              "quantity": 5,
-              "itemType": "consumable",
-              "flags": {
-                "beavers-crafting": {}
-              }
+              "type": "Item",
+              "itemType": "loot",
+              "quantity": 5
             }
           }
         },
         "output": {
           "1": {
-            "key": {
+            "Compendium-beavers-potions-potions-Item-aj92WlihsltHkeaJ": {
               "id": "aj92WlihsltHkeaJ",
-              "uuid": "Compendium.beavers-potions.potions.aj92WlihsltHkeaJ",
+              "uuid": "Compendium.beavers-potions.potions.Item.aj92WlihsltHkeaJ",
               "img": "icons/consumables/potions/bottle-pear-corked-pink.webp",
-              "type": "Item",
               "name": "Comprehend Languages",
-              "quantity": 1,
+              "type": "Item",
               "itemType": "consumable",
-              "flags": {
-                "beavers-crafting": {}
-              }
+              "quantity": 1
             }
           }
+        },
+        "currency": {
+          "name": "gp",
+          "value": 5
         },
         "beaversTests": {
           "fails": 1,
           "consume": true,
+          "failsInARow": false,
           "ands": {
             "1": {
+              "hits": 1,
               "ors": {
                 "1": {
                   "type": "SkillTest",
@@ -85,32 +89,14 @@
                     "skill": "his"
                   }
                 }
-              },
-              "hits": 1
+              }
             }
           }
-        }
-      },
-      "subtype": "Recipe"
-    },
-    "core": {}
-  },
-  "_stats": {
-    "compendiumSource": null,
-    "duplicateSource": null,
-    "coreVersion": "12.331",
-    "systemId": "dnd5e",
-    "systemVersion": "3.3.1",
-    "createdTime": 1725004640871,
-    "modifiedTime": 1725007141211,
-    "lastModifiedBy": "jklU6hJSPXST02AA"
-  },
-  "_id": "FYEuonYJtrpvwvYn",
-  "folder": null,
-  "sort": 0,
-  "ownership": {
-    "default": 0,
-    "jklU6hJSPXST02AA": 3
-  },
-  "_key": "!items!FYEuonYJtrpvwvYn"
+        },
+        "macro": "",
+        "folder": "Beaver's Potions",
+        "kind": "recipe"
+      }
+    }
+  }
 }

@@ -1,0 +1,146 @@
+{
+  "_id": "bpRecRegenerate0",
+  "_key": "!items!bpRecRegenerate0",
+  "name": "Regeneration",
+  "type": "loot",
+  "img": "icons/sundries/scrolls/scroll-worn-tan.webp",
+  "system": {
+    "description": {
+      "value": "<p>A recipe of Beaver's Potions, it needs the module Beaver's Crafting.</p><p>Brewing: Medicine check DC 13.</p>",
+      "chat": ""
+    },
+    "identifier": "recipe-regeneration",
+    "source": {
+      "custom": "Beaver's Potions",
+      "rules": "2014",
+      "book": "",
+      "license": ""
+    },
+    "quantity": 1,
+    "weight": {
+      "value": 0,
+      "units": "lb"
+    },
+    "price": {
+      "value": 0,
+      "denomination": "gp"
+    },
+    "rarity": "",
+    "identified": true,
+    "type": {
+      "value": "",
+      "subtype": ""
+    },
+    "properties": []
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "beavers-crafting": {
+      "subtype": "Recipe",
+      "recipe": {
+        "required": {},
+        "input": {
+          "1": {
+            "Compendium-beavers-potions-ingredients-Item-90BJIBWtxLN3SMHn": {
+              "id": "90BJIBWtxLN3SMHn",
+              "uuid": "Compendium.beavers-potions.ingredients.Item.90BJIBWtxLN3SMHn",
+              "img": "icons/consumables/mushrooms/convex-bolete-brown.webp",
+              "name": "Penny Bun",
+              "type": "Item",
+              "itemType": "loot",
+              "quantity": 5
+            }
+          },
+          "2": {
+            "Compendium-beavers-potions-ingredients-Item-MNUTlx4UjXSRzW25": {
+              "id": "MNUTlx4UjXSRzW25",
+              "uuid": "Compendium.beavers-potions.ingredients.Item.MNUTlx4UjXSRzW25",
+              "img": "icons/consumables/mushrooms/conical-bell-orange-white.webp",
+              "name": "Guepinia",
+              "type": "Item",
+              "itemType": "loot",
+              "quantity": 5
+            }
+          },
+          "3": {
+            "Compendium-beavers-potions-ingredients-Item-iw2D0a2gXp3lu7iJ": {
+              "id": "iw2D0a2gXp3lu7iJ",
+              "uuid": "Compendium.beavers-potions.ingredients.Item.iw2D0a2gXp3lu7iJ",
+              "img": "icons/consumables/mushrooms/convex-green-brown.webp",
+              "name": "Ghoule Groats",
+              "type": "Item",
+              "itemType": "loot",
+              "quantity": 5
+            }
+          },
+          "4": {
+            "Compendium-beavers-potions-ingredients-Item-WTpNWej9PSN8A4G8": {
+              "id": "WTpNWej9PSN8A4G8",
+              "uuid": "Compendium.beavers-potions.ingredients.Item.WTpNWej9PSN8A4G8",
+              "img": "icons/consumables/mushrooms/helm-red-white.webp",
+              "name": "Tiny Maw",
+              "type": "Item",
+              "itemType": "loot",
+              "quantity": 5
+            }
+          },
+          "5": {
+            "Compendium-beavers-potions-ingredients-Item-dozjFH55CR4npT6F": {
+              "id": "dozjFH55CR4npT6F",
+              "uuid": "Compendium.beavers-potions.ingredients.Item.dozjFH55CR4npT6F",
+              "img": "icons/tools/laboratory/bowl-powder-purple.webp",
+              "name": "Magical Essence",
+              "type": "Item",
+              "itemType": "loot",
+              "quantity": 3
+            }
+          }
+        },
+        "output": {
+          "1": {
+            "Compendium-beavers-potions-potions-Item-BxtFA7sMSWIML0aG": {
+              "id": "BxtFA7sMSWIML0aG",
+              "uuid": "Compendium.beavers-potions.potions.Item.BxtFA7sMSWIML0aG",
+              "img": "icons/consumables/potions/conical-ornate-purple.webp",
+              "name": "Regeneration",
+              "type": "Item",
+              "itemType": "consumable",
+              "quantity": 1
+            }
+          }
+        },
+        "currency": {
+          "name": "gp",
+          "value": 500
+        },
+        "beaversTests": {
+          "fails": 1,
+          "consume": true,
+          "failsInARow": false,
+          "ands": {
+            "1": {
+              "hits": 1,
+              "ors": {
+                "1": {
+                  "type": "SkillTest",
+                  "data": {
+                    "dc": 13,
+                    "skill": "med"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "macro": "",
+        "folder": "Beaver's Potions",
+        "kind": "recipe"
+      }
+    }
+  }
+}

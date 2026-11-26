@@ -1,125 +1,130 @@
 {
+  "_id": "aq3NJ4xfyf3HhNXc",
+  "_key": "!tables!aq3NJ4xfyf3HhNXc",
   "name": "Very Rare Potions",
   "img": "icons/tools/laboratory/vials-blue-pink.webp",
-  "description": "",
+  "description": "<p>A random very rare potion.</p>",
+  "formula": "1d7",
+  "replacement": true,
+  "displayRoll": true,
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
   "results": [
     {
-      "type": 2,
+      "_id": "bptraq3NJ4xf0000",
+      "_key": "!tables.results!aq3NJ4xfyf3HhNXc.bptraq3NJ4xf0000",
+      "type": "document",
+      "name": "Casters Overtime Superior",
+      "img": "icons/consumables/potions/bottle-metal-yellow-gray.webp",
+      "description": "",
+      "documentUuid": "Compendium.beavers-potions.potions.Item.vXJxudEhpp6hpdOe",
       "weight": 1,
       "range": [
         1,
         1
       ],
       "drawn": false,
-      "text": "Distortion",
-      "img": "icons/consumables/potions/bottle-round-label-cork-yellow.webp",
-      "documentCollection": "beavers-potions.potions",
-      "documentId": "R4hEpzqaIBuxT7Pb",
-      "_id": "u1VsxCaH6hEzkfiQ",
-      "flags": {},
-      "_key": "!tables.results!aq3NJ4xfyf3HhNXc.u1VsxCaH6hEzkfiQ"
+      "flags": {}
     },
     {
-      "type": 2,
+      "_id": "bptraq3NJ4xf0100",
+      "_key": "!tables.results!aq3NJ4xfyf3HhNXc.bptraq3NJ4xf0100",
+      "type": "document",
+      "name": "Distortion",
+      "img": "icons/consumables/potions/bottle-round-label-cork-yellow.webp",
+      "description": "",
+      "documentUuid": "Compendium.beavers-potions.potions.Item.R4hEpzqaIBuxT7Pb",
       "weight": 1,
       "range": [
         2,
         2
       ],
       "drawn": false,
-      "text": "Protection From Death",
-      "img": "icons/consumables/potions/flask-corked-red-glow.webp",
-      "documentCollection": "beavers-potions.potions",
-      "documentId": "rwiqgjX2sHoB5H3k",
-      "_id": "lUnQWAJang6ZYlmb",
-      "flags": {},
-      "_key": "!tables.results!aq3NJ4xfyf3HhNXc.lUnQWAJang6ZYlmb"
+      "flags": {}
     },
     {
-      "type": 2,
+      "_id": "bptraq3NJ4xf0200",
+      "_key": "!tables.results!aq3NJ4xfyf3HhNXc.bptraq3NJ4xf0200",
+      "type": "document",
+      "name": "Protection From Death",
+      "img": "icons/consumables/potions/flask-corked-red-glow.webp",
+      "description": "",
+      "documentUuid": "Compendium.beavers-potions.potions.Item.rwiqgjX2sHoB5H3k",
       "weight": 1,
       "range": [
         3,
         3
       ],
       "drawn": false,
-      "text": "Reflect Damage",
-      "img": "icons/consumables/potions/bottle-round-corked-red.webp",
-      "documentCollection": "beavers-potions.potions",
-      "documentId": "y6zSFJYIKPOiZnI7",
-      "_id": "Vd6qGpxEsjqjh6zH",
-      "flags": {},
-      "_key": "!tables.results!aq3NJ4xfyf3HhNXc.Vd6qGpxEsjqjh6zH"
+      "flags": {}
     },
     {
-      "type": 2,
+      "_id": "bptraq3NJ4xf0300",
+      "_key": "!tables.results!aq3NJ4xfyf3HhNXc.bptraq3NJ4xf0300",
+      "type": "document",
+      "name": "Reflect Damage",
+      "img": "icons/consumables/potions/bottle-round-corked-red.webp",
+      "description": "",
+      "documentUuid": "Compendium.beavers-potions.potions.Item.y6zSFJYIKPOiZnI7",
       "weight": 1,
       "range": [
         4,
         4
       ],
       "drawn": false,
-      "text": "Restoration Greater",
-      "img": "icons/consumables/potions/bottle-round-label-cork-green.webp",
-      "documentCollection": "beavers-potions.potions",
-      "documentId": "OaJjAk4crpXHRTPv",
-      "_id": "Um77D3WumOivcgXN",
-      "flags": {},
-      "_key": "!tables.results!aq3NJ4xfyf3HhNXc.Um77D3WumOivcgXN"
+      "flags": {}
     },
     {
-      "type": 2,
+      "_id": "bptraq3NJ4xf0400",
+      "_key": "!tables.results!aq3NJ4xfyf3HhNXc.bptraq3NJ4xf0400",
+      "type": "document",
+      "name": "Regeneration",
+      "img": "icons/consumables/potions/conical-ornate-purple.webp",
+      "description": "",
+      "documentUuid": "Compendium.beavers-potions.potions.Item.BxtFA7sMSWIML0aG",
       "weight": 1,
       "range": [
         5,
         5
       ],
       "drawn": false,
-      "text": "Casters Overtime Supreme",
-      "img": "icons/consumables/potions/bottle-metal-yellow-gray.webp",
-      "documentCollection": "beavers-potions.potions",
-      "documentId": "vXJxudEhpp6hpdOe",
-      "_id": "fv5Is5Cmla9JpKKN",
-      "flags": {},
-      "_key": "!tables.results!aq3NJ4xfyf3HhNXc.fv5Is5Cmla9JpKKN"
+      "flags": {}
     },
     {
-      "type": 1,
+      "_id": "bptraq3NJ4xf0500",
+      "_key": "!tables.results!aq3NJ4xfyf3HhNXc.bptraq3NJ4xf0500",
+      "type": "document",
+      "name": "Restoration Greater",
+      "img": "icons/consumables/potions/bottle-round-label-cork-green.webp",
+      "description": "",
+      "documentUuid": "Compendium.beavers-potions.potions.Item.OaJjAk4crpXHRTPv",
       "weight": 1,
       "range": [
         6,
         6
       ],
       "drawn": false,
-      "text": "Regeneration",
-      "img": "icons/consumables/potions/conical-ornate-purple.webp",
-      "documentCollection": "Item",
-      "documentId": "BxtFA7sMSWIML0aG",
-      "_id": "GZeYhljvOVaUVg2P",
-      "flags": {},
-      "_key": "!tables.results!aq3NJ4xfyf3HhNXc.GZeYhljvOVaUVg2P"
+      "flags": {}
+    },
+    {
+      "_id": "bptraq3NJ4xf0600",
+      "_key": "!tables.results!aq3NJ4xfyf3HhNXc.bptraq3NJ4xf0600",
+      "type": "document",
+      "name": "Potion of Supreme Healing",
+      "img": "icons/consumables/potions/potion-flask-stopped-red.webp",
+      "description": "",
+      "documentUuid": "Compendium.dnd5e.items.Item.JFiSlgcm3uSSBM5t",
+      "weight": 1,
+      "range": [
+        7,
+        7
+      ],
+      "drawn": false,
+      "flags": {}
     }
-  ],
-  "formula": "1d6",
-  "replacement": true,
-  "displayRoll": true,
-  "flags": {
-    "core": {}
-  },
-  "_stats": {
-    "systemId": "dnd5e",
-    "systemVersion": "2.4.1",
-    "coreVersion": "11.315",
-    "createdTime": 1672477816141,
-    "modifiedTime": 1702947754179,
-    "lastModifiedBy": "1enA27CLCptznVn9"
-  },
-  "_id": "aq3NJ4xfyf3HhNXc",
-  "folder": null,
-  "sort": 0,
-  "ownership": {
-    "default": 0,
-    "1enA27CLCptznVn9": 3
-  },
-  "_key": "!tables!aq3NJ4xfyf3HhNXc"
+  ]
 }

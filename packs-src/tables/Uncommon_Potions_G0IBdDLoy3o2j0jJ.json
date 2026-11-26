@@ -1,317 +1,306 @@
 {
+  "_id": "G0IBdDLoy3o2j0jJ",
+  "_key": "!tables!G0IBdDLoy3o2j0jJ",
   "name": "Uncommon Potions",
   "img": "icons/tools/laboratory/vials-blue-pink.webp",
-  "description": "",
+  "description": "<p>A random uncommon potion.</p>",
+  "formula": "1d18",
+  "replacement": true,
+  "displayRoll": true,
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
   "results": [
     {
-      "type": 2,
+      "_id": "bptrG0IBdDLo0000",
+      "_key": "!tables.results!G0IBdDLoy3o2j0jJ.bptrG0IBdDLo0000",
+      "type": "document",
+      "name": "Casters Overtime",
+      "img": "icons/consumables/potions/bottle-metal-yellow-gray.webp",
+      "description": "",
+      "documentUuid": "Compendium.beavers-potions.potions.Item.cWELUkq6t7rP6Ryo",
+      "weight": 1,
+      "range": [
+        1,
+        1
+      ],
+      "drawn": false,
+      "flags": {}
+    },
+    {
+      "_id": "bptrG0IBdDLo0100",
+      "_key": "!tables.results!G0IBdDLoy3o2j0jJ.bptrG0IBdDLo0100",
+      "type": "document",
+      "name": "Feral Instinct",
+      "img": "icons/consumables/potions/bottle-round-label-cork-purple.webp",
+      "description": "",
+      "documentUuid": "Compendium.beavers-potions.potions.Item.kr0avi5meoADT9lu",
+      "weight": 1,
+      "range": [
+        2,
+        2
+      ],
+      "drawn": false,
+      "flags": {}
+    },
+    {
+      "_id": "bptrG0IBdDLo0200",
+      "_key": "!tables.results!G0IBdDLoy3o2j0jJ.bptrG0IBdDLo0200",
+      "type": "document",
+      "name": "Frost Armor",
+      "img": "icons/consumables/potions/bottle-corked-blue.webp",
+      "description": "",
+      "documentUuid": "Compendium.beavers-potions.potions.Item.OjFEnZKfdL0TfU64",
       "weight": 1,
       "range": [
         3,
         3
       ],
       "drawn": false,
-      "text": "Casters Overtime",
-      "img": "icons/consumables/potions/bottle-metal-yellow-gray.webp",
-      "documentCollection": "beavers-potions.potions",
-      "documentId": "cWELUkq6t7rP6Ryo",
-      "_id": "y4OifWrJVyev2BZq",
-      "flags": {},
-      "_key": "!tables.results!G0IBdDLoy3o2j0jJ.y4OifWrJVyev2BZq"
+      "flags": {}
     },
     {
-      "type": 2,
+      "_id": "bptrG0IBdDLo0300",
+      "_key": "!tables.results!G0IBdDLoy3o2j0jJ.bptrG0IBdDLo0300",
+      "type": "document",
+      "name": "Glimpse of Future",
+      "img": "icons/consumables/potions/bottle-corked-empty.webp",
+      "description": "",
+      "documentUuid": "Compendium.beavers-potions.potions.Item.0aHuyVIccJtLDbtq",
       "weight": 1,
       "range": [
         4,
         4
       ],
       "drawn": false,
-      "text": "Feral instinct",
-      "img": "icons/consumables/potions/bottle-round-label-cork-purple.webp",
-      "documentCollection": "beavers-potions.potions",
-      "documentId": "kr0avi5meoADT9lu",
-      "_id": "FX4I7eOQ4d9Hc9Ma",
-      "flags": {},
-      "_key": "!tables.results!G0IBdDLoy3o2j0jJ.FX4I7eOQ4d9Hc9Ma"
+      "flags": {}
     },
     {
-      "type": 2,
+      "_id": "bptrG0IBdDLo0400",
+      "_key": "!tables.results!G0IBdDLoy3o2j0jJ.bptrG0IBdDLo0400",
+      "type": "document",
+      "name": "Gold Rush",
+      "img": "icons/consumables/potions/bottle-round-corked-orange.webp",
+      "description": "",
+      "documentUuid": "Compendium.beavers-potions.potions.Item.MBW3BYNmH8bhZhwe",
       "weight": 1,
       "range": [
         5,
         5
       ],
       "drawn": false,
-      "text": "FrostArmor",
-      "img": "icons/consumables/potions/bottle-corked-blue.webp",
-      "documentCollection": "beavers-potions.potions",
-      "documentId": "OjFEnZKfdL0TfU64",
-      "_id": "njIu8ZIDBohJ1pM8",
-      "flags": {},
-      "_key": "!tables.results!G0IBdDLoy3o2j0jJ.njIu8ZIDBohJ1pM8"
+      "flags": {}
     },
     {
-      "type": 2,
+      "_id": "bptrG0IBdDLo0500",
+      "_key": "!tables.results!G0IBdDLoy3o2j0jJ.bptrG0IBdDLo0500",
+      "type": "document",
+      "name": "Keen Sense",
+      "img": "icons/consumables/potions/bottle-round-corked-pink.webp",
+      "description": "",
+      "documentUuid": "Compendium.beavers-potions.potions.Item.aqkjbUe15A5ivk39",
       "weight": 1,
       "range": [
         6,
         6
       ],
       "drawn": false,
-      "text": "Glimpse of Future",
-      "img": "icons/consumables/potions/bottle-corked-empty.webp",
-      "documentCollection": "beavers-potions.potions",
-      "documentId": "0aHuyVIccJtLDbtq",
-      "_id": "5MWKLHeSooUmsBTT",
-      "flags": {},
-      "_key": "!tables.results!G0IBdDLoy3o2j0jJ.5MWKLHeSooUmsBTT"
+      "flags": {}
     },
     {
-      "type": 2,
+      "_id": "bptrG0IBdDLo0600",
+      "_key": "!tables.results!G0IBdDLoy3o2j0jJ.bptrG0IBdDLo0600",
+      "type": "document",
+      "name": "Life Shell",
+      "img": "icons/consumables/potions/flask-corked-green.webp",
+      "description": "",
+      "documentUuid": "Compendium.beavers-potions.potions.Item.YK67se6j7hfPVd6Q",
       "weight": 1,
       "range": [
         7,
         7
       ],
       "drawn": false,
-      "text": "Gold Rush",
-      "img": "icons/consumables/potions/bottle-round-corked-orange.webp",
-      "documentCollection": "beavers-potions.potions",
-      "documentId": "MBW3BYNmH8bhZhwe",
-      "_id": "3fchcOFYTfPjMk82",
-      "flags": {},
-      "_key": "!tables.results!G0IBdDLoy3o2j0jJ.3fchcOFYTfPjMk82"
+      "flags": {}
     },
     {
-      "type": 2,
+      "_id": "bptrG0IBdDLo0700",
+      "_key": "!tables.results!G0IBdDLoy3o2j0jJ.bptrG0IBdDLo0700",
+      "type": "document",
+      "name": "Liquid Knowledge",
+      "img": "icons/consumables/potions/bottle-round-ring-teal.webp",
+      "description": "",
+      "documentUuid": "Compendium.beavers-potions.potions.Item.mEjNxXozN4eKsb98",
       "weight": 1,
       "range": [
         8,
         8
       ],
       "drawn": false,
-      "text": "Keen Sense",
-      "img": "icons/consumables/potions/bottle-round-corked-pink.webp",
-      "documentCollection": "beavers-potions.potions",
-      "documentId": "aqkjbUe15A5ivk39",
-      "_id": "b7PH6gZJBN751xyJ",
-      "flags": {},
-      "_key": "!tables.results!G0IBdDLoy3o2j0jJ.b7PH6gZJBN751xyJ"
+      "flags": {}
     },
     {
-      "type": 2,
+      "_id": "bptrG0IBdDLo0800",
+      "_key": "!tables.results!G0IBdDLoy3o2j0jJ.bptrG0IBdDLo0800",
+      "type": "document",
+      "name": "Messenger's Potion",
+      "img": "icons/consumables/potions/bottle-conical-corked-labeled-shell-cyan.webp",
+      "description": "",
+      "documentUuid": "Compendium.beavers-potions.potions.Item.Sp3E9go1b56yNnBX",
       "weight": 1,
       "range": [
         9,
         9
       ],
       "drawn": false,
-      "text": "Life Shell",
-      "img": "icons/consumables/potions/flask-corked-green.webp",
-      "documentCollection": "beavers-potions.potions",
-      "documentId": "YK67se6j7hfPVd6Q",
-      "_id": "BRQokIF1dDyB7coV",
-      "flags": {},
-      "_key": "!tables.results!G0IBdDLoy3o2j0jJ.BRQokIF1dDyB7coV"
+      "flags": {}
     },
     {
-      "type": 2,
+      "_id": "bptrG0IBdDLo0900",
+      "_key": "!tables.results!G0IBdDLoy3o2j0jJ.bptrG0IBdDLo0900",
+      "type": "document",
+      "name": "Overconfident",
+      "img": "icons/consumables/potions/bottle-pear-corked-labeled-ornamental-purple.webp",
+      "description": "",
+      "documentUuid": "Compendium.beavers-potions.potions.Item.RhTbotaKOkFunnJ3",
       "weight": 1,
       "range": [
         10,
         10
       ],
       "drawn": false,
-      "text": "Liquid knowledge",
-      "img": "icons/consumables/potions/bottle-round-ring-teal.webp",
-      "documentCollection": "beavers-potions.potions",
-      "documentId": "mEjNxXozN4eKsb98",
-      "_id": "MDeG51GpW8mjP3z0",
-      "flags": {},
-      "_key": "!tables.results!G0IBdDLoy3o2j0jJ.MDeG51GpW8mjP3z0"
+      "flags": {}
     },
     {
-      "type": 2,
+      "_id": "bptrG0IBdDLo1000",
+      "_key": "!tables.results!G0IBdDLoy3o2j0jJ.bptrG0IBdDLo1000",
+      "type": "document",
+      "name": "Pass Without Trace",
+      "img": "icons/consumables/potions/bottle-round-corked-yellow.webp",
+      "description": "",
+      "documentUuid": "Compendium.beavers-potions.potions.Item.yDfNPSQ296iityij",
       "weight": 1,
       "range": [
         11,
         11
       ],
       "drawn": false,
-      "text": "Messenger's Potion",
-      "img": "icons/consumables/potions/bottle-conical-corked-labeled-shell-cyan.webp",
-      "documentCollection": "beavers-potions.potions",
-      "documentId": "Sp3E9go1b56yNnBX",
-      "_id": "9jOaekm0dEXpf79z",
-      "flags": {},
-      "_key": "!tables.results!G0IBdDLoy3o2j0jJ.9jOaekm0dEXpf79z"
+      "flags": {}
     },
     {
-      "type": 2,
+      "_id": "bptrG0IBdDLo1100",
+      "_key": "!tables.results!G0IBdDLoy3o2j0jJ.bptrG0IBdDLo1100",
+      "type": "document",
+      "name": "Restoration Lesser",
+      "img": "icons/consumables/potions/bottle-round-label-cork-green.webp",
+      "description": "",
+      "documentUuid": "Compendium.beavers-potions.potions.Item.FL9Yuouc8V8OTrbP",
       "weight": 1,
       "range": [
         12,
         12
       ],
       "drawn": false,
-      "text": "Overconfident",
-      "img": "icons/consumables/potions/bottle-pear-corked-labeled-ornamental-purple.webp",
-      "documentCollection": "beavers-potions.potions",
-      "documentId": "RhTbotaKOkFunnJ3",
-      "_id": "xbKf2pK9O6doa3mn",
-      "flags": {},
-      "_key": "!tables.results!G0IBdDLoy3o2j0jJ.xbKf2pK9O6doa3mn"
+      "flags": {}
     },
     {
-      "type": 2,
+      "_id": "bptrG0IBdDLo1200",
+      "_key": "!tables.results!G0IBdDLoy3o2j0jJ.bptrG0IBdDLo1200",
+      "type": "document",
+      "name": "Speak Language",
+      "img": "icons/consumables/potions/bottle-pear-corked-pink.webp",
+      "description": "",
+      "documentUuid": "Compendium.beavers-potions.potions.Item.U8wGkjLGinM5L54q",
       "weight": 1,
       "range": [
         13,
         13
       ],
       "drawn": false,
-      "text": "Pass Without Trace",
-      "img": "icons/consumables/potions/bottle-round-corked-yellow.webp",
-      "documentCollection": "beavers-potions.potions",
-      "documentId": "yDfNPSQ296iityij",
-      "_id": "6DQz7jsrSFGxCeLG",
-      "flags": {},
-      "_key": "!tables.results!G0IBdDLoy3o2j0jJ.6DQz7jsrSFGxCeLG"
+      "flags": {}
     },
     {
-      "type": 2,
+      "_id": "bptrG0IBdDLo1300",
+      "_key": "!tables.results!G0IBdDLoy3o2j0jJ.bptrG0IBdDLo1300",
+      "type": "document",
+      "name": "Specialist (Mage)",
+      "img": "icons/consumables/potions/bottle-pear-corked-labeled-green.webp",
+      "description": "",
+      "documentUuid": "Compendium.beavers-potions.potions.Item.j641yloHOUgLIBwM",
       "weight": 1,
       "range": [
         14,
         14
       ],
       "drawn": false,
-      "text": "Restoration Lesser",
-      "img": "icons/consumables/potions/bottle-round-label-cork-green.webp",
-      "documentCollection": "beavers-potions.potions",
-      "documentId": "FL9Yuouc8V8OTrbP",
-      "_id": "UbaSiZ6l3PWPSvGl",
-      "flags": {},
-      "_key": "!tables.results!G0IBdDLoy3o2j0jJ.UbaSiZ6l3PWPSvGl"
+      "flags": {}
     },
     {
-      "type": 2,
+      "_id": "bptrG0IBdDLo1400",
+      "_key": "!tables.results!G0IBdDLoy3o2j0jJ.bptrG0IBdDLo1400",
+      "type": "document",
+      "name": "Specialist (Melee)",
+      "img": "icons/consumables/potions/bottle-pear-corked-labeled-green.webp",
+      "description": "",
+      "documentUuid": "Compendium.beavers-potions.potions.Item.omxL5fdlJ5wYXlkw",
       "weight": 1,
       "range": [
         15,
         15
       ],
       "drawn": false,
-      "text": "Speak Language",
-      "img": "icons/consumables/potions/bottle-pear-corked-pink.webp",
-      "documentCollection": "beavers-potions.potions",
-      "documentId": "U8wGkjLGinM5L54q",
-      "_id": "5nMioc5bVelOoMUb",
-      "flags": {},
-      "_key": "!tables.results!G0IBdDLoy3o2j0jJ.5nMioc5bVelOoMUb"
+      "flags": {}
     },
     {
-      "type": 2,
+      "_id": "bptrG0IBdDLo1500",
+      "_key": "!tables.results!G0IBdDLoy3o2j0jJ.bptrG0IBdDLo1500",
+      "type": "document",
+      "name": "Specialist (Ranged)",
+      "img": "icons/consumables/potions/bottle-pear-corked-labeled-green.webp",
+      "description": "",
+      "documentUuid": "Compendium.beavers-potions.potions.Item.EdcAwBTS1ke2QxZ0",
       "weight": 1,
       "range": [
         16,
         16
       ],
       "drawn": false,
-      "text": "Specialist ( Mage )",
-      "img": "icons/consumables/potions/bottle-pear-corked-labeled-green.webp",
-      "documentCollection": "beavers-potions.potions",
-      "documentId": "j641yloHOUgLIBwM",
-      "_id": "nG4buXoW1XE0jAgh",
-      "flags": {},
-      "_key": "!tables.results!G0IBdDLoy3o2j0jJ.nG4buXoW1XE0jAgh"
+      "flags": {}
     },
     {
-      "type": 2,
+      "_id": "bptrG0IBdDLo1600",
+      "_key": "!tables.results!G0IBdDLoy3o2j0jJ.bptrG0IBdDLo1600",
+      "type": "document",
+      "name": "Tree Friend",
+      "img": "icons/consumables/potions/bottle-round-corked-green.webp",
+      "description": "",
+      "documentUuid": "Compendium.beavers-potions.potions.Item.Xw46DSfi4sKT8nWz",
       "weight": 1,
       "range": [
         17,
         17
       ],
       "drawn": false,
-      "text": "Specialist ( Meele )",
-      "img": "icons/consumables/potions/bottle-pear-corked-labeled-green.webp",
-      "documentCollection": "beavers-potions.potions",
-      "documentId": "omxL5fdlJ5wYXlkw",
-      "_id": "t5IFyxD5Ny1YrmNp",
-      "flags": {},
-      "_key": "!tables.results!G0IBdDLoy3o2j0jJ.t5IFyxD5Ny1YrmNp"
+      "flags": {}
     },
     {
-      "type": 2,
+      "_id": "bptrG0IBdDLo1700",
+      "_key": "!tables.results!G0IBdDLoy3o2j0jJ.bptrG0IBdDLo1700",
+      "type": "document",
+      "name": "Potion of Greater Healing",
+      "img": "icons/consumables/potions/bottle-bulb-corked-glowing-red.webp",
+      "description": "",
+      "documentUuid": "Compendium.dnd5e.items.Item.L887NdWEP5NqHCrQ",
       "weight": 1,
       "range": [
         18,
         18
       ],
       "drawn": false,
-      "text": "Specialist ( Ranged )",
-      "img": "icons/consumables/potions/bottle-pear-corked-labeled-green.webp",
-      "documentCollection": "beavers-potions.potions",
-      "documentId": "EdcAwBTS1ke2QxZ0",
-      "_id": "vfrk07WRxuDQpegR",
-      "flags": {},
-      "_key": "!tables.results!G0IBdDLoy3o2j0jJ.vfrk07WRxuDQpegR"
-    },
-    {
-      "type": 2,
-      "weight": 1,
-      "range": [
-        19,
-        19
-      ],
-      "drawn": false,
-      "text": "Tree Friend",
-      "img": "icons/consumables/potions/bottle-round-corked-green.webp",
-      "documentCollection": "beavers-potions.potions",
-      "documentId": "Xw46DSfi4sKT8nWz",
-      "_id": "faj05gghaj5Nq1XZ",
-      "flags": {},
-      "_key": "!tables.results!G0IBdDLoy3o2j0jJ.faj05gghaj5Nq1XZ"
-    },
-    {
-      "type": 2,
-      "weight": 1,
-      "range": [
-        20,
-        20
-      ],
-      "drawn": false,
-      "text": "Potion of Greater Healing",
-      "img": "icons/consumables/potions/bottle-bulb-corked-glowing-red.webp",
-      "documentCollection": "dnd5e.items",
-      "documentId": "L887NdWEP5NqHCrQ",
-      "_id": "LL63kXpUZldoo1Ta",
-      "flags": {},
-      "_key": "!tables.results!G0IBdDLoy3o2j0jJ.LL63kXpUZldoo1Ta"
+      "flags": {}
     }
-  ],
-  "formula": "1d20",
-  "replacement": true,
-  "displayRoll": true,
-  "flags": {
-    "core": {}
-  },
-  "_stats": {
-    "systemId": "dnd5e",
-    "systemVersion": "2.4.1",
-    "coreVersion": "11.315",
-    "createdTime": 1669921433584,
-    "modifiedTime": 1702947754179,
-    "lastModifiedBy": "1enA27CLCptznVn9"
-  },
-  "_id": "G0IBdDLoy3o2j0jJ",
-  "folder": null,
-  "sort": 0,
-  "ownership": {
-    "default": 0,
-    "1enA27CLCptznVn9": 3
-  },
-  "_key": "!tables!G0IBdDLoy3o2j0jJ"
+  ]
 }

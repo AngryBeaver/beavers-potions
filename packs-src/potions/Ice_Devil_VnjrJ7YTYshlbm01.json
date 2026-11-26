@@ -1,197 +1,187 @@
 {
+  "_id": "VnjrJ7YTYshlbm01",
+  "_key": "!items!VnjrJ7YTYshlbm01",
   "name": "Ice Devil",
   "type": "consumable",
   "img": "icons/consumables/potions/bottle-ornate-bat-teal.webp",
   "system": {
     "description": {
-      "value": "<p><span style=\"font-family:Signika, sans-serif\">You become an ice devil for 1 min. You do not just polymorph into one you actually become one.<br />You can not willingly dismiss the effect.<br />Afterwards your mind is corrupted for a couple of days while the effect wears off.</span></p><p></p><p>IceDevil:</p><ul><li><p>You are selfcentered, egoistic, you have no sense of emphaty,</p></li><li><p>You see your companions as slaves, lesser fouls that might be usefull to you, if not you are willing to sacrifice them.</p></li><li><p>Your main motivation is to get promoted by slaughtering enemies and claiming as many souls as possible.</p></li></ul><p></p><p>Corrupted Mind:</p><ul><li><p>You do not remember what happend</p></li><li><p>You feel like you have lost some great power and someone is to blame for it.</p></li><li><p>You have the feeling everyone is lying to you and your companions are only selfish and do not want the best of you.</p></li></ul>",
-      "chat": "",
-      "unidentified": ""
+      "value": "<p>You become an ice devil for 1 minute. You do not just polymorph into one, you actually become one. You cannot willingly dismiss the effect. Afterwards your mind is corrupted for a couple of days while the effect wears off.</p><p><strong>Ice Devil:</strong> You are self-centered and egoistic, you have no sense of empathy. You see your companions as slaves, lesser fools that might be useful to you; if not, you are willing to sacrifice them. Your main motivation is to get promoted by slaughtering enemies and claiming as many souls as possible.</p><p><strong>Corrupted Mind:</strong> You do not remember what happened. You feel like you have lost some great power and someone is to blame for it. You have the feeling everyone is lying to you and your companions are only selfish and do not want the best for you.</p>",
+      "chat": ""
     },
+    "identifier": "ice-devil",
     "source": {
-      "custom": ""
+      "custom": "Beaver's Potions",
+      "rules": "2014",
+      "book": "",
+      "license": ""
     },
     "quantity": 1,
-    "weight": 0.1,
+    "weight": {
+      "value": 0.5,
+      "units": "lb"
+    },
     "price": {
       "value": 5000,
       "denomination": "gp"
     },
-    "attunement": 0,
-    "equipped": false,
     "rarity": "legendary",
     "identified": true,
-    "activation": {
-      "type": "action",
-      "cost": 1,
-      "condition": ""
+    "unidentified": {
+      "description": ""
     },
-    "duration": {
-      "value": "1",
-      "units": "minute"
+    "container": null,
+    "attunement": "",
+    "attuned": false,
+    "equipped": false,
+    "type": {
+      "value": "potion",
+      "subtype": ""
     },
-    "cover": null,
-    "crewed": false,
-    "target": {
-      "value": 1,
-      "width": null,
-      "units": "",
-      "type": "creature",
-      "prompt": true
-    },
-    "range": {
-      "value": null,
-      "long": null,
-      "units": ""
-    },
+    "properties": [
+      "mgc"
+    ],
     "uses": {
-      "value": 1,
+      "spent": 0,
       "max": "1",
-      "per": "charges",
-      "recovery": "",
-      "autoDestroy": true,
-      "prompt": true
+      "recovery": [],
+      "autoDestroy": true
     },
-    "consume": {
-      "type": "",
-      "target": "",
-      "amount": null,
-      "scale": false
-    },
-    "ability": null,
-    "actionType": "",
-    "attackBonus": "",
-    "chatFlavor": "",
-    "critical": {
-      "threshold": null,
-      "damage": ""
-    },
-    "damage": {
-      "parts": [],
-      "versatile": ""
-    },
-    "formula": "",
-    "save": {
-      "ability": "",
-      "dc": null,
-      "scaling": "spell"
-    },
-    "consumableType": "potion",
-    "properties": {}
-  },
-  "effects": [
-    {
-      "icon": "icons/consumables/potions/bottle-ornate-bat-teal.webp",
-      "changes": [
-        {
-          "key": "macro.itemMacro",
-          "mode": 0,
-          "value": "",
-          "priority": 20
-        }
-      ],
-      "transfer": false,
-      "_id": "l6SOiRZ0ubmOpt4G",
-      "disabled": false,
-      "duration": {
-        "startTime": null,
-        "seconds": null,
-        "combat": null,
-        "rounds": null,
-        "turns": null,
-        "startRound": null,
-        "startTurn": null
-      },
-      "origin": null,
-      "tint": null,
-      "flags": {
-        "dae": {
-          "selfTarget": false,
-          "selfTargetAlways": false,
-          "stackable": "none",
-          "durationExpression": "",
-          "specialDuration": [],
-          "macroRepeat": "none"
-        },
-        "core": {
-          "statusId": ""
-        },
-        "ActiveAuras": {
-          "isAura": false,
-          "aura": "None",
-          "radius": null,
-          "alignment": "",
-          "type": "",
-          "ignoreSelf": false,
-          "height": false,
-          "hidden": false,
-          "displayTemp": false,
-          "hostile": false,
-          "onlyOnce": false
-        }
-      },
-      "name": "Ice Devil",
-      "description": "",
-      "statuses": [],
-      "_key": "!items.effects!VnjrJ7YTYshlbm01.l6SOiRZ0ubmOpt4G"
-    }
-  ],
-  "flags": {
-    "core": {},
-    "magicitems": {
-      "enabled": false,
-      "equipped": false,
-      "attuned": false,
-      "charges": "0",
-      "chargeType": "c1",
-      "destroy": false,
-      "destroyFlavorText": "reaches 0 charges: it crumbles into ashes and is destroyed.",
-      "rechargeable": false,
-      "recharge": "0",
-      "rechargeType": "t1",
-      "rechargeUnit": "r1",
-      "sorting": "l"
-    },
-    "itemacro": {
-      "macro": {
-        "name": "Ice Devil",
-        "type": "script",
-        "scope": "global",
-        "command": "if(args[0] === \"on\"){\n  const actor = await fromUuid(args[1].actorUuid);\n  const nextActor = await game.packs.get(\"dnd5e.monsters\").getDocument(\"1zzRQps9jZdLZGqI\");\n  const polymorphedActor = await actor.transformInto(nextActor);\n  const actorUpdate = {};\n  actorUpdate[\"flags.beavers-potions.polymorphed\"] = polymorphedActor[0]._actor.uuid\n  await actor.update(actorUpdate);\n  await polymorphedActor[0]._actor.update(actorUpdate);\n}\nif(args[0] === \"off\"){\n  const actor = await fromUuid(args[1].actorUuid);\n  console.log(actor);\n  console.log(actor.flags[\"beavers-potions\"].polymorphed);\n  const polymorphedActor = await fromUuid(actor.flags[\"beavers-potions\"].polymorphed);\n  console.log(polymorphedActor);\n  await polymorphedActor.revertOriginalForm()\n}",
-        "author": "r8M7z5xqyZDxng8W",
-        "_id": null,
-        "img": "icons/svg/dice-target.svg",
-        "folder": null,
+    "activities": {
+      "bpactVnjrJ7YDrin": {
+        "_id": "bpactVnjrJ7YDrin",
+        "type": "transform",
+        "name": "Drink",
         "sort": 0,
-        "ownership": {
-          "default": 0
+        "activation": {
+          "type": "action",
+          "value": null,
+          "override": false,
+          "condition": ""
         },
-        "flags": {},
-        "_stats": {
-          "systemId": null,
-          "systemVersion": null,
-          "coreVersion": null,
-          "createdTime": null,
-          "modifiedTime": null,
-          "lastModifiedBy": null
-        }
+        "consumption": {
+          "scaling": {
+            "allowed": false
+          },
+          "spellSlot": true,
+          "targets": [
+            {
+              "type": "itemUses",
+              "value": "1",
+              "target": ""
+            }
+          ]
+        },
+        "description": {
+          "chatFlavor": ""
+        },
+        "duration": {
+          "units": "inst",
+          "concentration": false,
+          "override": false
+        },
+        "effects": [],
+        "range": {
+          "units": "self",
+          "override": false,
+          "special": ""
+        },
+        "target": {
+          "template": {
+            "contiguous": false,
+            "units": "ft",
+            "type": ""
+          },
+          "affects": {
+            "choice": false,
+            "count": "",
+            "type": "self"
+          },
+          "override": false,
+          "prompt": false
+        },
+        "uses": {
+          "spent": 0,
+          "recovery": [],
+          "max": ""
+        },
+        "img": "",
+        "visibility": {
+          "requireMagic": false,
+          "level": {
+            "min": null,
+            "max": null
+          },
+          "identifier": ""
+        },
+        "profiles": [
+          {
+            "_id": "bpprofVnjrJ7YTYs",
+            "name": "Ice Devil",
+            "uuid": "Compendium.dnd5e.actors24.Actor.mmIceDevil000000",
+            "cr": "",
+            "sizes": [],
+            "types": [],
+            "movement": [],
+            "level": {
+              "min": null,
+              "max": null
+            }
+          }
+        ],
+        "transform": {
+          "customize": false,
+          "mode": "",
+          "preset": "polymorph",
+          "formless": false
+        },
+        "settings": null
       }
     }
   },
-  "_stats": {
-    "systemId": "dnd5e",
-    "systemVersion": "2.4.1",
-    "coreVersion": "11.315",
-    "createdTime": 1666288212883,
-    "modifiedTime": 1702947838758,
-    "lastModifiedBy": "1enA27CLCptznVn9"
-  },
-  "_id": "VnjrJ7YTYshlbm01",
+  "effects": [
+    {
+      "_id": "bpfxVnjrJ7YT9000",
+      "_key": "!items.effects!VnjrJ7YTYshlbm01.bpfxVnjrJ7YT9000",
+      "name": "Corrupted Mind",
+      "img": "icons/consumables/potions/bottle-ornate-bat-teal.webp",
+      "type": "base",
+      "description": "<p>You do not remember what happened. You feel like you have lost some great power and someone is to blame for it. You have the feeling everyone is lying to you.</p>",
+      "system": {
+        "changes": [],
+        "magical": true
+      },
+      "disabled": false,
+      "transfer": false,
+      "duration": {
+        "value": 3,
+        "units": "days",
+        "expiry": "turnStart",
+        "expired": false
+      },
+      "statuses": [],
+      "flags": {},
+      "tint": "#ffffff",
+      "showIcon": 1,
+      "origin": null,
+      "start": null,
+      "sort": 0
+    }
+  ],
   "folder": null,
   "sort": 0,
   "ownership": {
-    "default": 0,
-    "1enA27CLCptznVn9": 3
+    "default": 0
   },
-  "_key": "!items!VnjrJ7YTYshlbm01"
+  "flags": {
+    "beavers-potions": {
+      "potion": true,
+      "use": {
+        "transform": {
+          "seconds": 60,
+          "after": "bpfxVnjrJ7YT9000"
+        }
+      }
+    }
+  }
 }

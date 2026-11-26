@@ -1,0 +1,209 @@
+{
+  "_id": "j641yloHOUgLIBwM",
+  "_key": "!items!j641yloHOUgLIBwM",
+  "name": "Specialist (Mage)",
+  "type": "consumable",
+  "img": "icons/consumables/potions/bottle-pear-corked-labeled-green.webp",
+  "system": {
+    "description": {
+      "value": "<p>For the next minute you gain +2 on spell attacks and +2 on spell damage, while your speed is halved.</p>",
+      "chat": ""
+    },
+    "identifier": "specialist-mage",
+    "source": {
+      "custom": "Beaver's Potions",
+      "rules": "2014",
+      "book": "",
+      "license": ""
+    },
+    "quantity": 1,
+    "weight": {
+      "value": 0.5,
+      "units": "lb"
+    },
+    "price": {
+      "value": 250,
+      "denomination": "gp"
+    },
+    "rarity": "uncommon",
+    "identified": true,
+    "unidentified": {
+      "description": ""
+    },
+    "container": null,
+    "attunement": "",
+    "attuned": false,
+    "equipped": false,
+    "type": {
+      "value": "potion",
+      "subtype": ""
+    },
+    "properties": [
+      "mgc"
+    ],
+    "uses": {
+      "spent": 0,
+      "max": "1",
+      "recovery": [],
+      "autoDestroy": true
+    },
+    "activities": {
+      "bpactj641yloDrin": {
+        "_id": "bpactj641yloDrin",
+        "type": "utility",
+        "name": "Drink",
+        "sort": 0,
+        "activation": {
+          "type": "action",
+          "value": null,
+          "override": false,
+          "condition": ""
+        },
+        "consumption": {
+          "scaling": {
+            "allowed": false
+          },
+          "spellSlot": true,
+          "targets": [
+            {
+              "type": "itemUses",
+              "value": "1",
+              "target": ""
+            }
+          ]
+        },
+        "description": {
+          "chatFlavor": ""
+        },
+        "duration": {
+          "units": "minute",
+          "value": "1",
+          "concentration": false,
+          "override": false
+        },
+        "effects": [
+          {
+            "_id": "bpfxj641yloH0000",
+            "level": {
+              "min": null,
+              "max": null
+            }
+          }
+        ],
+        "range": {
+          "units": "self",
+          "override": false,
+          "special": ""
+        },
+        "target": {
+          "template": {
+            "contiguous": false,
+            "units": "ft",
+            "type": ""
+          },
+          "affects": {
+            "choice": false,
+            "count": "",
+            "type": "self"
+          },
+          "override": false,
+          "prompt": false
+        },
+        "uses": {
+          "spent": 0,
+          "recovery": [],
+          "max": ""
+        },
+        "img": "",
+        "visibility": {
+          "requireMagic": false,
+          "level": {
+            "min": null,
+            "max": null
+          },
+          "identifier": ""
+        }
+      }
+    }
+  },
+  "effects": [
+    {
+      "_id": "bpfxj641yloH0000",
+      "_key": "!items.effects!j641yloHOUgLIBwM.bpfxj641yloH0000",
+      "name": "Specialist (Mage)",
+      "img": "icons/consumables/potions/bottle-pear-corked-labeled-green.webp",
+      "type": "base",
+      "description": "<p>For the next minute you gain +2 on spell attacks and +2 on spell damage, while your speed is halved.</p>",
+      "system": {
+        "changes": [
+          {
+            "_id": "bpfxj641yloHc000",
+            "key": "system.rolls.attack.msak.bonus",
+            "type": "add",
+            "value": "2",
+            "phase": "initial",
+            "priority": null
+          },
+          {
+            "_id": "bpfxj641yloHc100",
+            "key": "system.rolls.attack.rsak.bonus",
+            "type": "add",
+            "value": "2",
+            "phase": "initial",
+            "priority": null
+          },
+          {
+            "_id": "bpfxj641yloHc200",
+            "key": "system.rolls.damage.msak.bonus",
+            "type": "add",
+            "value": "2",
+            "phase": "initial",
+            "priority": null
+          },
+          {
+            "_id": "bpfxj641yloHc300",
+            "key": "system.rolls.damage.rsak.bonus",
+            "type": "add",
+            "value": "2",
+            "phase": "initial",
+            "priority": null
+          },
+          {
+            "_id": "bpfxj641yloHc400",
+            "key": "system.attributes.movement.multiplier",
+            "type": "multiply",
+            "value": "0.5",
+            "phase": "initial",
+            "priority": null
+          }
+        ],
+        "magical": true
+      },
+      "disabled": false,
+      "transfer": false,
+      "duration": {
+        "value": 1,
+        "units": "minutes",
+        "expiry": "turnStart",
+        "expired": false
+      },
+      "statuses": [],
+      "flags": {},
+      "tint": "#ffffff",
+      "showIcon": 1,
+      "origin": null,
+      "start": null,
+      "sort": 0
+    }
+  ],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "beavers-potions": {
+      "potion": true
+    }
+  }
+}

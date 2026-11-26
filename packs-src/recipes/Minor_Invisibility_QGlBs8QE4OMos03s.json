@@ -1,14 +1,20 @@
 {
+  "_id": "QGlBs8QE4OMos03s",
+  "_key": "!items!QGlBs8QE4OMos03s",
   "name": "Minor Invisibility",
   "type": "loot",
   "img": "icons/sundries/scrolls/scroll-worn-tan.webp",
   "system": {
     "description": {
-      "value": "<p>You need beavers-crafting module.</p>",
+      "value": "<p>A recipe of Beaver's Potions, it needs the module Beaver's Crafting.</p><p>Brewing: Arcana check DC 8.</p>",
       "chat": ""
     },
+    "identifier": "recipe-minor-invisibility",
     "source": {
-      "custom": "Recipe"
+      "custom": "Beaver's Potions",
+      "rules": "2014",
+      "book": "",
+      "license": ""
     },
     "quantity": 1,
     "weight": {
@@ -19,64 +25,62 @@
       "value": 0,
       "denomination": "gp"
     },
-    "rarity": "common",
+    "rarity": "",
     "identified": true,
     "type": {
       "value": "",
       "subtype": ""
     },
-    "unidentified": {
-      "description": ""
-    },
-    "container": null,
     "properties": []
   },
   "effects": [],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
   "flags": {
     "beavers-crafting": {
+      "subtype": "Recipe",
       "recipe": {
-        "currency": {
-          "value": 5,
-          "name": "gp"
-        },
         "required": {},
         "input": {
           "1": {
-            "key": {
+            "Compendium-beavers-potions-ingredients-Item-AAfrnuKdmek8QYqV": {
               "id": "AAfrnuKdmek8QYqV",
-              "uuid": "Compendium.beavers-crafting.ingredients.AAfrnuKdmek8QYqV",
-              "img": "modules/beavers-crafting/icons/mushroom/25.png",
-              "type": "Item",
+              "uuid": "Compendium.beavers-potions.ingredients.Item.AAfrnuKdmek8QYqV",
+              "img": "icons/consumables/mushrooms/umbontae-bumpy-purple.webp",
               "name": "Viscid Ghost",
-              "quantity": 5,
-              "itemType": "consumable",
-              "flags": {
-                "beavers-crafting": {}
-              }
+              "type": "Item",
+              "itemType": "loot",
+              "quantity": 5
             }
           }
         },
         "output": {
           "1": {
-            "key": {
+            "Compendium-beavers-potions-potions-Item-kmMTJHkbMUoOLJIy": {
               "id": "kmMTJHkbMUoOLJIy",
-              "uuid": "Compendium.beavers-potions.potions.kmMTJHkbMUoOLJIy",
+              "uuid": "Compendium.beavers-potions.potions.Item.kmMTJHkbMUoOLJIy",
               "img": "icons/consumables/potions/bottle-conical-corked-blue.webp",
-              "type": "Item",
               "name": "Minor Invisibility",
-              "quantity": 1,
+              "type": "Item",
               "itemType": "consumable",
-              "flags": {
-                "beavers-crafting": {}
-              }
+              "quantity": 1
             }
           }
+        },
+        "currency": {
+          "name": "gp",
+          "value": 5
         },
         "beaversTests": {
           "fails": 1,
           "consume": true,
+          "failsInARow": false,
           "ands": {
             "1": {
+              "hits": 1,
               "ors": {
                 "1": {
                   "type": "SkillTest",
@@ -85,32 +89,14 @@
                     "skill": "arc"
                   }
                 }
-              },
-              "hits": 1
+              }
             }
           }
-        }
-      },
-      "subtype": "Recipe"
-    },
-    "core": {}
-  },
-  "_stats": {
-    "compendiumSource": null,
-    "duplicateSource": null,
-    "coreVersion": "12.331",
-    "systemId": "dnd5e",
-    "systemVersion": "3.3.1",
-    "createdTime": 1725004640871,
-    "modifiedTime": 1725007141211,
-    "lastModifiedBy": "jklU6hJSPXST02AA"
-  },
-  "_id": "QGlBs8QE4OMos03s",
-  "folder": null,
-  "sort": 0,
-  "ownership": {
-    "default": 0,
-    "jklU6hJSPXST02AA": 3
-  },
-  "_key": "!items!QGlBs8QE4OMos03s"
+        },
+        "macro": "",
+        "folder": "Beaver's Potions",
+        "kind": "recipe"
+      }
+    }
+  }
 }

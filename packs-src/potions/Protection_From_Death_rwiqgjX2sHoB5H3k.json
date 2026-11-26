@@ -1,166 +1,172 @@
 {
+  "_id": "rwiqgjX2sHoB5H3k",
+  "_key": "!items!rwiqgjX2sHoB5H3k",
   "name": "Protection From Death",
   "type": "consumable",
   "img": "icons/consumables/potions/flask-corked-red-glow.webp",
   "system": {
     "description": {
-      "value": "<p><span style=\"font-family:Signika, sans-serif\">The first time any effect would kill you you are instead reduced to 1 hp, the effect last for one hour.</span></p>",
-      "chat": "",
-      "unidentified": ""
+      "value": "<p>For one hour: the first time any effect would reduce you to 0 hit points you are reduced to 1 hit point instead.</p>",
+      "chat": ""
     },
+    "identifier": "protection-from-death",
     "source": {
-      "custom": ""
+      "custom": "Beaver's Potions",
+      "rules": "2014",
+      "book": "",
+      "license": ""
     },
     "quantity": 1,
-    "weight": 0.1,
+    "weight": {
+      "value": 0.5,
+      "units": "lb"
+    },
     "price": {
       "value": 2500,
       "denomination": "gp"
     },
-    "attunement": 0,
-    "equipped": false,
     "rarity": "veryRare",
     "identified": true,
-    "activation": {
-      "type": "action",
-      "cost": 1,
-      "condition": ""
+    "unidentified": {
+      "description": ""
     },
-    "duration": {
-      "value": "1",
-      "units": "hour"
+    "container": null,
+    "attunement": "",
+    "attuned": false,
+    "equipped": false,
+    "type": {
+      "value": "potion",
+      "subtype": ""
     },
-    "cover": null,
-    "crewed": false,
-    "target": {
-      "value": 1,
-      "width": null,
-      "units": "",
-      "type": "creature",
-      "prompt": true
-    },
-    "range": {
-      "value": null,
-      "long": null,
-      "units": "touch"
-    },
+    "properties": [
+      "mgc"
+    ],
     "uses": {
-      "value": 1,
+      "spent": 0,
       "max": "1",
-      "per": "charges",
-      "recovery": "",
-      "autoDestroy": true,
-      "prompt": true
+      "recovery": [],
+      "autoDestroy": true
     },
-    "consume": {
-      "type": "",
-      "target": "",
-      "amount": null,
-      "scale": false
-    },
-    "ability": null,
-    "actionType": "",
-    "attackBonus": "",
-    "chatFlavor": "",
-    "critical": {
-      "threshold": null,
-      "damage": ""
-    },
-    "damage": {
-      "parts": [],
-      "versatile": ""
-    },
-    "formula": "",
-    "save": {
-      "ability": "",
-      "dc": null,
-      "scaling": "spell"
-    },
-    "consumableType": "potion",
-    "properties": {}
+    "activities": {
+      "bpactrwiqgjXDrin": {
+        "_id": "bpactrwiqgjXDrin",
+        "type": "utility",
+        "name": "Drink",
+        "sort": 0,
+        "activation": {
+          "type": "action",
+          "value": null,
+          "override": false,
+          "condition": ""
+        },
+        "consumption": {
+          "scaling": {
+            "allowed": false
+          },
+          "spellSlot": true,
+          "targets": [
+            {
+              "type": "itemUses",
+              "value": "1",
+              "target": ""
+            }
+          ]
+        },
+        "description": {
+          "chatFlavor": ""
+        },
+        "duration": {
+          "units": "hour",
+          "value": "1",
+          "concentration": false,
+          "override": false
+        },
+        "effects": [
+          {
+            "_id": "bpfxrwiqgjX20000",
+            "level": {
+              "min": null,
+              "max": null
+            }
+          }
+        ],
+        "range": {
+          "units": "self",
+          "override": false,
+          "special": ""
+        },
+        "target": {
+          "template": {
+            "contiguous": false,
+            "units": "ft",
+            "type": ""
+          },
+          "affects": {
+            "choice": false,
+            "count": "",
+            "type": "self"
+          },
+          "override": false,
+          "prompt": false
+        },
+        "uses": {
+          "spent": 0,
+          "recovery": [],
+          "max": ""
+        },
+        "img": "",
+        "visibility": {
+          "requireMagic": false,
+          "level": {
+            "min": null,
+            "max": null
+          },
+          "identifier": ""
+        }
+      }
+    }
   },
   "effects": [
     {
-      "icon": "icons/consumables/potions/flask-corked-red-glow.webp",
-      "origin": "Item.rwiqgjX2sHoB5H3k",
-      "duration": {
-        "startTime": null,
-        "seconds": null,
-        "combat": null,
-        "rounds": null,
-        "turns": null,
-        "startRound": null,
-        "startTurn": null
+      "_id": "bpfxrwiqgjX20000",
+      "_key": "!items.effects!rwiqgjX2sHoB5H3k.bpfxrwiqgjX20000",
+      "name": "Protection From Death",
+      "img": "icons/consumables/potions/flask-corked-red-glow.webp",
+      "type": "base",
+      "description": "<p>For one hour: the first time any effect would reduce you to 0 hit points you are reduced to 1 hit point instead.</p>",
+      "system": {
+        "changes": [],
+        "magical": true
       },
       "disabled": false,
-      "_id": "RSr36YO9t36pFwFw",
-      "changes": [],
-      "tint": null,
       "transfer": false,
+      "duration": {
+        "value": 1,
+        "units": "hours",
+        "expiry": "turnStart",
+        "expired": false
+      },
+      "statuses": [],
       "flags": {
-        "times-up": {},
-        "dae": {
-          "selfTarget": false,
-          "selfTargetAlways": false,
-          "stackable": "noneName",
-          "durationExpression": "",
-          "macroRepeat": "none",
-          "specialDuration": []
-        },
-        "core": {
-          "statusId": ""
-        },
-        "ActiveAuras": {
-          "isAura": false,
-          "aura": "None",
-          "radius": null,
-          "alignment": "",
-          "type": "",
-          "ignoreSelf": false,
-          "height": false,
-          "hidden": false,
-          "displayTemp": false,
-          "hostile": false,
-          "onlyOnce": false
+        "beavers-potions": {
+          "protectionFromDeath": true
         }
       },
-      "name": "Protection From Death",
-      "description": "",
-      "statuses": [],
-      "_key": "!items.effects!rwiqgjX2sHoB5H3k.RSr36YO9t36pFwFw"
+      "tint": "#ffffff",
+      "showIcon": 1,
+      "origin": null,
+      "start": null,
+      "sort": 0
     }
   ],
-  "flags": {
-    "core": {},
-    "magicitems": {
-      "enabled": false,
-      "equipped": false,
-      "attuned": false,
-      "charges": "0",
-      "chargeType": "c1",
-      "destroy": false,
-      "destroyFlavorText": "reaches 0 charges: it crumbles into ashes and is destroyed.",
-      "rechargeable": false,
-      "recharge": "0",
-      "rechargeType": "t1",
-      "rechargeUnit": "r1",
-      "sorting": "l"
-    }
-  },
-  "_stats": {
-    "systemId": "dnd5e",
-    "systemVersion": "2.4.1",
-    "coreVersion": "11.315",
-    "createdTime": 1666288212883,
-    "modifiedTime": 1702947838758,
-    "lastModifiedBy": "1enA27CLCptznVn9"
-  },
-  "_id": "rwiqgjX2sHoB5H3k",
   "folder": null,
   "sort": 0,
   "ownership": {
-    "default": 0,
-    "1enA27CLCptznVn9": 3
+    "default": 0
   },
-  "_key": "!items!rwiqgjX2sHoB5H3k"
+  "flags": {
+    "beavers-potions": {
+      "potion": true
+    }
+  }
 }

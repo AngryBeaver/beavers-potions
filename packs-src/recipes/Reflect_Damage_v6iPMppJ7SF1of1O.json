@@ -1,14 +1,20 @@
 {
+  "_id": "v6iPMppJ7SF1of1O",
+  "_key": "!items!v6iPMppJ7SF1of1O",
   "name": "Reflect Damage",
   "type": "loot",
   "img": "icons/sundries/scrolls/scroll-worn-tan.webp",
   "system": {
     "description": {
-      "value": "<p>You need beavers-crafting module.</p>",
+      "value": "<p>A recipe of Beaver's Potions, it needs the module Beaver's Crafting.</p><p>Brewing: History check DC 13.</p>",
       "chat": ""
     },
+    "identifier": "recipe-reflect-damage",
     "source": {
-      "custom": "Recipe"
+      "custom": "Beaver's Potions",
+      "rules": "2014",
+      "book": "",
+      "license": ""
     },
     "quantity": 1,
     "weight": {
@@ -19,120 +25,106 @@
       "value": 0,
       "denomination": "gp"
     },
-    "rarity": "veryRare",
+    "rarity": "",
     "identified": true,
     "type": {
       "value": "",
       "subtype": ""
     },
-    "unidentified": {
-      "description": ""
-    },
-    "container": null,
     "properties": []
   },
   "effects": [],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
   "flags": {
     "beavers-crafting": {
+      "subtype": "Recipe",
       "recipe": {
-        "currency": {
-          "value": 500,
-          "name": "gp"
-        },
         "required": {},
         "input": {
           "1": {
-            "key": {
+            "Compendium-beavers-potions-ingredients-Item-AAfrnuKdmek8QYqV": {
               "id": "AAfrnuKdmek8QYqV",
-              "uuid": "Compendium.world.ingredients3.AAfrnuKdmek8QYqV",
-              "img": "modules/beavers-crafting/icons/mushroom/25.png",
-              "type": "Item",
+              "uuid": "Compendium.beavers-potions.ingredients.Item.AAfrnuKdmek8QYqV",
+              "img": "icons/consumables/mushrooms/umbontae-bumpy-purple.webp",
               "name": "Viscid Ghost",
-              "quantity": 5,
-              "itemType": "consumable",
-              "flags": {
-                "beavers-crafting": {}
-              }
+              "type": "Item",
+              "itemType": "loot",
+              "quantity": 5
             }
           },
           "2": {
-            "key": {
+            "Compendium-beavers-potions-ingredients-Item-qK9o4MD82WmUgXP8": {
               "id": "qK9o4MD82WmUgXP8",
-              "uuid": "Compendium.world.ingredients3.qK9o4MD82WmUgXP8",
-              "img": "modules/beavers-crafting/icons/mushroom/13.png",
-              "type": "Item",
+              "uuid": "Compendium.beavers-potions.ingredients.Item.qK9o4MD82WmUgXP8",
+              "img": "icons/consumables/mushrooms/bell-shiitake-brown.webp",
               "name": "Vanilla Mob",
-              "quantity": 5,
-              "itemType": "consumable",
-              "flags": {
-                "beavers-crafting": {}
-              }
+              "type": "Item",
+              "itemType": "loot",
+              "quantity": 5
             }
           },
           "3": {
-            "key": {
+            "Compendium-beavers-potions-ingredients-Item-dVFbblELstFhBgeW": {
               "id": "dVFbblELstFhBgeW",
-              "uuid": "Compendium.world.ingredients3.dVFbblELstFhBgeW",
-              "img": "modules/beavers-crafting/icons/mushroom/46.png",
-              "type": "Item",
+              "uuid": "Compendium.beavers-potions.ingredients.Item.dVFbblELstFhBgeW",
+              "img": "icons/consumables/mushrooms/umbontae-pink-purple.webp",
               "name": "Rainblow",
-              "quantity": 5,
-              "itemType": "consumable",
-              "flags": {
-                "beavers-crafting": {}
-              }
+              "type": "Item",
+              "itemType": "loot",
+              "quantity": 5
             }
           },
           "4": {
-            "key": {
+            "Compendium-beavers-potions-ingredients-Item-NHWQ6levQ3apHpN2": {
               "id": "NHWQ6levQ3apHpN2",
-              "uuid": "Compendium.world.ingredients3.NHWQ6levQ3apHpN2",
-              "img": "modules/beavers-crafting/icons/mushroom/48.png",
-              "type": "Item",
+              "uuid": "Compendium.beavers-potions.ingredients.Item.NHWQ6levQ3apHpN2",
+              "img": "icons/consumables/mushrooms/ovate-thin-blue.webp",
               "name": "Silver Dart",
-              "quantity": 5,
-              "itemType": "consumable",
-              "flags": {
-                "beavers-crafting": {}
-              }
+              "type": "Item",
+              "itemType": "loot",
+              "quantity": 5
             }
           },
           "5": {
-            "key": {
+            "Compendium-beavers-potions-ingredients-Item-dozjFH55CR4npT6F": {
               "id": "dozjFH55CR4npT6F",
-              "uuid": "Compendium.beavers-crafting.ingredients.dozjFH55CR4npT6F",
+              "uuid": "Compendium.beavers-potions.ingredients.Item.dozjFH55CR4npT6F",
               "img": "icons/tools/laboratory/bowl-powder-purple.webp",
-              "type": "Item",
               "name": "Magical Essence",
-              "quantity": 3,
+              "type": "Item",
               "itemType": "loot",
-              "flags": {
-                "beavers-crafting": {}
-              }
+              "quantity": 3
             }
           }
         },
         "output": {
           "1": {
-            "key": {
+            "Compendium-beavers-potions-potions-Item-y6zSFJYIKPOiZnI7": {
               "id": "y6zSFJYIKPOiZnI7",
-              "uuid": "Compendium.beavers-potions.potions.y6zSFJYIKPOiZnI7",
+              "uuid": "Compendium.beavers-potions.potions.Item.y6zSFJYIKPOiZnI7",
               "img": "icons/consumables/potions/bottle-round-corked-red.webp",
-              "type": "Item",
               "name": "Reflect Damage",
-              "quantity": 1,
+              "type": "Item",
               "itemType": "consumable",
-              "flags": {
-                "beavers-crafting": {}
-              }
+              "quantity": 1
             }
           }
+        },
+        "currency": {
+          "name": "gp",
+          "value": 500
         },
         "beaversTests": {
           "fails": 1,
           "consume": true,
+          "failsInARow": false,
           "ands": {
             "1": {
+              "hits": 1,
               "ors": {
                 "1": {
                   "type": "SkillTest",
@@ -141,32 +133,14 @@
                     "skill": "his"
                   }
                 }
-              },
-              "hits": 1
+              }
             }
           }
-        }
-      },
-      "subtype": "Recipe"
-    },
-    "core": {}
-  },
-  "_stats": {
-    "compendiumSource": null,
-    "duplicateSource": null,
-    "coreVersion": "12.331",
-    "systemId": "dnd5e",
-    "systemVersion": "3.3.1",
-    "createdTime": 1725004640871,
-    "modifiedTime": 1725007141211,
-    "lastModifiedBy": "jklU6hJSPXST02AA"
-  },
-  "_id": "v6iPMppJ7SF1of1O",
-  "folder": null,
-  "sort": 0,
-  "ownership": {
-    "default": 0,
-    "jklU6hJSPXST02AA": 3
-  },
-  "_key": "!items!v6iPMppJ7SF1of1O"
+        },
+        "macro": "",
+        "folder": "Beaver's Potions",
+        "kind": "recipe"
+      }
+    }
+  }
 }

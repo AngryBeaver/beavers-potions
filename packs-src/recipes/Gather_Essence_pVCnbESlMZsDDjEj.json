@@ -1,14 +1,20 @@
 {
+  "_id": "pVCnbESlMZsDDjEj",
+  "_key": "!items!pVCnbESlMZsDDjEj",
   "name": "Gather Essence",
   "type": "loot",
   "img": "icons/sundries/scrolls/scroll-worn-tan.webp",
   "system": {
     "description": {
-      "value": "",
+      "value": "<p>A recipe of Beaver's Potions, it needs the module Beaver's Crafting.</p><p>Brewing: Arcana check DC 12.</p>",
       "chat": ""
     },
+    "identifier": "recipe-gather-essence",
     "source": {
-      "custom": "Recipe"
+      "custom": "Beaver's Potions",
+      "rules": "2014",
+      "book": "",
+      "license": ""
     },
     "quantity": 1,
     "weight": {
@@ -19,64 +25,62 @@
       "value": 0,
       "denomination": "gp"
     },
-    "rarity": "uncommon",
+    "rarity": "",
     "identified": true,
     "type": {
       "value": "",
       "subtype": ""
     },
-    "unidentified": {
-      "description": ""
-    },
-    "container": null,
     "properties": []
   },
   "effects": [],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
   "flags": {
     "beavers-crafting": {
+      "subtype": "Recipe",
       "recipe": {
-        "currency": {
-          "name": "gp",
-          "value": 5
-        },
-        "macro": "  const component= {\n    \"id\": \"rQ58LK12aGK9ZZdd\",\n    \"uuid\": \"Compendium.beavers-crafting.ingredients.dozjFH55CR4npT6F\",\n    \"type\": \"Item\",\n    \"itemType\": \"consumable\",\n    \"name\": \"Magical Essence\",\n    \"img\": \"icons/tools/laboratory/bowl-powder-purple.webp\",\n    \"quantity\": -1\n  };\n\nfor(const ingredient of Object.values(recipeData.input[1])){\n  const item = await ingredient.getEntity();\n  const rarity = item?.system?.rarity;\n  if(rarity === \"common\"){\n    component.quantity = 0;\n  }\n  if(rarity === \"uncommon\"){\n    component.quantity = 2;\n  }\n  if(rarity === \"rare\"){\n    component.quantity = 4;\n  }\n  if(rarity === \"veryRare\"){\n    component.quantity = 8;\n  }\n  if(rarity === \"legendary\"){\n    component.quantity = 16;\n  }\n  if(rarity === \"artifact\"){\n    component.quantity = 32;\n  }\n  result.updateComponent(\"produced\",component);\n  break;\n}",
         "required": {},
         "input": {
           "1": {
-            "key": {
+            "Compendium-beavers-potions-ingredients-Item-iluiCHKksYVhsxwk": {
               "id": "iluiCHKksYVhsxwk",
-              "uuid": "Compendium.beavers-potions.ingredients.iluiCHKksYVhsxwk",
+              "uuid": "Compendium.beavers-potions.ingredients.Item.iluiCHKksYVhsxwk",
               "img": "modules/beavers-crafting/icons/anyOf.png",
-              "type": "AnyOf",
               "name": "Any Potion",
-              "quantity": 1,
-              "flags": {
-                "beavers-crafting": {}
-              }
+              "type": "AnyOf",
+              "itemType": "loot",
+              "quantity": 1
             }
           }
         },
         "output": {
           "1": {
-            "key": {
+            "Compendium-beavers-potions-ingredients-Item-dozjFH55CR4npT6F": {
               "id": "dozjFH55CR4npT6F",
-              "uuid": "Compendium.beavers-crafting.ingredients.dozjFH55CR4npT6F",
+              "uuid": "Compendium.beavers-potions.ingredients.Item.dozjFH55CR4npT6F",
               "img": "icons/tools/laboratory/bowl-powder-purple.webp",
-              "type": "Item",
               "name": "Magical Essence",
-              "quantity": 1,
+              "type": "Item",
               "itemType": "loot",
-              "flags": {
-                "beavers-crafting": {}
-              }
+              "quantity": 1
             }
           }
+        },
+        "currency": {
+          "name": "gp",
+          "value": 5
         },
         "beaversTests": {
           "fails": 1,
           "consume": true,
+          "failsInARow": false,
           "ands": {
             "1": {
+              "hits": 1,
               "ors": {
                 "1": {
                   "type": "SkillTest",
@@ -85,34 +89,14 @@
                     "skill": "arc"
                   }
                 }
-              },
-              "hits": 1
+              }
             }
           }
         },
-        "folder": "",
-        "instruction": ""
-      },
-      "subtype": "Recipe"
-    },
-    "core": {}
-  },
-  "_stats": {
-    "compendiumSource": null,
-    "duplicateSource": null,
-    "coreVersion": "12.331",
-    "systemId": "dnd5e",
-    "systemVersion": "3.3.1",
-    "createdTime": 1725004640871,
-    "modifiedTime": 1725007141211,
-    "lastModifiedBy": "jklU6hJSPXST02AA"
-  },
-  "_id": "pVCnbESlMZsDDjEj",
-  "folder": null,
-  "sort": 0,
-  "ownership": {
-    "default": 0,
-    "jklU6hJSPXST02AA": 3
-  },
-  "_key": "!items!pVCnbESlMZsDDjEj"
+        "macro": "const essence = {\n  id: \"dozjFH55CR4npT6F\",\n  uuid: \"Compendium.beavers-potions.ingredients.Item.dozjFH55CR4npT6F\",\n  type: \"Item\",\n  itemType: \"loot\",\n  name: \"Magical Essence\",\n  img: \"icons/tools/laboratory/bowl-powder-purple.webp\",\n  quantity: 1\n};\nconst perRarity = { common: 0, uncommon: 2, rare: 4, veryRare: 8, legendary: 16, artifact: 32 };\nfor (const ingredient of Object.values(recipeData.input[1] ?? {})) {\n  const item = await ingredient.getEntity();\n  // one essence is in the recipe's result already: add what the rarity gives on top of it\n  essence.quantity = (perRarity[item?.system?.rarity] ?? 1) - 1;\n  if (essence.quantity !== 0) result.updateComponent(\"produced\", essence);\n  break;\n}",
+        "folder": "Beaver's Potions",
+        "kind": "recipe"
+      }
+    }
+  }
 }

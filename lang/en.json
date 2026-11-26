@@ -1,0 +1,29 @@
+{
+  "beavers-potions": {
+    "settings": {
+      "automate": {
+        "name": "Apply potion effects automatically",
+        "hint": "When a potion of Beaver's Potions is drunk, its effects are put on the drinker (or the creatures in its area) right away. Without it, use the buttons of the chat card."
+      }
+    },
+    "noGM": "Beaver's Potions: this needs a Gamemaster to be connected.",
+    "restoredSlots": "Spell slots restored (level {levels}), {exhaustion} level(s) of exhaustion gained.",
+    "restorationTitle": "Restoration",
+    "restorationChoose": "Choose what the potion ends:",
+    "restored": "Ended: {what}.",
+    "nothingToRestore": "There is nothing the potion could end.",
+    "exhaustionMinusOne": "One level of exhaustion",
+    "restoreHpMax": "The reduction of the hit point maximum",
+    "needsTarget": "{name}: target the creature whose blood is in the potion.",
+    "drained": "Drained {dealt} hit points from {target}.",
+    "noForm": "{name}: the creature to transform into was not found.",
+    "distortionMiss": "The attack of {attacker} passes through the distortion and misses (d100: {roll}, needs {chance} or less).",
+    "distortionHit": "The distortion does not fool {attacker} (d100: {roll}, needs {chance} or less to miss).",
+    "invulnerable": "Outside of time: nothing changes.",
+    "reflected": "{amount} damage reflected to {attacker}.",
+    "protectedFromDeath": "Protection from death: instead of dying, 1 hit point remains.",
+    "turnHeal": "Regains {amount} hit points.",
+    "turnTemp": "Has {amount} temporary hit points.",
+    "noEffect": "The potion has no effect."
+  }
+}

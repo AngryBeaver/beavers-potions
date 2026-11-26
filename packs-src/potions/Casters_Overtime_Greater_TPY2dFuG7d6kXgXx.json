@@ -1,210 +1,181 @@
 {
+  "_id": "TPY2dFuG7d6kXgXx",
+  "_key": "!items!TPY2dFuG7d6kXgXx",
   "name": "Casters Overtime Greater",
   "type": "consumable",
   "img": "icons/consumables/potions/bottle-metal-yellow-gray.webp",
   "system": {
     "description": {
-      "value": "<p><span style=\"font-family:Signika, sans-serif\">You spend one round doing nothing else then concentrating. During this time you can not effectivly defend yourself, everyone attacking you will have advantage and hits critically.<br /><br />Afterwards<br />You replenished all your first, second and 3rd level spell slots while getting two levels of Exhaustion which can not be magically healed.</span></p>",
-      "chat": "",
-      "unidentified": ""
+      "value": "<p>You spend one round doing nothing else than concentrating. During this time you cannot defend yourself: you are incapacitated, everyone attacking you has advantage and hits critically.</p><p>You replenish all your spell slots of the first to third level while you gain 2 levels of exhaustion, which cannot be healed magically.</p>",
+      "chat": ""
     },
+    "identifier": "casters-overtime-greater",
     "source": {
-      "custom": ""
+      "custom": "Beaver's Potions",
+      "rules": "2014",
+      "book": "",
+      "license": ""
     },
     "quantity": 1,
-    "weight": 0.1,
+    "weight": {
+      "value": 0.5,
+      "units": "lb"
+    },
     "price": {
       "value": 750,
       "denomination": "gp"
     },
-    "attunement": 0,
-    "equipped": false,
     "rarity": "rare",
     "identified": true,
-    "activation": {
-      "type": "action",
-      "cost": 1,
-      "condition": ""
+    "unidentified": {
+      "description": ""
     },
-    "duration": {
-      "value": "1",
-      "units": "round"
+    "container": null,
+    "attunement": "",
+    "attuned": false,
+    "equipped": false,
+    "type": {
+      "value": "potion",
+      "subtype": ""
     },
-    "cover": null,
-    "crewed": false,
-    "target": {
-      "value": 1,
-      "width": null,
-      "units": "",
-      "type": "creature",
-      "prompt": true
-    },
-    "range": {
-      "value": null,
-      "long": null,
-      "units": "touch"
-    },
+    "properties": [
+      "mgc"
+    ],
     "uses": {
-      "value": 1,
+      "spent": 0,
       "max": "1",
-      "per": "charges",
-      "recovery": "",
-      "autoDestroy": true,
-      "prompt": true
+      "recovery": [],
+      "autoDestroy": true
     },
-    "consume": {
-      "type": "",
-      "target": "",
-      "amount": null,
-      "scale": false
-    },
-    "ability": null,
-    "actionType": "",
-    "attackBonus": "",
-    "chatFlavor": "",
-    "critical": {
-      "threshold": null,
-      "damage": ""
-    },
-    "damage": {
-      "parts": [],
-      "versatile": ""
-    },
-    "formula": "",
-    "save": {
-      "ability": "",
-      "dc": null,
-      "scaling": "spell"
-    },
-    "consumableType": "potion",
-    "properties": {}
-  },
-  "effects": [
-    {
-      "icon": "icons/consumables/potions/bottle-metal-yellow-gray.webp",
-      "origin": "Item.cWELUkq6t7rP6Ryo",
-      "duration": {
-        "startTime": null,
-        "seconds": null,
-        "combat": null,
-        "rounds": null,
-        "turns": null,
-        "startRound": null,
-        "startTurn": null
-      },
-      "disabled": false,
-      "_id": "AtkJiV5eKnpvDhlt",
-      "changes": [
-        {
-          "key": "flags.midi-qol.grants.advantage.attack.all",
-          "mode": 0,
-          "value": "1",
-          "priority": 20
-        },
-        {
-          "key": "flags.midi-qol.grants.critical.all",
-          "mode": 0,
-          "value": "1",
-          "priority": 20
-        },
-        {
-          "key": "macro.itemMacro",
-          "mode": 0,
-          "value": "",
-          "priority": 20
-        }
-      ],
-      "tint": null,
-      "transfer": false,
-      "flags": {
-        "times-up": {},
-        "dae": {
-          "selfTarget": false,
-          "selfTargetAlways": false,
-          "stackable": "none",
-          "durationExpression": "",
-          "macroRepeat": "none",
-          "specialDuration": []
-        },
-        "core": {
-          "statusId": ""
-        },
-        "ActiveAuras": {
-          "isAura": false,
-          "aura": "None",
-          "radius": null,
-          "alignment": "",
-          "type": "",
-          "ignoreSelf": false,
-          "height": false,
-          "hidden": false,
-          "displayTemp": false,
-          "hostile": false,
-          "onlyOnce": false
-        }
-      },
-      "name": "OutOfMind",
-      "description": "",
-      "statuses": [],
-      "_key": "!items.effects!TPY2dFuG7d6kXgXx.AtkJiV5eKnpvDhlt"
-    }
-  ],
-  "flags": {
-    "core": {},
-    "magicitems": {
-      "enabled": false,
-      "equipped": false,
-      "attuned": false,
-      "charges": "0",
-      "chargeType": "c1",
-      "destroy": false,
-      "destroyFlavorText": "reaches 0 charges: it crumbles into ashes and is destroyed.",
-      "rechargeable": false,
-      "recharge": "0",
-      "rechargeType": "t1",
-      "rechargeUnit": "r1",
-      "sorting": "l"
-    },
-    "itemacro": {
-      "macro": {
-        "name": "Casters Overtime Greater",
-        "type": "script",
-        "scope": "global",
-        "command": "if(args[0] === \"off\"){\n      const actor = await fromUuid(args[1].actorUuid);\n      const prevActiveEffect = actor.effects.find((ae)=> ae.label.startsWith(\"Exhaustion\"));\n      let effectName = \"Exhaustion 2\";\n      if(prevActiveEffect !== undefined){\n        if(prevActiveEffect.label.endsWith(\"1\")){effectName=\"Exhaustion 3\";}\n        else if(prevActiveEffect.label.endsWith(\"2\")){effectName=\"Exhaustion 4\";}\n        else if(prevActiveEffect.label.endsWith(\"3\")){effectName=\"Exhaustion 5\";}\n        else {effectName=\"Dead\";}\n        prevActiveEffect.delete();\n      }\n      const activeEffect = game.dfreds.effectInterface.findEffectByName(effectName);\n      await actor.createEmbeddedDocuments('ActiveEffect', [activeEffect.convertToActiveEffectData()]);\n      await actor.update({system:{spells:{\n        spell3:{value:actor.system.spells.spell3.max},\n        spell2:{value:actor.system.spells.spell2.max},\n        spell1:{value:actor.system.spells.spell1.max}\n      }}});\n    }",
-        "author": "r8M7z5xqyZDxng8W",
-        "_id": null,
-        "img": "icons/svg/dice-target.svg",
-        "folder": null,
+    "activities": {
+      "bpactTPY2dFuDrin": {
+        "_id": "bpactTPY2dFuDrin",
+        "type": "utility",
+        "name": "Drink",
         "sort": 0,
-        "ownership": {
-          "default": 0
+        "activation": {
+          "type": "action",
+          "value": null,
+          "override": false,
+          "condition": ""
         },
-        "flags": {},
-        "_stats": {
-          "systemId": null,
-          "systemVersion": null,
-          "coreVersion": null,
-          "createdTime": null,
-          "modifiedTime": null,
-          "lastModifiedBy": null
+        "consumption": {
+          "scaling": {
+            "allowed": false
+          },
+          "spellSlot": true,
+          "targets": [
+            {
+              "type": "itemUses",
+              "value": "1",
+              "target": ""
+            }
+          ]
+        },
+        "description": {
+          "chatFlavor": ""
+        },
+        "duration": {
+          "units": "round",
+          "value": "1",
+          "concentration": false,
+          "override": false
+        },
+        "effects": [
+          {
+            "_id": "bpfxTPY2dFuG0000",
+            "level": {
+              "min": null,
+              "max": null
+            }
+          }
+        ],
+        "range": {
+          "units": "self",
+          "override": false,
+          "special": ""
+        },
+        "target": {
+          "template": {
+            "contiguous": false,
+            "units": "ft",
+            "type": ""
+          },
+          "affects": {
+            "choice": false,
+            "count": "",
+            "type": "self"
+          },
+          "override": false,
+          "prompt": false
+        },
+        "uses": {
+          "spent": 0,
+          "recovery": [],
+          "max": ""
+        },
+        "img": "",
+        "visibility": {
+          "requireMagic": false,
+          "level": {
+            "min": null,
+            "max": null
+          },
+          "identifier": ""
         }
       }
     }
   },
-  "_stats": {
-    "systemId": "dnd5e",
-    "systemVersion": "2.4.1",
-    "coreVersion": "11.315",
-    "createdTime": 1666288212883,
-    "modifiedTime": 1702947838758,
-    "lastModifiedBy": "1enA27CLCptznVn9"
-  },
-  "_id": "TPY2dFuG7d6kXgXx",
+  "effects": [
+    {
+      "_id": "bpfxTPY2dFuG0000",
+      "_key": "!items.effects!TPY2dFuG7d6kXgXx.bpfxTPY2dFuG0000",
+      "name": "Out of Mind",
+      "img": "icons/consumables/potions/bottle-metal-yellow-gray.webp",
+      "type": "base",
+      "description": "<p>You spend one round doing nothing else than concentrating. During this time you cannot defend yourself: you are incapacitated, everyone attacking you has advantage and hits critically.</p><p>You replenish all your spell slots of the first to third level while you gain 2 levels of exhaustion, which cannot be healed magically.</p>",
+      "system": {
+        "changes": [],
+        "magical": true
+      },
+      "disabled": false,
+      "transfer": false,
+      "duration": {
+        "value": 1,
+        "units": "rounds",
+        "expiry": "turnStart",
+        "expired": false
+      },
+      "statuses": [
+        "incapacitated"
+      ],
+      "flags": {
+        "beavers-potions": {
+          "grantsAdvantage": true,
+          "grantsCritical": true
+        }
+      },
+      "tint": "#ffffff",
+      "showIcon": 1,
+      "origin": null,
+      "start": null,
+      "sort": 0
+    }
+  ],
   "folder": null,
   "sort": 0,
   "ownership": {
-    "default": 0,
-    "1enA27CLCptznVn9": 3
+    "default": 0
   },
-  "_key": "!items!TPY2dFuG7d6kXgXx"
+  "flags": {
+    "beavers-potions": {
+      "potion": true,
+      "use": {
+        "restoreSlots": {
+          "maxLevel": 3,
+          "exhaustion": 2
+        }
+      }
+    }
+  }
 }

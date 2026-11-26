@@ -1,14 +1,20 @@
 {
+  "_id": "iluiCHKksYVhsxwk",
+  "_key": "!items!iluiCHKksYVhsxwk",
   "name": "Any Potion",
   "type": "loot",
   "img": "modules/beavers-crafting/icons/anyOf.png",
   "system": {
     "description": {
-      "value": "",
+      "value": "<p>Any potion.</p>",
       "chat": ""
     },
+    "identifier": "any-potion",
     "source": {
-      "custom": ""
+      "custom": "Beaver's Potions",
+      "rules": "2014",
+      "book": "",
+      "license": ""
     },
     "quantity": 1,
     "weight": {
@@ -21,42 +27,28 @@
     },
     "rarity": "common",
     "identified": true,
-    "type": {
-      "value": "",
-      "subtype": ""
-    },
     "unidentified": {
       "description": ""
     },
     "container": null,
+    "type": {
+      "value": "material",
+      "subtype": ""
+    },
     "properties": []
   },
   "effects": [],
-  "flags": {
-    "beavers-crafting": {
-      "anyOf": {
-        "macro": "return item.type === \"consumable\" && (item.system.consumableType === \"potion\" || item.system.type.value === \"potion\")"
-      },
-      "subtype": "AnyOf"
-    },
-    "core": {}
-  },
-  "_stats": {
-    "compendiumSource": null,
-    "duplicateSource": null,
-    "coreVersion": "12.331",
-    "systemId": "dnd5e",
-    "systemVersion": "3.3.1",
-    "createdTime": 1725005941258,
-    "modifiedTime": 1725005941258,
-    "lastModifiedBy": "jklU6hJSPXST02AA"
-  },
-  "_id": "iluiCHKksYVhsxwk",
   "folder": null,
   "sort": 0,
   "ownership": {
-    "default": 0,
-    "jklU6hJSPXST02AA": 3
+    "default": 0
   },
-  "_key": "!items!iluiCHKksYVhsxwk"
+  "flags": {
+    "beavers-crafting": {
+      "subtype": "AnyOf",
+      "anyOf": {
+        "macro": "// beavers-crafting passes an item or a component of the actor\nconst doc = item?.system ? item : await item?.getEntity?.();\nreturn doc?.type === \"consumable\" && doc.system.type?.value === \"potion\";"
+      }
+    }
+  }
 }

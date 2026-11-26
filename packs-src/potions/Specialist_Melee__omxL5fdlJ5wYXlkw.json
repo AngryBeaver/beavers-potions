@@ -1,0 +1,201 @@
+{
+  "_id": "omxL5fdlJ5wYXlkw",
+  "_key": "!items!omxL5fdlJ5wYXlkw",
+  "name": "Specialist (Melee)",
+  "type": "consumable",
+  "img": "icons/consumables/potions/bottle-pear-corked-labeled-green.webp",
+  "system": {
+    "description": {
+      "value": "<p>For the next minute you gain +2 on melee weapon attacks and +2 on melee weapon damage, while your Dexterity and Wisdom saving throws are lowered by 2.</p>",
+      "chat": ""
+    },
+    "identifier": "specialist-melee",
+    "source": {
+      "custom": "Beaver's Potions",
+      "rules": "2014",
+      "book": "",
+      "license": ""
+    },
+    "quantity": 1,
+    "weight": {
+      "value": 0.5,
+      "units": "lb"
+    },
+    "price": {
+      "value": 250,
+      "denomination": "gp"
+    },
+    "rarity": "uncommon",
+    "identified": true,
+    "unidentified": {
+      "description": ""
+    },
+    "container": null,
+    "attunement": "",
+    "attuned": false,
+    "equipped": false,
+    "type": {
+      "value": "potion",
+      "subtype": ""
+    },
+    "properties": [
+      "mgc"
+    ],
+    "uses": {
+      "spent": 0,
+      "max": "1",
+      "recovery": [],
+      "autoDestroy": true
+    },
+    "activities": {
+      "bpactomxL5fdDrin": {
+        "_id": "bpactomxL5fdDrin",
+        "type": "utility",
+        "name": "Drink",
+        "sort": 0,
+        "activation": {
+          "type": "action",
+          "value": null,
+          "override": false,
+          "condition": ""
+        },
+        "consumption": {
+          "scaling": {
+            "allowed": false
+          },
+          "spellSlot": true,
+          "targets": [
+            {
+              "type": "itemUses",
+              "value": "1",
+              "target": ""
+            }
+          ]
+        },
+        "description": {
+          "chatFlavor": ""
+        },
+        "duration": {
+          "units": "minute",
+          "value": "1",
+          "concentration": false,
+          "override": false
+        },
+        "effects": [
+          {
+            "_id": "bpfxomxL5fdl0000",
+            "level": {
+              "min": null,
+              "max": null
+            }
+          }
+        ],
+        "range": {
+          "units": "self",
+          "override": false,
+          "special": ""
+        },
+        "target": {
+          "template": {
+            "contiguous": false,
+            "units": "ft",
+            "type": ""
+          },
+          "affects": {
+            "choice": false,
+            "count": "",
+            "type": "self"
+          },
+          "override": false,
+          "prompt": false
+        },
+        "uses": {
+          "spent": 0,
+          "recovery": [],
+          "max": ""
+        },
+        "img": "",
+        "visibility": {
+          "requireMagic": false,
+          "level": {
+            "min": null,
+            "max": null
+          },
+          "identifier": ""
+        }
+      }
+    }
+  },
+  "effects": [
+    {
+      "_id": "bpfxomxL5fdl0000",
+      "_key": "!items.effects!omxL5fdlJ5wYXlkw.bpfxomxL5fdl0000",
+      "name": "Specialist (Melee)",
+      "img": "icons/consumables/potions/bottle-pear-corked-labeled-green.webp",
+      "type": "base",
+      "description": "<p>For the next minute you gain +2 on melee weapon attacks and +2 on melee weapon damage, while your Dexterity and Wisdom saving throws are lowered by 2.</p>",
+      "system": {
+        "changes": [
+          {
+            "_id": "bpfxomxL5fdlc000",
+            "key": "system.rolls.attack.mwak.bonus",
+            "type": "add",
+            "value": "2",
+            "phase": "initial",
+            "priority": null
+          },
+          {
+            "_id": "bpfxomxL5fdlc100",
+            "key": "system.rolls.damage.mwak.bonus",
+            "type": "add",
+            "value": "2",
+            "phase": "initial",
+            "priority": null
+          },
+          {
+            "_id": "bpfxomxL5fdlc200",
+            "key": "system.abilities.dex.save.roll.bonus",
+            "type": "add",
+            "value": "-2",
+            "phase": "initial",
+            "priority": null
+          },
+          {
+            "_id": "bpfxomxL5fdlc300",
+            "key": "system.abilities.wis.save.roll.bonus",
+            "type": "add",
+            "value": "-2",
+            "phase": "initial",
+            "priority": null
+          }
+        ],
+        "magical": true
+      },
+      "disabled": false,
+      "transfer": false,
+      "duration": {
+        "value": 1,
+        "units": "minutes",
+        "expiry": "turnStart",
+        "expired": false
+      },
+      "statuses": [],
+      "flags": {},
+      "tint": "#ffffff",
+      "showIcon": 1,
+      "origin": null,
+      "start": null,
+      "sort": 0
+    }
+  ],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "beavers-potions": {
+      "potion": true
+    }
+  }
+}

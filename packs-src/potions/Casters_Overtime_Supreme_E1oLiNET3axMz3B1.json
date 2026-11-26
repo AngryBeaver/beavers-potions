@@ -1,0 +1,181 @@
+{
+  "_id": "E1oLiNET3axMz3B1",
+  "_key": "!items!E1oLiNET3axMz3B1",
+  "name": "Casters Overtime Supreme",
+  "type": "consumable",
+  "img": "icons/consumables/potions/bottle-metal-yellow-gray.webp",
+  "system": {
+    "description": {
+      "value": "<p>You spend one round doing nothing else than concentrating. During this time you cannot defend yourself: you are incapacitated, everyone attacking you has advantage and hits critically.</p><p>You replenish all your spell slots of the first to fifth level while you gain 4 levels of exhaustion, which cannot be healed magically.</p>",
+      "chat": ""
+    },
+    "identifier": "casters-overtime-supreme",
+    "source": {
+      "custom": "Beaver's Potions",
+      "rules": "2014",
+      "book": "",
+      "license": ""
+    },
+    "quantity": 1,
+    "weight": {
+      "value": 0.5,
+      "units": "lb"
+    },
+    "price": {
+      "value": 5000,
+      "denomination": "gp"
+    },
+    "rarity": "legendary",
+    "identified": true,
+    "unidentified": {
+      "description": ""
+    },
+    "container": null,
+    "attunement": "",
+    "attuned": false,
+    "equipped": false,
+    "type": {
+      "value": "potion",
+      "subtype": ""
+    },
+    "properties": [
+      "mgc"
+    ],
+    "uses": {
+      "spent": 0,
+      "max": "1",
+      "recovery": [],
+      "autoDestroy": true
+    },
+    "activities": {
+      "bpactE1oLiNEDrin": {
+        "_id": "bpactE1oLiNEDrin",
+        "type": "utility",
+        "name": "Drink",
+        "sort": 0,
+        "activation": {
+          "type": "action",
+          "value": null,
+          "override": false,
+          "condition": ""
+        },
+        "consumption": {
+          "scaling": {
+            "allowed": false
+          },
+          "spellSlot": true,
+          "targets": [
+            {
+              "type": "itemUses",
+              "value": "1",
+              "target": ""
+            }
+          ]
+        },
+        "description": {
+          "chatFlavor": ""
+        },
+        "duration": {
+          "units": "round",
+          "value": "1",
+          "concentration": false,
+          "override": false
+        },
+        "effects": [
+          {
+            "_id": "bpfxE1oLiNET0000",
+            "level": {
+              "min": null,
+              "max": null
+            }
+          }
+        ],
+        "range": {
+          "units": "self",
+          "override": false,
+          "special": ""
+        },
+        "target": {
+          "template": {
+            "contiguous": false,
+            "units": "ft",
+            "type": ""
+          },
+          "affects": {
+            "choice": false,
+            "count": "",
+            "type": "self"
+          },
+          "override": false,
+          "prompt": false
+        },
+        "uses": {
+          "spent": 0,
+          "recovery": [],
+          "max": ""
+        },
+        "img": "",
+        "visibility": {
+          "requireMagic": false,
+          "level": {
+            "min": null,
+            "max": null
+          },
+          "identifier": ""
+        }
+      }
+    }
+  },
+  "effects": [
+    {
+      "_id": "bpfxE1oLiNET0000",
+      "_key": "!items.effects!E1oLiNET3axMz3B1.bpfxE1oLiNET0000",
+      "name": "Out of Mind",
+      "img": "icons/consumables/potions/bottle-metal-yellow-gray.webp",
+      "type": "base",
+      "description": "<p>You spend one round doing nothing else than concentrating. During this time you cannot defend yourself: you are incapacitated, everyone attacking you has advantage and hits critically.</p><p>You replenish all your spell slots of the first to fifth level while you gain 4 levels of exhaustion, which cannot be healed magically.</p>",
+      "system": {
+        "changes": [],
+        "magical": true
+      },
+      "disabled": false,
+      "transfer": false,
+      "duration": {
+        "value": 1,
+        "units": "rounds",
+        "expiry": "turnStart",
+        "expired": false
+      },
+      "statuses": [
+        "incapacitated"
+      ],
+      "flags": {
+        "beavers-potions": {
+          "grantsAdvantage": true,
+          "grantsCritical": true
+        }
+      },
+      "tint": "#ffffff",
+      "showIcon": 1,
+      "origin": null,
+      "start": null,
+      "sort": 0
+    }
+  ],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "beavers-potions": {
+      "potion": true,
+      "use": {
+        "restoreSlots": {
+          "maxLevel": 5,
+          "exhaustion": 4
+        }
+      }
+    }
+  }
+}

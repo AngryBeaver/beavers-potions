@@ -1,138 +1,151 @@
 {
+  "_id": "tEG8DYWsIjsnq89H",
+  "_key": "!items!tEG8DYWsIjsnq89H",
   "name": "Cure Undead",
   "type": "consumable",
   "img": "icons/consumables/potions/bottle-conical-corked-labeled-skull-poison-green.webp",
   "system": {
     "description": {
-      "value": "<p><span style=\"font-family:Signika, sans-serif\">you regain 2d4+2 hit points when you are undead and drink this potion.</span></p>",
-      "chat": "",
-      "unidentified": ""
+      "value": "<p>You regain 2d4 + 2 hit points when you are undead and drink this potion. It does nothing for the living.</p>",
+      "chat": ""
     },
+    "identifier": "cure-undead",
     "source": {
-      "custom": ""
+      "custom": "Beaver's Potions",
+      "rules": "2014",
+      "book": "",
+      "license": ""
     },
     "quantity": 1,
-    "weight": 0.1,
+    "weight": {
+      "value": 0.5,
+      "units": "lb"
+    },
     "price": {
       "value": 50,
       "denomination": "gp"
     },
-    "attunement": 0,
-    "equipped": false,
     "rarity": "common",
     "identified": true,
-    "activation": {
-      "type": "action",
-      "cost": 1,
-      "condition": ""
+    "unidentified": {
+      "description": ""
     },
-    "duration": {
-      "value": "",
-      "units": ""
+    "container": null,
+    "attunement": "",
+    "attuned": false,
+    "equipped": false,
+    "type": {
+      "value": "potion",
+      "subtype": ""
     },
-    "cover": null,
-    "crewed": false,
-    "target": {
-      "value": 1,
-      "width": null,
-      "units": "",
-      "type": "creature",
-      "prompt": true
-    },
-    "range": {
-      "value": null,
-      "long": null,
-      "units": ""
-    },
+    "properties": [
+      "mgc"
+    ],
     "uses": {
-      "value": 1,
+      "spent": 0,
       "max": "1",
-      "per": "charges",
-      "recovery": "",
-      "autoDestroy": true,
-      "prompt": true
+      "recovery": [],
+      "autoDestroy": true
     },
-    "consume": {
-      "type": "",
-      "target": "",
-      "amount": null,
-      "scale": false
-    },
-    "ability": "",
-    "actionType": "other",
-    "attackBonus": "",
-    "chatFlavor": "",
-    "critical": {
-      "threshold": null,
-      "damage": ""
-    },
-    "damage": {
-      "parts": [
-        [
-          "2d4 + 2",
-          "necrotic"
-        ]
-      ],
-      "versatile": ""
-    },
-    "formula": "",
-    "save": {
-      "ability": "",
-      "dc": null,
-      "scaling": "spell"
-    },
-    "consumableType": "potion",
-    "properties": {}
-  },
-  "effects": [],
-  "flags": {
-    "core": {},
-    "midi-qol": {
-      "effectActivation": false
-    },
-    "midiProperties": {
-      "nodam": false,
-      "fulldam": false,
-      "halfdam": false,
-      "rollOther": false,
-      "critOther": false,
-      "magicdam": false,
-      "magiceffect": false,
-      "concentration": false,
-      "toggleEffect": false,
-      "ignoreTotalCover": false,
-      "autoFailFriendly": false,
-      "offHandWeapon": false
-    },
-    "magicitems": {
-      "enabled": false,
-      "equipped": false,
-      "attuned": false,
-      "charges": "0",
-      "chargeType": "c1",
-      "destroy": false,
-      "destroyFlavorText": "reaches 0 charges: it crumbles into ashes and is destroyed.",
-      "rechargeable": false,
-      "recharge": "0",
-      "rechargeType": "t1",
-      "rechargeUnit": "r1",
-      "sorting": "l"
+    "activities": {
+      "bpacttEG8DYWDrin": {
+        "_id": "bpacttEG8DYWDrin",
+        "type": "heal",
+        "name": "Drink",
+        "sort": 0,
+        "activation": {
+          "type": "action",
+          "value": null,
+          "override": false,
+          "condition": ""
+        },
+        "consumption": {
+          "scaling": {
+            "allowed": false
+          },
+          "spellSlot": true,
+          "targets": [
+            {
+              "type": "itemUses",
+              "value": "1",
+              "target": ""
+            }
+          ]
+        },
+        "description": {
+          "chatFlavor": ""
+        },
+        "duration": {
+          "units": "inst",
+          "concentration": false,
+          "override": false
+        },
+        "effects": [],
+        "range": {
+          "units": "self",
+          "override": false,
+          "special": ""
+        },
+        "target": {
+          "template": {
+            "contiguous": false,
+            "units": "ft",
+            "type": ""
+          },
+          "affects": {
+            "choice": false,
+            "count": "",
+            "type": "self"
+          },
+          "override": false,
+          "prompt": false
+        },
+        "uses": {
+          "spent": 0,
+          "recovery": [],
+          "max": ""
+        },
+        "img": "",
+        "visibility": {
+          "requireMagic": false,
+          "level": {
+            "min": null,
+            "max": null
+          },
+          "identifier": ""
+        },
+        "healing": {
+          "number": 2,
+          "denomination": 4,
+          "bonus": "2",
+          "types": [
+            "healing"
+          ],
+          "custom": {
+            "enabled": false,
+            "formula": ""
+          },
+          "scaling": {
+            "mode": "",
+            "number": 1,
+            "formula": ""
+          }
+        }
+      }
     }
   },
-  "_stats": {
-    "systemId": "dnd5e",
-    "systemVersion": "2.4.1",
-    "coreVersion": "11.315",
-    "createdTime": 1666288212883,
-    "modifiedTime": 1702947838758,
-    "lastModifiedBy": "1enA27CLCptznVn9"
-  },
-  "_id": "tEG8DYWsIjsnq89H",
+  "effects": [],
   "folder": null,
   "sort": 0,
   "ownership": {
-    "default": 0,
-    "1enA27CLCptznVn9": 3
+    "default": 0
   },
-  "_key": "!items!tEG8DYWsIjsnq89H"
+  "flags": {
+    "beavers-potions": {
+      "potion": true,
+      "use": {
+        "onlyType": "undead"
+      }
+    }
+  }
 }

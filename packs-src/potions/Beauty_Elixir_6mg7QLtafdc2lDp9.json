@@ -1,0 +1,177 @@
+{
+  "_id": "6mg7QLtafdc2lDp9",
+  "_key": "!items!6mg7QLtafdc2lDp9",
+  "name": "Beauty Elixir",
+  "type": "consumable",
+  "img": "icons/consumables/potions/bottle-bulb-corked-glowing-red.webp",
+  "system": {
+    "description": {
+      "value": "<p>Makes you significantly more attractive for 5 hours: you have advantage on Charisma (Persuasion) checks.</p>",
+      "chat": ""
+    },
+    "identifier": "beauty-elixir",
+    "source": {
+      "custom": "Beaver's Potions",
+      "rules": "2014",
+      "book": "",
+      "license": ""
+    },
+    "quantity": 1,
+    "weight": {
+      "value": 0.5,
+      "units": "lb"
+    },
+    "price": {
+      "value": 50,
+      "denomination": "gp"
+    },
+    "rarity": "common",
+    "identified": true,
+    "unidentified": {
+      "description": ""
+    },
+    "container": null,
+    "attunement": "",
+    "attuned": false,
+    "equipped": false,
+    "type": {
+      "value": "potion",
+      "subtype": ""
+    },
+    "properties": [
+      "mgc"
+    ],
+    "uses": {
+      "spent": 0,
+      "max": "1",
+      "recovery": [],
+      "autoDestroy": true
+    },
+    "activities": {
+      "bpact6mg7QLtDrin": {
+        "_id": "bpact6mg7QLtDrin",
+        "type": "utility",
+        "name": "Drink",
+        "sort": 0,
+        "activation": {
+          "type": "action",
+          "value": null,
+          "override": false,
+          "condition": ""
+        },
+        "consumption": {
+          "scaling": {
+            "allowed": false
+          },
+          "spellSlot": true,
+          "targets": [
+            {
+              "type": "itemUses",
+              "value": "1",
+              "target": ""
+            }
+          ]
+        },
+        "description": {
+          "chatFlavor": ""
+        },
+        "duration": {
+          "units": "hour",
+          "value": "5",
+          "concentration": false,
+          "override": false
+        },
+        "effects": [
+          {
+            "_id": "bpfx6mg7QLta0000",
+            "level": {
+              "min": null,
+              "max": null
+            }
+          }
+        ],
+        "range": {
+          "units": "self",
+          "override": false,
+          "special": ""
+        },
+        "target": {
+          "template": {
+            "contiguous": false,
+            "units": "ft",
+            "type": ""
+          },
+          "affects": {
+            "choice": false,
+            "count": "",
+            "type": "self"
+          },
+          "override": false,
+          "prompt": false
+        },
+        "uses": {
+          "spent": 0,
+          "recovery": [],
+          "max": ""
+        },
+        "img": "",
+        "visibility": {
+          "requireMagic": false,
+          "level": {
+            "min": null,
+            "max": null
+          },
+          "identifier": ""
+        }
+      }
+    }
+  },
+  "effects": [
+    {
+      "_id": "bpfx6mg7QLta0000",
+      "_key": "!items.effects!6mg7QLtafdc2lDp9.bpfx6mg7QLta0000",
+      "name": "Beauty Elixir",
+      "img": "icons/consumables/potions/bottle-bulb-corked-glowing-red.webp",
+      "type": "base",
+      "description": "<p>Makes you significantly more attractive for 5 hours: you have advantage on Charisma (Persuasion) checks.</p>",
+      "system": {
+        "changes": [
+          {
+            "_id": "bpfx6mg7QLtac000",
+            "key": "system.skills.per.roll.mode",
+            "type": "add",
+            "value": "1",
+            "phase": "initial",
+            "priority": null
+          }
+        ],
+        "magical": true
+      },
+      "disabled": false,
+      "transfer": false,
+      "duration": {
+        "value": 5,
+        "units": "hours",
+        "expiry": "turnStart",
+        "expired": false
+      },
+      "statuses": [],
+      "flags": {},
+      "tint": "#ffffff",
+      "showIcon": 1,
+      "origin": null,
+      "start": null,
+      "sort": 0
+    }
+  ],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "beavers-potions": {
+      "potion": true
+    }
+  }
+}

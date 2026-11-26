@@ -1,0 +1,54 @@
+{
+  "_id": "AGQvjDL4TIPOEBHX",
+  "_key": "!items!AGQvjDL4TIPOEBHX",
+  "name": "Any Mushroom",
+  "type": "loot",
+  "img": "modules/beavers-crafting/icons/anyOf.png",
+  "system": {
+    "description": {
+      "value": "<p>Any mushroom of Beaver's Potions.</p>",
+      "chat": ""
+    },
+    "identifier": "any-mushroom",
+    "source": {
+      "custom": "Beaver's Potions",
+      "rules": "2014",
+      "book": "",
+      "license": ""
+    },
+    "quantity": 1,
+    "weight": {
+      "value": 0,
+      "units": "lb"
+    },
+    "price": {
+      "value": 0,
+      "denomination": "gp"
+    },
+    "rarity": "common",
+    "identified": true,
+    "unidentified": {
+      "description": ""
+    },
+    "container": null,
+    "type": {
+      "value": "material",
+      "subtype": ""
+    },
+    "properties": []
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "beavers-crafting": {
+      "subtype": "AnyOf",
+      "anyOf": {
+        "macro": "// beavers-crafting passes an item or a component of the actor\nconst doc = item?.system ? item : await item?.getEntity?.();\nreturn doc?.flags?.[\"beavers-potions\"]?.ingredient === \"mushroom\";"
+      }
+    }
+  }
+}

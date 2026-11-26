@@ -1,191 +1,172 @@
 {
+  "_id": "y6zSFJYIKPOiZnI7",
+  "_key": "!items!y6zSFJYIKPOiZnI7",
   "name": "Reflect Damage",
   "type": "consumable",
   "img": "icons/consumables/potions/bottle-round-corked-red.webp",
   "system": {
     "description": {
-      "value": "<p><span style=\"font-family:Signika, sans-serif\">You return all damage you recive to the attacker for the next round.</span></p>",
-      "chat": "",
-      "unidentified": ""
+      "value": "<p>Until the start of your next turn, all damage you would receive from an attacker is dealt to the attacker instead.</p>",
+      "chat": ""
     },
+    "identifier": "reflect-damage",
     "source": {
-      "custom": ""
+      "custom": "Beaver's Potions",
+      "rules": "2014",
+      "book": "",
+      "license": ""
     },
     "quantity": 1,
-    "weight": 0.1,
+    "weight": {
+      "value": 0.5,
+      "units": "lb"
+    },
     "price": {
       "value": 2500,
       "denomination": "gp"
     },
-    "attunement": 0,
-    "equipped": false,
     "rarity": "veryRare",
     "identified": true,
-    "activation": {
-      "type": "action",
-      "cost": 1,
-      "condition": ""
+    "unidentified": {
+      "description": ""
     },
-    "duration": {
-      "value": "1",
-      "units": "round"
+    "container": null,
+    "attunement": "",
+    "attuned": false,
+    "equipped": false,
+    "type": {
+      "value": "potion",
+      "subtype": ""
     },
-    "cover": null,
-    "crewed": false,
-    "target": {
-      "value": 1,
-      "width": null,
-      "units": "",
-      "type": "creature",
-      "prompt": true
-    },
-    "range": {
-      "value": null,
-      "long": null,
-      "units": "touch"
-    },
+    "properties": [
+      "mgc"
+    ],
     "uses": {
-      "value": 1,
+      "spent": 0,
       "max": "1",
-      "per": "charges",
-      "recovery": "",
-      "autoDestroy": true,
-      "prompt": true
+      "recovery": [],
+      "autoDestroy": true
     },
-    "consume": {
-      "type": "",
-      "target": "",
-      "amount": null,
-      "scale": false
-    },
-    "ability": null,
-    "actionType": "",
-    "attackBonus": "",
-    "chatFlavor": "",
-    "critical": {
-      "threshold": null,
-      "damage": ""
-    },
-    "damage": {
-      "parts": [],
-      "versatile": ""
-    },
-    "formula": "",
-    "save": {
-      "ability": "",
-      "dc": null,
-      "scaling": "spell"
-    },
-    "consumableType": "potion",
-    "properties": {}
-  },
-  "effects": [
-    {
-      "icon": "icons/consumables/potions/bottle-round-corked-red.webp",
-      "origin": "Item.y6zSFJYIKPOiZnI7",
-      "duration": {
-        "startTime": null,
-        "seconds": null,
-        "combat": null,
-        "rounds": null,
-        "turns": null,
-        "startRound": null,
-        "startTurn": null
-      },
-      "disabled": false,
-      "_id": "6bS4BsRXmJ5R8dFB",
-      "changes": [],
-      "tint": null,
-      "transfer": false,
-      "flags": {
-        "times-up": {},
-        "dae": {
-          "selfTarget": false,
-          "selfTargetAlways": false,
-          "stackable": "noneName",
-          "durationExpression": "",
-          "macroRepeat": "none",
-          "specialDuration": []
-        },
-        "core": {
-          "statusId": ""
-        },
-        "ActiveAuras": {
-          "isAura": false,
-          "aura": "None",
-          "radius": null,
-          "alignment": "",
-          "type": "",
-          "ignoreSelf": false,
-          "height": false,
-          "hidden": false,
-          "displayTemp": false,
-          "hostile": false,
-          "onlyOnce": false
-        }
-      },
-      "name": "Reflect Damage",
-      "description": "",
-      "statuses": [],
-      "_key": "!items.effects!y6zSFJYIKPOiZnI7.6bS4BsRXmJ5R8dFB"
-    }
-  ],
-  "flags": {
-    "core": {},
-    "magicitems": {
-      "enabled": false,
-      "equipped": false,
-      "attuned": false,
-      "charges": "0",
-      "chargeType": "c1",
-      "destroy": false,
-      "destroyFlavorText": "reaches 0 charges: it crumbles into ashes and is destroyed.",
-      "rechargeable": false,
-      "recharge": "0",
-      "rechargeType": "t1",
-      "rechargeUnit": "r1",
-      "sorting": "l"
-    },
-    "itemacro": {
-      "macro": {
-        "name": "Block Element (fire)",
-        "type": "script",
-        "scope": "global",
-        "command": "if(args[0] === \"on\"){\n  const actor = await fromUuid(args[1].actorUuid);\n  actor.effects.forEach((effect)=>{\n    if(effect.label === \"Block Element\"){\n      effect.update({flags:{\"beavers-potions.blockElement\":{\n        type:\"fire\",\n        value:100\n      }}})\n    }\n  });\n}",
-        "author": "r8M7z5xqyZDxng8W",
-        "_id": null,
-        "img": "icons/svg/dice-target.svg",
-        "folder": null,
+    "activities": {
+      "bpacty6zSFJYDrin": {
+        "_id": "bpacty6zSFJYDrin",
+        "type": "utility",
+        "name": "Drink",
         "sort": 0,
-        "ownership": {
-          "default": 0
+        "activation": {
+          "type": "action",
+          "value": null,
+          "override": false,
+          "condition": ""
         },
-        "flags": {},
-        "_stats": {
-          "systemId": null,
-          "systemVersion": null,
-          "coreVersion": null,
-          "createdTime": null,
-          "modifiedTime": null,
-          "lastModifiedBy": null
+        "consumption": {
+          "scaling": {
+            "allowed": false
+          },
+          "spellSlot": true,
+          "targets": [
+            {
+              "type": "itemUses",
+              "value": "1",
+              "target": ""
+            }
+          ]
+        },
+        "description": {
+          "chatFlavor": ""
+        },
+        "duration": {
+          "units": "round",
+          "value": "1",
+          "concentration": false,
+          "override": false
+        },
+        "effects": [
+          {
+            "_id": "bpfxy6zSFJYI0000",
+            "level": {
+              "min": null,
+              "max": null
+            }
+          }
+        ],
+        "range": {
+          "units": "self",
+          "override": false,
+          "special": ""
+        },
+        "target": {
+          "template": {
+            "contiguous": false,
+            "units": "ft",
+            "type": ""
+          },
+          "affects": {
+            "choice": false,
+            "count": "",
+            "type": "self"
+          },
+          "override": false,
+          "prompt": false
+        },
+        "uses": {
+          "spent": 0,
+          "recovery": [],
+          "max": ""
+        },
+        "img": "",
+        "visibility": {
+          "requireMagic": false,
+          "level": {
+            "min": null,
+            "max": null
+          },
+          "identifier": ""
         }
       }
     }
   },
-  "_stats": {
-    "systemId": "dnd5e",
-    "systemVersion": "2.4.1",
-    "coreVersion": "11.315",
-    "createdTime": 1666288212883,
-    "modifiedTime": 1702947838758,
-    "lastModifiedBy": "1enA27CLCptznVn9"
-  },
-  "_id": "y6zSFJYIKPOiZnI7",
+  "effects": [
+    {
+      "_id": "bpfxy6zSFJYI0000",
+      "_key": "!items.effects!y6zSFJYIKPOiZnI7.bpfxy6zSFJYI0000",
+      "name": "Reflect Damage",
+      "img": "icons/consumables/potions/bottle-round-corked-red.webp",
+      "type": "base",
+      "description": "<p>Until the start of your next turn, all damage you would receive from an attacker is dealt to the attacker instead.</p>",
+      "system": {
+        "changes": [],
+        "magical": true
+      },
+      "disabled": false,
+      "transfer": false,
+      "duration": {
+        "value": 1,
+        "units": "rounds",
+        "expiry": "turnStart",
+        "expired": false
+      },
+      "statuses": [],
+      "flags": {
+        "beavers-potions": {
+          "reflectDamage": true
+        }
+      },
+      "tint": "#ffffff",
+      "showIcon": 1,
+      "origin": null,
+      "start": null,
+      "sort": 0
+    }
+  ],
   "folder": null,
   "sort": 0,
   "ownership": {
-    "default": 0,
-    "1enA27CLCptznVn9": 3
+    "default": 0
   },
-  "_key": "!items!y6zSFJYIKPOiZnI7"
+  "flags": {
+    "beavers-potions": {
+      "potion": true
+    }
+  }
 }

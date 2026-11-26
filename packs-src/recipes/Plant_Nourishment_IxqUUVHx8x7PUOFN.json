@@ -1,14 +1,20 @@
 {
+  "_id": "IxqUUVHx8x7PUOFN",
+  "_key": "!items!IxqUUVHx8x7PUOFN",
   "name": "Plant Nourishment",
   "type": "loot",
   "img": "icons/sundries/scrolls/scroll-worn-tan.webp",
   "system": {
     "description": {
-      "value": "<p>You need beavers-crafting module.</p>",
+      "value": "<p>A recipe of Beaver's Potions, it needs the module Beaver's Crafting.</p><p>Brewing: Nature check DC 8.</p>",
       "chat": ""
     },
+    "identifier": "recipe-plant-nourishment",
     "source": {
-      "custom": "Recipe"
+      "custom": "Beaver's Potions",
+      "rules": "2014",
+      "book": "",
+      "license": ""
     },
     "quantity": 1,
     "weight": {
@@ -19,64 +25,62 @@
       "value": 0,
       "denomination": "gp"
     },
-    "rarity": "common",
+    "rarity": "",
     "identified": true,
     "type": {
       "value": "",
       "subtype": ""
     },
-    "unidentified": {
-      "description": ""
-    },
-    "container": null,
     "properties": []
   },
   "effects": [],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
   "flags": {
     "beavers-crafting": {
+      "subtype": "Recipe",
       "recipe": {
-        "currency": {
-          "value": 5,
-          "name": "gp"
-        },
         "required": {},
         "input": {
           "1": {
-            "key": {
+            "Compendium-beavers-potions-ingredients-Item-OOFUAGixSqsgyT29": {
               "id": "OOFUAGixSqsgyT29",
-              "uuid": "Compendium.beavers-crafting.ingredients.OOFUAGixSqsgyT29",
-              "img": "modules/beavers-crafting/icons/mushroom/36.png",
-              "type": "Item",
+              "uuid": "Compendium.beavers-potions.ingredients.Item.OOFUAGixSqsgyT29",
+              "img": "icons/consumables/mushrooms/campanulate-bell-red-white.webp",
               "name": "Hansel and Gretel",
-              "quantity": 5,
-              "itemType": "consumable",
-              "flags": {
-                "beavers-crafting": {}
-              }
+              "type": "Item",
+              "itemType": "loot",
+              "quantity": 5
             }
           }
         },
         "output": {
           "1": {
-            "key": {
+            "Compendium-beavers-potions-potions-Item-NRltRDCfJCTu6frt": {
               "id": "NRltRDCfJCTu6frt",
-              "uuid": "Compendium.beavers-potions.potions.NRltRDCfJCTu6frt",
+              "uuid": "Compendium.beavers-potions.potions.Item.NRltRDCfJCTu6frt",
               "img": "icons/consumables/potions/bottle-conical-bubbling-blue.webp",
-              "type": "Item",
               "name": "Plant Nourishment",
-              "quantity": 1,
+              "type": "Item",
               "itemType": "consumable",
-              "flags": {
-                "beavers-crafting": {}
-              }
+              "quantity": 1
             }
           }
+        },
+        "currency": {
+          "name": "gp",
+          "value": 5
         },
         "beaversTests": {
           "fails": 1,
           "consume": true,
+          "failsInARow": false,
           "ands": {
             "1": {
+              "hits": 1,
               "ors": {
                 "1": {
                   "type": "SkillTest",
@@ -85,32 +89,14 @@
                     "skill": "nat"
                   }
                 }
-              },
-              "hits": 1
+              }
             }
           }
-        }
-      },
-      "subtype": "Recipe"
-    },
-    "core": {}
-  },
-  "_stats": {
-    "compendiumSource": null,
-    "duplicateSource": null,
-    "coreVersion": "12.331",
-    "systemId": "dnd5e",
-    "systemVersion": "3.3.1",
-    "createdTime": 1725004640871,
-    "modifiedTime": 1725007141211,
-    "lastModifiedBy": "jklU6hJSPXST02AA"
-  },
-  "_id": "IxqUUVHx8x7PUOFN",
-  "folder": null,
-  "sort": 0,
-  "ownership": {
-    "default": 0,
-    "jklU6hJSPXST02AA": 3
-  },
-  "_key": "!items!IxqUUVHx8x7PUOFN"
+        },
+        "macro": "",
+        "folder": "Beaver's Potions",
+        "kind": "recipe"
+      }
+    }
+  }
 }

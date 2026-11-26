@@ -1,289 +1,203 @@
 {
+  "_id": "YywpTHDQ09DN7aLd",
+  "_key": "!items!YywpTHDQ09DN7aLd",
   "name": "Frost Armor Greater",
   "type": "consumable",
   "img": "icons/consumables/potions/bottle-corked-blue.webp",
   "system": {
     "description": {
-      "value": "<p><span style=\"font-family:Roboto, Helvetica, sans-serif\">A protective magical force surrounds you, manifesting as a spectral frost that covers you and your gear for 5 rounds.</span></p><p><span style=\"font-family:Roboto, Helvetica, sans-serif\"><br />You regain 6 temporary hit points each round to a maximum of 6.<br />Anyone starting its turn next to you will suffer 3d4 cold damage.<br /></span></p>",
-      "chat": "",
-      "unidentified": ""
+      "value": "<p>A protective magical force surrounds you, manifesting as a spectral frost that covers you and your gear for 5 rounds. At the start of each of your turns you regain temporary hit points up to 6. Anyone starting its turn next to you takes 3d4 cold damage (Wisdom saving throw DC 14 for half).</p>",
+      "chat": ""
     },
+    "identifier": "frost-armor-greater",
     "source": {
-      "custom": ""
+      "custom": "Beaver's Potions",
+      "rules": "2014",
+      "book": "",
+      "license": ""
     },
     "quantity": 1,
-    "weight": 0.1,
+    "weight": {
+      "value": 0.5,
+      "units": "lb"
+    },
     "price": {
       "value": 750,
       "denomination": "gp"
     },
-    "attunement": 0,
-    "equipped": false,
     "rarity": "rare",
     "identified": true,
-    "activation": {
-      "type": "action",
-      "cost": 1,
-      "condition": ""
+    "unidentified": {
+      "description": ""
     },
-    "duration": {
-      "value": "5",
-      "units": "round"
+    "container": null,
+    "attunement": "",
+    "attuned": false,
+    "equipped": false,
+    "type": {
+      "value": "potion",
+      "subtype": ""
     },
-    "cover": null,
-    "crewed": false,
-    "target": {
-      "value": 1,
-      "width": null,
-      "units": "",
-      "type": "creature",
-      "prompt": true
-    },
-    "range": {
-      "value": null,
-      "long": null,
-      "units": "touch"
-    },
+    "properties": [
+      "mgc"
+    ],
     "uses": {
-      "value": 1,
+      "spent": 0,
       "max": "1",
-      "per": "charges",
-      "recovery": "",
-      "autoDestroy": true,
-      "prompt": true
+      "recovery": [],
+      "autoDestroy": true
     },
-    "consume": {
-      "type": "",
-      "target": "",
-      "amount": null,
-      "scale": false
-    },
-    "ability": "",
-    "actionType": "save",
-    "attackBonus": "",
-    "chatFlavor": "",
-    "critical": {
-      "threshold": null,
-      "damage": ""
-    },
-    "damage": {
-      "parts": [],
-      "versatile": ""
-    },
-    "formula": "",
-    "save": {
-      "ability": "",
-      "dc": 13,
-      "scaling": "flat"
-    },
-    "consumableType": "potion",
-    "properties": {}
+    "activities": {
+      "bpactYywpTHDDrin": {
+        "_id": "bpactYywpTHDDrin",
+        "type": "heal",
+        "name": "Drink",
+        "sort": 0,
+        "activation": {
+          "type": "action",
+          "value": null,
+          "override": false,
+          "condition": ""
+        },
+        "consumption": {
+          "scaling": {
+            "allowed": false
+          },
+          "spellSlot": true,
+          "targets": [
+            {
+              "type": "itemUses",
+              "value": "1",
+              "target": ""
+            }
+          ]
+        },
+        "description": {
+          "chatFlavor": ""
+        },
+        "duration": {
+          "units": "round",
+          "value": "5",
+          "concentration": false,
+          "override": false
+        },
+        "effects": [
+          {
+            "_id": "bpfxYywpTHDQ0000",
+            "level": {
+              "min": null,
+              "max": null
+            }
+          }
+        ],
+        "range": {
+          "units": "self",
+          "override": false,
+          "special": ""
+        },
+        "target": {
+          "template": {
+            "contiguous": false,
+            "units": "ft",
+            "type": ""
+          },
+          "affects": {
+            "choice": false,
+            "count": "",
+            "type": "self"
+          },
+          "override": false,
+          "prompt": false
+        },
+        "uses": {
+          "spent": 0,
+          "recovery": [],
+          "max": ""
+        },
+        "img": "",
+        "visibility": {
+          "requireMagic": false,
+          "level": {
+            "min": null,
+            "max": null
+          },
+          "identifier": ""
+        },
+        "healing": {
+          "number": null,
+          "denomination": null,
+          "bonus": "6",
+          "types": [
+            "temphp"
+          ],
+          "custom": {
+            "enabled": false,
+            "formula": ""
+          },
+          "scaling": {
+            "mode": "",
+            "number": 1,
+            "formula": ""
+          }
+        }
+      }
+    }
   },
   "effects": [
     {
-      "icon": "icons/magic/defensive/shield-barrier-flaming-diamond-blue.webp",
-      "changes": [
-        {
-          "key": "flags.midi-qol.OverTime",
-          "mode": 0,
-          "value": "turn=start,\nlabel=FrostArmor,\nsaveAbility=wis,\nsaveDC=14,\nrollType=save,\nsaveMagic=true,\ndamageBeforeSave=false, \ndamageRoll=3d4,\ndamageType=cold,\nsaveDamage=halfdamage",
-          "priority": 0
-        }
-      ],
-      "transfer": false,
-      "_id": "wrefbIuX0vD3GQsl",
-      "disabled": false,
-      "duration": {
-        "startTime": null,
-        "seconds": null,
-        "combat": null,
-        "rounds": null,
-        "turns": null,
-        "startRound": null,
-        "startTurn": null
-      },
-      "origin": "Item.OjFEnZKfdL0TfU64",
-      "tint": null,
-      "flags": {
-        "dae": {
-          "selfTarget": false,
-          "selfTargetAlways": false,
-          "stackable": "noneName",
-          "durationExpression": "",
-          "macroRepeat": "startEveryTurn",
-          "specialDuration": []
-        },
-        "core": {
-          "statusId": "",
-          "sourceId": "Actor.t9fEEQaI8deIzxwe.Item.J5iUgR3b4cEyn1az.ActiveEffect.dWiGi2kJkwt3deKZ"
-        },
-        "ActiveAuras": {
-          "isAura": true,
-          "aura": "All",
-          "radius": 10,
-          "alignment": "",
-          "type": "",
-          "ignoreSelf": true,
-          "height": false,
-          "hidden": false,
-          "displayTemp": false,
-          "hostile": false,
-          "onlyOnce": true
-        },
-        "times-up": {
-          "isPassive": false
-        }
-      },
-      "name": "FrostAura",
-      "description": "",
-      "statuses": [],
-      "_key": "!items.effects!YywpTHDQ09DN7aLd.wrefbIuX0vD3GQsl"
-    },
-    {
-      "icon": "icons/magic/defensive/shield-barrier-flaming-diamond-blue.webp",
-      "origin": "Item.OjFEnZKfdL0TfU64",
-      "duration": {
-        "startTime": null,
-        "seconds": null,
-        "combat": null,
-        "rounds": null,
-        "turns": null,
-        "startRound": null,
-        "startTurn": null
+      "_id": "bpfxYywpTHDQ0000",
+      "_key": "!items.effects!YywpTHDQ09DN7aLd.bpfxYywpTHDQ0000",
+      "name": "Frost Armor Greater",
+      "img": "icons/consumables/potions/bottle-corked-blue.webp",
+      "type": "base",
+      "description": "<p>A protective magical force surrounds you, manifesting as a spectral frost that covers you and your gear for 5 rounds. At the start of each of your turns you regain temporary hit points up to 6. Anyone starting its turn next to you takes 3d4 cold damage (Wisdom saving throw DC 14 for half).</p>",
+      "system": {
+        "changes": [],
+        "magical": true
       },
       "disabled": false,
-      "_id": "X3kcWk7rYql9DlRi",
-      "changes": [
-        {
-          "key": "macro.tokenMagic",
-          "mode": 0,
-          "value": "Super-Frost",
-          "priority": 20
-        },
-        {
-          "key": "macro.itemMacro",
-          "mode": 0,
-          "value": "3",
-          "priority": 20
-        }
-      ],
-      "tint": null,
       "transfer": false,
+      "duration": {
+        "value": 5,
+        "units": "rounds",
+        "expiry": "turnStart",
+        "expired": false
+      },
+      "statuses": [],
       "flags": {
-        "dae": {
-          "selfTarget": false,
-          "selfTargetAlways": false,
-          "stackable": "noneName",
-          "durationExpression": "",
-          "macroRepeat": "startEveryTurn",
-          "specialDuration": [
-            "None"
-          ]
-        },
-        "core": {
-          "statusId": "",
-          "sourceId": "Actor.t9fEEQaI8deIzxwe.Item.J5iUgR3b4cEyn1az.ActiveEffect.miZvIPNUDbYBCbnE"
-        },
-        "ActiveAuras": {
-          "isAura": false,
-          "aura": "None",
-          "radius": null,
-          "alignment": "",
-          "type": "",
-          "ignoreSelf": false,
-          "height": false,
-          "hidden": false,
-          "displayTemp": false,
-          "hostile": false,
-          "onlyOnce": false
-        },
-        "times-up": {
-          "isPassive": false
+        "beavers-potions": {
+          "turnStart": {
+            "temp": 6
+          },
+          "aura": {
+            "radius": 5,
+            "includeSelf": false,
+            "save": {
+              "ability": "wis",
+              "dc": 14
+            },
+            "damage": {
+              "formula": "3d4",
+              "type": "cold"
+            }
+          }
         }
       },
-      "name": "FrostArmor",
-      "description": "",
-      "statuses": [],
-      "_key": "!items.effects!YywpTHDQ09DN7aLd.X3kcWk7rYql9DlRi"
+      "tint": "#ffffff",
+      "showIcon": 1,
+      "origin": null,
+      "start": null,
+      "sort": 0
     }
   ],
-  "flags": {
-    "magicitems": {
-      "enabled": false,
-      "equipped": false,
-      "attuned": false,
-      "charges": "0",
-      "chargeType": "c1",
-      "destroy": false,
-      "destroyFlavorText": "reaches 0 charges: it crumbles into ashes and is destroyed.",
-      "rechargeable": false,
-      "recharge": "0",
-      "rechargeType": "t1",
-      "rechargeUnit": "r1",
-      "sorting": "l",
-      "destroyCheck": "d1",
-      "destroyType": "dt1",
-      "spells": {}
-    },
-    "itemacro": {
-      "macro": {
-        "name": "FrostArmor Greater",
-        "type": "script",
-        "scope": "global",
-        "command": "const tempHp = (2*args[1]);\nconsole.log(args);\nif(args[0] === \"on\"){\n  const actorData = await fromUuid(args[2].actorUuid);\n  const actorUpdate = {};\n  actorUpdate[\"flags.beavers-potions.frostArmor.base\"] = actorData.system.attributes.hp.temp;\n  actorUpdate[\"flags.beavers-potions.frostArmor.next\"] = actorData.system.attributes.hp.temp + tempHp;\n  actorUpdate[\"system.attributes.hp.temp\"] = actorUpdate[\"flags.beavers-potions.frostArmor.next\"];\n  await actor.update(actorUpdate);\n}\nif(args[0] === \"each\"){\n  const actorData = await fromUuid(args[2].actorUuid);\n  if(actorData.system.attributes.hp.temp<actorData.flags[\"beavers-potions\"].frostArmor.next){\n    const actorUpdate = {};\n    actorUpdate[\"system.attributes.hp.temp\"] = actorData.flags[\"beavers-potions\"].frostArmor.next;\n    await actor.update(actorUpdate);\n  }\n}\nif(args[0] === \"off\"){\n  const actorData = await fromUuid(args[2].actorUuid);\n  const actorUpdate = {};\n  if(actorData.system.attributes.hp.temp<=actorData.flags[\"beavers-potions\"].frostArmor.next && \n    actorData.system.attributes.hp.temp>actorData.flags[\"beavers-potions\"].frostArmor.base\n  ){\n    actorUpdate[\"system.attributes.hp.temp\"] = actorData.flags[\"beavers-potions\"].frostArmor.base\n    await actor.update(actorUpdate);\n  }else \n  if(actorData.system.attributes.hp.temp>actorData.flags[\"beavers-potions\"].frostArmor.next){\n    const diff = actorData.flags[\"beavers-potions\"].frostArmor.next-actorData.flags[\"beavers-potions\"].frostArmor.base;\n    actorUpdate[\"system.attributes.hp.temp\"] = actorData.system.attributes.hp.temp-diff; \n    await actor.update(actorUpdate);\n  }\n}",
-        "author": "r8M7z5xqyZDxng8W",
-        "_id": null,
-        "img": "icons/svg/dice-target.svg",
-        "folder": null,
-        "sort": 0,
-        "ownership": {
-          "default": 0
-        },
-        "flags": {},
-        "_stats": {
-          "systemId": null,
-          "systemVersion": null,
-          "coreVersion": null,
-          "createdTime": null,
-          "modifiedTime": null,
-          "lastModifiedBy": null
-        }
-      }
-    },
-    "midi-qol": {
-      "effectActivation": false,
-      "onUseMacroName": ""
-    },
-    "midiProperties": {
-      "nodam": false,
-      "fulldam": false,
-      "halfdam": false,
-      "autoFailFriendly": false,
-      "rollOther": false,
-      "critOther": false,
-      "offHandWeapon": false,
-      "magicdam": false,
-      "magiceffect": false,
-      "concentration": false,
-      "toggleEffect": false,
-      "ignoreTotalCover": false
-    },
-    "core": {}
-  },
-  "_stats": {
-    "systemId": "dnd5e",
-    "systemVersion": "2.4.1",
-    "coreVersion": "11.315",
-    "createdTime": 1669920101137,
-    "modifiedTime": 1702947838758,
-    "lastModifiedBy": "1enA27CLCptznVn9"
-  },
-  "_id": "YywpTHDQ09DN7aLd",
   "folder": null,
   "sort": 0,
   "ownership": {
-    "default": 0,
-    "1enA27CLCptznVn9": 3
+    "default": 0
   },
-  "_key": "!items!YywpTHDQ09DN7aLd"
+  "flags": {
+    "beavers-potions": {
+      "potion": true
+    }
+  }
 }

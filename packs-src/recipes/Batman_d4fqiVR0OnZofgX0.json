@@ -1,14 +1,20 @@
 {
+  "_id": "d4fqiVR0OnZofgX0",
+  "_key": "!items!d4fqiVR0OnZofgX0",
   "name": "Batman",
   "type": "loot",
   "img": "icons/sundries/scrolls/scroll-worn-tan.webp",
   "system": {
     "description": {
-      "value": "<p>You need beavers-crafting module.</p>",
+      "value": "<p>A recipe of Beaver's Potions, it needs the module Beaver's Crafting.</p><p>Brewing: Nature check DC 12.</p>",
       "chat": ""
     },
+    "identifier": "recipe-batman",
     "source": {
-      "custom": "Recipe"
+      "custom": "Beaver's Potions",
+      "rules": "2014",
+      "book": "",
+      "license": ""
     },
     "quantity": 1,
     "weight": {
@@ -19,107 +25,95 @@
       "value": 0,
       "denomination": "gp"
     },
-    "rarity": "rare",
+    "rarity": "",
     "identified": true,
     "type": {
       "value": "",
       "subtype": ""
     },
-    "unidentified": {
-      "description": ""
-    },
-    "container": null,
     "properties": []
   },
   "effects": [],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
   "flags": {
     "beavers-crafting": {
+      "subtype": "Recipe",
       "recipe": {
-        "currency": {
-          "value": 250,
-          "name": "gp"
-        },
+        "required": {},
         "input": {
           "1": {
-            "key": {
-              "quantity": 5,
+            "Compendium-beavers-potions-ingredients-Item-abVFmDAfMIxApd1c": {
               "id": "abVFmDAfMIxApd1c",
-              "uuid": "Compendium.world.ingredients3.abVFmDAfMIxApd1c",
-              "img": "modules/beavers-crafting/icons/mushroom/47.png",
-              "type": "Item",
+              "uuid": "Compendium.beavers-potions.ingredients.Item.abVFmDAfMIxApd1c",
+              "img": "icons/consumables/mushrooms/campanulate-bell-shiny-blue.webp",
               "name": "Jelly Bag Cap",
-              "itemType": "consumable",
-              "flags": {
-                "beavers-crafting": {}
-              }
+              "type": "Item",
+              "itemType": "loot",
+              "quantity": 5
             }
           },
           "2": {
-            "key": {
-              "quantity": 5,
+            "Compendium-beavers-potions-ingredients-Item-Q8Mlg9WpuW6zKqes": {
               "id": "Q8Mlg9WpuW6zKqes",
-              "uuid": "Compendium.world.ingredients3.Q8Mlg9WpuW6zKqes",
-              "img": "modules/beavers-crafting/icons/mushroom/14.png",
-              "type": "Item",
+              "uuid": "Compendium.beavers-potions.ingredients.Item.Q8Mlg9WpuW6zKqes",
+              "img": "icons/consumables/mushrooms/umbontae-hot-pink.webp",
               "name": "Gloat Glow",
-              "itemType": "consumable",
-              "flags": {
-                "beavers-crafting": {}
-              }
+              "type": "Item",
+              "itemType": "loot",
+              "quantity": 5
             }
           },
           "3": {
-            "key": {
-              "quantity": 5,
+            "Compendium-beavers-potions-ingredients-Item-F1SSWiF1VvLWDvoK": {
               "id": "F1SSWiF1VvLWDvoK",
-              "uuid": "Compendium.world.ingredients3.F1SSWiF1VvLWDvoK",
-              "img": "modules/beavers-crafting/icons/mushroom/26.png",
-              "type": "Item",
+              "uuid": "Compendium.beavers-potions.ingredients.Item.F1SSWiF1VvLWDvoK",
+              "img": "icons/consumables/mushrooms/ovate-blue.webp",
               "name": "Blue Bill",
-              "itemType": "consumable",
-              "flags": {
-                "beavers-crafting": {}
-              }
+              "type": "Item",
+              "itemType": "loot",
+              "quantity": 5
             }
           },
           "4": {
-            "key": {
-              "quantity": 2,
+            "Compendium-beavers-potions-ingredients-Item-dozjFH55CR4npT6F": {
               "id": "dozjFH55CR4npT6F",
-              "uuid": "Compendium.beavers-crafting.ingredients.dozjFH55CR4npT6F",
+              "uuid": "Compendium.beavers-potions.ingredients.Item.dozjFH55CR4npT6F",
               "img": "icons/tools/laboratory/bowl-powder-purple.webp",
-              "type": "Item",
               "name": "Magical Essence",
+              "type": "Item",
               "itemType": "loot",
-              "flags": {
-                "beavers-crafting": {}
-              }
+              "quantity": 2
             }
           }
         },
         "output": {
           "1": {
-            "key": {
-              "quantity": 1,
+            "Compendium-beavers-potions-potions-Item-UOYRzlUw2HSELs9u": {
               "id": "UOYRzlUw2HSELs9u",
-              "uuid": "Compendium.beavers-potions.potions.UOYRzlUw2HSELs9u",
+              "uuid": "Compendium.beavers-potions.potions.Item.UOYRzlUw2HSELs9u",
               "img": "icons/consumables/potions/bottle-conical-corked-tied-blue.webp",
-              "type": "Item",
               "name": "Batman",
+              "type": "Item",
               "itemType": "consumable",
-              "flags": {
-                "beavers-crafting": {}
-              }
+              "quantity": 1
             }
           }
         },
-        "instruction": "",
-        "required": {},
+        "currency": {
+          "name": "gp",
+          "value": 250
+        },
         "beaversTests": {
           "fails": 1,
           "consume": true,
+          "failsInARow": false,
           "ands": {
             "1": {
+              "hits": 1,
               "ors": {
                 "1": {
                   "type": "SkillTest",
@@ -128,32 +122,14 @@
                     "skill": "nat"
                   }
                 }
-              },
-              "hits": 1
+              }
             }
           }
-        }
-      },
-      "subtype": "Recipe"
-    },
-    "core": {}
-  },
-  "_stats": {
-    "compendiumSource": null,
-    "duplicateSource": null,
-    "coreVersion": "12.331",
-    "systemId": "dnd5e",
-    "systemVersion": "3.3.1",
-    "createdTime": 1725004640871,
-    "modifiedTime": 1725007141211,
-    "lastModifiedBy": "jklU6hJSPXST02AA"
-  },
-  "_id": "d4fqiVR0OnZofgX0",
-  "folder": null,
-  "sort": 0,
-  "ownership": {
-    "default": 0,
-    "jklU6hJSPXST02AA": 3
-  },
-  "_key": "!items!d4fqiVR0OnZofgX0"
+        },
+        "macro": "",
+        "folder": "Beaver's Potions",
+        "kind": "recipe"
+      }
+    }
+  }
 }

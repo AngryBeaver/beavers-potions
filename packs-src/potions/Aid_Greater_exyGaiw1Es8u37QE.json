@@ -1,179 +1,194 @@
 {
+  "_id": "exyGaiw1Es8u37QE",
+  "_key": "!items!exyGaiw1Es8u37QE",
   "name": "Aid Greater",
   "type": "consumable",
   "img": "icons/consumables/potions/bottle-round-label-cork-red.webp",
   "system": {
     "description": {
-      "value": "<p><span style=\"font-family:Signika, sans-serif\">Your hit point maximum and current hit points increase by 10 for 8 hours</span></p>",
-      "chat": "",
-      "unidentified": ""
+      "value": "<p>Your hit point maximum and your current hit points increase by 10 for 8 hours.</p>",
+      "chat": ""
     },
+    "identifier": "aid-greater",
     "source": {
-      "custom": ""
+      "custom": "Beaver's Potions",
+      "rules": "2014",
+      "book": "",
+      "license": ""
     },
     "quantity": 1,
-    "weight": 0.1,
+    "weight": {
+      "value": 0.5,
+      "units": "lb"
+    },
     "price": {
       "value": 750,
       "denomination": "gp"
     },
-    "attunement": 0,
-    "equipped": false,
     "rarity": "rare",
     "identified": true,
-    "activation": {
-      "type": "action",
-      "cost": 1,
-      "condition": ""
+    "unidentified": {
+      "description": ""
     },
-    "duration": {
-      "value": "8",
-      "units": "hour"
+    "container": null,
+    "attunement": "",
+    "attuned": false,
+    "equipped": false,
+    "type": {
+      "value": "potion",
+      "subtype": ""
     },
-    "cover": null,
-    "crewed": false,
-    "target": {
-      "value": 1,
-      "width": null,
-      "units": "",
-      "type": "creature",
-      "prompt": true
-    },
-    "range": {
-      "value": null,
-      "long": null,
-      "units": "touch"
-    },
+    "properties": [
+      "mgc"
+    ],
     "uses": {
-      "value": 1,
+      "spent": 0,
       "max": "1",
-      "per": "charges",
-      "recovery": "",
-      "autoDestroy": true,
-      "prompt": true
+      "recovery": [],
+      "autoDestroy": true
     },
-    "consume": {
-      "type": "",
-      "target": "",
-      "amount": null,
-      "scale": false
-    },
-    "ability": null,
-    "actionType": "",
-    "attackBonus": "",
-    "chatFlavor": "",
-    "critical": {
-      "threshold": null,
-      "damage": ""
-    },
-    "damage": {
-      "parts": [],
-      "versatile": ""
-    },
-    "formula": "",
-    "save": {
-      "ability": "",
-      "dc": null,
-      "scaling": "spell"
-    },
-    "consumableType": "potion",
-    "properties": {}
+    "activities": {
+      "bpactexyGaiwDrin": {
+        "_id": "bpactexyGaiwDrin",
+        "type": "heal",
+        "name": "Drink",
+        "sort": 0,
+        "activation": {
+          "type": "action",
+          "value": null,
+          "override": false,
+          "condition": ""
+        },
+        "consumption": {
+          "scaling": {
+            "allowed": false
+          },
+          "spellSlot": true,
+          "targets": [
+            {
+              "type": "itemUses",
+              "value": "1",
+              "target": ""
+            }
+          ]
+        },
+        "description": {
+          "chatFlavor": ""
+        },
+        "duration": {
+          "units": "hour",
+          "value": "8",
+          "concentration": false,
+          "override": false
+        },
+        "effects": [
+          {
+            "_id": "bpfxexyGaiw10000",
+            "level": {
+              "min": null,
+              "max": null
+            }
+          }
+        ],
+        "range": {
+          "units": "self",
+          "override": false,
+          "special": ""
+        },
+        "target": {
+          "template": {
+            "contiguous": false,
+            "units": "ft",
+            "type": ""
+          },
+          "affects": {
+            "choice": false,
+            "count": "",
+            "type": "self"
+          },
+          "override": false,
+          "prompt": false
+        },
+        "uses": {
+          "spent": 0,
+          "recovery": [],
+          "max": ""
+        },
+        "img": "",
+        "visibility": {
+          "requireMagic": false,
+          "level": {
+            "min": null,
+            "max": null
+          },
+          "identifier": ""
+        },
+        "healing": {
+          "number": null,
+          "denomination": null,
+          "bonus": "10",
+          "types": [
+            "healing"
+          ],
+          "custom": {
+            "enabled": false,
+            "formula": ""
+          },
+          "scaling": {
+            "mode": "",
+            "number": 1,
+            "formula": ""
+          }
+        }
+      }
+    }
   },
   "effects": [
     {
-      "icon": "icons/consumables/potions/bottle-round-label-cork-red.webp",
-      "origin": "Item.exyGaiw1Es8u37QE",
-      "duration": {
-        "startTime": null,
-        "seconds": null,
-        "combat": null,
-        "rounds": null,
-        "turns": null,
-        "startRound": null,
-        "startTurn": null
+      "_id": "bpfxexyGaiw10000",
+      "_key": "!items.effects!exyGaiw1Es8u37QE.bpfxexyGaiw10000",
+      "name": "Aid Greater",
+      "img": "icons/consumables/potions/bottle-round-label-cork-red.webp",
+      "type": "base",
+      "description": "<p>Your hit point maximum and your current hit points increase by 10 for 8 hours.</p>",
+      "system": {
+        "changes": [
+          {
+            "_id": "bpfxexyGaiw1c000",
+            "key": "system.attributes.hp.tempmax",
+            "type": "add",
+            "value": "10",
+            "phase": "initial",
+            "priority": null
+          }
+        ],
+        "magical": true
       },
       "disabled": false,
-      "_id": "jbLB3cbBuFI7OKR4",
-      "changes": [
-        {
-          "key": "system.attributes.hp.max",
-          "mode": 2,
-          "value": "+10",
-          "priority": 20
-        },
-        {
-          "key": "system.attributes.hp.value",
-          "mode": 2,
-          "value": "+10",
-          "priority": 20
-        }
-      ],
-      "tint": null,
       "transfer": false,
-      "flags": {
-        "times-up": {},
-        "dae": {
-          "selfTarget": false,
-          "selfTargetAlways": false,
-          "stackable": "noneName",
-          "durationExpression": "",
-          "macroRepeat": "none",
-          "specialDuration": []
-        },
-        "core": {
-          "statusId": ""
-        },
-        "ActiveAuras": {
-          "isAura": false,
-          "aura": "None",
-          "radius": null,
-          "alignment": "",
-          "type": "",
-          "ignoreSelf": false,
-          "height": false,
-          "hidden": false,
-          "displayTemp": false,
-          "hostile": false,
-          "onlyOnce": false
-        }
+      "duration": {
+        "value": 8,
+        "units": "hours",
+        "expiry": "turnStart",
+        "expired": false
       },
-      "name": "Aid Greater",
-      "description": "",
       "statuses": [],
-      "_key": "!items.effects!exyGaiw1Es8u37QE.jbLB3cbBuFI7OKR4"
+      "flags": {},
+      "tint": "#ffffff",
+      "showIcon": 1,
+      "origin": null,
+      "start": null,
+      "sort": 0
     }
   ],
-  "flags": {
-    "core": {},
-    "magicitems": {
-      "enabled": false,
-      "equipped": false,
-      "attuned": false,
-      "charges": "0",
-      "chargeType": "c1",
-      "destroy": false,
-      "destroyFlavorText": "reaches 0 charges: it crumbles into ashes and is destroyed.",
-      "rechargeable": false,
-      "recharge": "0",
-      "rechargeType": "t1",
-      "rechargeUnit": "r1",
-      "sorting": "l"
-    }
-  },
-  "_stats": {
-    "systemId": "dnd5e",
-    "systemVersion": "2.4.1",
-    "coreVersion": "11.315",
-    "createdTime": 1666288212883,
-    "modifiedTime": 1702947838758,
-    "lastModifiedBy": "1enA27CLCptznVn9"
-  },
-  "_id": "exyGaiw1Es8u37QE",
   "folder": null,
   "sort": 0,
   "ownership": {
-    "default": 0,
-    "1enA27CLCptznVn9": 3
+    "default": 0
   },
-  "_key": "!items!exyGaiw1Es8u37QE"
+  "flags": {
+    "beavers-potions": {
+      "potion": true
+    }
+  }
 }

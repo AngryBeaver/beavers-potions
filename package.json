@@ -18,7 +18,8 @@
     "packs:extract": "node tools/extract-packs.mjs",
     "tag": "git tag -d ${npm_package_name}_${npm_package_version} 2>/dev/null ; git tag ${npm_package_name}_${npm_package_version} && git push -f origin ${npm_package_name}_${npm_package_version}",
     "format": "prettier --write \"src/**/*.{ts,js}\"",
-    "format:check": "prettier --check \"src/**/*.{ts,js}\""
+    "format:check": "prettier --check \"src/**/*.{ts,js}\"",
+    "packs:generate": "node tools/generate-packs.mjs"
   },
   "prettier": {
     "tabWidth": 2,

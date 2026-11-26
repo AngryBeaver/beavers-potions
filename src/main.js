@@ -1,31 +1,18 @@
-import {distortion, protectionFromDeath, reflectDamage} from "./EffectHooks.js";
+// Beaver's Potions: the potions work with dnd5e alone, the rules that dnd5e has no effect for are implemented here.
+import { NS } from "./util.js";
+import "./effects.js";
+import "./use.js";
+import "./rolls.js";
+import "./combat.js";
+import "./lifecycle.js";
 
-
-
-Hooks.on("midi-qol.preCheckHits",(workflow)=>{
-    workflow.targets.forEach(token=>{
-        token.document.actor.effects.forEach((effect)=>{
-           if(effect.label === "Distortion"){
-               distortion(workflow, token)
-           }
-        });
-    })
-});
-
-Hooks.on("midi-qol.damageApplied",(token,next)=>{
-    token.document.actor.effects.forEach((effect)=>{
-       if(effect.label === "Reflect Damage"){
-           reflectDamage(next.workflow.actor, next.ditem)
-       }
-    });
-});
-
-Hooks.on("updateActor",(actor,update,data,id)=>{
-    if(update.system?.attributes?.hp?.value <= 0 ){
-        actor.effects.forEach((effect)=>{
-            if(effect.label === "Protection From Death"){
-                protectionFromDeath(actor,effect);
-            }
-        });
-    }
+Hooks.once("init", () => {
+  game.settings.register(NS, "automate", {
+    name: `${NS}.settings.automate.name`,
+    hint: `${NS}.settings.automate.hint`,
+    scope: "world",
+    config: true,
+    type: Boolean,
+    default: true,
+  });
 });

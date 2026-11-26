@@ -1,237 +1,226 @@
 {
+  "_id": "FoM4MdQwQ0ASqMGu",
+  "_key": "!tables!FoM4MdQwQ0ASqMGu",
   "name": "Common Potions",
-  "description": "A random table created from the contents of the potions Folder.",
+  "img": "icons/tools/laboratory/vials-blue-pink.webp",
+  "description": "<p>A random common potion.</p>",
+  "formula": "1d13",
+  "replacement": true,
+  "displayRoll": true,
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
   "results": [
     {
-      "type": 2,
+      "_id": "bptrFoM4MdQw0000",
+      "_key": "!tables.results!FoM4MdQwQ0ASqMGu.bptrFoM4MdQw0000",
+      "type": "document",
+      "name": "Beauty Elixir",
+      "img": "icons/consumables/potions/bottle-bulb-corked-glowing-red.webp",
+      "description": "",
+      "documentUuid": "Compendium.beavers-potions.potions.Item.6mg7QLtafdc2lDp9",
       "weight": 1,
       "range": [
         1,
         1
       ],
       "drawn": false,
-      "text": "Detect Magic",
-      "img": "icons/consumables/potions/bottle-bulb-corked-purple.webp",
-      "documentCollection": "beavers-potions.potions",
-      "documentId": "hOpVQsMdNcgoZe8A",
-      "_id": "4jdjHzc422JAIYJI",
-      "flags": {},
-      "_key": "!tables.results!FoM4MdQwQ0ASqMGu.4jdjHzc422JAIYJI"
+      "flags": {}
     },
     {
-      "type": 2,
+      "_id": "bptrFoM4MdQw0100",
+      "_key": "!tables.results!FoM4MdQwQ0ASqMGu.bptrFoM4MdQw0100",
+      "type": "document",
+      "name": "Bug Shield",
+      "img": "icons/consumables/potions/bottle-bulb-corked-green.webp",
+      "description": "",
+      "documentUuid": "Compendium.beavers-potions.potions.Item.Qqh06crGN0I4wQuj",
       "weight": 1,
       "range": [
         2,
         2
       ],
       "drawn": false,
-      "text": "Beauty Elexir",
-      "img": "icons/consumables/potions/bottle-bulb-corked-glowing-red.webp",
-      "documentCollection": "beavers-potions.potions",
-      "documentId": "6mg7QLtafdc2lDp9",
-      "_id": "Q3KhrnLIICmJSHpT",
-      "flags": {},
-      "_key": "!tables.results!FoM4MdQwQ0ASqMGu.Q3KhrnLIICmJSHpT"
+      "flags": {}
     },
     {
-      "type": 2,
+      "_id": "bptrFoM4MdQw0200",
+      "_key": "!tables.results!FoM4MdQwQ0ASqMGu.bptrFoM4MdQw0200",
+      "type": "document",
+      "name": "Cobra Kai",
+      "img": "icons/consumables/potions/bottle-conical-corked-cyan.webp",
+      "description": "",
+      "documentUuid": "Compendium.beavers-potions.potions.Item.MChWuF8FTz5vOntg",
       "weight": 1,
       "range": [
         3,
         3
       ],
       "drawn": false,
-      "text": "Bug Shield",
-      "img": "icons/consumables/potions/bottle-bulb-corked-green.webp",
-      "documentCollection": "beavers-potions.potions",
-      "documentId": "Qqh06crGN0I4wQuj",
-      "_id": "N00qinElIjN3v2V1",
-      "flags": {},
-      "_key": "!tables.results!FoM4MdQwQ0ASqMGu.N00qinElIjN3v2V1"
+      "flags": {}
     },
     {
-      "type": 2,
+      "_id": "bptrFoM4MdQw0300",
+      "_key": "!tables.results!FoM4MdQwQ0ASqMGu.bptrFoM4MdQw0300",
+      "type": "document",
+      "name": "Comfort",
+      "img": "icons/consumables/potions/bottle-conical-corked-green.webp",
+      "description": "",
+      "documentUuid": "Compendium.beavers-potions.potions.Item.KHCZLpOKIl9Kjy84",
       "weight": 1,
       "range": [
         4,
         4
       ],
       "drawn": false,
-      "text": "Cobra Kai",
-      "img": "icons/consumables/potions/bottle-conical-corked-cyan.webp",
-      "documentCollection": "beavers-potions.potions",
-      "documentId": "MChWuF8FTz5vOntg",
-      "_id": "q381HSyw49vDEAlp",
-      "flags": {},
-      "_key": "!tables.results!FoM4MdQwQ0ASqMGu.q381HSyw49vDEAlp"
+      "flags": {}
     },
     {
-      "type": 2,
+      "_id": "bptrFoM4MdQw0400",
+      "_key": "!tables.results!FoM4MdQwQ0ASqMGu.bptrFoM4MdQw0400",
+      "type": "document",
+      "name": "Comprehend Languages",
+      "img": "icons/consumables/potions/bottle-pear-corked-pink.webp",
+      "description": "",
+      "documentUuid": "Compendium.beavers-potions.potions.Item.aj92WlihsltHkeaJ",
       "weight": 1,
       "range": [
         5,
         5
       ],
       "drawn": false,
-      "text": "Comfort",
-      "img": "icons/consumables/potions/bottle-conical-corked-green.webp",
-      "documentCollection": "beavers-potions.potions",
-      "documentId": "KHCZLpOKIl9Kjy84",
-      "_id": "cQLJuh9IEtH5dGWW",
-      "flags": {},
-      "_key": "!tables.results!FoM4MdQwQ0ASqMGu.cQLJuh9IEtH5dGWW"
+      "flags": {}
     },
     {
-      "type": 2,
+      "_id": "bptrFoM4MdQw0500",
+      "_key": "!tables.results!FoM4MdQwQ0ASqMGu.bptrFoM4MdQw0500",
+      "type": "document",
+      "name": "Cure Disease",
+      "img": "icons/consumables/potions/bottle-circular-corked-labeled-green.webp",
+      "description": "",
+      "documentUuid": "Compendium.beavers-potions.potions.Item.kSlCgJX5DO7u0F6a",
       "weight": 1,
       "range": [
         6,
         6
       ],
       "drawn": false,
-      "text": "Cure Disease",
-      "img": "icons/consumables/potions/bottle-circular-corked-labeled-green.webp",
-      "documentCollection": "beavers-potions.potions",
-      "documentId": "kSlCgJX5DO7u0F6a",
-      "_id": "GJ8EC70einqSzG7F",
-      "flags": {},
-      "_key": "!tables.results!FoM4MdQwQ0ASqMGu.GJ8EC70einqSzG7F"
+      "flags": {}
     },
     {
-      "type": 2,
+      "_id": "bptrFoM4MdQw0600",
+      "_key": "!tables.results!FoM4MdQwQ0ASqMGu.bptrFoM4MdQw0600",
+      "type": "document",
+      "name": "Cure Undead",
+      "img": "icons/consumables/potions/bottle-conical-corked-labeled-skull-poison-green.webp",
+      "description": "",
+      "documentUuid": "Compendium.beavers-potions.potions.Item.tEG8DYWsIjsnq89H",
       "weight": 1,
       "range": [
         7,
         7
       ],
       "drawn": false,
-      "text": "Cure Undead",
-      "img": "icons/consumables/potions/bottle-conical-corked-labeled-skull-poison-green.webp",
-      "documentCollection": "beavers-potions.potions",
-      "documentId": "tEG8DYWsIjsnq89H",
-      "_id": "2SRdaZv0UH95vbIQ",
-      "flags": {},
-      "_key": "!tables.results!FoM4MdQwQ0ASqMGu.2SRdaZv0UH95vbIQ"
+      "flags": {}
     },
     {
-      "type": 2,
+      "_id": "bptrFoM4MdQw0700",
+      "_key": "!tables.results!FoM4MdQwQ0ASqMGu.bptrFoM4MdQw0700",
+      "type": "document",
+      "name": "Detect Magic",
+      "img": "icons/consumables/potions/bottle-bulb-corked-purple.webp",
+      "description": "",
+      "documentUuid": "Compendium.beavers-potions.potions.Item.hOpVQsMdNcgoZe8A",
       "weight": 1,
       "range": [
         8,
         8
       ],
       "drawn": false,
-      "text": "Minor Invisibility",
-      "img": "icons/consumables/potions/bottle-conical-corked-blue.webp",
-      "documentCollection": "beavers-potions.potions",
-      "documentId": "kmMTJHkbMUoOLJIy",
-      "_id": "wUyrTa9FsTcXu5yM",
-      "flags": {},
-      "_key": "!tables.results!FoM4MdQwQ0ASqMGu.wUyrTa9FsTcXu5yM"
+      "flags": {}
     },
     {
-      "type": 2,
+      "_id": "bptrFoM4MdQw0800",
+      "_key": "!tables.results!FoM4MdQwQ0ASqMGu.bptrFoM4MdQw0800",
+      "type": "document",
+      "name": "Minor Invisibility",
+      "img": "icons/consumables/potions/bottle-conical-corked-blue.webp",
+      "description": "",
+      "documentUuid": "Compendium.beavers-potions.potions.Item.kmMTJHkbMUoOLJIy",
       "weight": 1,
       "range": [
         9,
         9
       ],
       "drawn": false,
-      "text": "Plant Nourishment",
-      "img": "icons/consumables/potions/bottle-conical-bubbling-blue.webp",
-      "documentCollection": "beavers-potions.potions",
-      "documentId": "NRltRDCfJCTu6frt",
-      "_id": "iGwYEDBTPIqvwRw1",
-      "flags": {},
-      "_key": "!tables.results!FoM4MdQwQ0ASqMGu.iGwYEDBTPIqvwRw1"
+      "flags": {}
     },
     {
-      "type": 2,
+      "_id": "bptrFoM4MdQw0900",
+      "_key": "!tables.results!FoM4MdQwQ0ASqMGu.bptrFoM4MdQw0900",
+      "type": "document",
+      "name": "Plant Nourishment",
+      "img": "icons/consumables/potions/bottle-conical-bubbling-blue.webp",
+      "description": "",
+      "documentUuid": "Compendium.beavers-potions.potions.Item.NRltRDCfJCTu6frt",
       "weight": 1,
       "range": [
         10,
         10
       ],
       "drawn": false,
-      "text": "Repair Glue",
-      "img": "icons/consumables/potions/bottle-conical-corked-purple.webp",
-      "documentCollection": "beavers-potions.potions",
-      "documentId": "SUJ0FsFU1YlW8Ail",
-      "_id": "lxD4oPXYuD9uvIHX",
-      "flags": {},
-      "_key": "!tables.results!FoM4MdQwQ0ASqMGu.lxD4oPXYuD9uvIHX"
+      "flags": {}
     },
     {
-      "type": 2,
+      "_id": "bptrFoM4MdQw1000",
+      "_key": "!tables.results!FoM4MdQwQ0ASqMGu.bptrFoM4MdQw1000",
+      "type": "document",
+      "name": "Repair Glue",
+      "img": "icons/consumables/potions/bottle-conical-corked-purple.webp",
+      "description": "",
+      "documentUuid": "Compendium.beavers-potions.potions.Item.SUJ0FsFU1YlW8Ail",
       "weight": 1,
       "range": [
         11,
         11
       ],
       "drawn": false,
-      "text": "Potion of Healing",
-      "img": "icons/consumables/potions/potion-tube-corked-red.webp",
-      "documentCollection": "dnd5e.items",
-      "documentId": "ytlsBjYsZ7OBSEBs",
-      "_id": "6L17EGjeYbFTfJci",
-      "flags": {},
-      "_key": "!tables.results!FoM4MdQwQ0ASqMGu.6L17EGjeYbFTfJci"
+      "flags": {}
     },
     {
-      "type": 2,
+      "_id": "bptrFoM4MdQw1100",
+      "_key": "!tables.results!FoM4MdQwQ0ASqMGu.bptrFoM4MdQw1100",
+      "type": "document",
+      "name": "Weightless",
+      "img": "icons/consumables/potions/bottle-bulb-empty-glass.webp",
+      "description": "",
+      "documentUuid": "Compendium.beavers-potions.potions.Item.abmTcsGnJaHZxNDU",
       "weight": 1,
       "range": [
         12,
         12
       ],
       "drawn": false,
-      "text": "Comprehend Languages",
-      "img": "icons/consumables/potions/bottle-pear-corked-pink.webp",
-      "documentCollection": "beavers-potions.potions",
-      "documentId": "aj92WlihsltHkeaJ",
-      "_id": "GCxv9tmWGqxYOq3t",
-      "flags": {},
-      "_key": "!tables.results!FoM4MdQwQ0ASqMGu.GCxv9tmWGqxYOq3t"
+      "flags": {}
     },
     {
-      "type": 2,
+      "_id": "bptrFoM4MdQw1200",
+      "_key": "!tables.results!FoM4MdQwQ0ASqMGu.bptrFoM4MdQw1200",
+      "type": "document",
+      "name": "Potion of Healing",
+      "img": "icons/consumables/potions/potion-tube-corked-red.webp",
+      "description": "",
+      "documentUuid": "Compendium.dnd5e.items.Item.ytlsBjYsZ7OBSEBs",
       "weight": 1,
       "range": [
         13,
         13
       ],
       "drawn": false,
-      "text": "Weightless",
-      "img": "icons/consumables/potions/bottle-bulb-empty-glass.webp",
-      "documentCollection": "beavers-potions.potions",
-      "documentId": "abmTcsGnJaHZxNDU",
-      "_id": "Ds0kdekbxBb2giw0",
-      "flags": {},
-      "_key": "!tables.results!FoM4MdQwQ0ASqMGu.Ds0kdekbxBb2giw0"
+      "flags": {}
     }
-  ],
-  "formula": "1d13",
-  "img": "icons/tools/laboratory/vials-blue-pink.webp",
-  "replacement": true,
-  "displayRoll": true,
-  "flags": {
-    "core": {}
-  },
-  "_stats": {
-    "systemId": "dnd5e",
-    "systemVersion": "2.4.1",
-    "coreVersion": "11.315",
-    "createdTime": 1672476913934,
-    "modifiedTime": 1702947754179,
-    "lastModifiedBy": "1enA27CLCptznVn9"
-  },
-  "_id": "FoM4MdQwQ0ASqMGu",
-  "folder": null,
-  "sort": 0,
-  "ownership": {
-    "default": 0,
-    "1enA27CLCptznVn9": 3
-  },
-  "_key": "!tables!FoM4MdQwQ0ASqMGu"
+  ]
 }

@@ -1,0 +1,135 @@
+{
+  "_id": "bpRecBlur0000000",
+  "_key": "!items!bpRecBlur0000000",
+  "name": "Blur",
+  "type": "loot",
+  "img": "icons/sundries/scrolls/scroll-worn-tan.webp",
+  "system": {
+    "description": {
+      "value": "<p>A recipe of Beaver's Potions, it needs the module Beaver's Crafting.</p><p>Brewing: Arcana check DC 12.</p>",
+      "chat": ""
+    },
+    "identifier": "recipe-blur",
+    "source": {
+      "custom": "Beaver's Potions",
+      "rules": "2014",
+      "book": "",
+      "license": ""
+    },
+    "quantity": 1,
+    "weight": {
+      "value": 0,
+      "units": "lb"
+    },
+    "price": {
+      "value": 0,
+      "denomination": "gp"
+    },
+    "rarity": "",
+    "identified": true,
+    "type": {
+      "value": "",
+      "subtype": ""
+    },
+    "properties": []
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "beavers-crafting": {
+      "subtype": "Recipe",
+      "recipe": {
+        "required": {},
+        "input": {
+          "1": {
+            "Compendium-beavers-potions-ingredients-Item-AAfrnuKdmek8QYqV": {
+              "id": "AAfrnuKdmek8QYqV",
+              "uuid": "Compendium.beavers-potions.ingredients.Item.AAfrnuKdmek8QYqV",
+              "img": "icons/consumables/mushrooms/umbontae-bumpy-purple.webp",
+              "name": "Viscid Ghost",
+              "type": "Item",
+              "itemType": "loot",
+              "quantity": 5
+            }
+          },
+          "2": {
+            "Compendium-beavers-potions-ingredients-Item-Q2IL3nSljRbVrhnt": {
+              "id": "Q2IL3nSljRbVrhnt",
+              "uuid": "Compendium.beavers-potions.ingredients.Item.Q2IL3nSljRbVrhnt",
+              "img": "icons/consumables/mushrooms/alien-spotted-blue.webp",
+              "name": "Star Dip",
+              "type": "Item",
+              "itemType": "loot",
+              "quantity": 5
+            }
+          },
+          "3": {
+            "Compendium-beavers-potions-ingredients-Item-dVFbblELstFhBgeW": {
+              "id": "dVFbblELstFhBgeW",
+              "uuid": "Compendium.beavers-potions.ingredients.Item.dVFbblELstFhBgeW",
+              "img": "icons/consumables/mushrooms/umbontae-pink-purple.webp",
+              "name": "Rainblow",
+              "type": "Item",
+              "itemType": "loot",
+              "quantity": 5
+            }
+          },
+          "4": {
+            "Compendium-beavers-potions-ingredients-Item-dozjFH55CR4npT6F": {
+              "id": "dozjFH55CR4npT6F",
+              "uuid": "Compendium.beavers-potions.ingredients.Item.dozjFH55CR4npT6F",
+              "img": "icons/tools/laboratory/bowl-powder-purple.webp",
+              "name": "Magical Essence",
+              "type": "Item",
+              "itemType": "loot",
+              "quantity": 2
+            }
+          }
+        },
+        "output": {
+          "1": {
+            "Compendium-beavers-potions-potions-Item-GC5EmcU3FzX8o4Mi": {
+              "id": "GC5EmcU3FzX8o4Mi",
+              "uuid": "Compendium.beavers-potions.potions.Item.GC5EmcU3FzX8o4Mi",
+              "img": "icons/consumables/potions/bottle-round-label-cork-blue.webp",
+              "name": "Blur",
+              "type": "Item",
+              "itemType": "consumable",
+              "quantity": 1
+            }
+          }
+        },
+        "currency": {
+          "name": "gp",
+          "value": 250
+        },
+        "beaversTests": {
+          "fails": 1,
+          "consume": true,
+          "failsInARow": false,
+          "ands": {
+            "1": {
+              "hits": 1,
+              "ors": {
+                "1": {
+                  "type": "SkillTest",
+                  "data": {
+                    "dc": 12,
+                    "skill": "arc"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "macro": "",
+        "folder": "Beaver's Potions",
+        "kind": "recipe"
+      }
+    }
+  }
+}

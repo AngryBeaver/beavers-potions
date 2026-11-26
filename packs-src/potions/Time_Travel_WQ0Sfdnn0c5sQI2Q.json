@@ -1,198 +1,168 @@
 {
+  "_id": "WQ0Sfdnn0c5sQI2Q",
+  "_key": "!items!WQ0Sfdnn0c5sQI2Q",
   "name": "Time Travel",
   "type": "consumable",
   "img": "icons/consumables/potions/bottle-conical-corked-yellow.webp",
   "system": {
     "description": {
-      "value": "<p>You travel back in time for exaclty 30 minutes.</p><ol><li><p>you do not change! The world around you does.</p></li><li><p>you coexists with your past.</p></li><li><p>rules of timetravel: You can not change anything effecting your personal perspective of history !</p></li></ol><p>If you violate the rules of timetravel your time travel ends immidiatly and you return to your timeline where everything has happend as before.</p><p>( In reality you just open up a new parallel timeline, sadly your mind is bonded to this one. )</p><p></p><p>When your time is up or after your violate the rules of timetravel, your existence vanishes while simultaniously your past is strucked down at 0 hitpoints. When you manage to survive or revive your mind is the mind of your traveled you.</p><p></p><section id=\"secret-9Vw4JUl0dZ2IJrjX\" class=\"secret\"><p>You do not change! the world around you does: <br />You start your existence in the past at the exact same spot your are currently in with exact the same stats and equipment you currently posses.<br /><br />rules of timetravel: <br />Will lead to you doing exactly the same as before! Your past is not aware of your future help  ! But wait why should you then drink this potion. !Be creative ! The changes you did could change the future thereafter. e.g. You have been chased down by an angry mop and ended up here in front of a locked door. If only someone would have left a key below that doormat. </p></section><p></p>",
-      "chat": "",
-      "unidentified": ""
+      "value": "<p>You travel back in time for exactly 30 minutes. You do not change! The world around you does: you coexist with your past self. You start your existence in the past at the exact same spot you are currently in, with exactly the same stats and equipment.</p><p><strong>Rules of time travel:</strong> you cannot change anything affecting your personal perspective of history! Your past self is not aware of your help and does exactly the same as before. If you violate the rules, your time travel ends immediately and you return to your timeline where everything happened as before. (In reality you just opened a new parallel timeline, sadly your mind is bonded to this one.)</p><p>When your time is up or after you violate the rules, your existence vanishes while your past self is simultaneously struck down to 0 hit points. When it survives, its mind is the mind of the traveller.</p><p>But wait, why should you then drink this potion? Be creative! The changes you make could change the future thereafter. E.g. you have been chased by an angry mob and ended up in front of a locked door. If only someone had left a key below that doormat.</p>",
+      "chat": ""
     },
+    "identifier": "time-travel",
     "source": {
-      "custom": ""
+      "custom": "Beaver's Potions",
+      "rules": "2014",
+      "book": "",
+      "license": ""
     },
     "quantity": 1,
-    "weight": 0.1,
+    "weight": {
+      "value": 0.5,
+      "units": "lb"
+    },
     "price": {
       "value": 5000,
       "denomination": "gp"
     },
-    "attunement": 0,
-    "equipped": false,
     "rarity": "legendary",
     "identified": true,
-    "activation": {
-      "type": "action",
-      "cost": 1,
-      "condition": ""
+    "unidentified": {
+      "description": ""
     },
-    "duration": {
-      "value": "30",
-      "units": "minute"
+    "container": null,
+    "attunement": "",
+    "attuned": false,
+    "equipped": false,
+    "type": {
+      "value": "potion",
+      "subtype": ""
     },
-    "cover": null,
-    "crewed": false,
-    "target": {
-      "value": 1,
-      "width": null,
-      "units": "",
-      "type": "creature",
-      "prompt": true
-    },
-    "range": {
-      "value": null,
-      "long": null,
-      "units": "touch"
-    },
+    "properties": [
+      "mgc"
+    ],
     "uses": {
-      "value": 1,
+      "spent": 0,
       "max": "1",
-      "per": "charges",
-      "recovery": "",
-      "autoDestroy": true,
-      "prompt": true
+      "recovery": [],
+      "autoDestroy": true
     },
-    "consume": {
-      "type": "",
-      "target": "",
-      "amount": null,
-      "scale": false
-    },
-    "ability": null,
-    "actionType": "",
-    "attackBonus": "",
-    "chatFlavor": "",
-    "critical": {
-      "threshold": null,
-      "damage": ""
-    },
-    "damage": {
-      "parts": [],
-      "versatile": ""
-    },
-    "formula": "",
-    "save": {
-      "ability": "",
-      "dc": null,
-      "scaling": "spell"
-    },
-    "consumableType": "potion",
-    "properties": {}
+    "activities": {
+      "bpactWQ0SfdnDrin": {
+        "_id": "bpactWQ0SfdnDrin",
+        "type": "utility",
+        "name": "Drink",
+        "sort": 0,
+        "activation": {
+          "type": "action",
+          "value": null,
+          "override": false,
+          "condition": ""
+        },
+        "consumption": {
+          "scaling": {
+            "allowed": false
+          },
+          "spellSlot": true,
+          "targets": [
+            {
+              "type": "itemUses",
+              "value": "1",
+              "target": ""
+            }
+          ]
+        },
+        "description": {
+          "chatFlavor": ""
+        },
+        "duration": {
+          "units": "minute",
+          "value": "30",
+          "concentration": false,
+          "override": false
+        },
+        "effects": [
+          {
+            "_id": "bpfxWQ0Sfdnn0000",
+            "level": {
+              "min": null,
+              "max": null
+            }
+          }
+        ],
+        "range": {
+          "units": "self",
+          "override": false,
+          "special": ""
+        },
+        "target": {
+          "template": {
+            "contiguous": false,
+            "units": "ft",
+            "type": ""
+          },
+          "affects": {
+            "choice": false,
+            "count": "",
+            "type": "self"
+          },
+          "override": false,
+          "prompt": false
+        },
+        "uses": {
+          "spent": 0,
+          "recovery": [],
+          "max": ""
+        },
+        "img": "",
+        "visibility": {
+          "requireMagic": false,
+          "level": {
+            "min": null,
+            "max": null
+          },
+          "identifier": ""
+        }
+      }
+    }
   },
   "effects": [
     {
-      "icon": "icons/magic/time/hourglass-tilted-glowing-gold.webp",
-      "origin": "Item.WQ0Sfdnn0c5sQI2Q",
-      "duration": {
-        "startTime": null,
-        "seconds": null,
-        "combat": null,
-        "rounds": null,
-        "turns": null,
-        "startRound": null,
-        "startTurn": null
+      "_id": "bpfxWQ0Sfdnn0000",
+      "_key": "!items.effects!WQ0Sfdnn0c5sQI2Q.bpfxWQ0Sfdnn0000",
+      "name": "Timeless",
+      "img": "icons/consumables/potions/bottle-conical-corked-yellow.webp",
+      "type": "base",
+      "description": "<p>You travel back in time for exactly 30 minutes. You do not change! The world around you does: you coexist with your past self. You start your existence in the past at the exact same spot you are currently in, with exactly the same stats and equipment.</p><p><strong>Rules of time travel:</strong> you cannot change anything affecting your personal perspective of history! Your past self is not aware of your help and does exactly the same as before. If you violate the rules, your time travel ends immediately and you return to your timeline where everything happened as before. (In reality you just opened a new parallel timeline, sadly your mind is bonded to this one.)</p><p>When your time is up or after you violate the rules, your existence vanishes while your past self is simultaneously struck down to 0 hit points. When it survives, its mind is the mind of the traveller.</p><p>But wait, why should you then drink this potion? Be creative! The changes you make could change the future thereafter. E.g. you have been chased by an angry mob and ended up in front of a locked door. If only someone had left a key below that doormat.</p>",
+      "system": {
+        "changes": [],
+        "magical": true
       },
       "disabled": false,
-      "_id": "fGACPMSnTPy95vfW",
-      "changes": [
-        {
-          "key": "macro.itemMacro",
-          "mode": 0,
-          "value": "",
-          "priority": 20
-        }
-      ],
-      "tint": null,
       "transfer": false,
-      "flags": {
-        "times-up": {},
-        "dae": {
-          "selfTarget": false,
-          "selfTargetAlways": false,
-          "stackable": "noneName",
-          "durationExpression": "",
-          "macroRepeat": "none",
-          "specialDuration": []
-        },
-        "core": {
-          "statusId": ""
-        },
-        "ActiveAuras": {
-          "isAura": false,
-          "aura": "None",
-          "radius": null,
-          "alignment": "",
-          "type": "",
-          "ignoreSelf": false,
-          "height": false,
-          "hidden": false,
-          "displayTemp": false,
-          "hostile": false,
-          "onlyOnce": false
-        }
+      "duration": {
+        "value": 30,
+        "units": "minutes",
+        "expiry": "turnStart",
+        "expired": false
       },
-      "name": "Timeless",
-      "description": "",
       "statuses": [],
-      "_key": "!items.effects!WQ0Sfdnn0c5sQI2Q.fGACPMSnTPy95vfW"
+      "flags": {},
+      "tint": "#ffffff",
+      "showIcon": 1,
+      "origin": null,
+      "start": null,
+      "sort": 0
     }
   ],
-  "flags": {
-    "magicitems": {
-      "enabled": false,
-      "equipped": false,
-      "attuned": false,
-      "charges": "0",
-      "chargeType": "c1",
-      "destroy": false,
-      "destroyFlavorText": "reaches 0 charges: it crumbles into ashes and is destroyed.",
-      "rechargeable": false,
-      "recharge": "0",
-      "rechargeType": "t1",
-      "rechargeUnit": "r1",
-      "sorting": "l"
-    },
-    "itemacro": {
-      "macro": {
-        "name": "Time Travel",
-        "type": "script",
-        "scope": "global",
-        "command": "console.log(args);\nif(args[0] === \"off\"){\n  const actor = await fromUuid(args[1].actorUuid);\n  await actor.update({system:{attributes:{hp:{value:0}}}});\n}",
-        "author": "r8M7z5xqyZDxng8W",
-        "_id": null,
-        "img": "icons/svg/dice-target.svg",
-        "folder": null,
-        "sort": 0,
-        "ownership": {
-          "default": 0
-        },
-        "flags": {},
-        "_stats": {
-          "systemId": null,
-          "systemVersion": null,
-          "coreVersion": null,
-          "createdTime": null,
-          "modifiedTime": null,
-          "lastModifiedBy": null
-        }
-      }
-    },
-    "core": {}
-  },
-  "_stats": {
-    "systemId": "dnd5e",
-    "systemVersion": "2.4.1",
-    "coreVersion": "11.315",
-    "createdTime": 1671625615893,
-    "modifiedTime": 1702947838758,
-    "lastModifiedBy": "1enA27CLCptznVn9"
-  },
-  "_id": "WQ0Sfdnn0c5sQI2Q",
   "folder": null,
   "sort": 0,
   "ownership": {
-    "default": 0,
-    "1enA27CLCptznVn9": 3
+    "default": 0
   },
-  "_key": "!items!WQ0Sfdnn0c5sQI2Q"
+  "flags": {
+    "beavers-potions": {
+      "potion": true
+    }
+  }
 }

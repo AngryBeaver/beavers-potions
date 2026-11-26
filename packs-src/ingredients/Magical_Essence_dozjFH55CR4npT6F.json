@@ -1,0 +1,51 @@
+{
+  "_id": "dozjFH55CR4npT6F",
+  "_key": "!items!dozjFH55CR4npT6F",
+  "name": "Magical Essence",
+  "type": "loot",
+  "img": "icons/tools/laboratory/bowl-powder-purple.webp",
+  "system": {
+    "description": {
+      "value": "<p>The magic of a potion, distilled into a purple powder. Many potions need it.</p>",
+      "chat": ""
+    },
+    "identifier": "magical-essence",
+    "source": {
+      "custom": "Beaver's Potions",
+      "rules": "2014",
+      "book": "",
+      "license": ""
+    },
+    "quantity": 1,
+    "weight": {
+      "value": 0.1,
+      "units": "lb"
+    },
+    "price": {
+      "value": 10,
+      "denomination": "gp"
+    },
+    "rarity": "uncommon",
+    "identified": true,
+    "unidentified": {
+      "description": ""
+    },
+    "container": null,
+    "type": {
+      "value": "material",
+      "subtype": ""
+    },
+    "properties": []
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "beavers-potions": {
+      "ingredient": "essence"
+    }
+  }
+}
