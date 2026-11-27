@@ -1,0 +1,86 @@
+{
+  "_id": "IGqhyVesOoWIt6Tg",
+  "_key": "!items!IGqhyVesOoWIt6Tg",
+  "name": "Live Essence",
+  "type": "object",
+  "img": "icons/consumables/potions/bottle-round-corked-orante-red.webp",
+  "system": {
+    "description": "<p>Before drinking, mix in one drop of fresh blood of your target (target it). You drink the life essence of the blood's owner: it takes 3d6 + 3 necrotic damage on a failed DC 14 Constitution saving throw, or half as much on a successful one. You heal the same amount.</p>",
+    "actions": {
+      "bpactIGqhyVeDrin": {
+        "name": "Drink",
+        "img": "icons/consumables/potions/bottle-round-corked-orante-red.webp",
+        "activation": {
+          "type": "action",
+          "cost": 1,
+          "reactionTrigger": ""
+        },
+        "duration": {
+          "unit": "instantaneous",
+          "value": ""
+        },
+        "target": {
+          "quantity": "",
+          "type": "self"
+        },
+        "consumers": {
+          "bpconIGqhyVeDrin": {
+            "type": "quantity",
+            "default": true,
+            "itemId": "",
+            "quantity": 1,
+            "deleteOnZero": true,
+            "label": ""
+          }
+        },
+        "rolls": {},
+        "prompts": {},
+        "effects": [],
+        "macro": ""
+      }
+    },
+    "objectType": "consumable",
+    "price": {
+      "value": 750,
+      "denomination": "gp",
+      "special": ""
+    },
+    "quantity": 1,
+    "rarity": "rare",
+    "weight": 0.5,
+    "source": "",
+    "requiresAttunement": false,
+    "unidentified": false
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "beavers-potions": {
+      "potion": true,
+      "use": {
+        "drain": {
+          "formula": "3d6 + 3",
+          "type": "necrotic",
+          "ability": "con",
+          "dc": 14
+        }
+      },
+      "rarity": "rare",
+      "rules": [
+        [
+          "drain",
+          {
+            "formula": "3d6 + 3",
+            "type": "necrotic",
+            "ability": "con",
+            "dc": 14
+          }
+        ]
+      ]
+    }
+  }
+}

@@ -1,0 +1,85 @@
+{
+  "_id": "hOpVQsMdNcgoZe8A",
+  "_key": "!items!hOpVQsMdNcgoZe8A",
+  "name": "Detect Magic",
+  "type": "consumable",
+  "img": "icons/consumables/potions/bottle-bulb-corked-purple.webp",
+  "system": {
+    "subType": "potion",
+    "description": {
+      "value": "<p>Gives the effect of a <em>Detect Magic</em> spell for 10 minutes (no concentration required).</p>",
+      "instructions": "",
+      "unidentified": ""
+    },
+    "quantity": 1,
+    "weight": {
+      "value": 0.1
+    },
+    "price": 50,
+    "identified": true,
+    "cl": 1,
+    "uses": {
+      "value": null,
+      "per": "single",
+      "autoDeductChargesCost": "",
+      "maxFormula": "",
+      "rechargeFormula": ""
+    },
+    "actions": [
+      {
+        "_id": "bpacthOpVQsMDrin",
+        "name": "Drink",
+        "activation": {
+          "type": "standard",
+          "unchained": {
+            "type": "action",
+            "cost": 2
+          }
+        },
+        "duration": {
+          "units": "inst"
+        }
+      }
+    ]
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "beavers-potions": {
+      "potion": true,
+      "buffs": [
+        {
+          "name": "Detect Magic",
+          "type": "buff",
+          "img": "icons/consumables/potions/bottle-bulb-corked-purple.webp",
+          "system": {
+            "subType": "temp",
+            "active": true,
+            "level": 1,
+            "duration": {
+              "value": "10",
+              "units": "minute",
+              "end": "turnStart"
+            },
+            "changes": [],
+            "conditions": [],
+            "description": {
+              "value": "<p>Gives the effect of a <em>Detect Magic</em> spell for 10 minutes (no concentration required).</p>"
+            }
+          },
+          "flags": {
+            "beavers-potions": {
+              "source": "detect-magic.buff"
+            }
+          }
+        }
+      ],
+      "rarity": "common",
+      "rules": []
+    }
+  }
+}

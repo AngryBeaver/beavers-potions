@@ -1,0 +1,63 @@
+{
+  "_id": "MBW3BYNmH8bhZhwe",
+  "_key": "!items!MBW3BYNmH8bhZhwe",
+  "name": "Gold Rush",
+  "type": "consumable",
+  "img": "icons/consumables/potions/bottle-round-corked-orange.webp",
+  "system": {
+    "consumableType": "potion",
+    "description": {
+      "value": "<p>For the next 24 hours you can smell the presence of gold within 50 ft. of you. On a successful (DC 15) Wisdom (Perception) check you can pinpoint its location and amount.</p>"
+    },
+    "quantity": 1,
+    "weight": 0.1,
+    "price": 250,
+    "identified": true,
+    "identifiedName": "Gold Rush",
+    "uses": {
+      "value": 0,
+      "max": 0,
+      "per": "single"
+    }
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "beavers-potions": {
+      "potion": true,
+      "buffs": [
+        {
+          "name": "Gold Rush",
+          "type": "buff",
+          "img": "icons/consumables/potions/bottle-round-corked-orange.webp",
+          "system": {
+            "buffType": "temp",
+            "active": true,
+            "level": 1,
+            "duration": {
+              "value": "24",
+              "units": "hour"
+            },
+            "changes": [],
+            "description": {
+              "value": "<p>For the next 24 hours you can smell the presence of gold within 50 ft. of you. On a successful (DC 15) Wisdom (Perception) check you can pinpoint its location and amount.</p>"
+            }
+          },
+          "flags": {
+            "beavers-potions": {
+              "conditions": [],
+              "source": "gold-rush.buff"
+            }
+          }
+        }
+      ],
+      "pour": false,
+      "rarity": "uncommon",
+      "rules": []
+    }
+  }
+}

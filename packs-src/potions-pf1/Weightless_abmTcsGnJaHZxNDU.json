@@ -1,0 +1,93 @@
+{
+  "_id": "abmTcsGnJaHZxNDU",
+  "_key": "!items!abmTcsGnJaHZxNDU",
+  "name": "Weightless",
+  "type": "consumable",
+  "img": "icons/consumables/potions/bottle-bulb-empty-glass.webp",
+  "system": {
+    "subType": "potion",
+    "description": {
+      "value": "<p>Your body becomes weightless for 1 minute. As long as you do not carry anything (including clothes) you are no longer pulled down to earth: you hover.</p>",
+      "instructions": "",
+      "unidentified": ""
+    },
+    "quantity": 1,
+    "weight": {
+      "value": 0.1
+    },
+    "price": 50,
+    "identified": true,
+    "cl": 1,
+    "uses": {
+      "value": null,
+      "per": "single",
+      "autoDeductChargesCost": "",
+      "maxFormula": "",
+      "rechargeFormula": ""
+    },
+    "actions": [
+      {
+        "_id": "bpactabmTcsGDrin",
+        "name": "Drink",
+        "activation": {
+          "type": "standard",
+          "unchained": {
+            "type": "action",
+            "cost": 2
+          }
+        },
+        "duration": {
+          "units": "inst"
+        }
+      }
+    ]
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "beavers-potions": {
+      "potion": true,
+      "buffs": [
+        {
+          "name": "Weightless",
+          "type": "buff",
+          "img": "icons/consumables/potions/bottle-bulb-empty-glass.webp",
+          "system": {
+            "subType": "temp",
+            "active": true,
+            "level": 1,
+            "duration": {
+              "value": "1",
+              "units": "minute",
+              "end": "turnStart"
+            },
+            "changes": [],
+            "conditions": [],
+            "description": {
+              "value": "<p>Your body becomes weightless for 1 minute. As long as you do not carry anything (including clothes) you are no longer pulled down to earth: you hover.</p>"
+            }
+          },
+          "flags": {
+            "beavers-potions": {
+              "source": "weightless.buff"
+            }
+          }
+        }
+      ],
+      "rarity": "common",
+      "rules": [
+        [
+          "status",
+          "hovering"
+        ]
+      ],
+      "unsupported": [
+        "status hovering"
+      ]
+    }
+  }
+}

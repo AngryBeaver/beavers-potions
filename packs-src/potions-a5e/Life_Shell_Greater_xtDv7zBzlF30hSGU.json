@@ -1,0 +1,80 @@
+{
+  "_id": "xtDv7zBzlF30hSGU",
+  "_key": "!items!xtDv7zBzlF30hSGU",
+  "name": "Life Shell Greater",
+  "type": "object",
+  "img": "icons/consumables/potions/flask-corked-green.webp",
+  "system": {
+    "description": "<p>You gain 20 temporary hit points.</p>",
+    "actions": {
+      "bpactxtDv7zBDrin": {
+        "name": "Drink",
+        "img": "icons/consumables/potions/flask-corked-green.webp",
+        "activation": {
+          "type": "action",
+          "cost": 1,
+          "reactionTrigger": ""
+        },
+        "duration": {
+          "unit": "instantaneous",
+          "value": ""
+        },
+        "target": {
+          "quantity": "",
+          "type": "self"
+        },
+        "consumers": {
+          "bpconxtDv7zBDrin": {
+            "type": "quantity",
+            "default": true,
+            "itemId": "",
+            "quantity": 1,
+            "deleteOnZero": true,
+            "label": ""
+          }
+        },
+        "rolls": {
+          "bprollxtDv7zDrin": {
+            "type": "healing",
+            "formula": "20",
+            "healingType": "temporaryHealing",
+            "name": "Life Shell Greater"
+          }
+        },
+        "prompts": {},
+        "effects": [],
+        "macro": ""
+      }
+    },
+    "objectType": "consumable",
+    "price": {
+      "value": 750,
+      "denomination": "gp",
+      "special": ""
+    },
+    "quantity": 1,
+    "rarity": "rare",
+    "weight": 0.5,
+    "source": "",
+    "requiresAttunement": false,
+    "unidentified": false
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "beavers-potions": {
+      "potion": true,
+      "rarity": "rare",
+      "rules": [
+        [
+          "temp",
+          20
+        ]
+      ]
+    }
+  }
+}

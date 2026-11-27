@@ -152,7 +152,18 @@
         "transform": {
           "seconds": 21600
         }
-      }
+      },
+      "rarity": "common",
+      "rules": [
+        [
+          "transform",
+          {
+            "dnd5e": "Compendium.dnd5e.actors24.Actor.mmVenomousSnake0"
+          },
+          "Venomous Snake",
+          21600
+        ]
+      ]
     }
   }
 }

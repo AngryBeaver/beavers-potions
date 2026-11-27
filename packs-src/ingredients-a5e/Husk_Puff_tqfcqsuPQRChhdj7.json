@@ -1,0 +1,31 @@
+{
+  "_id": "tqfcqsuPQRChhdj7",
+  "_key": "!items!tqfcqsuPQRChhdj7",
+  "name": "Husk Puff",
+  "type": "object",
+  "img": "icons/consumables/mushrooms/convex-tan.webp",
+  "system": {
+    "description": "<p>A mushroom, an ingredient of Beaver's Potions.</p>",
+    "objectType": "miscellaneous",
+    "price": {
+      "value": 0,
+      "denomination": "gp",
+      "special": ""
+    },
+    "quantity": 1,
+    "rarity": "common",
+    "weight": 0.1,
+    "actions": {}
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "beavers-potions": {
+      "ingredient": "mushroom"
+    }
+  }
+}

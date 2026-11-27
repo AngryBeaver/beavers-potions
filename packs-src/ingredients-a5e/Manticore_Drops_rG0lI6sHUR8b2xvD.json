@@ -1,0 +1,31 @@
+{
+  "_id": "rG0lI6sHUR8b2xvD",
+  "_key": "!items!rG0lI6sHUR8b2xvD",
+  "name": "Manticore Drops",
+  "type": "object",
+  "img": "icons/consumables/mushrooms/campanulate-bell-shiny-bumpy-red.webp",
+  "system": {
+    "description": "<p>A mushroom, an ingredient of Beaver's Potions.</p>",
+    "objectType": "miscellaneous",
+    "price": {
+      "value": 0,
+      "denomination": "gp",
+      "special": ""
+    },
+    "quantity": 1,
+    "rarity": "common",
+    "weight": 0.1,
+    "actions": {}
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "beavers-potions": {
+      "ingredient": "mushroom"
+    }
+  }
+}

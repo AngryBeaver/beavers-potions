@@ -1,0 +1,150 @@
+{
+  "_id": "iSnyqLSClSjZx1Nk",
+  "_key": "!items!iSnyqLSClSjZx1Nk",
+  "name": "Radio Activity",
+  "type": "consumable",
+  "img": "icons/consumables/potions/bottle-conical-fumes-green.webp",
+  "system": {
+    "category": "potion",
+    "description": {
+      "value": "<p>You begin to glow for 5 rounds creating a 25 ft. aura of green light around you. Each creature, including yourself, must make a DC 14 Constitution saving throw when it starts its turn within 25 ft. of you. A target takes 3d6 radiant damage on a failed save, or half as much on a successful one.</p>"
+    },
+    "level": {
+      "value": 8
+    },
+    "price": {
+      "value": {
+        "gp": 750
+      }
+    },
+    "quantity": 1,
+    "bulk": {
+      "value": 0.1
+    },
+    "uses": {
+      "value": 1,
+      "max": 1,
+      "autoDestroy": true
+    },
+    "traits": {
+      "value": [
+        "consumable",
+        "magical",
+        "potion"
+      ],
+      "rarity": "rare"
+    },
+    "usage": {
+      "value": "held-in-one-hand"
+    },
+    "rules": [],
+    "slug": "radio-activity",
+    "publication": {
+      "title": "Beaver's Potions",
+      "authors": "",
+      "license": "OGL",
+      "remaster": false
+    }
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "beavers-potions": {
+      "potion": true,
+      "effects": [
+        {
+          "name": "Effect: Radio Activity",
+          "type": "effect",
+          "img": "icons/consumables/potions/bottle-conical-fumes-green.webp",
+          "system": {
+            "description": {
+              "value": "<p>You begin to glow for 5 rounds creating a 25 ft. aura of green light around you. Each creature, including yourself, must make a DC 14 Constitution saving throw when it starts its turn within 25 ft. of you. A target takes 3d6 radiant damage on a failed save, or half as much on a successful one.</p>"
+            },
+            "duration": {
+              "value": 5,
+              "unit": "rounds",
+              "expiry": "turn-start",
+              "sustained": false
+            },
+            "rules": [],
+            "tokenIcon": {
+              "show": true
+            },
+            "level": {
+              "value": 8
+            },
+            "traits": {
+              "value": [],
+              "rarity": "common"
+            },
+            "slug": "effect-radio-activity"
+          },
+          "flags": {
+            "beavers-potions": {
+              "aura": {
+                "radius": 25,
+                "includeSelf": true,
+                "save": {
+                  "ability": "con",
+                  "dc": 14
+                },
+                "damage": {
+                  "formula": "3d6",
+                  "type": "radiant"
+                }
+              },
+              "light": {
+                "dim": 25,
+                "bright": 5,
+                "color": "#4dff4d",
+                "alpha": 0.4,
+                "animation": {
+                  "type": "pulse",
+                  "speed": 3,
+                  "intensity": 3
+                }
+              },
+              "source": "radio-activity.effect"
+            }
+          }
+        }
+      ],
+      "rarity": "rare",
+      "rules": [
+        [
+          "aura",
+          {
+            "radius": 25,
+            "includeSelf": true,
+            "save": {
+              "ability": "con",
+              "dc": 14
+            },
+            "damage": {
+              "formula": "3d6",
+              "type": "radiant"
+            }
+          }
+        ],
+        [
+          "light",
+          {
+            "dim": 25,
+            "bright": 5,
+            "color": "#4dff4d",
+            "alpha": 0.4,
+            "animation": {
+              "type": "pulse",
+              "speed": 3,
+              "intensity": 3
+            }
+          }
+        ]
+      ]
+    }
+  }
+}

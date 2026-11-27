@@ -237,7 +237,15 @@
   },
   "flags": {
     "beavers-potions": {
-      "potion": true
+      "potion": true,
+      "rarity": "common",
+      "rules": [
+        [
+          "ability",
+          "wis",
+          -1
+        ]
+      ]
     }
   }
 }

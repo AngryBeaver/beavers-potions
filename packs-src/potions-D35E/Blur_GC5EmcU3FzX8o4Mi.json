@@ -1,0 +1,78 @@
+{
+  "_id": "GC5EmcU3FzX8o4Mi",
+  "_key": "!items!GC5EmcU3FzX8o4Mi",
+  "name": "Blur",
+  "type": "consumable",
+  "img": "icons/consumables/potions/bottle-round-label-cork-blue.webp",
+  "system": {
+    "consumableType": "potion",
+    "description": {
+      "value": "<p>Your body becomes blurred, shifting and wavering to all who can see you. For 1 minute any creature has disadvantage on attack rolls against you. An attacker is immune to this effect if it doesn't rely on sight, as with blindsight, or can see through illusions, as with truesight.</p>"
+    },
+    "quantity": 1,
+    "weight": 0.1,
+    "price": 750,
+    "identified": true,
+    "identifiedName": "Blur",
+    "uses": {
+      "value": 0,
+      "max": 0,
+      "per": "single"
+    }
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "beavers-potions": {
+      "potion": true,
+      "buffs": [
+        {
+          "name": "Blur",
+          "type": "buff",
+          "img": "icons/consumables/potions/bottle-round-label-cork-blue.webp",
+          "system": {
+            "buffType": "temp",
+            "active": true,
+            "level": 1,
+            "duration": {
+              "value": "1",
+              "units": "minute"
+            },
+            "changes": [
+              [
+                "20",
+                "misc",
+                "concealment",
+                "untyped"
+              ]
+            ],
+            "description": {
+              "value": "<p>Your body becomes blurred, shifting and wavering to all who can see you. For 1 minute any creature has disadvantage on attack rolls against you. An attacker is immune to this effect if it doesn't rely on sight, as with blindsight, or can see through illusions, as with truesight.</p>"
+            }
+          },
+          "flags": {
+            "beavers-potions": {
+              "conditions": [],
+              "source": "blur.buff"
+            }
+          }
+        }
+      ],
+      "pour": false,
+      "rarity": "rare",
+      "rules": [
+        [
+          "grants",
+          "disadvantage",
+          {
+            "sight": true
+          }
+        ]
+      ]
+    }
+  }
+}

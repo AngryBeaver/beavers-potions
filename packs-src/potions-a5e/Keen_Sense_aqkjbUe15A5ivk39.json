@@ -1,0 +1,122 @@
+{
+  "_id": "aqkjbUe15A5ivk39",
+  "_key": "!items!aqkjbUe15A5ivk39",
+  "name": "Keen Sense",
+  "type": "object",
+  "img": "icons/consumables/potions/bottle-round-corked-pink.webp",
+  "system": {
+    "description": "<p>You gain expertise in Perception for 1 hour.</p>",
+    "actions": {
+      "bpactaqkjbUeDrin": {
+        "name": "Drink",
+        "img": "icons/consumables/potions/bottle-round-corked-pink.webp",
+        "activation": {
+          "type": "action",
+          "cost": 1,
+          "reactionTrigger": ""
+        },
+        "duration": {
+          "unit": "hours",
+          "value": "1"
+        },
+        "target": {
+          "quantity": "",
+          "type": "self"
+        },
+        "consumers": {
+          "bpconaqkjbUeDrin": {
+            "type": "quantity",
+            "default": true,
+            "itemId": "",
+            "quantity": 1,
+            "deleteOnZero": true,
+            "label": ""
+          }
+        },
+        "rolls": {},
+        "prompts": {},
+        "effects": [
+          "bpfxaqkjbUe10000"
+        ],
+        "macro": ""
+      }
+    },
+    "objectType": "consumable",
+    "price": {
+      "value": 250,
+      "denomination": "gp",
+      "special": ""
+    },
+    "quantity": 1,
+    "rarity": "uncommon",
+    "weight": 0.5,
+    "source": "",
+    "requiresAttunement": false,
+    "unidentified": false
+  },
+  "effects": [
+    {
+      "_id": "bpfxaqkjbUe10000",
+      "_key": "!items.effects!aqkjbUe15A5ivk39.bpfxaqkjbUe10000",
+      "name": "Keen Sense",
+      "img": "icons/consumables/potions/bottle-round-corked-pink.webp",
+      "type": "base",
+      "description": "<p>You gain expertise in Perception for 1 hour.</p>",
+      "system": {
+        "changes": [
+          {
+            "_id": "bpfxaqkjbUe1c000",
+            "key": "system.skills.prc.proficient",
+            "type": "override",
+            "value": true,
+            "phase": "initial",
+            "priority": null
+          },
+          {
+            "_id": "bpfxaqkjbUe1c100",
+            "key": "system.skills.prc.expertiseDice",
+            "type": "upgrade",
+            "value": 2,
+            "phase": "initial",
+            "priority": null
+          }
+        ],
+        "magical": true,
+        "applyToSelf": false,
+        "effectType": "onUse"
+      },
+      "disabled": false,
+      "transfer": false,
+      "duration": {
+        "value": 1,
+        "units": "hours",
+        "expiry": "turnStart",
+        "expired": false
+      },
+      "statuses": [],
+      "flags": {},
+      "tint": "#ffffff",
+      "showIcon": 1,
+      "origin": null,
+      "start": null,
+      "sort": 0
+    }
+  ],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "beavers-potions": {
+      "potion": true,
+      "rarity": "uncommon",
+      "rules": [
+        [
+          "skillExpertise",
+          "perception"
+        ]
+      ]
+    }
+  }
+}

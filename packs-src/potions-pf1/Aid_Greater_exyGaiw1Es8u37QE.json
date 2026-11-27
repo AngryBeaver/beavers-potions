@@ -1,0 +1,101 @@
+{
+  "_id": "exyGaiw1Es8u37QE",
+  "_key": "!items!exyGaiw1Es8u37QE",
+  "name": "Aid Greater",
+  "type": "consumable",
+  "img": "icons/consumables/potions/bottle-round-label-cork-red.webp",
+  "system": {
+    "subType": "potion",
+    "description": {
+      "value": "<p>Your hit point maximum and your current hit points increase by 10 for 8 hours.</p>",
+      "instructions": "",
+      "unidentified": ""
+    },
+    "quantity": 1,
+    "weight": {
+      "value": 0.1
+    },
+    "price": 750,
+    "identified": true,
+    "cl": 1,
+    "uses": {
+      "value": null,
+      "per": "single",
+      "autoDeductChargesCost": "",
+      "maxFormula": "",
+      "rechargeFormula": ""
+    },
+    "actions": [
+      {
+        "_id": "bpactexyGaiwDrin",
+        "name": "Drink",
+        "activation": {
+          "type": "standard",
+          "unchained": {
+            "type": "action",
+            "cost": 2
+          }
+        },
+        "duration": {
+          "units": "inst"
+        }
+      }
+    ]
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "beavers-potions": {
+      "potion": true,
+      "buffs": [
+        {
+          "name": "Aid Greater",
+          "type": "buff",
+          "img": "icons/consumables/potions/bottle-round-label-cork-red.webp",
+          "system": {
+            "subType": "temp",
+            "active": true,
+            "level": 1,
+            "duration": {
+              "value": "8",
+              "units": "hour",
+              "end": "turnStart"
+            },
+            "changes": [
+              {
+                "_id": "bpcexyGa",
+                "formula": "10",
+                "target": "mhp",
+                "type": "untyped"
+              }
+            ],
+            "conditions": [],
+            "description": {
+              "value": "<p>Your hit point maximum and your current hit points increase by 10 for 8 hours.</p>"
+            }
+          },
+          "flags": {
+            "beavers-potions": {
+              "source": "aid-greater.buff"
+            }
+          }
+        }
+      ],
+      "rarity": "rare",
+      "rules": [
+        [
+          "heal",
+          "10"
+        ],
+        [
+          "hpMax",
+          10
+        ]
+      ]
+    }
+  }
+}

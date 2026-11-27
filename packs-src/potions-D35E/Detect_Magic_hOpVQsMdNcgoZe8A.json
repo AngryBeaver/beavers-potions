@@ -1,0 +1,63 @@
+{
+  "_id": "hOpVQsMdNcgoZe8A",
+  "_key": "!items!hOpVQsMdNcgoZe8A",
+  "name": "Detect Magic",
+  "type": "consumable",
+  "img": "icons/consumables/potions/bottle-bulb-corked-purple.webp",
+  "system": {
+    "consumableType": "potion",
+    "description": {
+      "value": "<p>Gives the effect of a <em>Detect Magic</em> spell for 10 minutes (no concentration required).</p>"
+    },
+    "quantity": 1,
+    "weight": 0.1,
+    "price": 50,
+    "identified": true,
+    "identifiedName": "Detect Magic",
+    "uses": {
+      "value": 0,
+      "max": 0,
+      "per": "single"
+    }
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "beavers-potions": {
+      "potion": true,
+      "buffs": [
+        {
+          "name": "Detect Magic",
+          "type": "buff",
+          "img": "icons/consumables/potions/bottle-bulb-corked-purple.webp",
+          "system": {
+            "buffType": "temp",
+            "active": true,
+            "level": 1,
+            "duration": {
+              "value": "10",
+              "units": "minute"
+            },
+            "changes": [],
+            "description": {
+              "value": "<p>Gives the effect of a <em>Detect Magic</em> spell for 10 minutes (no concentration required).</p>"
+            }
+          },
+          "flags": {
+            "beavers-potions": {
+              "conditions": [],
+              "source": "detect-magic.buff"
+            }
+          }
+        }
+      ],
+      "pour": false,
+      "rarity": "common",
+      "rules": []
+    }
+  }
+}

@@ -1,0 +1,75 @@
+{
+  "_id": "6mg7QLtafdc2lDp9",
+  "_key": "!items!6mg7QLtafdc2lDp9",
+  "name": "Beauty Elixir",
+  "type": "consumable",
+  "img": "icons/consumables/potions/bottle-bulb-corked-glowing-red.webp",
+  "system": {
+    "consumableType": "potion",
+    "description": {
+      "value": "<p>Makes you significantly more attractive for 5 hours: you have advantage on Charisma (Persuasion) checks.</p>"
+    },
+    "quantity": 1,
+    "weight": 0.1,
+    "price": 50,
+    "identified": true,
+    "identifiedName": "Beauty Elixir",
+    "uses": {
+      "value": 0,
+      "max": 0,
+      "per": "single"
+    }
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "beavers-potions": {
+      "potion": true,
+      "buffs": [
+        {
+          "name": "Beauty Elixir",
+          "type": "buff",
+          "img": "icons/consumables/potions/bottle-bulb-corked-glowing-red.webp",
+          "system": {
+            "buffType": "temp",
+            "active": true,
+            "level": 1,
+            "duration": {
+              "value": "5",
+              "units": "hour"
+            },
+            "changes": [
+              [
+                "4",
+                "skill",
+                "skill.dip",
+                "circumstance"
+              ]
+            ],
+            "description": {
+              "value": "<p>Makes you significantly more attractive for 5 hours: you have advantage on Charisma (Persuasion) checks.</p>"
+            }
+          },
+          "flags": {
+            "beavers-potions": {
+              "conditions": [],
+              "source": "beauty-elixir.buff"
+            }
+          }
+        }
+      ],
+      "pour": false,
+      "rarity": "common",
+      "rules": [
+        [
+          "skillAdvantage",
+          "persuasion"
+        ]
+      ]
+    }
+  }
+}

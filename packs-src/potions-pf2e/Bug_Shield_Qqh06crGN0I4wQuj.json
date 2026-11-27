@@ -1,0 +1,97 @@
+{
+  "_id": "Qqh06crGN0I4wQuj",
+  "_key": "!items!Qqh06crGN0I4wQuj",
+  "name": "Bug Shield",
+  "type": "consumable",
+  "img": "icons/consumables/potions/bottle-bulb-corked-green.webp",
+  "system": {
+    "category": "potion",
+    "description": {
+      "value": "<p>Repels insects and other tiny pests with 99% effectiveness. It lasts 3 days.</p>"
+    },
+    "level": {
+      "value": 1
+    },
+    "price": {
+      "value": {
+        "gp": 50
+      }
+    },
+    "quantity": 1,
+    "bulk": {
+      "value": 0.1
+    },
+    "uses": {
+      "value": 1,
+      "max": 1,
+      "autoDestroy": true
+    },
+    "traits": {
+      "value": [
+        "consumable",
+        "magical",
+        "potion"
+      ],
+      "rarity": "common"
+    },
+    "usage": {
+      "value": "held-in-one-hand"
+    },
+    "rules": [],
+    "slug": "bug-shield",
+    "publication": {
+      "title": "Beaver's Potions",
+      "authors": "",
+      "license": "OGL",
+      "remaster": false
+    }
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "beavers-potions": {
+      "potion": true,
+      "effects": [
+        {
+          "name": "Effect: Bug Shield",
+          "type": "effect",
+          "img": "icons/consumables/potions/bottle-bulb-corked-green.webp",
+          "system": {
+            "description": {
+              "value": "<p>Repels insects and other tiny pests with 99% effectiveness. It lasts 3 days.</p>"
+            },
+            "duration": {
+              "value": 3,
+              "unit": "days",
+              "expiry": "turn-start",
+              "sustained": false
+            },
+            "rules": [],
+            "tokenIcon": {
+              "show": true
+            },
+            "level": {
+              "value": 1
+            },
+            "traits": {
+              "value": [],
+              "rarity": "common"
+            },
+            "slug": "effect-bug-shield"
+          },
+          "flags": {
+            "beavers-potions": {
+              "source": "bug-shield.effect"
+            }
+          }
+        }
+      ],
+      "rarity": "common",
+      "rules": []
+    }
+  }
+}

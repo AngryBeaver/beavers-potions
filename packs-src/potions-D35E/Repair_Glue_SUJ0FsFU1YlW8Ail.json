@@ -1,0 +1,76 @@
+{
+  "_id": "SUJ0FsFU1YlW8Ail",
+  "_key": "!items!SUJ0FsFU1YlW8Ail",
+  "name": "Repair Glue",
+  "type": "consumable",
+  "img": "icons/consumables/potions/bottle-conical-corked-purple.webp",
+  "system": {
+    "consumableType": "potion",
+    "description": {
+      "value": "<p>Repairs small breaks or tears in objects. 1 dose poured on objects weighing 10 lb. in total.</p><p>If drunk by a person it results in the permanent loss of 1 Wisdom.</p>"
+    },
+    "quantity": 1,
+    "weight": 0.1,
+    "price": 50,
+    "identified": true,
+    "identifiedName": "Repair Glue",
+    "uses": {
+      "value": 0,
+      "max": 0,
+      "per": "single"
+    }
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "beavers-potions": {
+      "potion": true,
+      "buffs": [
+        {
+          "name": "Repair Glue (drunk)",
+          "type": "buff",
+          "img": "icons/consumables/potions/bottle-conical-corked-purple.webp",
+          "system": {
+            "buffType": "temp",
+            "active": true,
+            "level": 1,
+            "duration": {
+              "value": null,
+              "units": ""
+            },
+            "changes": [
+              [
+                "-1",
+                "ability",
+                "wis",
+                "untyped"
+              ]
+            ],
+            "description": {
+              "value": "<p>Repairs small breaks or tears in objects. 1 dose poured on objects weighing 10 lb. in total.</p><p>If drunk by a person it results in the permanent loss of 1 Wisdom.</p>"
+            }
+          },
+          "flags": {
+            "beavers-potions": {
+              "conditions": [],
+              "source": "repair-glue.buff"
+            }
+          }
+        }
+      ],
+      "pour": true,
+      "rarity": "common",
+      "rules": [
+        [
+          "ability",
+          "wis",
+          -1
+        ]
+      ]
+    }
+  }
+}

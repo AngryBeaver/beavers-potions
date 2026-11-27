@@ -1,0 +1,140 @@
+{
+  "_id": "dRx6IG62FzVc3Ukk",
+  "_key": "!items!dRx6IG62FzVc3Ukk",
+  "name": "Overload Attunement",
+  "type": "object",
+  "img": "icons/sundries/scrolls/scroll-worn-tan.webp",
+  "system": {
+    "description": "<p>A recipe of Beaver's Potions, it needs the module Beaver's Crafting.</p><p>Brewing: Religion check DC 14.</p>",
+    "objectType": "miscellaneous",
+    "price": {
+      "value": 0,
+      "denomination": "gp",
+      "special": ""
+    },
+    "quantity": 1,
+    "weight": 0,
+    "actions": {}
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "beavers-crafting": {
+      "subtype": "Recipe",
+      "recipe": {
+        "required": {},
+        "input": {
+          "1": {
+            "Compendium-beavers-potions-ingredients-a5e-Item-tqfcqsuPQRChhdj7": {
+              "id": "tqfcqsuPQRChhdj7",
+              "uuid": "Compendium.beavers-potions.ingredients-a5e.Item.tqfcqsuPQRChhdj7",
+              "img": "icons/consumables/mushrooms/convex-tan.webp",
+              "name": "Husk Puff",
+              "type": "Item",
+              "itemType": "object",
+              "quantity": 5
+            }
+          },
+          "2": {
+            "Compendium-beavers-potions-ingredients-a5e-Item-OOFUAGixSqsgyT29": {
+              "id": "OOFUAGixSqsgyT29",
+              "uuid": "Compendium.beavers-potions.ingredients-a5e.Item.OOFUAGixSqsgyT29",
+              "img": "icons/consumables/mushrooms/campanulate-bell-red-white.webp",
+              "name": "Hansel and Gretel",
+              "type": "Item",
+              "itemType": "object",
+              "quantity": 5
+            }
+          },
+          "3": {
+            "Compendium-beavers-potions-ingredients-a5e-Item-EBn04GlzYZdMi23m": {
+              "id": "EBn04GlzYZdMi23m",
+              "uuid": "Compendium.beavers-potions.ingredients-a5e.Item.EBn04GlzYZdMi23m",
+              "img": "icons/consumables/mushrooms/helm-purple-shiny.webp",
+              "name": "Astrid Lindworm",
+              "type": "Item",
+              "itemType": "object",
+              "quantity": 5
+            }
+          },
+          "4": {
+            "Compendium-beavers-potions-ingredients-a5e-Item-F1SSWiF1VvLWDvoK": {
+              "id": "F1SSWiF1VvLWDvoK",
+              "uuid": "Compendium.beavers-potions.ingredients-a5e.Item.F1SSWiF1VvLWDvoK",
+              "img": "icons/consumables/mushrooms/ovate-blue.webp",
+              "name": "Blue Bill",
+              "type": "Item",
+              "itemType": "object",
+              "quantity": 5
+            }
+          },
+          "5": {
+            "Compendium-beavers-potions-ingredients-a5e-Item-NHWQ6levQ3apHpN2": {
+              "id": "NHWQ6levQ3apHpN2",
+              "uuid": "Compendium.beavers-potions.ingredients-a5e.Item.NHWQ6levQ3apHpN2",
+              "img": "icons/consumables/mushrooms/ovate-thin-blue.webp",
+              "name": "Silver Dart",
+              "type": "Item",
+              "itemType": "object",
+              "quantity": 5
+            }
+          },
+          "6": {
+            "Compendium-beavers-potions-ingredients-a5e-Item-dozjFH55CR4npT6F": {
+              "id": "dozjFH55CR4npT6F",
+              "uuid": "Compendium.beavers-potions.ingredients-a5e.Item.dozjFH55CR4npT6F",
+              "img": "icons/tools/laboratory/bowl-powder-purple.webp",
+              "name": "Magical Essence",
+              "type": "Item",
+              "itemType": "object",
+              "quantity": 5
+            }
+          }
+        },
+        "output": {
+          "1": {
+            "Compendium-beavers-potions-potions-a5e-Item-tr3gjUhvmWpYrGJ0": {
+              "id": "tr3gjUhvmWpYrGJ0",
+              "uuid": "Compendium.beavers-potions.potions-a5e.Item.tr3gjUhvmWpYrGJ0",
+              "img": "icons/consumables/potions/bottle-corked-red.webp",
+              "name": "Overload Attunement",
+              "type": "Item",
+              "itemType": "object",
+              "quantity": 1
+            }
+          }
+        },
+        "currency": {
+          "name": "gp",
+          "value": 750
+        },
+        "beaversTests": {
+          "fails": 1,
+          "consume": true,
+          "failsInARow": false,
+          "ands": {
+            "1": {
+              "hits": 1,
+              "ors": {
+                "1": {
+                  "type": "SkillTest",
+                  "data": {
+                    "dc": 14,
+                    "skill": "rel"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "macro": "",
+        "folder": "Beaver's Potions",
+        "kind": "recipe"
+      }
+    }
+  }
+}

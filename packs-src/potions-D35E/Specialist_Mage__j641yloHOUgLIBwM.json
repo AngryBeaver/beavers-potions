@@ -1,0 +1,97 @@
+{
+  "_id": "j641yloHOUgLIBwM",
+  "_key": "!items!j641yloHOUgLIBwM",
+  "name": "Specialist (Mage)",
+  "type": "consumable",
+  "img": "icons/consumables/potions/bottle-pear-corked-labeled-green.webp",
+  "system": {
+    "consumableType": "potion",
+    "description": {
+      "value": "<p>For the next minute you gain +2 on spell attacks and +2 on spell damage, while your speed is halved.</p>"
+    },
+    "quantity": 1,
+    "weight": 0.1,
+    "price": 250,
+    "identified": true,
+    "identifiedName": "Specialist (Mage)",
+    "uses": {
+      "value": 0,
+      "max": 0,
+      "per": "single"
+    }
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "beavers-potions": {
+      "potion": true,
+      "buffs": [
+        {
+          "name": "Specialist (Mage)",
+          "type": "buff",
+          "img": "icons/consumables/potions/bottle-pear-corked-labeled-green.webp",
+          "system": {
+            "buffType": "temp",
+            "active": true,
+            "level": 1,
+            "duration": {
+              "value": "1",
+              "units": "minute"
+            },
+            "changes": [
+              [
+                "2",
+                "attack",
+                "attack",
+                "untyped"
+              ],
+              [
+                "2",
+                "damage",
+                "sdamage",
+                "untyped"
+              ],
+              [
+                "-floor(@attributes.speed.land.base * 0.5)",
+                "speed",
+                "landSpeed",
+                "untyped"
+              ]
+            ],
+            "description": {
+              "value": "<p>For the next minute you gain +2 on spell attacks and +2 on spell damage, while your speed is halved.</p>"
+            }
+          },
+          "flags": {
+            "beavers-potions": {
+              "conditions": [],
+              "source": "specialist-mage.buff"
+            }
+          }
+        }
+      ],
+      "pour": false,
+      "rarity": "uncommon",
+      "rules": [
+        [
+          "attackBonus",
+          "spell",
+          2
+        ],
+        [
+          "damageBonus",
+          "spell",
+          2
+        ],
+        [
+          "speed",
+          0.5
+        ]
+      ]
+    }
+  }
+}

@@ -1,0 +1,95 @@
+{
+  "_id": "BxtFA7sMSWIML0aG",
+  "_key": "!items!BxtFA7sMSWIML0aG",
+  "name": "Regeneration",
+  "type": "consumable",
+  "img": "icons/consumables/potions/conical-ornate-purple.webp",
+  "system": {
+    "subType": "potion",
+    "description": {
+      "value": "<p>You regenerate 10 hit points at the start of each of your turns for one minute.</p>",
+      "instructions": "",
+      "unidentified": ""
+    },
+    "quantity": 1,
+    "weight": {
+      "value": 0.1
+    },
+    "price": 2500,
+    "identified": true,
+    "cl": 1,
+    "uses": {
+      "value": null,
+      "per": "single",
+      "autoDeductChargesCost": "",
+      "maxFormula": "",
+      "rechargeFormula": ""
+    },
+    "actions": [
+      {
+        "_id": "bpactBxtFA7sDrin",
+        "name": "Drink",
+        "activation": {
+          "type": "standard",
+          "unchained": {
+            "type": "action",
+            "cost": 2
+          }
+        },
+        "duration": {
+          "units": "inst"
+        }
+      }
+    ]
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "beavers-potions": {
+      "potion": true,
+      "buffs": [
+        {
+          "name": "Regeneration",
+          "type": "buff",
+          "img": "icons/consumables/potions/conical-ornate-purple.webp",
+          "system": {
+            "subType": "temp",
+            "active": true,
+            "level": 1,
+            "duration": {
+              "value": "10",
+              "units": "round",
+              "end": "turnStart"
+            },
+            "changes": [],
+            "conditions": [],
+            "description": {
+              "value": "<p>You regenerate 10 hit points at the start of each of your turns for one minute.</p>"
+            }
+          },
+          "flags": {
+            "beavers-potions": {
+              "turnStart": {
+                "heal": "10"
+              },
+              "source": "regeneration.buff"
+            }
+          }
+        }
+      ],
+      "rarity": "veryRare",
+      "rules": [
+        [
+          "turnStart",
+          {
+            "heal": "10"
+          }
+        ]
+      ]
+    }
+  }
+}

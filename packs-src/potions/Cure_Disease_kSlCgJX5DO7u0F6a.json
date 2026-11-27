@@ -130,7 +130,14 @@
         "cure": [
           "diseased"
         ]
-      }
+      },
+      "rarity": "common",
+      "rules": [
+        [
+          "cure",
+          "diseased"
+        ]
+      ]
     }
   }
 }

@@ -1,0 +1,93 @@
+{
+  "_id": "nAfRk1eKIniTL049",
+  "_key": "!items!nAfRk1eKIniTL049",
+  "name": "Beauty Elixir",
+  "type": "treasure",
+  "img": "icons/sundries/scrolls/scroll-worn-tan.webp",
+  "system": {
+    "description": {
+      "value": "<p>A recipe of Beaver's Potions, it needs the module Beaver's Crafting.</p><p>Brewing: Medicine check DC 13.</p>"
+    },
+    "level": {
+      "value": 0
+    },
+    "price": {
+      "value": {}
+    },
+    "quantity": 1,
+    "bulk": {
+      "value": 0
+    },
+    "traits": {
+      "value": [],
+      "rarity": "common"
+    },
+    "slug": "recipe-beauty-elixir"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "beavers-crafting": {
+      "subtype": "Recipe",
+      "recipe": {
+        "required": {},
+        "input": {
+          "1": {
+            "Compendium-beavers-potions-ingredients-pf2e-Item-nrssiAqJHHCV1vyv": {
+              "id": "nrssiAqJHHCV1vyv",
+              "uuid": "Compendium.beavers-potions.ingredients-pf2e.Item.nrssiAqJHHCV1vyv",
+              "img": "icons/consumables/mushrooms/conical-bell-yellow.webp",
+              "name": "Yellow Stoned",
+              "type": "Item",
+              "itemType": "treasure",
+              "quantity": 5
+            }
+          }
+        },
+        "output": {
+          "1": {
+            "Compendium-beavers-potions-potions-pf2e-Item-6mg7QLtafdc2lDp9": {
+              "id": "6mg7QLtafdc2lDp9",
+              "uuid": "Compendium.beavers-potions.potions-pf2e.Item.6mg7QLtafdc2lDp9",
+              "img": "icons/consumables/potions/bottle-bulb-corked-glowing-red.webp",
+              "name": "Beauty Elixir",
+              "type": "Item",
+              "itemType": "consumable",
+              "quantity": 1
+            }
+          }
+        },
+        "currency": {
+          "name": "gp",
+          "value": 5
+        },
+        "beaversTests": {
+          "fails": 1,
+          "consume": true,
+          "failsInARow": false,
+          "ands": {
+            "1": {
+              "hits": 1,
+              "ors": {
+                "1": {
+                  "type": "SkillTest",
+                  "data": {
+                    "dc": 13,
+                    "skill": "medicine"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "macro": "",
+        "folder": "Beaver's Potions",
+        "kind": "recipe"
+      }
+    }
+  }
+}

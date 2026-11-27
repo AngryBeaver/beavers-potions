@@ -1,0 +1,71 @@
+{
+  "_id": "tEG8DYWsIjsnq89H",
+  "_key": "!items!tEG8DYWsIjsnq89H",
+  "name": "Cure Undead",
+  "type": "consumable",
+  "img": "icons/consumables/potions/bottle-conical-corked-labeled-skull-poison-green.webp",
+  "system": {
+    "subType": "potion",
+    "description": {
+      "value": "<p>You regain 2d4 + 2 hit points when you are undead and drink this potion. It does nothing for the living.</p>",
+      "instructions": "",
+      "unidentified": ""
+    },
+    "quantity": 1,
+    "weight": {
+      "value": 0.1
+    },
+    "price": 50,
+    "identified": true,
+    "cl": 1,
+    "uses": {
+      "value": null,
+      "per": "single",
+      "autoDeductChargesCost": "",
+      "maxFormula": "",
+      "rechargeFormula": ""
+    },
+    "actions": [
+      {
+        "_id": "bpacttEG8DYWDrin",
+        "name": "Drink",
+        "activation": {
+          "type": "standard",
+          "unchained": {
+            "type": "action",
+            "cost": 2
+          }
+        },
+        "duration": {
+          "units": "inst"
+        }
+      }
+    ]
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "beavers-potions": {
+      "potion": true,
+      "buffs": [],
+      "use": {
+        "onlyType": "undead"
+      },
+      "rarity": "common",
+      "rules": [
+        [
+          "heal",
+          "2d4 + 2"
+        ],
+        [
+          "onlyCreatureType",
+          "undead"
+        ]
+      ]
+    }
+  }
+}

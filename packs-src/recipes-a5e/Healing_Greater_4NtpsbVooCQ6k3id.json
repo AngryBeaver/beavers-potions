@@ -1,0 +1,107 @@
+{
+  "_id": "4NtpsbVooCQ6k3id",
+  "_key": "!items!4NtpsbVooCQ6k3id",
+  "name": "Healing Greater",
+  "type": "object",
+  "img": "icons/sundries/scrolls/scroll-worn-tan.webp",
+  "system": {
+    "description": "<p>A recipe of Beaver's Potions, it needs the module Beaver's Crafting.</p><p>Brewing: Medicine check DC 10.</p>",
+    "objectType": "miscellaneous",
+    "price": {
+      "value": 0,
+      "denomination": "gp",
+      "special": ""
+    },
+    "quantity": 1,
+    "weight": 0,
+    "actions": {}
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "beavers-crafting": {
+      "subtype": "Recipe",
+      "recipe": {
+        "required": {},
+        "input": {
+          "1": {
+            "Compendium-beavers-potions-ingredients-a5e-Item-90BJIBWtxLN3SMHn": {
+              "id": "90BJIBWtxLN3SMHn",
+              "uuid": "Compendium.beavers-potions.ingredients-a5e.Item.90BJIBWtxLN3SMHn",
+              "img": "icons/consumables/mushrooms/convex-bolete-brown.webp",
+              "name": "Penny Bun",
+              "type": "Item",
+              "itemType": "object",
+              "quantity": 5
+            }
+          },
+          "2": {
+            "Compendium-beavers-potions-ingredients-a5e-Item-MNUTlx4UjXSRzW25": {
+              "id": "MNUTlx4UjXSRzW25",
+              "uuid": "Compendium.beavers-potions.ingredients-a5e.Item.MNUTlx4UjXSRzW25",
+              "img": "icons/consumables/mushrooms/conical-bell-orange-white.webp",
+              "name": "Guepinia",
+              "type": "Item",
+              "itemType": "object",
+              "quantity": 5
+            }
+          },
+          "3": {
+            "Compendium-beavers-potions-ingredients-a5e-Item-dozjFH55CR4npT6F": {
+              "id": "dozjFH55CR4npT6F",
+              "uuid": "Compendium.beavers-potions.ingredients-a5e.Item.dozjFH55CR4npT6F",
+              "img": "icons/tools/laboratory/bowl-powder-purple.webp",
+              "name": "Magical Essence",
+              "type": "Item",
+              "itemType": "object",
+              "quantity": 1
+            }
+          }
+        },
+        "output": {
+          "1": {
+            "Compendium-a5e-a5e-adventuring-gear-Item-nees9nzonritxzwe": {
+              "id": "nees9nzonritxzwe",
+              "uuid": "Compendium.a5e.a5e-adventuring-gear.Item.nees9nzonritxzwe",
+              "img": "icons/consumables/potions/bottle-corked-red.webp",
+              "name": "Healing Potion (Greater)",
+              "type": "Item",
+              "itemType": "object",
+              "quantity": 1
+            }
+          }
+        },
+        "currency": {
+          "name": "gp",
+          "value": 50
+        },
+        "beaversTests": {
+          "fails": 1,
+          "consume": true,
+          "failsInARow": false,
+          "ands": {
+            "1": {
+              "hits": 1,
+              "ors": {
+                "1": {
+                  "type": "SkillTest",
+                  "data": {
+                    "dc": 10,
+                    "skill": "med"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "macro": "",
+        "folder": "Beaver's Potions",
+        "kind": "recipe"
+      }
+    }
+  }
+}

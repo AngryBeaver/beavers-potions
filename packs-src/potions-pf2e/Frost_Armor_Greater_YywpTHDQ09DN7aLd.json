@@ -1,0 +1,138 @@
+{
+  "_id": "YywpTHDQ09DN7aLd",
+  "_key": "!items!YywpTHDQ09DN7aLd",
+  "name": "Frost Armor Greater",
+  "type": "consumable",
+  "img": "icons/consumables/potions/bottle-corked-blue.webp",
+  "system": {
+    "category": "potion",
+    "description": {
+      "value": "<p>A protective magical force surrounds you, manifesting as a spectral frost that covers you and your gear for 5 rounds. At the start of each of your turns you regain temporary hit points up to 6. Anyone starting its turn next to you takes 3d4 cold damage (Wisdom saving throw DC 14 for half).</p>"
+    },
+    "level": {
+      "value": 8
+    },
+    "price": {
+      "value": {
+        "gp": 750
+      }
+    },
+    "quantity": 1,
+    "bulk": {
+      "value": 0.1
+    },
+    "uses": {
+      "value": 1,
+      "max": 1,
+      "autoDestroy": true
+    },
+    "traits": {
+      "value": [
+        "consumable",
+        "magical",
+        "potion"
+      ],
+      "rarity": "rare"
+    },
+    "usage": {
+      "value": "held-in-one-hand"
+    },
+    "rules": [],
+    "slug": "frost-armor-greater",
+    "publication": {
+      "title": "Beaver's Potions",
+      "authors": "",
+      "license": "OGL",
+      "remaster": false
+    }
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "beavers-potions": {
+      "potion": true,
+      "effects": [
+        {
+          "name": "Effect: Frost Armor Greater",
+          "type": "effect",
+          "img": "icons/consumables/potions/bottle-corked-blue.webp",
+          "system": {
+            "description": {
+              "value": "<p>A protective magical force surrounds you, manifesting as a spectral frost that covers you and your gear for 5 rounds. At the start of each of your turns you regain temporary hit points up to 6. Anyone starting its turn next to you takes 3d4 cold damage (Wisdom saving throw DC 14 for half).</p>"
+            },
+            "duration": {
+              "value": 5,
+              "unit": "rounds",
+              "expiry": "turn-start",
+              "sustained": false
+            },
+            "rules": [],
+            "tokenIcon": {
+              "show": true
+            },
+            "level": {
+              "value": 8
+            },
+            "traits": {
+              "value": [],
+              "rarity": "common"
+            },
+            "slug": "effect-frost-armor-greater"
+          },
+          "flags": {
+            "beavers-potions": {
+              "turnStart": {
+                "temp": 6
+              },
+              "aura": {
+                "radius": 5,
+                "includeSelf": false,
+                "save": {
+                  "ability": "wis",
+                  "dc": 14
+                },
+                "damage": {
+                  "formula": "3d4",
+                  "type": "cold"
+                }
+              },
+              "source": "frost-armor-greater.effect"
+            }
+          }
+        }
+      ],
+      "rarity": "rare",
+      "rules": [
+        [
+          "temp",
+          6
+        ],
+        [
+          "turnStart",
+          {
+            "temp": 6
+          }
+        ],
+        [
+          "aura",
+          {
+            "radius": 5,
+            "includeSelf": false,
+            "save": {
+              "ability": "wis",
+              "dc": 14
+            },
+            "damage": {
+              "formula": "3d4",
+              "type": "cold"
+            }
+          }
+        ]
+      ]
+    }
+  }
+}

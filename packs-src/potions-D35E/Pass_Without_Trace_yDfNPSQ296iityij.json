@@ -1,0 +1,76 @@
+{
+  "_id": "yDfNPSQ296iityij",
+  "_key": "!items!yDfNPSQ296iityij",
+  "name": "Pass Without Trace",
+  "type": "consumable",
+  "img": "icons/consumables/potions/bottle-round-corked-yellow.webp",
+  "system": {
+    "consumableType": "potion",
+    "description": {
+      "value": "<p>For 1 hour you can move through any type of terrain and leave neither footprints nor scent: you have a +10 bonus to Dexterity (Stealth) checks and you cannot be tracked except by magical means.</p>"
+    },
+    "quantity": 1,
+    "weight": 0.1,
+    "price": 250,
+    "identified": true,
+    "identifiedName": "Pass Without Trace",
+    "uses": {
+      "value": 0,
+      "max": 0,
+      "per": "single"
+    }
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "beavers-potions": {
+      "potion": true,
+      "buffs": [
+        {
+          "name": "Pass Without Trace",
+          "type": "buff",
+          "img": "icons/consumables/potions/bottle-round-corked-yellow.webp",
+          "system": {
+            "buffType": "temp",
+            "active": true,
+            "level": 1,
+            "duration": {
+              "value": "1",
+              "units": "hour"
+            },
+            "changes": [
+              [
+                "10",
+                "skill",
+                "skill.hid",
+                "untyped"
+              ]
+            ],
+            "description": {
+              "value": "<p>For 1 hour you can move through any type of terrain and leave neither footprints nor scent: you have a +10 bonus to Dexterity (Stealth) checks and you cannot be tracked except by magical means.</p>"
+            }
+          },
+          "flags": {
+            "beavers-potions": {
+              "conditions": [],
+              "source": "pass-without-trace.buff"
+            }
+          }
+        }
+      ],
+      "pour": false,
+      "rarity": "uncommon",
+      "rules": [
+        [
+          "skillBonus",
+          "stealth",
+          10
+        ]
+      ]
+    }
+  }
+}

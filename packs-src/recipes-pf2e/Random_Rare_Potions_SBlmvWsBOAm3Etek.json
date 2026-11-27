@@ -1,0 +1,147 @@
+{
+  "_id": "SBlmvWsBOAm3Etek",
+  "_key": "!items!SBlmvWsBOAm3Etek",
+  "name": "Random Rare Potions",
+  "type": "treasure",
+  "img": "icons/sundries/scrolls/scroll-worn-tan.webp",
+  "system": {
+    "description": {
+      "value": "<p>A recipe of Beaver's Potions, it needs the module Beaver's Crafting.</p><p>Brewing: Arcana check DC 18.</p>"
+    },
+    "level": {
+      "value": 0
+    },
+    "price": {
+      "value": {}
+    },
+    "quantity": 1,
+    "bulk": {
+      "value": 0
+    },
+    "traits": {
+      "value": [],
+      "rarity": "common"
+    },
+    "slug": "recipe-random-rare-potions"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "beavers-crafting": {
+      "subtype": "Recipe",
+      "recipe": {
+        "required": {},
+        "input": {
+          "1": {
+            "Compendium-beavers-potions-ingredients-pf2e-Item-AGQvjDL4TIPOEBHX": {
+              "id": "AGQvjDL4TIPOEBHX",
+              "uuid": "Compendium.beavers-potions.ingredients-pf2e.Item.AGQvjDL4TIPOEBHX",
+              "img": "modules/beavers-crafting/icons/anyOf.png",
+              "name": "Any Mushroom",
+              "type": "AnyOf",
+              "itemType": "treasure",
+              "quantity": 3
+            }
+          },
+          "2": {
+            "Compendium-beavers-potions-ingredients-pf2e-Item-AGQvjDL4TIPOEBHX": {
+              "id": "AGQvjDL4TIPOEBHX",
+              "uuid": "Compendium.beavers-potions.ingredients-pf2e.Item.AGQvjDL4TIPOEBHX",
+              "img": "modules/beavers-crafting/icons/anyOf.png",
+              "name": "Any Mushroom",
+              "type": "AnyOf",
+              "itemType": "treasure",
+              "quantity": 3
+            }
+          },
+          "3": {
+            "Compendium-beavers-potions-ingredients-pf2e-Item-AGQvjDL4TIPOEBHX": {
+              "id": "AGQvjDL4TIPOEBHX",
+              "uuid": "Compendium.beavers-potions.ingredients-pf2e.Item.AGQvjDL4TIPOEBHX",
+              "img": "modules/beavers-crafting/icons/anyOf.png",
+              "name": "Any Mushroom",
+              "type": "AnyOf",
+              "itemType": "treasure",
+              "quantity": 3
+            }
+          },
+          "4": {
+            "Compendium-beavers-potions-ingredients-pf2e-Item-AGQvjDL4TIPOEBHX": {
+              "id": "AGQvjDL4TIPOEBHX",
+              "uuid": "Compendium.beavers-potions.ingredients-pf2e.Item.AGQvjDL4TIPOEBHX",
+              "img": "modules/beavers-crafting/icons/anyOf.png",
+              "name": "Any Mushroom",
+              "type": "AnyOf",
+              "itemType": "treasure",
+              "quantity": 3
+            }
+          },
+          "5": {
+            "Compendium-beavers-potions-ingredients-pf2e-Item-AGQvjDL4TIPOEBHX": {
+              "id": "AGQvjDL4TIPOEBHX",
+              "uuid": "Compendium.beavers-potions.ingredients-pf2e.Item.AGQvjDL4TIPOEBHX",
+              "img": "modules/beavers-crafting/icons/anyOf.png",
+              "name": "Any Mushroom",
+              "type": "AnyOf",
+              "itemType": "treasure",
+              "quantity": 3
+            }
+          },
+          "6": {
+            "Compendium-beavers-potions-ingredients-pf2e-Item-dozjFH55CR4npT6F": {
+              "id": "dozjFH55CR4npT6F",
+              "uuid": "Compendium.beavers-potions.ingredients-pf2e.Item.dozjFH55CR4npT6F",
+              "img": "icons/tools/laboratory/bowl-powder-purple.webp",
+              "name": "Magical Essence",
+              "type": "Item",
+              "itemType": "treasure",
+              "quantity": 3
+            }
+          }
+        },
+        "output": {
+          "1": {
+            "Compendium-beavers-potions-tables-pf2e-RollTable-rYKKOSkRoX5zmgJ3": {
+              "id": "rYKKOSkRoX5zmgJ3",
+              "uuid": "Compendium.beavers-potions.tables-pf2e.RollTable.rYKKOSkRoX5zmgJ3",
+              "img": "icons/tools/laboratory/vials-blue-pink.webp",
+              "name": "Rare Potions",
+              "type": "RollTable",
+              "quantity": 1
+            }
+          }
+        },
+        "currency": {
+          "name": "gp",
+          "value": 250
+        },
+        "beaversTests": {
+          "fails": 1,
+          "consume": true,
+          "failsInARow": false,
+          "ands": {
+            "1": {
+              "hits": 1,
+              "ors": {
+                "1": {
+                  "type": "SkillTest",
+                  "data": {
+                    "dc": 18,
+                    "skill": "arcana"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "macro": "",
+        "folder": "Beaver's Potions",
+        "kind": "recipe"
+      }
+    }
+  }
+}

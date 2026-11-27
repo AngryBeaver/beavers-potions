@@ -1,0 +1,43 @@
+{
+  "_id": "xtDv7zBzlF30hSGU",
+  "_key": "!items!xtDv7zBzlF30hSGU",
+  "name": "Life Shell Greater",
+  "type": "consumable",
+  "img": "icons/consumables/potions/flask-corked-green.webp",
+  "system": {
+    "consumableType": "potion",
+    "description": {
+      "value": "<p>You gain 20 temporary hit points.</p>"
+    },
+    "quantity": 1,
+    "weight": 0.1,
+    "price": 750,
+    "identified": true,
+    "identifiedName": "Life Shell Greater",
+    "uses": {
+      "value": 0,
+      "max": 0,
+      "per": "single"
+    }
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "beavers-potions": {
+      "potion": true,
+      "buffs": [],
+      "pour": false,
+      "rarity": "rare",
+      "rules": [
+        [
+          "temp",
+          20
+        ]
+      ]
+    }
+  }
+}

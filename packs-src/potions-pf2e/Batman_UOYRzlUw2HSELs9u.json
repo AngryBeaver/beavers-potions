@@ -1,0 +1,117 @@
+{
+  "_id": "UOYRzlUw2HSELs9u",
+  "_key": "!items!UOYRzlUw2HSELs9u",
+  "name": "Batman",
+  "type": "consumable",
+  "img": "icons/consumables/potions/bottle-conical-corked-tied-blue.webp",
+  "system": {
+    "category": "potion",
+    "description": {
+      "value": "<p>You lose the ability to speak for 10 minutes. Instead you can release high-frequency squeaks for echolocation: you have blindsight 60 ft. as long as the surroundings are on the material plane.</p>"
+    },
+    "level": {
+      "value": 8
+    },
+    "price": {
+      "value": {
+        "gp": 750
+      }
+    },
+    "quantity": 1,
+    "bulk": {
+      "value": 0.1
+    },
+    "uses": {
+      "value": 1,
+      "max": 1,
+      "autoDestroy": true
+    },
+    "traits": {
+      "value": [
+        "consumable",
+        "magical",
+        "potion"
+      ],
+      "rarity": "rare"
+    },
+    "usage": {
+      "value": "held-in-one-hand"
+    },
+    "rules": [],
+    "slug": "batman",
+    "publication": {
+      "title": "Beaver's Potions",
+      "authors": "",
+      "license": "OGL",
+      "remaster": false
+    }
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "beavers-potions": {
+      "potion": true,
+      "effects": [
+        {
+          "name": "Effect: Batman",
+          "type": "effect",
+          "img": "icons/consumables/potions/bottle-conical-corked-tied-blue.webp",
+          "system": {
+            "description": {
+              "value": "<p>You lose the ability to speak for 10 minutes. Instead you can release high-frequency squeaks for echolocation: you have blindsight 60 ft. as long as the surroundings are on the material plane.</p>"
+            },
+            "duration": {
+              "value": 10,
+              "unit": "minutes",
+              "expiry": "turn-start",
+              "sustained": false
+            },
+            "rules": [
+              {
+                "key": "Sense",
+                "selector": "echolocation",
+                "acuity": "precise",
+                "range": 60
+              }
+            ],
+            "tokenIcon": {
+              "show": true
+            },
+            "level": {
+              "value": 8
+            },
+            "traits": {
+              "value": [],
+              "rarity": "common"
+            },
+            "slug": "effect-batman"
+          },
+          "flags": {
+            "beavers-potions": {
+              "source": "batman.effect"
+            }
+          }
+        }
+      ],
+      "rarity": "rare",
+      "rules": [
+        [
+          "sense",
+          "blindsight",
+          60
+        ],
+        [
+          "status",
+          "silenced"
+        ]
+      ],
+      "unsupported": [
+        "status silenced"
+      ]
+    }
+  }
+}

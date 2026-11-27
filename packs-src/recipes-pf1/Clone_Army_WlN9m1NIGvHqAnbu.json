@@ -1,0 +1,140 @@
+{
+  "_id": "WlN9m1NIGvHqAnbu",
+  "_key": "!items!WlN9m1NIGvHqAnbu",
+  "name": "Clone Army",
+  "type": "loot",
+  "img": "icons/sundries/scrolls/scroll-worn-tan.webp",
+  "system": {
+    "subType": "misc",
+    "description": {
+      "value": "<p>A recipe of Beaver's Potions, it needs the module Beaver's Crafting.</p><p>Brewing: Knowledge (religion) check DC 14.</p>"
+    },
+    "quantity": 1,
+    "weight": {
+      "value": 0
+    },
+    "price": 0,
+    "identified": true
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "beavers-crafting": {
+      "subtype": "Recipe",
+      "recipe": {
+        "required": {},
+        "input": {
+          "1": {
+            "Compendium-beavers-potions-ingredients-pf1-Item-yaAARBHnqhZCn3kG": {
+              "id": "yaAARBHnqhZCn3kG",
+              "uuid": "Compendium.beavers-potions.ingredients-pf1.Item.yaAARBHnqhZCn3kG",
+              "img": "icons/consumables/mushrooms/cluster-red-brown.webp",
+              "name": "Bongo Wombo",
+              "type": "Item",
+              "itemType": "loot",
+              "quantity": 5
+            }
+          },
+          "2": {
+            "Compendium-beavers-potions-ingredients-pf1-Item-tqfcqsuPQRChhdj7": {
+              "id": "tqfcqsuPQRChhdj7",
+              "uuid": "Compendium.beavers-potions.ingredients-pf1.Item.tqfcqsuPQRChhdj7",
+              "img": "icons/consumables/mushrooms/convex-tan.webp",
+              "name": "Husk Puff",
+              "type": "Item",
+              "itemType": "loot",
+              "quantity": 5
+            }
+          },
+          "3": {
+            "Compendium-beavers-potions-ingredients-pf1-Item-Q8Mlg9WpuW6zKqes": {
+              "id": "Q8Mlg9WpuW6zKqes",
+              "uuid": "Compendium.beavers-potions.ingredients-pf1.Item.Q8Mlg9WpuW6zKqes",
+              "img": "icons/consumables/mushrooms/umbontae-hot-pink.webp",
+              "name": "Gloat Glow",
+              "type": "Item",
+              "itemType": "loot",
+              "quantity": 5
+            }
+          },
+          "4": {
+            "Compendium-beavers-potions-ingredients-pf1-Item-nrssiAqJHHCV1vyv": {
+              "id": "nrssiAqJHHCV1vyv",
+              "uuid": "Compendium.beavers-potions.ingredients-pf1.Item.nrssiAqJHHCV1vyv",
+              "img": "icons/consumables/mushrooms/conical-bell-yellow.webp",
+              "name": "Yellow Stoned",
+              "type": "Item",
+              "itemType": "loot",
+              "quantity": 5
+            }
+          },
+          "5": {
+            "Compendium-beavers-potions-ingredients-pf1-Item-qK9o4MD82WmUgXP8": {
+              "id": "qK9o4MD82WmUgXP8",
+              "uuid": "Compendium.beavers-potions.ingredients-pf1.Item.qK9o4MD82WmUgXP8",
+              "img": "icons/consumables/mushrooms/bell-shiitake-brown.webp",
+              "name": "Vanilla Mob",
+              "type": "Item",
+              "itemType": "loot",
+              "quantity": 5
+            }
+          },
+          "6": {
+            "Compendium-beavers-potions-ingredients-pf1-Item-dozjFH55CR4npT6F": {
+              "id": "dozjFH55CR4npT6F",
+              "uuid": "Compendium.beavers-potions.ingredients-pf1.Item.dozjFH55CR4npT6F",
+              "img": "icons/tools/laboratory/bowl-powder-purple.webp",
+              "name": "Magical Essence",
+              "type": "Item",
+              "itemType": "loot",
+              "quantity": 5
+            }
+          }
+        },
+        "output": {
+          "1": {
+            "Compendium-beavers-potions-potions-pf1-Item-XShdKZEf6oqbyIOh": {
+              "id": "XShdKZEf6oqbyIOh",
+              "uuid": "Compendium.beavers-potions.potions-pf1.Item.XShdKZEf6oqbyIOh",
+              "img": "icons/consumables/potions/bottle-round-flask-fumes-purple.webp",
+              "name": "Clone Army",
+              "type": "Item",
+              "itemType": "consumable",
+              "quantity": 1
+            }
+          }
+        },
+        "currency": {
+          "name": "gp",
+          "value": 750
+        },
+        "beaversTests": {
+          "fails": 1,
+          "consume": true,
+          "failsInARow": false,
+          "ands": {
+            "1": {
+              "hits": 1,
+              "ors": {
+                "1": {
+                  "type": "SkillTest",
+                  "data": {
+                    "dc": 14,
+                    "skill": "kre"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "macro": "",
+        "folder": "Beaver's Potions",
+        "kind": "recipe"
+      }
+    }
+  }
+}

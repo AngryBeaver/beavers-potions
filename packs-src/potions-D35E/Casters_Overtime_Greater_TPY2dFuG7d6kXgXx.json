@@ -1,0 +1,103 @@
+{
+  "_id": "TPY2dFuG7d6kXgXx",
+  "_key": "!items!TPY2dFuG7d6kXgXx",
+  "name": "Casters Overtime Greater",
+  "type": "consumable",
+  "img": "icons/consumables/potions/bottle-metal-yellow-gray.webp",
+  "system": {
+    "consumableType": "potion",
+    "description": {
+      "value": "<p>You spend one round doing nothing else than concentrating. During this time you cannot defend yourself: you are incapacitated, everyone attacking you has advantage and hits critically.</p><p>You replenish all your spell slots of the first to third level while you gain 2 levels of exhaustion, which cannot be healed magically.</p>"
+    },
+    "quantity": 1,
+    "weight": 0.1,
+    "price": 750,
+    "identified": true,
+    "identifiedName": "Casters Overtime Greater",
+    "uses": {
+      "value": 0,
+      "max": 0,
+      "per": "single"
+    }
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "beavers-potions": {
+      "potion": true,
+      "buffs": [
+        {
+          "name": "Out of Mind",
+          "type": "buff",
+          "img": "icons/consumables/potions/bottle-metal-yellow-gray.webp",
+          "system": {
+            "buffType": "temp",
+            "active": true,
+            "level": 1,
+            "duration": {
+              "value": "1",
+              "units": "round"
+            },
+            "changes": [
+              [
+                "-4",
+                "ac",
+                "ac",
+                "untyped"
+              ]
+            ],
+            "description": {
+              "value": "<p>You spend one round doing nothing else than concentrating. During this time you cannot defend yourself: you are incapacitated, everyone attacking you has advantage and hits critically.</p><p>You replenish all your spell slots of the first to third level while you gain 2 levels of exhaustion, which cannot be healed magically.</p>"
+            }
+          },
+          "flags": {
+            "beavers-potions": {
+              "grantsCritical": true,
+              "conditions": [
+                "helpless"
+              ],
+              "source": "casters-overtime-greater.buff"
+            }
+          }
+        }
+      ],
+      "pour": false,
+      "use": {
+        "restoreSlots": {
+          "maxLevel": 3,
+          "exhaustion": 2
+        }
+      },
+      "rarity": "rare",
+      "rules": [
+        [
+          "status",
+          "incapacitated"
+        ],
+        [
+          "grants",
+          "advantage"
+        ],
+        [
+          "grants",
+          "critical"
+        ],
+        [
+          "restoreSlots",
+          3
+        ],
+        [
+          "exhaustion",
+          2
+        ]
+      ],
+      "unsupported": [
+        "grants critical"
+      ]
+    }
+  }
+}

@@ -1,0 +1,137 @@
+{
+  "_id": "JUXP9jG5P4ETjwfj",
+  "_key": "!items!JUXP9jG5P4ETjwfj",
+  "name": "Casters Overtime Superior",
+  "type": "treasure",
+  "img": "icons/sundries/scrolls/scroll-worn-tan.webp",
+  "system": {
+    "description": {
+      "value": "<p>A recipe of Beaver's Potions, it needs the module Beaver's Crafting.</p><p>Brewing: Arcana check DC 18.</p>"
+    },
+    "level": {
+      "value": 0
+    },
+    "price": {
+      "value": {}
+    },
+    "quantity": 1,
+    "bulk": {
+      "value": 0
+    },
+    "traits": {
+      "value": [],
+      "rarity": "common"
+    },
+    "slug": "recipe-casters-overtime-superior"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "beavers-crafting": {
+      "subtype": "Recipe",
+      "recipe": {
+        "required": {},
+        "input": {
+          "1": {
+            "Compendium-beavers-potions-ingredients-pf2e-Item-abVFmDAfMIxApd1c": {
+              "id": "abVFmDAfMIxApd1c",
+              "uuid": "Compendium.beavers-potions.ingredients-pf2e.Item.abVFmDAfMIxApd1c",
+              "img": "icons/consumables/mushrooms/campanulate-bell-shiny-blue.webp",
+              "name": "Jelly Bag Cap",
+              "type": "Item",
+              "itemType": "treasure",
+              "quantity": 5
+            }
+          },
+          "2": {
+            "Compendium-beavers-potions-ingredients-pf2e-Item-nrssiAqJHHCV1vyv": {
+              "id": "nrssiAqJHHCV1vyv",
+              "uuid": "Compendium.beavers-potions.ingredients-pf2e.Item.nrssiAqJHHCV1vyv",
+              "img": "icons/consumables/mushrooms/conical-bell-yellow.webp",
+              "name": "Yellow Stoned",
+              "type": "Item",
+              "itemType": "treasure",
+              "quantity": 5
+            }
+          },
+          "3": {
+            "Compendium-beavers-potions-ingredients-pf2e-Item-rG0lI6sHUR8b2xvD": {
+              "id": "rG0lI6sHUR8b2xvD",
+              "uuid": "Compendium.beavers-potions.ingredients-pf2e.Item.rG0lI6sHUR8b2xvD",
+              "img": "icons/consumables/mushrooms/campanulate-bell-shiny-bumpy-red.webp",
+              "name": "Manticore Drops",
+              "type": "Item",
+              "itemType": "treasure",
+              "quantity": 5
+            }
+          },
+          "4": {
+            "Compendium-beavers-potions-ingredients-pf2e-Item-1GPYa56eLe6yUgoU": {
+              "id": "1GPYa56eLe6yUgoU",
+              "uuid": "Compendium.beavers-potions.ingredients-pf2e.Item.1GPYa56eLe6yUgoU",
+              "img": "icons/consumables/mushrooms/conical-bell-pink.webp",
+              "name": "Shrimp Brain",
+              "type": "Item",
+              "itemType": "treasure",
+              "quantity": 5
+            }
+          },
+          "5": {
+            "Compendium-beavers-potions-ingredients-pf2e-Item-dozjFH55CR4npT6F": {
+              "id": "dozjFH55CR4npT6F",
+              "uuid": "Compendium.beavers-potions.ingredients-pf2e.Item.dozjFH55CR4npT6F",
+              "img": "icons/tools/laboratory/bowl-powder-purple.webp",
+              "name": "Magical Essence",
+              "type": "Item",
+              "itemType": "treasure",
+              "quantity": 3
+            }
+          }
+        },
+        "output": {
+          "1": {
+            "Compendium-beavers-potions-potions-pf2e-Item-vXJxudEhpp6hpdOe": {
+              "id": "vXJxudEhpp6hpdOe",
+              "uuid": "Compendium.beavers-potions.potions-pf2e.Item.vXJxudEhpp6hpdOe",
+              "img": "icons/consumables/potions/bottle-metal-yellow-gray.webp",
+              "name": "Casters Overtime Superior",
+              "type": "Item",
+              "itemType": "consumable",
+              "quantity": 1
+            }
+          }
+        },
+        "currency": {
+          "name": "gp",
+          "value": 500
+        },
+        "beaversTests": {
+          "fails": 1,
+          "consume": true,
+          "failsInARow": false,
+          "ands": {
+            "1": {
+              "hits": 1,
+              "ors": {
+                "1": {
+                  "type": "SkillTest",
+                  "data": {
+                    "dc": 18,
+                    "skill": "arcana"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "macro": "",
+        "folder": "Beaver's Potions",
+        "kind": "recipe"
+      }
+    }
+  }
+}

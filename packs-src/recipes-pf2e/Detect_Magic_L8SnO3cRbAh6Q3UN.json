@@ -1,0 +1,93 @@
+{
+  "_id": "L8SnO3cRbAh6Q3UN",
+  "_key": "!items!L8SnO3cRbAh6Q3UN",
+  "name": "Detect Magic",
+  "type": "treasure",
+  "img": "icons/sundries/scrolls/scroll-worn-tan.webp",
+  "system": {
+    "description": {
+      "value": "<p>A recipe of Beaver's Potions, it needs the module Beaver's Crafting.</p><p>Brewing: Arcana check DC 13.</p>"
+    },
+    "level": {
+      "value": 0
+    },
+    "price": {
+      "value": {}
+    },
+    "quantity": 1,
+    "bulk": {
+      "value": 0
+    },
+    "traits": {
+      "value": [],
+      "rarity": "common"
+    },
+    "slug": "recipe-detect-magic"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "beavers-crafting": {
+      "subtype": "Recipe",
+      "recipe": {
+        "required": {},
+        "input": {
+          "1": {
+            "Compendium-beavers-potions-ingredients-pf2e-Item-dVFbblELstFhBgeW": {
+              "id": "dVFbblELstFhBgeW",
+              "uuid": "Compendium.beavers-potions.ingredients-pf2e.Item.dVFbblELstFhBgeW",
+              "img": "icons/consumables/mushrooms/umbontae-pink-purple.webp",
+              "name": "Rainblow",
+              "type": "Item",
+              "itemType": "treasure",
+              "quantity": 5
+            }
+          }
+        },
+        "output": {
+          "1": {
+            "Compendium-beavers-potions-potions-pf2e-Item-hOpVQsMdNcgoZe8A": {
+              "id": "hOpVQsMdNcgoZe8A",
+              "uuid": "Compendium.beavers-potions.potions-pf2e.Item.hOpVQsMdNcgoZe8A",
+              "img": "icons/consumables/potions/bottle-bulb-corked-purple.webp",
+              "name": "Detect Magic",
+              "type": "Item",
+              "itemType": "consumable",
+              "quantity": 1
+            }
+          }
+        },
+        "currency": {
+          "name": "gp",
+          "value": 5
+        },
+        "beaversTests": {
+          "fails": 1,
+          "consume": true,
+          "failsInARow": false,
+          "ands": {
+            "1": {
+              "hits": 1,
+              "ors": {
+                "1": {
+                  "type": "SkillTest",
+                  "data": {
+                    "dc": 13,
+                    "skill": "arcana"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "macro": "",
+        "folder": "Beaver's Potions",
+        "kind": "recipe"
+      }
+    }
+  }
+}

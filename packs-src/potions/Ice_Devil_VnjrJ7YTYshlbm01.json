@@ -181,7 +181,18 @@
           "seconds": 60,
           "after": "bpfxVnjrJ7YT9000"
         }
-      }
+      },
+      "rarity": "legendary",
+      "rules": [
+        [
+          "transform",
+          {
+            "dnd5e": "Compendium.dnd5e.actors24.Actor.mmIceDevil000000"
+          },
+          "Ice Devil",
+          60
+        ]
+      ]
     }
   }
 }

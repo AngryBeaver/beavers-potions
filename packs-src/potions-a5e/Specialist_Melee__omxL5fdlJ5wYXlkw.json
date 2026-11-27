@@ -1,0 +1,174 @@
+{
+  "_id": "omxL5fdlJ5wYXlkw",
+  "_key": "!items!omxL5fdlJ5wYXlkw",
+  "name": "Specialist (Melee)",
+  "type": "object",
+  "img": "icons/consumables/potions/bottle-pear-corked-labeled-green.webp",
+  "system": {
+    "description": "<p>For the next minute you gain +2 on melee weapon attacks and +2 on melee weapon damage, while your Dexterity and Wisdom saving throws are lowered by 2.</p>",
+    "actions": {
+      "bpactomxL5fdDrin": {
+        "name": "Drink",
+        "img": "icons/consumables/potions/bottle-pear-corked-labeled-green.webp",
+        "activation": {
+          "type": "action",
+          "cost": 1,
+          "reactionTrigger": ""
+        },
+        "duration": {
+          "unit": "minutes",
+          "value": "1"
+        },
+        "target": {
+          "quantity": "",
+          "type": "self"
+        },
+        "consumers": {
+          "bpconomxL5fdDrin": {
+            "type": "quantity",
+            "default": true,
+            "itemId": "",
+            "quantity": 1,
+            "deleteOnZero": true,
+            "label": ""
+          }
+        },
+        "rolls": {},
+        "prompts": {},
+        "effects": [
+          "bpfxomxL5fdl0000"
+        ],
+        "macro": ""
+      }
+    },
+    "objectType": "consumable",
+    "price": {
+      "value": 250,
+      "denomination": "gp",
+      "special": ""
+    },
+    "quantity": 1,
+    "rarity": "uncommon",
+    "weight": 0.5,
+    "source": "",
+    "requiresAttunement": false,
+    "unidentified": false
+  },
+  "effects": [
+    {
+      "_id": "bpfxomxL5fdl0000",
+      "_key": "!items.effects!omxL5fdlJ5wYXlkw.bpfxomxL5fdl0000",
+      "name": "Specialist (Melee)",
+      "img": "icons/consumables/potions/bottle-pear-corked-labeled-green.webp",
+      "type": "base",
+      "description": "<p>For the next minute you gain +2 on melee weapon attacks and +2 on melee weapon damage, while your Dexterity and Wisdom saving throws are lowered by 2.</p>",
+      "system": {
+        "changes": [
+          {
+            "_id": "bpfxomxL5fdlc000",
+            "key": "flags.a5e.effects.bonuses.attacks",
+            "type": "custom",
+            "value": {
+              "label": "Specialist (Melee)",
+              "formula": "2",
+              "context": {
+                "attackTypes": [
+                  "meleeWeaponAttack"
+                ],
+                "spellLevels": []
+              }
+            },
+            "phase": "initial",
+            "priority": null
+          },
+          {
+            "_id": "bpfxomxL5fdlc100",
+            "key": "flags.a5e.effects.bonuses.damage",
+            "type": "custom",
+            "value": {
+              "label": "Specialist (Melee)",
+              "formula": "2",
+              "damageType": "",
+              "context": {
+                "attackTypes": [
+                  "meleeWeaponAttack"
+                ],
+                "spellLevels": [],
+                "damageTypes": []
+              }
+            },
+            "phase": "initial",
+            "priority": null
+          },
+          {
+            "_id": "bpfxomxL5fdlc200",
+            "key": "system.abilities.dex.save.bonus",
+            "type": "add",
+            "value": "-2",
+            "phase": "initial",
+            "priority": null
+          },
+          {
+            "_id": "bpfxomxL5fdlc300",
+            "key": "system.abilities.wis.save.bonus",
+            "type": "add",
+            "value": "-2",
+            "phase": "initial",
+            "priority": null
+          }
+        ],
+        "magical": true,
+        "applyToSelf": false,
+        "effectType": "onUse"
+      },
+      "disabled": false,
+      "transfer": false,
+      "duration": {
+        "value": 1,
+        "units": "minutes",
+        "expiry": "turnStart",
+        "expired": false
+      },
+      "statuses": [],
+      "flags": {},
+      "tint": "#ffffff",
+      "showIcon": 1,
+      "origin": null,
+      "start": null,
+      "sort": 0
+    }
+  ],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "beavers-potions": {
+      "potion": true,
+      "rarity": "uncommon",
+      "rules": [
+        [
+          "attackBonus",
+          "melee",
+          2
+        ],
+        [
+          "damageBonus",
+          "melee",
+          2
+        ],
+        [
+          "saveBonus",
+          "dex",
+          -2
+        ],
+        [
+          "saveBonus",
+          "wis",
+          -2
+        ]
+      ]
+    }
+  }
+}

@@ -1,0 +1,111 @@
+{
+  "_id": "y6zSFJYIKPOiZnI7",
+  "_key": "!items!y6zSFJYIKPOiZnI7",
+  "name": "Reflect Damage",
+  "type": "object",
+  "img": "icons/consumables/potions/bottle-round-corked-red.webp",
+  "system": {
+    "description": "<p>Until the start of your next turn, all damage you would receive from an attacker is dealt to the attacker instead.</p>",
+    "actions": {
+      "bpacty6zSFJYDrin": {
+        "name": "Drink",
+        "img": "icons/consumables/potions/bottle-round-corked-red.webp",
+        "activation": {
+          "type": "action",
+          "cost": 1,
+          "reactionTrigger": ""
+        },
+        "duration": {
+          "unit": "rounds",
+          "value": "1"
+        },
+        "target": {
+          "quantity": "",
+          "type": "self"
+        },
+        "consumers": {
+          "bpcony6zSFJYDrin": {
+            "type": "quantity",
+            "default": true,
+            "itemId": "",
+            "quantity": 1,
+            "deleteOnZero": true,
+            "label": ""
+          }
+        },
+        "rolls": {},
+        "prompts": {},
+        "effects": [
+          "bpfxy6zSFJYI0000"
+        ],
+        "macro": ""
+      }
+    },
+    "objectType": "consumable",
+    "price": {
+      "value": 2500,
+      "denomination": "gp",
+      "special": ""
+    },
+    "quantity": 1,
+    "rarity": "veryRare",
+    "weight": 0.5,
+    "source": "",
+    "requiresAttunement": false,
+    "unidentified": false
+  },
+  "effects": [
+    {
+      "_id": "bpfxy6zSFJYI0000",
+      "_key": "!items.effects!y6zSFJYIKPOiZnI7.bpfxy6zSFJYI0000",
+      "name": "Reflect Damage",
+      "img": "icons/consumables/potions/bottle-round-corked-red.webp",
+      "type": "base",
+      "description": "<p>Until the start of your next turn, all damage you would receive from an attacker is dealt to the attacker instead.</p>",
+      "system": {
+        "changes": [],
+        "magical": true,
+        "applyToSelf": false,
+        "effectType": "onUse"
+      },
+      "disabled": false,
+      "transfer": false,
+      "duration": {
+        "value": 1,
+        "units": "rounds",
+        "expiry": "turnStart",
+        "expired": false
+      },
+      "statuses": [],
+      "flags": {
+        "beavers-potions": {
+          "reflectDamage": true
+        }
+      },
+      "tint": "#ffffff",
+      "showIcon": 1,
+      "origin": null,
+      "start": null,
+      "sort": 0
+    }
+  ],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "beavers-potions": {
+      "potion": true,
+      "rarity": "veryRare",
+      "rules": [
+        [
+          "reflectDamage"
+        ]
+      ],
+      "unsupported": [
+        "reflectDamage"
+      ]
+    }
+  }
+}

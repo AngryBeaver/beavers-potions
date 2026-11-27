@@ -1,0 +1,138 @@
+{
+  "_id": "iSnyqLSClSjZx1Nk",
+  "_key": "!items!iSnyqLSClSjZx1Nk",
+  "name": "Radio Activity",
+  "type": "consumable",
+  "img": "icons/consumables/potions/bottle-conical-fumes-green.webp",
+  "system": {
+    "subType": "potion",
+    "description": {
+      "value": "<p>You begin to glow for 5 rounds creating a 25 ft. aura of green light around you. Each creature, including yourself, must make a DC 14 Constitution saving throw when it starts its turn within 25 ft. of you. A target takes 3d6 radiant damage on a failed save, or half as much on a successful one.</p>",
+      "instructions": "",
+      "unidentified": ""
+    },
+    "quantity": 1,
+    "weight": {
+      "value": 0.1
+    },
+    "price": 750,
+    "identified": true,
+    "cl": 1,
+    "uses": {
+      "value": null,
+      "per": "single",
+      "autoDeductChargesCost": "",
+      "maxFormula": "",
+      "rechargeFormula": ""
+    },
+    "actions": [
+      {
+        "_id": "bpactiSnyqLSDrin",
+        "name": "Drink",
+        "activation": {
+          "type": "standard",
+          "unchained": {
+            "type": "action",
+            "cost": 2
+          }
+        },
+        "duration": {
+          "units": "inst"
+        }
+      }
+    ]
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "beavers-potions": {
+      "potion": true,
+      "buffs": [
+        {
+          "name": "Radio Activity",
+          "type": "buff",
+          "img": "icons/consumables/potions/bottle-conical-fumes-green.webp",
+          "system": {
+            "subType": "temp",
+            "active": true,
+            "level": 1,
+            "duration": {
+              "value": "5",
+              "units": "round",
+              "end": "turnStart"
+            },
+            "changes": [],
+            "conditions": [],
+            "description": {
+              "value": "<p>You begin to glow for 5 rounds creating a 25 ft. aura of green light around you. Each creature, including yourself, must make a DC 14 Constitution saving throw when it starts its turn within 25 ft. of you. A target takes 3d6 radiant damage on a failed save, or half as much on a successful one.</p>"
+            }
+          },
+          "flags": {
+            "beavers-potions": {
+              "aura": {
+                "radius": 25,
+                "includeSelf": true,
+                "save": {
+                  "ability": "con",
+                  "dc": 14
+                },
+                "damage": {
+                  "formula": "3d6",
+                  "type": "radiant"
+                }
+              },
+              "light": {
+                "dim": 25,
+                "bright": 5,
+                "color": "#4dff4d",
+                "alpha": 0.4,
+                "animation": {
+                  "type": "pulse",
+                  "speed": 3,
+                  "intensity": 3
+                }
+              },
+              "source": "radio-activity.buff"
+            }
+          }
+        }
+      ],
+      "rarity": "rare",
+      "rules": [
+        [
+          "aura",
+          {
+            "radius": 25,
+            "includeSelf": true,
+            "save": {
+              "ability": "con",
+              "dc": 14
+            },
+            "damage": {
+              "formula": "3d6",
+              "type": "radiant"
+            }
+          }
+        ],
+        [
+          "light",
+          {
+            "dim": 25,
+            "bright": 5,
+            "color": "#4dff4d",
+            "alpha": 0.4,
+            "animation": {
+              "type": "pulse",
+              "speed": 3,
+              "intensity": 3
+            }
+          }
+        ]
+      ]
+    }
+  }
+}

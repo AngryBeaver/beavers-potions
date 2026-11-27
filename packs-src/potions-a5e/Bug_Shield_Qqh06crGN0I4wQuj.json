@@ -1,0 +1,100 @@
+{
+  "_id": "Qqh06crGN0I4wQuj",
+  "_key": "!items!Qqh06crGN0I4wQuj",
+  "name": "Bug Shield",
+  "type": "object",
+  "img": "icons/consumables/potions/bottle-bulb-corked-green.webp",
+  "system": {
+    "description": "<p>Repels insects and other tiny pests with 99% effectiveness. It lasts 3 days.</p>",
+    "actions": {
+      "bpactQqh06crDrin": {
+        "name": "Drink",
+        "img": "icons/consumables/potions/bottle-bulb-corked-green.webp",
+        "activation": {
+          "type": "action",
+          "cost": 1,
+          "reactionTrigger": ""
+        },
+        "duration": {
+          "unit": "days",
+          "value": "3"
+        },
+        "target": {
+          "quantity": "",
+          "type": "self"
+        },
+        "consumers": {
+          "bpconQqh06crDrin": {
+            "type": "quantity",
+            "default": true,
+            "itemId": "",
+            "quantity": 1,
+            "deleteOnZero": true,
+            "label": ""
+          }
+        },
+        "rolls": {},
+        "prompts": {},
+        "effects": [
+          "bpfxQqh06crG0000"
+        ],
+        "macro": ""
+      }
+    },
+    "objectType": "consumable",
+    "price": {
+      "value": 50,
+      "denomination": "gp",
+      "special": ""
+    },
+    "quantity": 1,
+    "rarity": "common",
+    "weight": 0.5,
+    "source": "",
+    "requiresAttunement": false,
+    "unidentified": false
+  },
+  "effects": [
+    {
+      "_id": "bpfxQqh06crG0000",
+      "_key": "!items.effects!Qqh06crGN0I4wQuj.bpfxQqh06crG0000",
+      "name": "Bug Shield",
+      "img": "icons/consumables/potions/bottle-bulb-corked-green.webp",
+      "type": "base",
+      "description": "<p>Repels insects and other tiny pests with 99% effectiveness. It lasts 3 days.</p>",
+      "system": {
+        "changes": [],
+        "magical": true,
+        "applyToSelf": false,
+        "effectType": "onUse"
+      },
+      "disabled": false,
+      "transfer": false,
+      "duration": {
+        "value": 3,
+        "units": "days",
+        "expiry": "turnStart",
+        "expired": false
+      },
+      "statuses": [],
+      "flags": {},
+      "tint": "#ffffff",
+      "showIcon": 1,
+      "origin": null,
+      "start": null,
+      "sort": 0
+    }
+  ],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "beavers-potions": {
+      "potion": true,
+      "rarity": "common",
+      "rules": []
+    }
+  }
+}

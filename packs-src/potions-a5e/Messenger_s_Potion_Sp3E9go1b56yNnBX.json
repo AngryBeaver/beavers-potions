@@ -1,0 +1,156 @@
+{
+  "_id": "Sp3E9go1b56yNnBX",
+  "_key": "!items!Sp3E9go1b56yNnBX",
+  "name": "Messenger's Potion",
+  "type": "object",
+  "img": "icons/consumables/potions/bottle-conical-corked-labeled-shell-cyan.webp",
+  "system": {
+    "description": "<p>Doubles your speed for 3 hours, afterwards you gain two levels of exhaustion.</p>",
+    "actions": {
+      "bpactSp3E9goDrin": {
+        "name": "Drink",
+        "img": "icons/consumables/potions/bottle-conical-corked-labeled-shell-cyan.webp",
+        "activation": {
+          "type": "action",
+          "cost": 1,
+          "reactionTrigger": ""
+        },
+        "duration": {
+          "unit": "hours",
+          "value": "3"
+        },
+        "target": {
+          "quantity": "",
+          "type": "self"
+        },
+        "consumers": {
+          "bpconSp3E9goDrin": {
+            "type": "quantity",
+            "default": true,
+            "itemId": "",
+            "quantity": 1,
+            "deleteOnZero": true,
+            "label": ""
+          }
+        },
+        "rolls": {},
+        "prompts": {},
+        "effects": [
+          "bpfxSp3E9go10000"
+        ],
+        "macro": ""
+      }
+    },
+    "objectType": "consumable",
+    "price": {
+      "value": 250,
+      "denomination": "gp",
+      "special": ""
+    },
+    "quantity": 1,
+    "rarity": "uncommon",
+    "weight": 0.5,
+    "source": "",
+    "requiresAttunement": false,
+    "unidentified": false
+  },
+  "effects": [
+    {
+      "_id": "bpfxSp3E9go10000",
+      "_key": "!items.effects!Sp3E9go1b56yNnBX.bpfxSp3E9go10000",
+      "name": "Messenger's Potion",
+      "img": "icons/consumables/potions/bottle-conical-corked-labeled-shell-cyan.webp",
+      "type": "base",
+      "description": "<p>Doubles your speed for 3 hours, afterwards you gain two levels of exhaustion.</p>",
+      "system": {
+        "changes": [
+          {
+            "_id": "bpfxSp3E9go1c000",
+            "key": "system.attributes.movement.walk.distance",
+            "type": "multiply",
+            "value": 2,
+            "phase": "initial",
+            "priority": null
+          },
+          {
+            "_id": "bpfxSp3E9go1c100",
+            "key": "system.attributes.movement.fly.distance",
+            "type": "multiply",
+            "value": 2,
+            "phase": "initial",
+            "priority": null
+          },
+          {
+            "_id": "bpfxSp3E9go1c200",
+            "key": "system.attributes.movement.swim.distance",
+            "type": "multiply",
+            "value": 2,
+            "phase": "initial",
+            "priority": null
+          },
+          {
+            "_id": "bpfxSp3E9go1c300",
+            "key": "system.attributes.movement.climb.distance",
+            "type": "multiply",
+            "value": 2,
+            "phase": "initial",
+            "priority": null
+          },
+          {
+            "_id": "bpfxSp3E9go1c400",
+            "key": "system.attributes.movement.burrow.distance",
+            "type": "multiply",
+            "value": 2,
+            "phase": "initial",
+            "priority": null
+          }
+        ],
+        "magical": true,
+        "applyToSelf": false,
+        "effectType": "onUse"
+      },
+      "disabled": false,
+      "transfer": false,
+      "duration": {
+        "value": 3,
+        "units": "hours",
+        "expiry": "turnStart",
+        "expired": false
+      },
+      "statuses": [],
+      "flags": {
+        "beavers-potions": {
+          "onEnd": {
+            "exhaustion": 2
+          }
+        }
+      },
+      "tint": "#ffffff",
+      "showIcon": 1,
+      "origin": null,
+      "start": null,
+      "sort": 0
+    }
+  ],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "beavers-potions": {
+      "potion": true,
+      "rarity": "uncommon",
+      "rules": [
+        [
+          "speed",
+          2
+        ],
+        [
+          "exhaustionAtEnd",
+          2
+        ]
+      ]
+    }
+  }
+}

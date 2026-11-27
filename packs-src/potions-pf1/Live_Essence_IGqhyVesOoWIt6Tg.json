@@ -1,0 +1,77 @@
+{
+  "_id": "IGqhyVesOoWIt6Tg",
+  "_key": "!items!IGqhyVesOoWIt6Tg",
+  "name": "Live Essence",
+  "type": "consumable",
+  "img": "icons/consumables/potions/bottle-round-corked-orante-red.webp",
+  "system": {
+    "subType": "potion",
+    "description": {
+      "value": "<p>Before drinking, mix in one drop of fresh blood of your target (target it). You drink the life essence of the blood's owner: it takes 3d6 + 3 necrotic damage on a failed DC 14 Constitution saving throw, or half as much on a successful one. You heal the same amount.</p>",
+      "instructions": "",
+      "unidentified": ""
+    },
+    "quantity": 1,
+    "weight": {
+      "value": 0.1
+    },
+    "price": 750,
+    "identified": true,
+    "cl": 1,
+    "uses": {
+      "value": null,
+      "per": "single",
+      "autoDeductChargesCost": "",
+      "maxFormula": "",
+      "rechargeFormula": ""
+    },
+    "actions": [
+      {
+        "_id": "bpactIGqhyVeDrin",
+        "name": "Drink",
+        "activation": {
+          "type": "standard",
+          "unchained": {
+            "type": "action",
+            "cost": 2
+          }
+        },
+        "duration": {
+          "units": "inst"
+        }
+      }
+    ]
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "beavers-potions": {
+      "potion": true,
+      "buffs": [],
+      "use": {
+        "drain": {
+          "formula": "3d6 + 3",
+          "type": "necrotic",
+          "ability": "con",
+          "dc": 14
+        }
+      },
+      "rarity": "rare",
+      "rules": [
+        [
+          "drain",
+          {
+            "formula": "3d6 + 3",
+            "type": "necrotic",
+            "ability": "con",
+            "dc": 14
+          }
+        ]
+      ]
+    }
+  }
+}

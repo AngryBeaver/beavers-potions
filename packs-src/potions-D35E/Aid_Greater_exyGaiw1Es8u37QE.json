@@ -1,0 +1,79 @@
+{
+  "_id": "exyGaiw1Es8u37QE",
+  "_key": "!items!exyGaiw1Es8u37QE",
+  "name": "Aid Greater",
+  "type": "consumable",
+  "img": "icons/consumables/potions/bottle-round-label-cork-red.webp",
+  "system": {
+    "consumableType": "potion",
+    "description": {
+      "value": "<p>Your hit point maximum and your current hit points increase by 10 for 8 hours.</p>"
+    },
+    "quantity": 1,
+    "weight": 0.1,
+    "price": 750,
+    "identified": true,
+    "identifiedName": "Aid Greater",
+    "uses": {
+      "value": 0,
+      "max": 0,
+      "per": "single"
+    }
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "beavers-potions": {
+      "potion": true,
+      "buffs": [
+        {
+          "name": "Aid Greater",
+          "type": "buff",
+          "img": "icons/consumables/potions/bottle-round-label-cork-red.webp",
+          "system": {
+            "buffType": "temp",
+            "active": true,
+            "level": 1,
+            "duration": {
+              "value": "8",
+              "units": "hour"
+            },
+            "changes": [
+              [
+                "10",
+                "misc",
+                "mhp",
+                "untyped"
+              ]
+            ],
+            "description": {
+              "value": "<p>Your hit point maximum and your current hit points increase by 10 for 8 hours.</p>"
+            }
+          },
+          "flags": {
+            "beavers-potions": {
+              "conditions": [],
+              "source": "aid-greater.buff"
+            }
+          }
+        }
+      ],
+      "pour": false,
+      "rarity": "rare",
+      "rules": [
+        [
+          "heal",
+          "10"
+        ],
+        [
+          "hpMax",
+          10
+        ]
+      ]
+    }
+  }
+}

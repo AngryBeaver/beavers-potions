@@ -1,0 +1,29 @@
+{
+  "_id": "MNUTlx4UjXSRzW25",
+  "_key": "!items!MNUTlx4UjXSRzW25",
+  "name": "Guepinia",
+  "type": "loot",
+  "img": "icons/consumables/mushrooms/conical-bell-orange-white.webp",
+  "system": {
+    "subType": "tradeGoods",
+    "description": {
+      "value": "<p>A mushroom, an ingredient of Beaver's Potions.</p>"
+    },
+    "quantity": 1,
+    "weight": 0.1,
+    "price": 0,
+    "identified": true,
+    "identifiedName": "Guepinia"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "beavers-potions": {
+      "ingredient": "mushroom"
+    }
+  }
+}

@@ -1,0 +1,97 @@
+{
+  "_id": "WQ0Sfdnn0c5sQI2Q",
+  "_key": "!items!WQ0Sfdnn0c5sQI2Q",
+  "name": "Time Travel",
+  "type": "consumable",
+  "img": "icons/consumables/potions/bottle-conical-corked-yellow.webp",
+  "system": {
+    "category": "potion",
+    "description": {
+      "value": "<p>You travel back in time for exactly 30 minutes. You do not change! The world around you does: you coexist with your past self. You start your existence in the past at the exact same spot you are currently in, with exactly the same stats and equipment.</p><p><strong>Rules of time travel:</strong> you cannot change anything affecting your personal perspective of history! Your past self is not aware of your help and does exactly the same as before. If you violate the rules, your time travel ends immediately and you return to your timeline where everything happened as before. (In reality you just opened a new parallel timeline, sadly your mind is bonded to this one.)</p><p>When your time is up or after you violate the rules, your existence vanishes while your past self is simultaneously struck down to 0 hit points. When it survives, its mind is the mind of the traveller.</p><p>But wait, why should you then drink this potion? Be creative! The changes you make could change the future thereafter. E.g. you have been chased by an angry mob and ended up in front of a locked door. If only someone had left a key below that doormat.</p>"
+    },
+    "level": {
+      "value": 16
+    },
+    "price": {
+      "value": {
+        "gp": 5000
+      }
+    },
+    "quantity": 1,
+    "bulk": {
+      "value": 0.1
+    },
+    "uses": {
+      "value": 1,
+      "max": 1,
+      "autoDestroy": true
+    },
+    "traits": {
+      "value": [
+        "consumable",
+        "magical",
+        "potion"
+      ],
+      "rarity": "unique"
+    },
+    "usage": {
+      "value": "held-in-one-hand"
+    },
+    "rules": [],
+    "slug": "time-travel",
+    "publication": {
+      "title": "Beaver's Potions",
+      "authors": "",
+      "license": "OGL",
+      "remaster": false
+    }
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "beavers-potions": {
+      "potion": true,
+      "effects": [
+        {
+          "name": "Effect: Timeless",
+          "type": "effect",
+          "img": "icons/consumables/potions/bottle-conical-corked-yellow.webp",
+          "system": {
+            "description": {
+              "value": "<p>You travel back in time for exactly 30 minutes. You do not change! The world around you does: you coexist with your past self. You start your existence in the past at the exact same spot you are currently in, with exactly the same stats and equipment.</p><p><strong>Rules of time travel:</strong> you cannot change anything affecting your personal perspective of history! Your past self is not aware of your help and does exactly the same as before. If you violate the rules, your time travel ends immediately and you return to your timeline where everything happened as before. (In reality you just opened a new parallel timeline, sadly your mind is bonded to this one.)</p><p>When your time is up or after you violate the rules, your existence vanishes while your past self is simultaneously struck down to 0 hit points. When it survives, its mind is the mind of the traveller.</p><p>But wait, why should you then drink this potion? Be creative! The changes you make could change the future thereafter. E.g. you have been chased by an angry mob and ended up in front of a locked door. If only someone had left a key below that doormat.</p>"
+            },
+            "duration": {
+              "value": 30,
+              "unit": "minutes",
+              "expiry": "turn-start",
+              "sustained": false
+            },
+            "rules": [],
+            "tokenIcon": {
+              "show": true
+            },
+            "level": {
+              "value": 16
+            },
+            "traits": {
+              "value": [],
+              "rarity": "common"
+            },
+            "slug": "effect-time-travel"
+          },
+          "flags": {
+            "beavers-potions": {
+              "source": "time-travel.effect"
+            }
+          }
+        }
+      ],
+      "rarity": "legendary",
+      "rules": []
+    }
+  }
+}

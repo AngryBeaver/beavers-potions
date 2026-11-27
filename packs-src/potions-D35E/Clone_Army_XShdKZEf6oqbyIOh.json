@@ -1,0 +1,63 @@
+{
+  "_id": "XShdKZEf6oqbyIOh",
+  "_key": "!items!XShdKZEf6oqbyIOh",
+  "name": "Clone Army",
+  "type": "consumable",
+  "img": "icons/consumables/potions/bottle-round-flask-fumes-purple.webp",
+  "system": {
+    "consumableType": "potion",
+    "description": {
+      "value": "<p>You create a clone of yourself, then you immediately begin to hate each other. You both know only one can survive when the time is up, and you are the original while the other is the clone… obviously. When the other you is still alive when the hour ends, both of you drop dead.</p>"
+    },
+    "quantity": 1,
+    "weight": 0.1,
+    "price": 5000,
+    "identified": true,
+    "identifiedName": "Clone Army",
+    "uses": {
+      "value": 0,
+      "max": 0,
+      "per": "single"
+    }
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "beavers-potions": {
+      "potion": true,
+      "buffs": [
+        {
+          "name": "Clone Army",
+          "type": "buff",
+          "img": "icons/consumables/potions/bottle-round-flask-fumes-purple.webp",
+          "system": {
+            "buffType": "temp",
+            "active": true,
+            "level": 1,
+            "duration": {
+              "value": "1",
+              "units": "hour"
+            },
+            "changes": [],
+            "description": {
+              "value": "<p>You create a clone of yourself, then you immediately begin to hate each other. You both know only one can survive when the time is up, and you are the original while the other is the clone… obviously. When the other you is still alive when the hour ends, both of you drop dead.</p>"
+            }
+          },
+          "flags": {
+            "beavers-potions": {
+              "conditions": [],
+              "source": "clone-army.buff"
+            }
+          }
+        }
+      ],
+      "pour": false,
+      "rarity": "legendary",
+      "rules": []
+    }
+  }
+}

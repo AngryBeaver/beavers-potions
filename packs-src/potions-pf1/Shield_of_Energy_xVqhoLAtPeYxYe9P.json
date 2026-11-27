@@ -1,0 +1,106 @@
+{
+  "_id": "xVqhoLAtPeYxYe9P",
+  "_key": "!items!xVqhoLAtPeYxYe9P",
+  "name": "Shield of Energy",
+  "type": "consumable",
+  "img": "icons/consumables/potions/bottle-round-empty-glass.webp",
+  "system": {
+    "subType": "potion",
+    "description": {
+      "value": "<p>You create a gleaming sphere of energy with a 10 ft. radius centered on you. For 1 minute everyone within it when it forms (you included) gets a +2 bonus to AC.</p>",
+      "instructions": "",
+      "unidentified": ""
+    },
+    "quantity": 1,
+    "weight": {
+      "value": 0.1
+    },
+    "price": 750,
+    "identified": true,
+    "cl": 1,
+    "uses": {
+      "value": null,
+      "per": "single",
+      "autoDeductChargesCost": "",
+      "maxFormula": "",
+      "rechargeFormula": ""
+    },
+    "actions": [
+      {
+        "_id": "bpactxVqhoLADrin",
+        "name": "Drink",
+        "activation": {
+          "type": "standard",
+          "unchained": {
+            "type": "action",
+            "cost": 2
+          }
+        },
+        "duration": {
+          "units": "inst"
+        }
+      }
+    ]
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "beavers-potions": {
+      "potion": true,
+      "buffs": [
+        {
+          "name": "Shield of Energy",
+          "type": "buff",
+          "img": "icons/consumables/potions/bottle-round-empty-glass.webp",
+          "system": {
+            "subType": "temp",
+            "active": true,
+            "level": 1,
+            "duration": {
+              "value": "1",
+              "units": "minute",
+              "end": "turnStart"
+            },
+            "changes": [
+              {
+                "_id": "bpcxVqho",
+                "formula": "2",
+                "target": "ac",
+                "type": "untyped"
+              }
+            ],
+            "conditions": [],
+            "description": {
+              "value": "<p>You create a gleaming sphere of energy with a 10 ft. radius centered on you. For 1 minute everyone within it when it forms (you included) gets a +2 bonus to AC.</p>"
+            }
+          },
+          "flags": {
+            "beavers-potions": {
+              "source": "shield-of-energy.buff"
+            }
+          }
+        }
+      ],
+      "use": {
+        "area": {
+          "radius": 10
+        }
+      },
+      "rarity": "rare",
+      "rules": [
+        [
+          "ac",
+          2
+        ],
+        [
+          "area",
+          10
+        ]
+      ]
+    }
+  }
+}

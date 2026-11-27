@@ -1,0 +1,71 @@
+{
+  "_id": "abmTcsGnJaHZxNDU",
+  "_key": "!items!abmTcsGnJaHZxNDU",
+  "name": "Weightless",
+  "type": "consumable",
+  "img": "icons/consumables/potions/bottle-bulb-empty-glass.webp",
+  "system": {
+    "consumableType": "potion",
+    "description": {
+      "value": "<p>Your body becomes weightless for 1 minute. As long as you do not carry anything (including clothes) you are no longer pulled down to earth: you hover.</p>"
+    },
+    "quantity": 1,
+    "weight": 0.1,
+    "price": 50,
+    "identified": true,
+    "identifiedName": "Weightless",
+    "uses": {
+      "value": 0,
+      "max": 0,
+      "per": "single"
+    }
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "beavers-potions": {
+      "potion": true,
+      "buffs": [
+        {
+          "name": "Weightless",
+          "type": "buff",
+          "img": "icons/consumables/potions/bottle-bulb-empty-glass.webp",
+          "system": {
+            "buffType": "temp",
+            "active": true,
+            "level": 1,
+            "duration": {
+              "value": "1",
+              "units": "minute"
+            },
+            "changes": [],
+            "description": {
+              "value": "<p>Your body becomes weightless for 1 minute. As long as you do not carry anything (including clothes) you are no longer pulled down to earth: you hover.</p>"
+            }
+          },
+          "flags": {
+            "beavers-potions": {
+              "conditions": [],
+              "source": "weightless.buff"
+            }
+          }
+        }
+      ],
+      "pour": false,
+      "rarity": "common",
+      "rules": [
+        [
+          "status",
+          "hovering"
+        ]
+      ],
+      "unsupported": [
+        "status hovering"
+      ]
+    }
+  }
+}

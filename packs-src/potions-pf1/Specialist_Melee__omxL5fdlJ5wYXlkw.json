@@ -1,0 +1,131 @@
+{
+  "_id": "omxL5fdlJ5wYXlkw",
+  "_key": "!items!omxL5fdlJ5wYXlkw",
+  "name": "Specialist (Melee)",
+  "type": "consumable",
+  "img": "icons/consumables/potions/bottle-pear-corked-labeled-green.webp",
+  "system": {
+    "subType": "potion",
+    "description": {
+      "value": "<p>For the next minute you gain +2 on melee weapon attacks and +2 on melee weapon damage, while your Dexterity and Wisdom saving throws are lowered by 2.</p>",
+      "instructions": "",
+      "unidentified": ""
+    },
+    "quantity": 1,
+    "weight": {
+      "value": 0.1
+    },
+    "price": 250,
+    "identified": true,
+    "cl": 1,
+    "uses": {
+      "value": null,
+      "per": "single",
+      "autoDeductChargesCost": "",
+      "maxFormula": "",
+      "rechargeFormula": ""
+    },
+    "actions": [
+      {
+        "_id": "bpactomxL5fdDrin",
+        "name": "Drink",
+        "activation": {
+          "type": "standard",
+          "unchained": {
+            "type": "action",
+            "cost": 2
+          }
+        },
+        "duration": {
+          "units": "inst"
+        }
+      }
+    ]
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "beavers-potions": {
+      "potion": true,
+      "buffs": [
+        {
+          "name": "Specialist (Melee)",
+          "type": "buff",
+          "img": "icons/consumables/potions/bottle-pear-corked-labeled-green.webp",
+          "system": {
+            "subType": "temp",
+            "active": true,
+            "level": 1,
+            "duration": {
+              "value": "1",
+              "units": "minute",
+              "end": "turnStart"
+            },
+            "changes": [
+              {
+                "_id": "bpcomxL5",
+                "formula": "2",
+                "target": "mattack",
+                "type": "untyped"
+              },
+              {
+                "_id": "bpcomxL5",
+                "formula": "2",
+                "target": "mwdamage",
+                "type": "untyped"
+              },
+              {
+                "_id": "bpcomxL5",
+                "formula": "-2",
+                "target": "ref",
+                "type": "untyped"
+              },
+              {
+                "_id": "bpcomxL5",
+                "formula": "-2",
+                "target": "will",
+                "type": "untyped"
+              }
+            ],
+            "conditions": [],
+            "description": {
+              "value": "<p>For the next minute you gain +2 on melee weapon attacks and +2 on melee weapon damage, while your Dexterity and Wisdom saving throws are lowered by 2.</p>"
+            }
+          },
+          "flags": {
+            "beavers-potions": {
+              "source": "specialist-melee.buff"
+            }
+          }
+        }
+      ],
+      "rarity": "uncommon",
+      "rules": [
+        [
+          "attackBonus",
+          "melee",
+          2
+        ],
+        [
+          "damageBonus",
+          "melee",
+          2
+        ],
+        [
+          "saveBonus",
+          "dex",
+          -2
+        ],
+        [
+          "saveBonus",
+          "wis",
+          -2
+        ]
+      ]
+    }
+  }
+}

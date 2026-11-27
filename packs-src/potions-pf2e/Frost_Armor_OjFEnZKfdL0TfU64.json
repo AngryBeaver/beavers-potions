@@ -1,0 +1,138 @@
+{
+  "_id": "OjFEnZKfdL0TfU64",
+  "_key": "!items!OjFEnZKfdL0TfU64",
+  "name": "Frost Armor",
+  "type": "consumable",
+  "img": "icons/consumables/potions/bottle-corked-blue.webp",
+  "system": {
+    "category": "potion",
+    "description": {
+      "value": "<p>A protective magical force surrounds you, manifesting as a spectral frost that covers you and your gear for 5 rounds. At the start of each of your turns you regain temporary hit points up to 2. Anyone starting its turn next to you takes 1d4 cold damage (Wisdom saving throw DC 11 for half).</p>"
+    },
+    "level": {
+      "value": 4
+    },
+    "price": {
+      "value": {
+        "gp": 250
+      }
+    },
+    "quantity": 1,
+    "bulk": {
+      "value": 0.1
+    },
+    "uses": {
+      "value": 1,
+      "max": 1,
+      "autoDestroy": true
+    },
+    "traits": {
+      "value": [
+        "consumable",
+        "magical",
+        "potion"
+      ],
+      "rarity": "uncommon"
+    },
+    "usage": {
+      "value": "held-in-one-hand"
+    },
+    "rules": [],
+    "slug": "frost-armor",
+    "publication": {
+      "title": "Beaver's Potions",
+      "authors": "",
+      "license": "OGL",
+      "remaster": false
+    }
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "beavers-potions": {
+      "potion": true,
+      "effects": [
+        {
+          "name": "Effect: Frost Armor",
+          "type": "effect",
+          "img": "icons/consumables/potions/bottle-corked-blue.webp",
+          "system": {
+            "description": {
+              "value": "<p>A protective magical force surrounds you, manifesting as a spectral frost that covers you and your gear for 5 rounds. At the start of each of your turns you regain temporary hit points up to 2. Anyone starting its turn next to you takes 1d4 cold damage (Wisdom saving throw DC 11 for half).</p>"
+            },
+            "duration": {
+              "value": 5,
+              "unit": "rounds",
+              "expiry": "turn-start",
+              "sustained": false
+            },
+            "rules": [],
+            "tokenIcon": {
+              "show": true
+            },
+            "level": {
+              "value": 4
+            },
+            "traits": {
+              "value": [],
+              "rarity": "common"
+            },
+            "slug": "effect-frost-armor"
+          },
+          "flags": {
+            "beavers-potions": {
+              "turnStart": {
+                "temp": 2
+              },
+              "aura": {
+                "radius": 5,
+                "includeSelf": false,
+                "save": {
+                  "ability": "wis",
+                  "dc": 11
+                },
+                "damage": {
+                  "formula": "1d4",
+                  "type": "cold"
+                }
+              },
+              "source": "frost-armor.effect"
+            }
+          }
+        }
+      ],
+      "rarity": "uncommon",
+      "rules": [
+        [
+          "temp",
+          2
+        ],
+        [
+          "turnStart",
+          {
+            "temp": 2
+          }
+        ],
+        [
+          "aura",
+          {
+            "radius": 5,
+            "includeSelf": false,
+            "save": {
+              "ability": "wis",
+              "dc": 11
+            },
+            "damage": {
+              "formula": "1d4",
+              "type": "cold"
+            }
+          }
+        ]
+      ]
+    }
+  }
+}

@@ -1,0 +1,110 @@
+{
+  "_id": "SUJ0FsFU1YlW8Ail",
+  "_key": "!items!SUJ0FsFU1YlW8Ail",
+  "name": "Repair Glue",
+  "type": "consumable",
+  "img": "icons/consumables/potions/bottle-conical-corked-purple.webp",
+  "system": {
+    "category": "potion",
+    "description": {
+      "value": "<p>Repairs small breaks or tears in objects. 1 dose poured on objects weighing 10 lb. in total.</p><p>If drunk by a person it results in the permanent loss of 1 Wisdom.</p>"
+    },
+    "level": {
+      "value": 1
+    },
+    "price": {
+      "value": {
+        "gp": 50
+      }
+    },
+    "quantity": 1,
+    "bulk": {
+      "value": 0.1
+    },
+    "uses": {
+      "value": 1,
+      "max": 1,
+      "autoDestroy": true
+    },
+    "traits": {
+      "value": [
+        "consumable",
+        "magical",
+        "potion"
+      ],
+      "rarity": "common"
+    },
+    "usage": {
+      "value": "held-in-one-hand"
+    },
+    "rules": [],
+    "slug": "repair-glue",
+    "publication": {
+      "title": "Beaver's Potions",
+      "authors": "",
+      "license": "OGL",
+      "remaster": false
+    }
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "beavers-potions": {
+      "potion": true,
+      "effects": [
+        {
+          "name": "Effect: Repair Glue (drunk)",
+          "type": "effect",
+          "img": "icons/consumables/potions/bottle-conical-corked-purple.webp",
+          "system": {
+            "description": {
+              "value": "<p>Repairs small breaks or tears in objects. 1 dose poured on objects weighing 10 lb. in total.</p><p>If drunk by a person it results in the permanent loss of 1 Wisdom.</p>"
+            },
+            "duration": {
+              "value": -1,
+              "unit": "unlimited",
+              "expiry": null,
+              "sustained": false
+            },
+            "rules": [
+              {
+                "key": "ActiveEffectLike",
+                "path": "system.abilities.wis.mod",
+                "mode": "add",
+                "value": -1
+              }
+            ],
+            "tokenIcon": {
+              "show": true
+            },
+            "level": {
+              "value": 1
+            },
+            "traits": {
+              "value": [],
+              "rarity": "common"
+            },
+            "slug": "effect-repair-glue"
+          },
+          "flags": {
+            "beavers-potions": {
+              "source": "repair-glue.effect"
+            }
+          }
+        }
+      ],
+      "rarity": "common",
+      "rules": [
+        [
+          "ability",
+          "wis",
+          -1
+        ]
+      ]
+    }
+  }
+}

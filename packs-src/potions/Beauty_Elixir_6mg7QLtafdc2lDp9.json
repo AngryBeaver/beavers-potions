@@ -171,7 +171,14 @@
   },
   "flags": {
     "beavers-potions": {
-      "potion": true
+      "potion": true,
+      "rarity": "common",
+      "rules": [
+        [
+          "skillAdvantage",
+          "persuasion"
+        ]
+      ]
     }
   }
 }

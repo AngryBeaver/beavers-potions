@@ -1,0 +1,75 @@
+{
+  "_id": "aqkjbUe15A5ivk39",
+  "_key": "!items!aqkjbUe15A5ivk39",
+  "name": "Keen Sense",
+  "type": "consumable",
+  "img": "icons/consumables/potions/bottle-round-corked-pink.webp",
+  "system": {
+    "consumableType": "potion",
+    "description": {
+      "value": "<p>You gain expertise in Perception for 1 hour.</p>"
+    },
+    "quantity": 1,
+    "weight": 0.1,
+    "price": 250,
+    "identified": true,
+    "identifiedName": "Keen Sense",
+    "uses": {
+      "value": 0,
+      "max": 0,
+      "per": "single"
+    }
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "beavers-potions": {
+      "potion": true,
+      "buffs": [
+        {
+          "name": "Keen Sense",
+          "type": "buff",
+          "img": "icons/consumables/potions/bottle-round-corked-pink.webp",
+          "system": {
+            "buffType": "temp",
+            "active": true,
+            "level": 1,
+            "duration": {
+              "value": "1",
+              "units": "hour"
+            },
+            "changes": [
+              [
+                "4",
+                "skill",
+                "skill.spt",
+                "competence"
+              ]
+            ],
+            "description": {
+              "value": "<p>You gain expertise in Perception for 1 hour.</p>"
+            }
+          },
+          "flags": {
+            "beavers-potions": {
+              "conditions": [],
+              "source": "keen-sense.buff"
+            }
+          }
+        }
+      ],
+      "pour": false,
+      "rarity": "uncommon",
+      "rules": [
+        [
+          "skillExpertise",
+          "perception"
+        ]
+      ]
+    }
+  }
+}

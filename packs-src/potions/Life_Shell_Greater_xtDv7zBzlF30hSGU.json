@@ -142,7 +142,14 @@
   },
   "flags": {
     "beavers-potions": {
-      "potion": true
+      "potion": true,
+      "rarity": "rare",
+      "rules": [
+        [
+          "temp",
+          20
+        ]
+      ]
     }
   }
 }

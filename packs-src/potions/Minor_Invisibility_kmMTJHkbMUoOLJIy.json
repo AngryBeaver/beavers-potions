@@ -174,7 +174,32 @@
   },
   "flags": {
     "beavers-potions": {
-      "potion": true
+      "potion": true,
+      "rarity": "common",
+      "rules": [
+        [
+          "status",
+          "invisible"
+        ],
+        [
+          "grants",
+          "disadvantage",
+          {
+            "sight": true
+          }
+        ],
+        [
+          "attackAdvantage"
+        ],
+        [
+          "endOn",
+          [
+            "attack",
+            "spell",
+            "move"
+          ]
+        ]
+      ]
     }
   }
 }

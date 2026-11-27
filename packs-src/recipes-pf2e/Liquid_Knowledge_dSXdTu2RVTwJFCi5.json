@@ -1,0 +1,115 @@
+{
+  "_id": "dSXdTu2RVTwJFCi5",
+  "_key": "!items!dSXdTu2RVTwJFCi5",
+  "name": "Liquid Knowledge",
+  "type": "treasure",
+  "img": "icons/sundries/scrolls/scroll-worn-tan.webp",
+  "system": {
+    "description": {
+      "value": "<p>A recipe of Beaver's Potions, it needs the module Beaver's Crafting.</p><p>Brewing: Society check DC 15.</p>"
+    },
+    "level": {
+      "value": 0
+    },
+    "price": {
+      "value": {}
+    },
+    "quantity": 1,
+    "bulk": {
+      "value": 0
+    },
+    "traits": {
+      "value": [],
+      "rarity": "common"
+    },
+    "slug": "recipe-liquid-knowledge"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "beavers-crafting": {
+      "subtype": "Recipe",
+      "recipe": {
+        "required": {},
+        "input": {
+          "1": {
+            "Compendium-beavers-potions-ingredients-pf2e-Item-AAfrnuKdmek8QYqV": {
+              "id": "AAfrnuKdmek8QYqV",
+              "uuid": "Compendium.beavers-potions.ingredients-pf2e.Item.AAfrnuKdmek8QYqV",
+              "img": "icons/consumables/mushrooms/umbontae-bumpy-purple.webp",
+              "name": "Viscid Ghost",
+              "type": "Item",
+              "itemType": "treasure",
+              "quantity": 5
+            }
+          },
+          "2": {
+            "Compendium-beavers-potions-ingredients-pf2e-Item-qX7GnE8q1YsDKhr7": {
+              "id": "qX7GnE8q1YsDKhr7",
+              "uuid": "Compendium.beavers-potions.ingredients-pf2e.Item.qX7GnE8q1YsDKhr7",
+              "img": "icons/consumables/mushrooms/crimini-button-brown.webp",
+              "name": "EldStuff Boxed",
+              "type": "Item",
+              "itemType": "treasure",
+              "quantity": 5
+            }
+          },
+          "3": {
+            "Compendium-beavers-potions-ingredients-pf2e-Item-dozjFH55CR4npT6F": {
+              "id": "dozjFH55CR4npT6F",
+              "uuid": "Compendium.beavers-potions.ingredients-pf2e.Item.dozjFH55CR4npT6F",
+              "img": "icons/tools/laboratory/bowl-powder-purple.webp",
+              "name": "Magical Essence",
+              "type": "Item",
+              "itemType": "treasure",
+              "quantity": 1
+            }
+          }
+        },
+        "output": {
+          "1": {
+            "Compendium-beavers-potions-potions-pf2e-Item-mEjNxXozN4eKsb98": {
+              "id": "mEjNxXozN4eKsb98",
+              "uuid": "Compendium.beavers-potions.potions-pf2e.Item.mEjNxXozN4eKsb98",
+              "img": "icons/consumables/potions/bottle-round-ring-teal.webp",
+              "name": "Liquid Knowledge",
+              "type": "Item",
+              "itemType": "consumable",
+              "quantity": 1
+            }
+          }
+        },
+        "currency": {
+          "name": "gp",
+          "value": 50
+        },
+        "beaversTests": {
+          "fails": 1,
+          "consume": true,
+          "failsInARow": false,
+          "ands": {
+            "1": {
+              "hits": 1,
+              "ors": {
+                "1": {
+                  "type": "SkillTest",
+                  "data": {
+                    "dc": 15,
+                    "skill": "society"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "macro": "",
+        "folder": "Beaver's Potions",
+        "kind": "recipe"
+      }
+    }
+  }
+}

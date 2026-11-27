@@ -1,0 +1,85 @@
+{
+  "_id": "nygwgLC0SxofDDVZ",
+  "_key": "!items!nygwgLC0SxofDDVZ",
+  "name": "Cobra Kai",
+  "type": "object",
+  "img": "icons/sundries/scrolls/scroll-worn-tan.webp",
+  "system": {
+    "description": "<p>A recipe of Beaver's Potions, it needs the module Beaver's Crafting.</p><p>Brewing: Arcana check DC 8.</p>",
+    "objectType": "miscellaneous",
+    "price": {
+      "value": 0,
+      "denomination": "gp",
+      "special": ""
+    },
+    "quantity": 1,
+    "weight": 0,
+    "actions": {}
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "beavers-crafting": {
+      "subtype": "Recipe",
+      "recipe": {
+        "required": {},
+        "input": {
+          "1": {
+            "Compendium-beavers-potions-ingredients-a5e-Item-EBn04GlzYZdMi23m": {
+              "id": "EBn04GlzYZdMi23m",
+              "uuid": "Compendium.beavers-potions.ingredients-a5e.Item.EBn04GlzYZdMi23m",
+              "img": "icons/consumables/mushrooms/helm-purple-shiny.webp",
+              "name": "Astrid Lindworm",
+              "type": "Item",
+              "itemType": "object",
+              "quantity": 5
+            }
+          }
+        },
+        "output": {
+          "1": {
+            "Compendium-beavers-potions-potions-a5e-Item-MChWuF8FTz5vOntg": {
+              "id": "MChWuF8FTz5vOntg",
+              "uuid": "Compendium.beavers-potions.potions-a5e.Item.MChWuF8FTz5vOntg",
+              "img": "icons/consumables/potions/bottle-conical-corked-cyan.webp",
+              "name": "Cobra Kai",
+              "type": "Item",
+              "itemType": "object",
+              "quantity": 1
+            }
+          }
+        },
+        "currency": {
+          "name": "gp",
+          "value": 5
+        },
+        "beaversTests": {
+          "fails": 1,
+          "consume": true,
+          "failsInARow": false,
+          "ands": {
+            "1": {
+              "hits": 1,
+              "ors": {
+                "1": {
+                  "type": "SkillTest",
+                  "data": {
+                    "dc": 8,
+                    "skill": "arc"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "macro": "",
+        "folder": "Beaver's Potions",
+        "kind": "recipe"
+      }
+    }
+  }
+}

@@ -1,0 +1,130 @@
+{
+  "_id": "aq3NJ4xfyf3HhNXc",
+  "_key": "!tables!aq3NJ4xfyf3HhNXc",
+  "name": "Very Rare Potions",
+  "img": "icons/tools/laboratory/vials-blue-pink.webp",
+  "description": "<p>A random very rare potion.</p>",
+  "formula": "1d7",
+  "replacement": true,
+  "displayRoll": true,
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "results": [
+    {
+      "_id": "bptraq3NJ4xf0000",
+      "_key": "!tables.results!aq3NJ4xfyf3HhNXc.bptraq3NJ4xf0000",
+      "type": "document",
+      "name": "Casters Overtime Superior",
+      "img": "icons/consumables/potions/bottle-metal-yellow-gray.webp",
+      "description": "",
+      "documentUuid": "Compendium.beavers-potions.potions-pf2e.Item.vXJxudEhpp6hpdOe",
+      "weight": 1,
+      "range": [
+        1,
+        1
+      ],
+      "drawn": false,
+      "flags": {}
+    },
+    {
+      "_id": "bptraq3NJ4xf0100",
+      "_key": "!tables.results!aq3NJ4xfyf3HhNXc.bptraq3NJ4xf0100",
+      "type": "document",
+      "name": "Distortion",
+      "img": "icons/consumables/potions/bottle-round-label-cork-yellow.webp",
+      "description": "",
+      "documentUuid": "Compendium.beavers-potions.potions-pf2e.Item.R4hEpzqaIBuxT7Pb",
+      "weight": 1,
+      "range": [
+        2,
+        2
+      ],
+      "drawn": false,
+      "flags": {}
+    },
+    {
+      "_id": "bptraq3NJ4xf0200",
+      "_key": "!tables.results!aq3NJ4xfyf3HhNXc.bptraq3NJ4xf0200",
+      "type": "document",
+      "name": "Protection From Death",
+      "img": "icons/consumables/potions/flask-corked-red-glow.webp",
+      "description": "",
+      "documentUuid": "Compendium.beavers-potions.potions-pf2e.Item.rwiqgjX2sHoB5H3k",
+      "weight": 1,
+      "range": [
+        3,
+        3
+      ],
+      "drawn": false,
+      "flags": {}
+    },
+    {
+      "_id": "bptraq3NJ4xf0300",
+      "_key": "!tables.results!aq3NJ4xfyf3HhNXc.bptraq3NJ4xf0300",
+      "type": "document",
+      "name": "Reflect Damage",
+      "img": "icons/consumables/potions/bottle-round-corked-red.webp",
+      "description": "",
+      "documentUuid": "Compendium.beavers-potions.potions-pf2e.Item.y6zSFJYIKPOiZnI7",
+      "weight": 1,
+      "range": [
+        4,
+        4
+      ],
+      "drawn": false,
+      "flags": {}
+    },
+    {
+      "_id": "bptraq3NJ4xf0400",
+      "_key": "!tables.results!aq3NJ4xfyf3HhNXc.bptraq3NJ4xf0400",
+      "type": "document",
+      "name": "Regeneration",
+      "img": "icons/consumables/potions/conical-ornate-purple.webp",
+      "description": "",
+      "documentUuid": "Compendium.beavers-potions.potions-pf2e.Item.BxtFA7sMSWIML0aG",
+      "weight": 1,
+      "range": [
+        5,
+        5
+      ],
+      "drawn": false,
+      "flags": {}
+    },
+    {
+      "_id": "bptraq3NJ4xf0500",
+      "_key": "!tables.results!aq3NJ4xfyf3HhNXc.bptraq3NJ4xf0500",
+      "type": "document",
+      "name": "Restoration Greater",
+      "img": "icons/consumables/potions/bottle-round-label-cork-green.webp",
+      "description": "",
+      "documentUuid": "Compendium.beavers-potions.potions-pf2e.Item.OaJjAk4crpXHRTPv",
+      "weight": 1,
+      "range": [
+        6,
+        6
+      ],
+      "drawn": false,
+      "flags": {}
+    },
+    {
+      "_id": "bptraq3NJ4xf0600",
+      "_key": "!tables.results!aq3NJ4xfyf3HhNXc.bptraq3NJ4xf0600",
+      "type": "document",
+      "name": "Healing Potion (Greater)",
+      "img": "icons/consumables/potions/bottle-round-corked-orante-red.webp",
+      "description": "",
+      "documentUuid": "Compendium.pf2e.equipment-srd.Item.TSrbwHW8zm0mhkwb",
+      "weight": 1,
+      "range": [
+        7,
+        7
+      ],
+      "drawn": false,
+      "flags": {}
+    }
+  ]
+}

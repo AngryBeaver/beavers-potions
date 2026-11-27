@@ -1,0 +1,103 @@
+{
+  "_id": "vXJxudEhpp6hpdOe",
+  "_key": "!items!vXJxudEhpp6hpdOe",
+  "name": "Casters Overtime Superior",
+  "type": "consumable",
+  "img": "icons/consumables/potions/bottle-metal-yellow-gray.webp",
+  "system": {
+    "consumableType": "potion",
+    "description": {
+      "value": "<p>You spend one round doing nothing else than concentrating. During this time you cannot defend yourself: you are incapacitated, everyone attacking you has advantage and hits critically.</p><p>You replenish all your spell slots of the first to fourth level while you gain 3 levels of exhaustion, which cannot be healed magically.</p>"
+    },
+    "quantity": 1,
+    "weight": 0.1,
+    "price": 2500,
+    "identified": true,
+    "identifiedName": "Casters Overtime Superior",
+    "uses": {
+      "value": 0,
+      "max": 0,
+      "per": "single"
+    }
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "beavers-potions": {
+      "potion": true,
+      "buffs": [
+        {
+          "name": "Out of Mind",
+          "type": "buff",
+          "img": "icons/consumables/potions/bottle-metal-yellow-gray.webp",
+          "system": {
+            "buffType": "temp",
+            "active": true,
+            "level": 1,
+            "duration": {
+              "value": "1",
+              "units": "round"
+            },
+            "changes": [
+              [
+                "-4",
+                "ac",
+                "ac",
+                "untyped"
+              ]
+            ],
+            "description": {
+              "value": "<p>You spend one round doing nothing else than concentrating. During this time you cannot defend yourself: you are incapacitated, everyone attacking you has advantage and hits critically.</p><p>You replenish all your spell slots of the first to fourth level while you gain 3 levels of exhaustion, which cannot be healed magically.</p>"
+            }
+          },
+          "flags": {
+            "beavers-potions": {
+              "grantsCritical": true,
+              "conditions": [
+                "helpless"
+              ],
+              "source": "casters-overtime-superior.buff"
+            }
+          }
+        }
+      ],
+      "pour": false,
+      "use": {
+        "restoreSlots": {
+          "maxLevel": 4,
+          "exhaustion": 3
+        }
+      },
+      "rarity": "veryRare",
+      "rules": [
+        [
+          "status",
+          "incapacitated"
+        ],
+        [
+          "grants",
+          "advantage"
+        ],
+        [
+          "grants",
+          "critical"
+        ],
+        [
+          "restoreSlots",
+          4
+        ],
+        [
+          "exhaustion",
+          3
+        ]
+      ],
+      "unsupported": [
+        "grants critical"
+      ]
+    }
+  }
+}

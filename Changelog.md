@@ -1,3 +1,9 @@
+# 3.1.0
+- new systems: Level Up A5E, D&D 3.5 SRD (Foundry 14), Pathfinder 1e and Pathfinder 2e (Foundry 13): each with its own potions, ingredients, recipes and tables
+- the potions are described once, independent of the system (tools/potions.mjs); tools/systems/<system>.mjs translates them, src/systems/<system>.js is the runtime part of a system
+- 5e rules are translated where a system has no 5e term (advantage, exhaustion ...); what a system cannot do is listed per potion and left to the Gamemaster
+- the module needs Foundry 13 (pf1, pf2e) or 14 (dnd5e, a5e, D35E)
+
 # 3.0.0
 ⚠️ needs Foundry 14 and dnd5e 6, reimport the potions, ingredients and recipes
 - the potions work with dnd5e alone: midi-qol, DAE, item macro, dfreds convenient effects, Active Auras and Token Magic are no longer needed

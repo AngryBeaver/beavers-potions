@@ -1,0 +1,107 @@
+{
+  "_id": "ihthq65bJVEDsFuV",
+  "_key": "!items!ihthq65bJVEDsFuV",
+  "name": "Life Shell",
+  "type": "loot",
+  "img": "icons/sundries/scrolls/scroll-worn-tan.webp",
+  "system": {
+    "subType": "misc",
+    "description": {
+      "value": "<p>A recipe of Beaver's Potions, it needs the module Beaver's Crafting.</p><p>Brewing: Survival check DC 10.</p>"
+    },
+    "quantity": 1,
+    "weight": {
+      "value": 0
+    },
+    "price": 0,
+    "identified": true
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "beavers-crafting": {
+      "subtype": "Recipe",
+      "recipe": {
+        "required": {},
+        "input": {
+          "1": {
+            "Compendium-beavers-potions-ingredients-pf1-Item-abVFmDAfMIxApd1c": {
+              "id": "abVFmDAfMIxApd1c",
+              "uuid": "Compendium.beavers-potions.ingredients-pf1.Item.abVFmDAfMIxApd1c",
+              "img": "icons/consumables/mushrooms/campanulate-bell-shiny-blue.webp",
+              "name": "Jelly Bag Cap",
+              "type": "Item",
+              "itemType": "loot",
+              "quantity": 5
+            }
+          },
+          "2": {
+            "Compendium-beavers-potions-ingredients-pf1-Item-dVFbblELstFhBgeW": {
+              "id": "dVFbblELstFhBgeW",
+              "uuid": "Compendium.beavers-potions.ingredients-pf1.Item.dVFbblELstFhBgeW",
+              "img": "icons/consumables/mushrooms/umbontae-pink-purple.webp",
+              "name": "Rainblow",
+              "type": "Item",
+              "itemType": "loot",
+              "quantity": 5
+            }
+          },
+          "3": {
+            "Compendium-beavers-potions-ingredients-pf1-Item-dozjFH55CR4npT6F": {
+              "id": "dozjFH55CR4npT6F",
+              "uuid": "Compendium.beavers-potions.ingredients-pf1.Item.dozjFH55CR4npT6F",
+              "img": "icons/tools/laboratory/bowl-powder-purple.webp",
+              "name": "Magical Essence",
+              "type": "Item",
+              "itemType": "loot",
+              "quantity": 1
+            }
+          }
+        },
+        "output": {
+          "1": {
+            "Compendium-beavers-potions-potions-pf1-Item-YK67se6j7hfPVd6Q": {
+              "id": "YK67se6j7hfPVd6Q",
+              "uuid": "Compendium.beavers-potions.potions-pf1.Item.YK67se6j7hfPVd6Q",
+              "img": "icons/consumables/potions/flask-corked-green.webp",
+              "name": "Life Shell",
+              "type": "Item",
+              "itemType": "consumable",
+              "quantity": 1
+            }
+          }
+        },
+        "currency": {
+          "name": "gp",
+          "value": 50
+        },
+        "beaversTests": {
+          "fails": 1,
+          "consume": true,
+          "failsInARow": false,
+          "ands": {
+            "1": {
+              "hits": 1,
+              "ors": {
+                "1": {
+                  "type": "SkillTest",
+                  "data": {
+                    "dc": 10,
+                    "skill": "sur"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "macro": "",
+        "folder": "Beaver's Potions",
+        "kind": "recipe"
+      }
+    }
+  }
+}

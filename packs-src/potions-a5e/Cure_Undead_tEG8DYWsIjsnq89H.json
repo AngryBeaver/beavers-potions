@@ -1,0 +1,87 @@
+{
+  "_id": "tEG8DYWsIjsnq89H",
+  "_key": "!items!tEG8DYWsIjsnq89H",
+  "name": "Cure Undead",
+  "type": "object",
+  "img": "icons/consumables/potions/bottle-conical-corked-labeled-skull-poison-green.webp",
+  "system": {
+    "description": "<p>You regain 2d4 + 2 hit points when you are undead and drink this potion. It does nothing for the living.</p>",
+    "actions": {
+      "bpacttEG8DYWDrin": {
+        "name": "Drink",
+        "img": "icons/consumables/potions/bottle-conical-corked-labeled-skull-poison-green.webp",
+        "activation": {
+          "type": "action",
+          "cost": 1,
+          "reactionTrigger": ""
+        },
+        "duration": {
+          "unit": "instantaneous",
+          "value": ""
+        },
+        "target": {
+          "quantity": "",
+          "type": "self"
+        },
+        "consumers": {
+          "bpcontEG8DYWDrin": {
+            "type": "quantity",
+            "default": true,
+            "itemId": "",
+            "quantity": 1,
+            "deleteOnZero": true,
+            "label": ""
+          }
+        },
+        "rolls": {
+          "bprolltEG8DYDrin": {
+            "type": "healing",
+            "formula": "2d4 + 2",
+            "healingType": "healing",
+            "name": "Cure Undead"
+          }
+        },
+        "prompts": {},
+        "effects": [],
+        "macro": ""
+      }
+    },
+    "objectType": "consumable",
+    "price": {
+      "value": 50,
+      "denomination": "gp",
+      "special": ""
+    },
+    "quantity": 1,
+    "rarity": "common",
+    "weight": 0.5,
+    "source": "",
+    "requiresAttunement": false,
+    "unidentified": false
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "beavers-potions": {
+      "potion": true,
+      "use": {
+        "onlyType": "undead"
+      },
+      "rarity": "common",
+      "rules": [
+        [
+          "heal",
+          "2d4 + 2"
+        ],
+        [
+          "onlyCreatureType",
+          "undead"
+        ]
+      ]
+    }
+  }
+}

@@ -1,0 +1,81 @@
+{
+  "_id": "kSlCgJX5DO7u0F6a",
+  "_key": "!items!kSlCgJX5DO7u0F6a",
+  "name": "Cure Disease",
+  "type": "object",
+  "img": "icons/consumables/potions/bottle-circular-corked-labeled-green.webp",
+  "system": {
+    "description": "<p>Cures one natural disease affecting you that you know of: ends the diseased condition.</p>",
+    "actions": {
+      "bpactkSlCgJXDrin": {
+        "name": "Drink",
+        "img": "icons/consumables/potions/bottle-circular-corked-labeled-green.webp",
+        "activation": {
+          "type": "action",
+          "cost": 1,
+          "reactionTrigger": ""
+        },
+        "duration": {
+          "unit": "instantaneous",
+          "value": ""
+        },
+        "target": {
+          "quantity": "",
+          "type": "self"
+        },
+        "consumers": {
+          "bpconkSlCgJXDrin": {
+            "type": "quantity",
+            "default": true,
+            "itemId": "",
+            "quantity": 1,
+            "deleteOnZero": true,
+            "label": ""
+          }
+        },
+        "rolls": {},
+        "prompts": {},
+        "effects": [],
+        "macro": ""
+      }
+    },
+    "objectType": "consumable",
+    "price": {
+      "value": 50,
+      "denomination": "gp",
+      "special": ""
+    },
+    "quantity": 1,
+    "rarity": "common",
+    "weight": 0.5,
+    "source": "",
+    "requiresAttunement": false,
+    "unidentified": false
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "beavers-potions": {
+      "potion": true,
+      "use": {
+        "cure": [
+          "diseased"
+        ]
+      },
+      "rarity": "common",
+      "rules": [
+        [
+          "cure",
+          "diseased"
+        ]
+      ],
+      "unsupported": [
+        "cure diseased"
+      ]
+    }
+  }
+}

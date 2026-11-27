@@ -188,7 +188,39 @@
   },
   "flags": {
     "beavers-potions": {
-      "potion": true
+      "potion": true,
+      "rarity": "rare",
+      "rules": [
+        [
+          "aura",
+          {
+            "radius": 25,
+            "includeSelf": true,
+            "save": {
+              "ability": "con",
+              "dc": 14
+            },
+            "damage": {
+              "formula": "3d6",
+              "type": "radiant"
+            }
+          }
+        ],
+        [
+          "light",
+          {
+            "dim": 25,
+            "bright": 5,
+            "color": "#4dff4d",
+            "alpha": 0.4,
+            "animation": {
+              "type": "pulse",
+              "speed": 3,
+              "intensity": 3
+            }
+          }
+        ]
+      ]
     }
   }
 }

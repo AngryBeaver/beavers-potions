@@ -1,0 +1,71 @@
+{
+  "_id": "y6zSFJYIKPOiZnI7",
+  "_key": "!items!y6zSFJYIKPOiZnI7",
+  "name": "Reflect Damage",
+  "type": "consumable",
+  "img": "icons/consumables/potions/bottle-round-corked-red.webp",
+  "system": {
+    "consumableType": "potion",
+    "description": {
+      "value": "<p>Until the start of your next turn, all damage you would receive from an attacker is dealt to the attacker instead.</p>"
+    },
+    "quantity": 1,
+    "weight": 0.1,
+    "price": 2500,
+    "identified": true,
+    "identifiedName": "Reflect Damage",
+    "uses": {
+      "value": 0,
+      "max": 0,
+      "per": "single"
+    }
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "beavers-potions": {
+      "potion": true,
+      "buffs": [
+        {
+          "name": "Reflect Damage",
+          "type": "buff",
+          "img": "icons/consumables/potions/bottle-round-corked-red.webp",
+          "system": {
+            "buffType": "temp",
+            "active": true,
+            "level": 1,
+            "duration": {
+              "value": "1",
+              "units": "round"
+            },
+            "changes": [],
+            "description": {
+              "value": "<p>Until the start of your next turn, all damage you would receive from an attacker is dealt to the attacker instead.</p>"
+            }
+          },
+          "flags": {
+            "beavers-potions": {
+              "reflectDamage": true,
+              "conditions": [],
+              "source": "reflect-damage.buff"
+            }
+          }
+        }
+      ],
+      "pour": false,
+      "rarity": "veryRare",
+      "rules": [
+        [
+          "reflectDamage"
+        ]
+      ],
+      "unsupported": [
+        "reflectDamage"
+      ]
+    }
+  }
+}

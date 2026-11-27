@@ -1,0 +1,30 @@
+{
+  "_id": "iw2D0a2gXp3lu7iJ",
+  "_key": "!items!iw2D0a2gXp3lu7iJ",
+  "name": "Ghoule Groats",
+  "type": "loot",
+  "img": "icons/consumables/mushrooms/convex-green-brown.webp",
+  "system": {
+    "subType": "tradeGoods",
+    "description": {
+      "value": "<p>A mushroom, an ingredient of Beaver's Potions.</p>"
+    },
+    "quantity": 1,
+    "weight": {
+      "value": 0.1
+    },
+    "price": 0,
+    "identified": true
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "beavers-potions": {
+      "ingredient": "mushroom"
+    }
+  }
+}

@@ -1,0 +1,80 @@
+{
+  "_id": "YK67se6j7hfPVd6Q",
+  "_key": "!items!YK67se6j7hfPVd6Q",
+  "name": "Life Shell",
+  "type": "object",
+  "img": "icons/consumables/potions/flask-corked-green.webp",
+  "system": {
+    "description": "<p>You gain 10 temporary hit points.</p>",
+    "actions": {
+      "bpactYK67se6Drin": {
+        "name": "Drink",
+        "img": "icons/consumables/potions/flask-corked-green.webp",
+        "activation": {
+          "type": "action",
+          "cost": 1,
+          "reactionTrigger": ""
+        },
+        "duration": {
+          "unit": "instantaneous",
+          "value": ""
+        },
+        "target": {
+          "quantity": "",
+          "type": "self"
+        },
+        "consumers": {
+          "bpconYK67se6Drin": {
+            "type": "quantity",
+            "default": true,
+            "itemId": "",
+            "quantity": 1,
+            "deleteOnZero": true,
+            "label": ""
+          }
+        },
+        "rolls": {
+          "bprollYK67seDrin": {
+            "type": "healing",
+            "formula": "10",
+            "healingType": "temporaryHealing",
+            "name": "Life Shell"
+          }
+        },
+        "prompts": {},
+        "effects": [],
+        "macro": ""
+      }
+    },
+    "objectType": "consumable",
+    "price": {
+      "value": 250,
+      "denomination": "gp",
+      "special": ""
+    },
+    "quantity": 1,
+    "rarity": "uncommon",
+    "weight": 0.5,
+    "source": "",
+    "requiresAttunement": false,
+    "unidentified": false
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "beavers-potions": {
+      "potion": true,
+      "rarity": "uncommon",
+      "rules": [
+        [
+          "temp",
+          10
+        ]
+      ]
+    }
+  }
+}

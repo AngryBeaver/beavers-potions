@@ -1,0 +1,133 @@
+{
+  "_id": "j641yloHOUgLIBwM",
+  "_key": "!items!j641yloHOUgLIBwM",
+  "name": "Specialist (Mage)",
+  "type": "consumable",
+  "img": "icons/consumables/potions/bottle-pear-corked-labeled-green.webp",
+  "system": {
+    "category": "potion",
+    "description": {
+      "value": "<p>For the next minute you gain +2 on spell attacks and +2 on spell damage, while your speed is halved.</p>"
+    },
+    "level": {
+      "value": 4
+    },
+    "price": {
+      "value": {
+        "gp": 250
+      }
+    },
+    "quantity": 1,
+    "bulk": {
+      "value": 0.1
+    },
+    "uses": {
+      "value": 1,
+      "max": 1,
+      "autoDestroy": true
+    },
+    "traits": {
+      "value": [
+        "consumable",
+        "magical",
+        "potion"
+      ],
+      "rarity": "uncommon"
+    },
+    "usage": {
+      "value": "held-in-one-hand"
+    },
+    "rules": [],
+    "slug": "specialist-mage",
+    "publication": {
+      "title": "Beaver's Potions",
+      "authors": "",
+      "license": "OGL",
+      "remaster": false
+    }
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "beavers-potions": {
+      "potion": true,
+      "effects": [
+        {
+          "name": "Effect: Specialist (Mage)",
+          "type": "effect",
+          "img": "icons/consumables/potions/bottle-pear-corked-labeled-green.webp",
+          "system": {
+            "description": {
+              "value": "<p>For the next minute you gain +2 on spell attacks and +2 on spell damage, while your speed is halved.</p>"
+            },
+            "duration": {
+              "value": 1,
+              "unit": "minutes",
+              "expiry": "turn-start",
+              "sustained": false
+            },
+            "rules": [
+              {
+                "key": "FlatModifier",
+                "selector": "spell-attack-roll",
+                "value": 2,
+                "type": "untyped",
+                "label": "Beaver's Potions"
+              },
+              {
+                "key": "FlatModifier",
+                "selector": "spell-damage",
+                "value": 2,
+                "type": "untyped",
+                "label": "Beaver's Potions"
+              },
+              {
+                "key": "ActiveEffectLike",
+                "path": "system.attributes.speed.value",
+                "mode": "multiply",
+                "value": 0.5
+              }
+            ],
+            "tokenIcon": {
+              "show": true
+            },
+            "level": {
+              "value": 4
+            },
+            "traits": {
+              "value": [],
+              "rarity": "common"
+            },
+            "slug": "effect-specialist-mage"
+          },
+          "flags": {
+            "beavers-potions": {
+              "source": "specialist-mage.effect"
+            }
+          }
+        }
+      ],
+      "rarity": "uncommon",
+      "rules": [
+        [
+          "attackBonus",
+          "spell",
+          2
+        ],
+        [
+          "damageBonus",
+          "spell",
+          2
+        ],
+        [
+          "speed",
+          0.5
+        ]
+      ]
+    }
+  }
+}

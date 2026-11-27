@@ -1,0 +1,119 @@
+{
+  "_id": "j641yloHOUgLIBwM",
+  "_key": "!items!j641yloHOUgLIBwM",
+  "name": "Specialist (Mage)",
+  "type": "consumable",
+  "img": "icons/consumables/potions/bottle-pear-corked-labeled-green.webp",
+  "system": {
+    "subType": "potion",
+    "description": {
+      "value": "<p>For the next minute you gain +2 on spell attacks and +2 on spell damage, while your speed is halved.</p>",
+      "instructions": "",
+      "unidentified": ""
+    },
+    "quantity": 1,
+    "weight": {
+      "value": 0.1
+    },
+    "price": 250,
+    "identified": true,
+    "cl": 1,
+    "uses": {
+      "value": null,
+      "per": "single",
+      "autoDeductChargesCost": "",
+      "maxFormula": "",
+      "rechargeFormula": ""
+    },
+    "actions": [
+      {
+        "_id": "bpactj641yloDrin",
+        "name": "Drink",
+        "activation": {
+          "type": "standard",
+          "unchained": {
+            "type": "action",
+            "cost": 2
+          }
+        },
+        "duration": {
+          "units": "inst"
+        }
+      }
+    ]
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "beavers-potions": {
+      "potion": true,
+      "buffs": [
+        {
+          "name": "Specialist (Mage)",
+          "type": "buff",
+          "img": "icons/consumables/potions/bottle-pear-corked-labeled-green.webp",
+          "system": {
+            "subType": "temp",
+            "active": true,
+            "level": 1,
+            "duration": {
+              "value": "1",
+              "units": "minute",
+              "end": "turnStart"
+            },
+            "changes": [
+              {
+                "_id": "bpcj641y",
+                "formula": "2",
+                "target": "sattack",
+                "type": "untyped"
+              },
+              {
+                "_id": "bpcj641y",
+                "formula": "2",
+                "target": "sdamage",
+                "type": "untyped"
+              },
+              {
+                "_id": "bpcj641y",
+                "formula": "-floor(@attributes.speed.land.base * 0.5)",
+                "target": "landSpeed",
+                "type": "untyped"
+              }
+            ],
+            "conditions": [],
+            "description": {
+              "value": "<p>For the next minute you gain +2 on spell attacks and +2 on spell damage, while your speed is halved.</p>"
+            }
+          },
+          "flags": {
+            "beavers-potions": {
+              "source": "specialist-mage.buff"
+            }
+          }
+        }
+      ],
+      "rarity": "uncommon",
+      "rules": [
+        [
+          "attackBonus",
+          "spell",
+          2
+        ],
+        [
+          "damageBonus",
+          "spell",
+          2
+        ],
+        [
+          "speed",
+          0.5
+        ]
+      ]
+    }
+  }
+}

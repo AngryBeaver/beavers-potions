@@ -1,0 +1,145 @@
+{
+  "_id": "vXJxudEhpp6hpdOe",
+  "_key": "!items!vXJxudEhpp6hpdOe",
+  "name": "Casters Overtime Superior",
+  "type": "object",
+  "img": "icons/consumables/potions/bottle-metal-yellow-gray.webp",
+  "system": {
+    "description": "<p>You spend one round doing nothing else than concentrating. During this time you cannot defend yourself: you are incapacitated, everyone attacking you has advantage and hits critically.</p><p>You replenish all your spell slots of the first to fourth level while you gain 3 levels of exhaustion, which cannot be healed magically.</p>",
+    "actions": {
+      "bpactvXJxudEDrin": {
+        "name": "Drink",
+        "img": "icons/consumables/potions/bottle-metal-yellow-gray.webp",
+        "activation": {
+          "type": "action",
+          "cost": 1,
+          "reactionTrigger": ""
+        },
+        "duration": {
+          "unit": "rounds",
+          "value": "1"
+        },
+        "target": {
+          "quantity": "",
+          "type": "self"
+        },
+        "consumers": {
+          "bpconvXJxudEDrin": {
+            "type": "quantity",
+            "default": true,
+            "itemId": "",
+            "quantity": 1,
+            "deleteOnZero": true,
+            "label": ""
+          }
+        },
+        "rolls": {},
+        "prompts": {},
+        "effects": [
+          "bpfxvXJxudEh0000"
+        ],
+        "macro": ""
+      }
+    },
+    "objectType": "consumable",
+    "price": {
+      "value": 2500,
+      "denomination": "gp",
+      "special": ""
+    },
+    "quantity": 1,
+    "rarity": "veryRare",
+    "weight": 0.5,
+    "source": "",
+    "requiresAttunement": false,
+    "unidentified": false
+  },
+  "effects": [
+    {
+      "_id": "bpfxvXJxudEh0000",
+      "_key": "!items.effects!vXJxudEhpp6hpdOe.bpfxvXJxudEh0000",
+      "name": "Out of Mind",
+      "img": "icons/consumables/potions/bottle-metal-yellow-gray.webp",
+      "type": "base",
+      "description": "<p>You spend one round doing nothing else than concentrating. During this time you cannot defend yourself: you are incapacitated, everyone attacking you has advantage and hits critically.</p><p>You replenish all your spell slots of the first to fourth level while you gain 3 levels of exhaustion, which cannot be healed magically.</p>",
+      "system": {
+        "changes": [
+          {
+            "_id": "bpfxvXJxudEhc000",
+            "key": "flags.a5e.effects.grants.rollMode.attack.all",
+            "type": "override",
+            "value": 1,
+            "phase": "initial",
+            "priority": null
+          }
+        ],
+        "magical": true,
+        "applyToSelf": false,
+        "effectType": "onUse"
+      },
+      "disabled": false,
+      "transfer": false,
+      "duration": {
+        "value": 1,
+        "units": "rounds",
+        "expiry": "turnStart",
+        "expired": false
+      },
+      "statuses": [
+        "incapacitated"
+      ],
+      "flags": {
+        "beavers-potions": {
+          "grantsCritical": true
+        }
+      },
+      "tint": "#ffffff",
+      "showIcon": 1,
+      "origin": null,
+      "start": null,
+      "sort": 0
+    }
+  ],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "beavers-potions": {
+      "potion": true,
+      "use": {
+        "restoreSlots": {
+          "maxLevel": 4,
+          "exhaustion": 3
+        }
+      },
+      "rarity": "veryRare",
+      "rules": [
+        [
+          "status",
+          "incapacitated"
+        ],
+        [
+          "grants",
+          "advantage"
+        ],
+        [
+          "grants",
+          "critical"
+        ],
+        [
+          "restoreSlots",
+          4
+        ],
+        [
+          "exhaustion",
+          3
+        ]
+      ],
+      "unsupported": [
+        "grants critical"
+      ]
+    }
+  }
+}

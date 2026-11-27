@@ -1,0 +1,29 @@
+{
+  "_id": "nrssiAqJHHCV1vyv",
+  "_key": "!items!nrssiAqJHHCV1vyv",
+  "name": "Yellow Stoned",
+  "type": "loot",
+  "img": "icons/consumables/mushrooms/conical-bell-yellow.webp",
+  "system": {
+    "subType": "tradeGoods",
+    "description": {
+      "value": "<p>A mushroom, an ingredient of Beaver's Potions.</p>"
+    },
+    "quantity": 1,
+    "weight": 0.1,
+    "price": 0,
+    "identified": true,
+    "identifiedName": "Yellow Stoned"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "beavers-potions": {
+      "ingredient": "mushroom"
+    }
+  }
+}

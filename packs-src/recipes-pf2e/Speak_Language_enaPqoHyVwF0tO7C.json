@@ -1,0 +1,115 @@
+{
+  "_id": "enaPqoHyVwF0tO7C",
+  "_key": "!items!enaPqoHyVwF0tO7C",
+  "name": "Speak Language",
+  "type": "treasure",
+  "img": "icons/sundries/scrolls/scroll-worn-tan.webp",
+  "system": {
+    "description": {
+      "value": "<p>A recipe of Beaver's Potions, it needs the module Beaver's Crafting.</p><p>Brewing: Society check DC 15.</p>"
+    },
+    "level": {
+      "value": 0
+    },
+    "price": {
+      "value": {}
+    },
+    "quantity": 1,
+    "bulk": {
+      "value": 0
+    },
+    "traits": {
+      "value": [],
+      "rarity": "common"
+    },
+    "slug": "recipe-speak-language"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "beavers-crafting": {
+      "subtype": "Recipe",
+      "recipe": {
+        "required": {},
+        "input": {
+          "1": {
+            "Compendium-beavers-potions-ingredients-pf2e-Item-OOFUAGixSqsgyT29": {
+              "id": "OOFUAGixSqsgyT29",
+              "uuid": "Compendium.beavers-potions.ingredients-pf2e.Item.OOFUAGixSqsgyT29",
+              "img": "icons/consumables/mushrooms/campanulate-bell-red-white.webp",
+              "name": "Hansel and Gretel",
+              "type": "Item",
+              "itemType": "treasure",
+              "quantity": 5
+            }
+          },
+          "2": {
+            "Compendium-beavers-potions-ingredients-pf2e-Item-tqfcqsuPQRChhdj7": {
+              "id": "tqfcqsuPQRChhdj7",
+              "uuid": "Compendium.beavers-potions.ingredients-pf2e.Item.tqfcqsuPQRChhdj7",
+              "img": "icons/consumables/mushrooms/convex-tan.webp",
+              "name": "Husk Puff",
+              "type": "Item",
+              "itemType": "treasure",
+              "quantity": 5
+            }
+          },
+          "3": {
+            "Compendium-beavers-potions-ingredients-pf2e-Item-dozjFH55CR4npT6F": {
+              "id": "dozjFH55CR4npT6F",
+              "uuid": "Compendium.beavers-potions.ingredients-pf2e.Item.dozjFH55CR4npT6F",
+              "img": "icons/tools/laboratory/bowl-powder-purple.webp",
+              "name": "Magical Essence",
+              "type": "Item",
+              "itemType": "treasure",
+              "quantity": 1
+            }
+          }
+        },
+        "output": {
+          "1": {
+            "Compendium-beavers-potions-potions-pf2e-Item-U8wGkjLGinM5L54q": {
+              "id": "U8wGkjLGinM5L54q",
+              "uuid": "Compendium.beavers-potions.potions-pf2e.Item.U8wGkjLGinM5L54q",
+              "img": "icons/consumables/potions/bottle-pear-corked-pink.webp",
+              "name": "Speak Language",
+              "type": "Item",
+              "itemType": "consumable",
+              "quantity": 1
+            }
+          }
+        },
+        "currency": {
+          "name": "gp",
+          "value": 50
+        },
+        "beaversTests": {
+          "fails": 1,
+          "consume": true,
+          "failsInARow": false,
+          "ands": {
+            "1": {
+              "hits": 1,
+              "ors": {
+                "1": {
+                  "type": "SkillTest",
+                  "data": {
+                    "dc": 15,
+                    "skill": "society"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "macro": "",
+        "folder": "Beaver's Potions",
+        "kind": "recipe"
+      }
+    }
+  }
+}

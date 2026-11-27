@@ -1,0 +1,38 @@
+{
+  "_id": "Xw46DSfi4sKT8nWz",
+  "_key": "!items!Xw46DSfi4sKT8nWz",
+  "name": "Tree Friend",
+  "type": "consumable",
+  "img": "icons/consumables/potions/bottle-round-corked-green.webp",
+  "system": {
+    "consumableType": "potion",
+    "description": {
+      "value": "<p>You are instantly teleported to the nearest tree.</p>"
+    },
+    "quantity": 1,
+    "weight": 0.1,
+    "price": 250,
+    "identified": true,
+    "identifiedName": "Tree Friend",
+    "uses": {
+      "value": 0,
+      "max": 0,
+      "per": "single"
+    }
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "beavers-potions": {
+      "potion": true,
+      "buffs": [],
+      "pour": false,
+      "rarity": "uncommon",
+      "rules": []
+    }
+  }
+}

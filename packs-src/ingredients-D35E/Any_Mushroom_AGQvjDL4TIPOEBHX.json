@@ -1,0 +1,32 @@
+{
+  "_id": "AGQvjDL4TIPOEBHX",
+  "_key": "!items!AGQvjDL4TIPOEBHX",
+  "name": "Any Mushroom",
+  "type": "loot",
+  "img": "modules/beavers-crafting/icons/anyOf.png",
+  "system": {
+    "subType": "tradeGoods",
+    "description": {
+      "value": "<p>Any mushroom of Beaver's Potions.</p>"
+    },
+    "quantity": 1,
+    "weight": 0,
+    "price": 0,
+    "identified": true,
+    "identifiedName": "Any Mushroom"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "beavers-crafting": {
+      "subtype": "AnyOf",
+      "anyOf": {
+        "macro": "// beavers-crafting passes an item or a component of the actor\nconst doc = item?.system ? item : await item?.getEntity?.();\nreturn doc?.flags?.[\"beavers-potions\"]?.ingredient === \"mushroom\";"
+      }
+    }
+  }
+}

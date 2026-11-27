@@ -1,0 +1,151 @@
+{
+  "_id": "YywpTHDQ09DN7aLd",
+  "_key": "!items!YywpTHDQ09DN7aLd",
+  "name": "Frost Armor Greater",
+  "type": "object",
+  "img": "icons/consumables/potions/bottle-corked-blue.webp",
+  "system": {
+    "description": "<p>A protective magical force surrounds you, manifesting as a spectral frost that covers you and your gear for 5 rounds. At the start of each of your turns you regain temporary hit points up to 6. Anyone starting its turn next to you takes 3d4 cold damage (Wisdom saving throw DC 14 for half).</p>",
+    "actions": {
+      "bpactYywpTHDDrin": {
+        "name": "Drink",
+        "img": "icons/consumables/potions/bottle-corked-blue.webp",
+        "activation": {
+          "type": "action",
+          "cost": 1,
+          "reactionTrigger": ""
+        },
+        "duration": {
+          "unit": "rounds",
+          "value": "5"
+        },
+        "target": {
+          "quantity": "",
+          "type": "self"
+        },
+        "consumers": {
+          "bpconYywpTHDDrin": {
+            "type": "quantity",
+            "default": true,
+            "itemId": "",
+            "quantity": 1,
+            "deleteOnZero": true,
+            "label": ""
+          }
+        },
+        "rolls": {
+          "bprollYywpTHDrin": {
+            "type": "healing",
+            "formula": "6",
+            "healingType": "temporaryHealing",
+            "name": "Frost Armor Greater"
+          }
+        },
+        "prompts": {},
+        "effects": [
+          "bpfxYywpTHDQ0000"
+        ],
+        "macro": ""
+      }
+    },
+    "objectType": "consumable",
+    "price": {
+      "value": 750,
+      "denomination": "gp",
+      "special": ""
+    },
+    "quantity": 1,
+    "rarity": "rare",
+    "weight": 0.5,
+    "source": "",
+    "requiresAttunement": false,
+    "unidentified": false
+  },
+  "effects": [
+    {
+      "_id": "bpfxYywpTHDQ0000",
+      "_key": "!items.effects!YywpTHDQ09DN7aLd.bpfxYywpTHDQ0000",
+      "name": "Frost Armor Greater",
+      "img": "icons/consumables/potions/bottle-corked-blue.webp",
+      "type": "base",
+      "description": "<p>A protective magical force surrounds you, manifesting as a spectral frost that covers you and your gear for 5 rounds. At the start of each of your turns you regain temporary hit points up to 6. Anyone starting its turn next to you takes 3d4 cold damage (Wisdom saving throw DC 14 for half).</p>",
+      "system": {
+        "changes": [],
+        "magical": true,
+        "applyToSelf": false,
+        "effectType": "onUse"
+      },
+      "disabled": false,
+      "transfer": false,
+      "duration": {
+        "value": 5,
+        "units": "rounds",
+        "expiry": "turnStart",
+        "expired": false
+      },
+      "statuses": [],
+      "flags": {
+        "beavers-potions": {
+          "turnStart": {
+            "temp": 6
+          },
+          "aura": {
+            "radius": 5,
+            "includeSelf": false,
+            "save": {
+              "ability": "wis",
+              "dc": 14
+            },
+            "damage": {
+              "formula": "3d4",
+              "type": "cold"
+            }
+          }
+        }
+      },
+      "tint": "#ffffff",
+      "showIcon": 1,
+      "origin": null,
+      "start": null,
+      "sort": 0
+    }
+  ],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "beavers-potions": {
+      "potion": true,
+      "rarity": "rare",
+      "rules": [
+        [
+          "temp",
+          6
+        ],
+        [
+          "turnStart",
+          {
+            "temp": 6
+          }
+        ],
+        [
+          "aura",
+          {
+            "radius": 5,
+            "includeSelf": false,
+            "save": {
+              "ability": "wis",
+              "dc": 14
+            },
+            "damage": {
+              "formula": "3d4",
+              "type": "cold"
+            }
+          }
+        ]
+      ]
+    }
+  }
+}

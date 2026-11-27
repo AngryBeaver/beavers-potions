@@ -24,6 +24,9 @@
     "protectedFromDeath": "Protection from death: instead of dying, 1 hit point remains.",
     "turnHeal": "Regains {amount} hit points.",
     "turnTemp": "Has {amount} temporary hit points.",
-    "noEffect": "The potion has no effect."
+    "noEffect": "The potion has no effect.",
+    "drinkOrPour": "Drink it or pour it out?",
+    "drink": "Drink",
+    "pour": "Pour"
   }
 }

@@ -1,0 +1,103 @@
+{
+  "_id": "R4hEpzqaIBuxT7Pb",
+  "_key": "!items!R4hEpzqaIBuxT7Pb",
+  "name": "Distortion",
+  "type": "consumable",
+  "img": "icons/consumables/potions/bottle-round-label-cork-yellow.webp",
+  "system": {
+    "category": "potion",
+    "description": {
+      "value": "<p>You vanish out of existence and back again within the blink of an eye. Your outline appears blurred, shifting and wavering. For 1 minute every attack against you has a 20% chance to miss: it appears as if you had not been targeted at all.</p>"
+    },
+    "level": {
+      "value": 12
+    },
+    "price": {
+      "value": {
+        "gp": 2500
+      }
+    },
+    "quantity": 1,
+    "bulk": {
+      "value": 0.1
+    },
+    "uses": {
+      "value": 1,
+      "max": 1,
+      "autoDestroy": true
+    },
+    "traits": {
+      "value": [
+        "consumable",
+        "magical",
+        "potion"
+      ],
+      "rarity": "rare"
+    },
+    "usage": {
+      "value": "held-in-one-hand"
+    },
+    "rules": [],
+    "slug": "distortion",
+    "publication": {
+      "title": "Beaver's Potions",
+      "authors": "",
+      "license": "OGL",
+      "remaster": false
+    }
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "beavers-potions": {
+      "potion": true,
+      "effects": [
+        {
+          "name": "Effect: Distortion",
+          "type": "effect",
+          "img": "icons/consumables/potions/bottle-round-label-cork-yellow.webp",
+          "system": {
+            "description": {
+              "value": "<p>You vanish out of existence and back again within the blink of an eye. Your outline appears blurred, shifting and wavering. For 1 minute every attack against you has a 20% chance to miss: it appears as if you had not been targeted at all.</p>"
+            },
+            "duration": {
+              "value": 1,
+              "unit": "minutes",
+              "expiry": "turn-start",
+              "sustained": false
+            },
+            "rules": [],
+            "tokenIcon": {
+              "show": true
+            },
+            "level": {
+              "value": 12
+            },
+            "traits": {
+              "value": [],
+              "rarity": "common"
+            },
+            "slug": "effect-distortion"
+          },
+          "flags": {
+            "beavers-potions": {
+              "distortion": 20,
+              "source": "distortion.effect"
+            }
+          }
+        }
+      ],
+      "rarity": "veryRare",
+      "rules": [
+        [
+          "distortion",
+          20
+        ]
+      ]
+    }
+  }
+}

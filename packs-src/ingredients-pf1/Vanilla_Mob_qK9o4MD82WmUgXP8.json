@@ -1,0 +1,30 @@
+{
+  "_id": "qK9o4MD82WmUgXP8",
+  "_key": "!items!qK9o4MD82WmUgXP8",
+  "name": "Vanilla Mob",
+  "type": "loot",
+  "img": "icons/consumables/mushrooms/bell-shiitake-brown.webp",
+  "system": {
+    "subType": "tradeGoods",
+    "description": {
+      "value": "<p>A mushroom, an ingredient of Beaver's Potions.</p>"
+    },
+    "quantity": 1,
+    "weight": {
+      "value": 0.1
+    },
+    "price": 0,
+    "identified": true
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "beavers-potions": {
+      "ingredient": "mushroom"
+    }
+  }
+}

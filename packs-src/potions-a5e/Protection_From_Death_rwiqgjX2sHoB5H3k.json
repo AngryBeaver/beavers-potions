@@ -1,0 +1,108 @@
+{
+  "_id": "rwiqgjX2sHoB5H3k",
+  "_key": "!items!rwiqgjX2sHoB5H3k",
+  "name": "Protection From Death",
+  "type": "object",
+  "img": "icons/consumables/potions/flask-corked-red-glow.webp",
+  "system": {
+    "description": "<p>For one hour: the first time any effect would reduce you to 0 hit points you are reduced to 1 hit point instead.</p>",
+    "actions": {
+      "bpactrwiqgjXDrin": {
+        "name": "Drink",
+        "img": "icons/consumables/potions/flask-corked-red-glow.webp",
+        "activation": {
+          "type": "action",
+          "cost": 1,
+          "reactionTrigger": ""
+        },
+        "duration": {
+          "unit": "hours",
+          "value": "1"
+        },
+        "target": {
+          "quantity": "",
+          "type": "self"
+        },
+        "consumers": {
+          "bpconrwiqgjXDrin": {
+            "type": "quantity",
+            "default": true,
+            "itemId": "",
+            "quantity": 1,
+            "deleteOnZero": true,
+            "label": ""
+          }
+        },
+        "rolls": {},
+        "prompts": {},
+        "effects": [
+          "bpfxrwiqgjX20000"
+        ],
+        "macro": ""
+      }
+    },
+    "objectType": "consumable",
+    "price": {
+      "value": 2500,
+      "denomination": "gp",
+      "special": ""
+    },
+    "quantity": 1,
+    "rarity": "veryRare",
+    "weight": 0.5,
+    "source": "",
+    "requiresAttunement": false,
+    "unidentified": false
+  },
+  "effects": [
+    {
+      "_id": "bpfxrwiqgjX20000",
+      "_key": "!items.effects!rwiqgjX2sHoB5H3k.bpfxrwiqgjX20000",
+      "name": "Protection From Death",
+      "img": "icons/consumables/potions/flask-corked-red-glow.webp",
+      "type": "base",
+      "description": "<p>For one hour: the first time any effect would reduce you to 0 hit points you are reduced to 1 hit point instead.</p>",
+      "system": {
+        "changes": [],
+        "magical": true,
+        "applyToSelf": false,
+        "effectType": "onUse"
+      },
+      "disabled": false,
+      "transfer": false,
+      "duration": {
+        "value": 1,
+        "units": "hours",
+        "expiry": "turnStart",
+        "expired": false
+      },
+      "statuses": [],
+      "flags": {
+        "beavers-potions": {
+          "protectionFromDeath": true
+        }
+      },
+      "tint": "#ffffff",
+      "showIcon": 1,
+      "origin": null,
+      "start": null,
+      "sort": 0
+    }
+  ],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "beavers-potions": {
+      "potion": true,
+      "rarity": "veryRare",
+      "rules": [
+        [
+          "protectionFromDeath"
+        ]
+      ]
+    }
+  }
+}

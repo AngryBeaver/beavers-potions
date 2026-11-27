@@ -62,6 +62,182 @@
         "PLAYER": "OBSERVER",
         "ASSISTANT": "OWNER"
       }
+    },
+    {
+      "label": "Potions",
+      "name": "potions-a5e",
+      "path": "packs/potions-a5e",
+      "system": "a5e",
+      "type": "Item",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      }
+    },
+    {
+      "label": "Ingredients",
+      "name": "ingredients-a5e",
+      "path": "packs/ingredients-a5e",
+      "system": "a5e",
+      "type": "Item",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      }
+    },
+    {
+      "label": "Recipes",
+      "name": "recipes-a5e",
+      "path": "packs/recipes-a5e",
+      "system": "a5e",
+      "type": "Item",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      }
+    },
+    {
+      "label": "Random Potions",
+      "name": "tables-a5e",
+      "path": "packs/tables-a5e",
+      "system": "a5e",
+      "type": "RollTable",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      }
+    },
+    {
+      "label": "Potions",
+      "name": "potions-D35E",
+      "path": "packs/potions-D35E",
+      "system": "D35E",
+      "type": "Item",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      }
+    },
+    {
+      "label": "Ingredients",
+      "name": "ingredients-D35E",
+      "path": "packs/ingredients-D35E",
+      "system": "D35E",
+      "type": "Item",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      }
+    },
+    {
+      "label": "Recipes",
+      "name": "recipes-D35E",
+      "path": "packs/recipes-D35E",
+      "system": "D35E",
+      "type": "Item",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      }
+    },
+    {
+      "label": "Random Potions",
+      "name": "tables-D35E",
+      "path": "packs/tables-D35E",
+      "system": "D35E",
+      "type": "RollTable",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      }
+    },
+    {
+      "label": "Potions",
+      "name": "potions-pf1",
+      "path": "packs/potions-pf1",
+      "system": "pf1",
+      "type": "Item",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      }
+    },
+    {
+      "label": "Ingredients",
+      "name": "ingredients-pf1",
+      "path": "packs/ingredients-pf1",
+      "system": "pf1",
+      "type": "Item",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      }
+    },
+    {
+      "label": "Recipes",
+      "name": "recipes-pf1",
+      "path": "packs/recipes-pf1",
+      "system": "pf1",
+      "type": "Item",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      }
+    },
+    {
+      "label": "Random Potions",
+      "name": "tables-pf1",
+      "path": "packs/tables-pf1",
+      "system": "pf1",
+      "type": "RollTable",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      }
+    },
+    {
+      "label": "Potions",
+      "name": "potions-pf2e",
+      "path": "packs/potions-pf2e",
+      "system": "pf2e",
+      "type": "Item",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      }
+    },
+    {
+      "label": "Ingredients",
+      "name": "ingredients-pf2e",
+      "path": "packs/ingredients-pf2e",
+      "system": "pf2e",
+      "type": "Item",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      }
+    },
+    {
+      "label": "Recipes",
+      "name": "recipes-pf2e",
+      "path": "packs/recipes-pf2e",
+      "system": "pf2e",
+      "type": "Item",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      }
+    },
+    {
+      "label": "Random Potions",
+      "name": "tables-pf2e",
+      "path": "packs/tables-pf2e",
+      "system": "pf2e",
+      "type": "RollTable",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      }
     }
   ],
   "socket": true,
@@ -77,6 +253,38 @@
           "minimum": "6.0.0",
           "verified": "6.1.1"
         }
+      },
+      {
+        "id": "a5e",
+        "type": "system",
+        "compatibility": {
+          "minimum": "1.5.0",
+          "verified": "1.5.3"
+        }
+      },
+      {
+        "id": "D35E",
+        "type": "system",
+        "compatibility": {
+          "minimum": "3.0.0",
+          "verified": "3.1.0"
+        }
+      },
+      {
+        "id": "pf1",
+        "type": "system",
+        "compatibility": {
+          "minimum": "11.0",
+          "verified": "11.11"
+        }
+      },
+      {
+        "id": "pf2e",
+        "type": "system",
+        "compatibility": {
+          "minimum": "7.0.0",
+          "verified": "7.12.2"
+        }
       }
     ],
     "recommends": [
@@ -88,7 +296,7 @@
     ]
   },
   "compatibility": {
-    "minimum": "14",
+    "minimum": "13",
     "verified": "14"
   }
 }

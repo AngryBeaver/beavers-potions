@@ -1,0 +1,109 @@
+{
+  "_id": "omxL5fdlJ5wYXlkw",
+  "_key": "!items!omxL5fdlJ5wYXlkw",
+  "name": "Specialist (Melee)",
+  "type": "consumable",
+  "img": "icons/consumables/potions/bottle-pear-corked-labeled-green.webp",
+  "system": {
+    "consumableType": "potion",
+    "description": {
+      "value": "<p>For the next minute you gain +2 on melee weapon attacks and +2 on melee weapon damage, while your Dexterity and Wisdom saving throws are lowered by 2.</p>"
+    },
+    "quantity": 1,
+    "weight": 0.1,
+    "price": 250,
+    "identified": true,
+    "identifiedName": "Specialist (Melee)",
+    "uses": {
+      "value": 0,
+      "max": 0,
+      "per": "single"
+    }
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "beavers-potions": {
+      "potion": true,
+      "buffs": [
+        {
+          "name": "Specialist (Melee)",
+          "type": "buff",
+          "img": "icons/consumables/potions/bottle-pear-corked-labeled-green.webp",
+          "system": {
+            "buffType": "temp",
+            "active": true,
+            "level": 1,
+            "duration": {
+              "value": "1",
+              "units": "minute"
+            },
+            "changes": [
+              [
+                "2",
+                "attack",
+                "mattack",
+                "untyped"
+              ],
+              [
+                "2",
+                "damage",
+                "wdamage",
+                "untyped"
+              ],
+              [
+                "-2",
+                "savingThrows",
+                "ref",
+                "untyped"
+              ],
+              [
+                "-2",
+                "savingThrows",
+                "will",
+                "untyped"
+              ]
+            ],
+            "description": {
+              "value": "<p>For the next minute you gain +2 on melee weapon attacks and +2 on melee weapon damage, while your Dexterity and Wisdom saving throws are lowered by 2.</p>"
+            }
+          },
+          "flags": {
+            "beavers-potions": {
+              "conditions": [],
+              "source": "specialist-melee.buff"
+            }
+          }
+        }
+      ],
+      "pour": false,
+      "rarity": "uncommon",
+      "rules": [
+        [
+          "attackBonus",
+          "melee",
+          2
+        ],
+        [
+          "damageBonus",
+          "melee",
+          2
+        ],
+        [
+          "saveBonus",
+          "dex",
+          -2
+        ],
+        [
+          "saveBonus",
+          "wis",
+          -2
+        ]
+      ]
+    }
+  }
+}

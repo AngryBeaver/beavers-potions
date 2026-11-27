@@ -173,7 +173,19 @@
   },
   "flags": {
     "beavers-potions": {
-      "potion": true
+      "potion": true,
+      "rarity": "rare",
+      "rules": [
+        [
+          "sense",
+          "blindsight",
+          60
+        ],
+        [
+          "status",
+          "silenced"
+        ]
+      ]
     }
   }
 }

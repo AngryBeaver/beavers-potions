@@ -1,0 +1,129 @@
+{
+  "_id": "exyGaiw1Es8u37QE",
+  "_key": "!items!exyGaiw1Es8u37QE",
+  "name": "Aid Greater",
+  "type": "object",
+  "img": "icons/consumables/potions/bottle-round-label-cork-red.webp",
+  "system": {
+    "description": "<p>Your hit point maximum and your current hit points increase by 10 for 8 hours.</p>",
+    "actions": {
+      "bpactexyGaiwDrin": {
+        "name": "Drink",
+        "img": "icons/consumables/potions/bottle-round-label-cork-red.webp",
+        "activation": {
+          "type": "action",
+          "cost": 1,
+          "reactionTrigger": ""
+        },
+        "duration": {
+          "unit": "hours",
+          "value": "8"
+        },
+        "target": {
+          "quantity": "",
+          "type": "self"
+        },
+        "consumers": {
+          "bpconexyGaiwDrin": {
+            "type": "quantity",
+            "default": true,
+            "itemId": "",
+            "quantity": 1,
+            "deleteOnZero": true,
+            "label": ""
+          }
+        },
+        "rolls": {
+          "bprollexyGaiDrin": {
+            "type": "healing",
+            "formula": "10",
+            "healingType": "healing",
+            "name": "Aid Greater"
+          }
+        },
+        "prompts": {},
+        "effects": [
+          "bpfxexyGaiw10000"
+        ],
+        "macro": ""
+      }
+    },
+    "objectType": "consumable",
+    "price": {
+      "value": 750,
+      "denomination": "gp",
+      "special": ""
+    },
+    "quantity": 1,
+    "rarity": "rare",
+    "weight": 0.5,
+    "source": "",
+    "requiresAttunement": false,
+    "unidentified": false
+  },
+  "effects": [
+    {
+      "_id": "bpfxexyGaiw10000",
+      "_key": "!items.effects!exyGaiw1Es8u37QE.bpfxexyGaiw10000",
+      "name": "Aid Greater",
+      "img": "icons/consumables/potions/bottle-round-label-cork-red.webp",
+      "type": "base",
+      "description": "<p>Your hit point maximum and your current hit points increase by 10 for 8 hours.</p>",
+      "system": {
+        "changes": [
+          {
+            "_id": "bpfxexyGaiw1c000",
+            "key": "flags.a5e.effects.bonuses.hitPoint",
+            "type": "custom",
+            "value": {
+              "label": "Aid Greater",
+              "formula": "10",
+              "context": {}
+            },
+            "phase": "initial",
+            "priority": null
+          }
+        ],
+        "magical": true,
+        "applyToSelf": false,
+        "effectType": "onUse"
+      },
+      "disabled": false,
+      "transfer": false,
+      "duration": {
+        "value": 8,
+        "units": "hours",
+        "expiry": "turnStart",
+        "expired": false
+      },
+      "statuses": [],
+      "flags": {},
+      "tint": "#ffffff",
+      "showIcon": 1,
+      "origin": null,
+      "start": null,
+      "sort": 0
+    }
+  ],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "beavers-potions": {
+      "potion": true,
+      "rarity": "rare",
+      "rules": [
+        [
+          "heal",
+          "10"
+        ],
+        [
+          "hpMax",
+          10
+        ]
+      ]
+    }
+  }
+}

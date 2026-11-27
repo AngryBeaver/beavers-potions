@@ -1,0 +1,71 @@
+{
+  "_id": "tr3gjUhvmWpYrGJ0",
+  "_key": "!items!tr3gjUhvmWpYrGJ0",
+  "name": "Overload Attunement",
+  "type": "consumable",
+  "img": "icons/consumables/potions/bottle-corked-red.webp",
+  "system": {
+    "consumableType": "potion",
+    "description": {
+      "value": "<p>Within this potion slumbers a tiny parasite. When you drink it, the parasite awakes. For the following 4 hours you painfully feel how something is eating your internals while slowly growing and moving upwards towards your brain. At its destination it attaches to your brain stem and usually stops growing. There it lives for the next 5 days until it dies. During this time it grants you the ability to attune to one additional magic item.</p>"
+    },
+    "quantity": 1,
+    "weight": 0.1,
+    "price": 5000,
+    "identified": true,
+    "identifiedName": "Overload Attunement",
+    "uses": {
+      "value": 0,
+      "max": 0,
+      "per": "single"
+    }
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "beavers-potions": {
+      "potion": true,
+      "buffs": [
+        {
+          "name": "Overload Attunement",
+          "type": "buff",
+          "img": "icons/consumables/potions/bottle-corked-red.webp",
+          "system": {
+            "buffType": "temp",
+            "active": true,
+            "level": 1,
+            "duration": {
+              "value": "5",
+              "units": "day"
+            },
+            "changes": [],
+            "description": {
+              "value": "<p>Within this potion slumbers a tiny parasite. When you drink it, the parasite awakes. For the following 4 hours you painfully feel how something is eating your internals while slowly growing and moving upwards towards your brain. At its destination it attaches to your brain stem and usually stops growing. There it lives for the next 5 days until it dies. During this time it grants you the ability to attune to one additional magic item.</p>"
+            }
+          },
+          "flags": {
+            "beavers-potions": {
+              "conditions": [],
+              "source": "overload-attunement.buff"
+            }
+          }
+        }
+      ],
+      "pour": false,
+      "rarity": "legendary",
+      "rules": [
+        [
+          "attunement",
+          1
+        ]
+      ],
+      "unsupported": [
+        "attunement"
+      ]
+    }
+  }
+}

@@ -1,0 +1,129 @@
+{
+  "_id": "IVqv7WZE3537ilDC",
+  "_key": "!items!IVqv7WZE3537ilDC",
+  "name": "Distortion",
+  "type": "object",
+  "img": "icons/sundries/scrolls/scroll-worn-tan.webp",
+  "system": {
+    "description": "<p>A recipe of Beaver's Potions, it needs the module Beaver's Crafting.</p><p>Brewing: Arcana check DC 13.</p>",
+    "objectType": "miscellaneous",
+    "price": {
+      "value": 0,
+      "denomination": "gp",
+      "special": ""
+    },
+    "quantity": 1,
+    "weight": 0,
+    "actions": {}
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "beavers-crafting": {
+      "subtype": "Recipe",
+      "recipe": {
+        "required": {},
+        "input": {
+          "1": {
+            "Compendium-beavers-potions-ingredients-a5e-Item-qK9o4MD82WmUgXP8": {
+              "id": "qK9o4MD82WmUgXP8",
+              "uuid": "Compendium.beavers-potions.ingredients-a5e.Item.qK9o4MD82WmUgXP8",
+              "img": "icons/consumables/mushrooms/bell-shiitake-brown.webp",
+              "name": "Vanilla Mob",
+              "type": "Item",
+              "itemType": "object",
+              "quantity": 5
+            }
+          },
+          "2": {
+            "Compendium-beavers-potions-ingredients-a5e-Item-Q2IL3nSljRbVrhnt": {
+              "id": "Q2IL3nSljRbVrhnt",
+              "uuid": "Compendium.beavers-potions.ingredients-a5e.Item.Q2IL3nSljRbVrhnt",
+              "img": "icons/consumables/mushrooms/alien-spotted-blue.webp",
+              "name": "Star Dip",
+              "type": "Item",
+              "itemType": "object",
+              "quantity": 5
+            }
+          },
+          "3": {
+            "Compendium-beavers-potions-ingredients-a5e-Item-90BJIBWtxLN3SMHn": {
+              "id": "90BJIBWtxLN3SMHn",
+              "uuid": "Compendium.beavers-potions.ingredients-a5e.Item.90BJIBWtxLN3SMHn",
+              "img": "icons/consumables/mushrooms/convex-bolete-brown.webp",
+              "name": "Penny Bun",
+              "type": "Item",
+              "itemType": "object",
+              "quantity": 5
+            }
+          },
+          "4": {
+            "Compendium-beavers-potions-ingredients-a5e-Item-EBn04GlzYZdMi23m": {
+              "id": "EBn04GlzYZdMi23m",
+              "uuid": "Compendium.beavers-potions.ingredients-a5e.Item.EBn04GlzYZdMi23m",
+              "img": "icons/consumables/mushrooms/helm-purple-shiny.webp",
+              "name": "Astrid Lindworm",
+              "type": "Item",
+              "itemType": "object",
+              "quantity": 5
+            }
+          },
+          "5": {
+            "Compendium-beavers-potions-ingredients-a5e-Item-dozjFH55CR4npT6F": {
+              "id": "dozjFH55CR4npT6F",
+              "uuid": "Compendium.beavers-potions.ingredients-a5e.Item.dozjFH55CR4npT6F",
+              "img": "icons/tools/laboratory/bowl-powder-purple.webp",
+              "name": "Magical Essence",
+              "type": "Item",
+              "itemType": "object",
+              "quantity": 3
+            }
+          }
+        },
+        "output": {
+          "1": {
+            "Compendium-beavers-potions-potions-a5e-Item-R4hEpzqaIBuxT7Pb": {
+              "id": "R4hEpzqaIBuxT7Pb",
+              "uuid": "Compendium.beavers-potions.potions-a5e.Item.R4hEpzqaIBuxT7Pb",
+              "img": "icons/consumables/potions/bottle-round-label-cork-yellow.webp",
+              "name": "Distortion",
+              "type": "Item",
+              "itemType": "object",
+              "quantity": 1
+            }
+          }
+        },
+        "currency": {
+          "name": "gp",
+          "value": 500
+        },
+        "beaversTests": {
+          "fails": 1,
+          "consume": true,
+          "failsInARow": false,
+          "ands": {
+            "1": {
+              "hits": 1,
+              "ors": {
+                "1": {
+                  "type": "SkillTest",
+                  "data": {
+                    "dc": 13,
+                    "skill": "arc"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "macro": "",
+        "folder": "Beaver's Potions",
+        "kind": "recipe"
+      }
+    }
+  }
+}

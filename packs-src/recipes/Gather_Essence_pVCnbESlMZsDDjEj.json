@@ -93,7 +93,7 @@
             }
           }
         },
-        "macro": "const essence = {\n  id: \"dozjFH55CR4npT6F\",\n  uuid: \"Compendium.beavers-potions.ingredients.Item.dozjFH55CR4npT6F\",\n  type: \"Item\",\n  itemType: \"loot\",\n  name: \"Magical Essence\",\n  img: \"icons/tools/laboratory/bowl-powder-purple.webp\",\n  quantity: 1\n};\nconst perRarity = { common: 0, uncommon: 2, rare: 4, veryRare: 8, legendary: 16, artifact: 32 };\nfor (const ingredient of Object.values(recipeData.input[1] ?? {})) {\n  const item = await ingredient.getEntity();\n  // one essence is in the recipe's result already: add what the rarity gives on top of it\n  essence.quantity = (perRarity[item?.system?.rarity] ?? 1) - 1;\n  if (essence.quantity !== 0) result.updateComponent(\"produced\", essence);\n  break;\n}",
+        "macro": "const essence = {\n  id: \"dozjFH55CR4npT6F\",\n  uuid: \"Compendium.beavers-potions.ingredients.Item.dozjFH55CR4npT6F\",\n  type: \"Item\",\n  itemType: \"loot\",\n  name: \"Magical Essence\",\n  img: \"icons/tools/laboratory/bowl-powder-purple.webp\",\n  quantity: 1\n};\nconst perRarity = { common: 0, uncommon: 2, rare: 4, veryRare: 8, legendary: 16, artifact: 32 };\nfor (const ingredient of Object.values(recipeData.input[1] ?? {})) {\n  const item = await ingredient.getEntity();\n  const rarity = item?.flags?.[\"beavers-potions\"]?.rarity ?? item?.system?.rarity;\n  // one essence is in the recipe's result already: add what the rarity gives on top of it\n  essence.quantity = (perRarity[rarity] ?? 1) - 1;\n  if (essence.quantity !== 0) result.updateComponent(\"produced\", essence);\n  break;\n}",
         "folder": "Beaver's Potions",
         "kind": "recipe"
       }

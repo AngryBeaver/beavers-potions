@@ -1,0 +1,122 @@
+{
+  "_id": "UOYRzlUw2HSELs9u",
+  "_key": "!items!UOYRzlUw2HSELs9u",
+  "name": "Batman",
+  "type": "object",
+  "img": "icons/consumables/potions/bottle-conical-corked-tied-blue.webp",
+  "system": {
+    "description": "<p>You lose the ability to speak for 10 minutes. Instead you can release high-frequency squeaks for echolocation: you have blindsight 60 ft. as long as the surroundings are on the material plane.</p>",
+    "actions": {
+      "bpactUOYRzlUDrin": {
+        "name": "Drink",
+        "img": "icons/consumables/potions/bottle-conical-corked-tied-blue.webp",
+        "activation": {
+          "type": "action",
+          "cost": 1,
+          "reactionTrigger": ""
+        },
+        "duration": {
+          "unit": "minutes",
+          "value": "10"
+        },
+        "target": {
+          "quantity": "",
+          "type": "self"
+        },
+        "consumers": {
+          "bpconUOYRzlUDrin": {
+            "type": "quantity",
+            "default": true,
+            "itemId": "",
+            "quantity": 1,
+            "deleteOnZero": true,
+            "label": ""
+          }
+        },
+        "rolls": {},
+        "prompts": {},
+        "effects": [
+          "bpfxUOYRzlUw0000"
+        ],
+        "macro": ""
+      }
+    },
+    "objectType": "consumable",
+    "price": {
+      "value": 750,
+      "denomination": "gp",
+      "special": ""
+    },
+    "quantity": 1,
+    "rarity": "rare",
+    "weight": 0.5,
+    "source": "",
+    "requiresAttunement": false,
+    "unidentified": false
+  },
+  "effects": [
+    {
+      "_id": "bpfxUOYRzlUw0000",
+      "_key": "!items.effects!UOYRzlUw2HSELs9u.bpfxUOYRzlUw0000",
+      "name": "Batman",
+      "img": "icons/consumables/potions/bottle-conical-corked-tied-blue.webp",
+      "type": "base",
+      "description": "<p>You lose the ability to speak for 10 minutes. Instead you can release high-frequency squeaks for echolocation: you have blindsight 60 ft. as long as the surroundings are on the material plane.</p>",
+      "system": {
+        "changes": [
+          {
+            "_id": "bpfxUOYRzlUwc000",
+            "key": "system.attributes.senses.blindsight.distance",
+            "type": "upgrade",
+            "value": 60,
+            "phase": "initial",
+            "priority": null
+          }
+        ],
+        "magical": true,
+        "applyToSelf": false,
+        "effectType": "onUse"
+      },
+      "disabled": false,
+      "transfer": false,
+      "duration": {
+        "value": 10,
+        "units": "minutes",
+        "expiry": "turnStart",
+        "expired": false
+      },
+      "statuses": [],
+      "flags": {},
+      "tint": "#ffffff",
+      "showIcon": 1,
+      "origin": null,
+      "start": null,
+      "sort": 0
+    }
+  ],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "beavers-potions": {
+      "potion": true,
+      "rarity": "rare",
+      "rules": [
+        [
+          "sense",
+          "blindsight",
+          60
+        ],
+        [
+          "status",
+          "silenced"
+        ]
+      ],
+      "unsupported": [
+        "status silenced"
+      ]
+    }
+  }
+}

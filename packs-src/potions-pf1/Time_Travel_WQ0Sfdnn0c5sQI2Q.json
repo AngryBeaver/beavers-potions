@@ -1,0 +1,85 @@
+{
+  "_id": "WQ0Sfdnn0c5sQI2Q",
+  "_key": "!items!WQ0Sfdnn0c5sQI2Q",
+  "name": "Time Travel",
+  "type": "consumable",
+  "img": "icons/consumables/potions/bottle-conical-corked-yellow.webp",
+  "system": {
+    "subType": "potion",
+    "description": {
+      "value": "<p>You travel back in time for exactly 30 minutes. You do not change! The world around you does: you coexist with your past self. You start your existence in the past at the exact same spot you are currently in, with exactly the same stats and equipment.</p><p><strong>Rules of time travel:</strong> you cannot change anything affecting your personal perspective of history! Your past self is not aware of your help and does exactly the same as before. If you violate the rules, your time travel ends immediately and you return to your timeline where everything happened as before. (In reality you just opened a new parallel timeline, sadly your mind is bonded to this one.)</p><p>When your time is up or after you violate the rules, your existence vanishes while your past self is simultaneously struck down to 0 hit points. When it survives, its mind is the mind of the traveller.</p><p>But wait, why should you then drink this potion? Be creative! The changes you make could change the future thereafter. E.g. you have been chased by an angry mob and ended up in front of a locked door. If only someone had left a key below that doormat.</p>",
+      "instructions": "",
+      "unidentified": ""
+    },
+    "quantity": 1,
+    "weight": {
+      "value": 0.1
+    },
+    "price": 5000,
+    "identified": true,
+    "cl": 1,
+    "uses": {
+      "value": null,
+      "per": "single",
+      "autoDeductChargesCost": "",
+      "maxFormula": "",
+      "rechargeFormula": ""
+    },
+    "actions": [
+      {
+        "_id": "bpactWQ0SfdnDrin",
+        "name": "Drink",
+        "activation": {
+          "type": "standard",
+          "unchained": {
+            "type": "action",
+            "cost": 2
+          }
+        },
+        "duration": {
+          "units": "inst"
+        }
+      }
+    ]
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "beavers-potions": {
+      "potion": true,
+      "buffs": [
+        {
+          "name": "Timeless",
+          "type": "buff",
+          "img": "icons/consumables/potions/bottle-conical-corked-yellow.webp",
+          "system": {
+            "subType": "temp",
+            "active": true,
+            "level": 1,
+            "duration": {
+              "value": "30",
+              "units": "minute",
+              "end": "turnStart"
+            },
+            "changes": [],
+            "conditions": [],
+            "description": {
+              "value": "<p>You travel back in time for exactly 30 minutes. You do not change! The world around you does: you coexist with your past self. You start your existence in the past at the exact same spot you are currently in, with exactly the same stats and equipment.</p><p><strong>Rules of time travel:</strong> you cannot change anything affecting your personal perspective of history! Your past self is not aware of your help and does exactly the same as before. If you violate the rules, your time travel ends immediately and you return to your timeline where everything happened as before. (In reality you just opened a new parallel timeline, sadly your mind is bonded to this one.)</p><p>When your time is up or after you violate the rules, your existence vanishes while your past self is simultaneously struck down to 0 hit points. When it survives, its mind is the mind of the traveller.</p><p>But wait, why should you then drink this potion? Be creative! The changes you make could change the future thereafter. E.g. you have been chased by an angry mob and ended up in front of a locked door. If only someone had left a key below that doormat.</p>"
+            }
+          },
+          "flags": {
+            "beavers-potions": {
+              "source": "time-travel.buff"
+            }
+          }
+        }
+      ],
+      "rarity": "legendary",
+      "rules": []
+    }
+  }
+}

@@ -1,0 +1,150 @@
+{
+  "_id": "kmMTJHkbMUoOLJIy",
+  "_key": "!items!kmMTJHkbMUoOLJIy",
+  "name": "Minor Invisibility",
+  "type": "object",
+  "img": "icons/consumables/potions/bottle-conical-corked-blue.webp",
+  "system": {
+    "description": "<p>You have the invisible condition for 1 minute or until you move, make an attack or cast a spell: attacks against you have disadvantage, your attacks have advantage.</p>",
+    "actions": {
+      "bpactkmMTJHkDrin": {
+        "name": "Drink",
+        "img": "icons/consumables/potions/bottle-conical-corked-blue.webp",
+        "activation": {
+          "type": "action",
+          "cost": 1,
+          "reactionTrigger": ""
+        },
+        "duration": {
+          "unit": "minutes",
+          "value": "1"
+        },
+        "target": {
+          "quantity": "",
+          "type": "self"
+        },
+        "consumers": {
+          "bpconkmMTJHkDrin": {
+            "type": "quantity",
+            "default": true,
+            "itemId": "",
+            "quantity": 1,
+            "deleteOnZero": true,
+            "label": ""
+          }
+        },
+        "rolls": {},
+        "prompts": {},
+        "effects": [
+          "bpfxkmMTJHkb0000"
+        ],
+        "macro": ""
+      }
+    },
+    "objectType": "consumable",
+    "price": {
+      "value": 50,
+      "denomination": "gp",
+      "special": ""
+    },
+    "quantity": 1,
+    "rarity": "common",
+    "weight": 0.5,
+    "source": "",
+    "requiresAttunement": false,
+    "unidentified": false
+  },
+  "effects": [
+    {
+      "_id": "bpfxkmMTJHkb0000",
+      "_key": "!items.effects!kmMTJHkbMUoOLJIy.bpfxkmMTJHkb0000",
+      "name": "Minor Invisibility",
+      "img": "icons/consumables/potions/bottle-conical-corked-blue.webp",
+      "type": "base",
+      "description": "<p>You have the invisible condition for 1 minute or until you move, make an attack or cast a spell: attacks against you have disadvantage, your attacks have advantage.</p>",
+      "system": {
+        "changes": [
+          {
+            "_id": "bpfxkmMTJHkbc000",
+            "key": "flags.a5e.effects.grants.rollMode.attack.all",
+            "type": "override",
+            "value": -1,
+            "phase": "initial",
+            "priority": null
+          },
+          {
+            "_id": "bpfxkmMTJHkbc100",
+            "key": "flags.a5e.effects.rollMode.attack.all",
+            "type": "override",
+            "value": 1,
+            "phase": "initial",
+            "priority": null
+          }
+        ],
+        "magical": true,
+        "applyToSelf": false,
+        "effectType": "onUse"
+      },
+      "disabled": false,
+      "transfer": false,
+      "duration": {
+        "value": 1,
+        "units": "minutes",
+        "expiry": "turnStart",
+        "expired": false
+      },
+      "statuses": [
+        "invisible"
+      ],
+      "flags": {
+        "beavers-potions": {
+          "endOn": [
+            "attack",
+            "spell",
+            "move"
+          ]
+        }
+      },
+      "tint": "#ffffff",
+      "showIcon": 1,
+      "origin": null,
+      "start": null,
+      "sort": 0
+    }
+  ],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "beavers-potions": {
+      "potion": true,
+      "rarity": "common",
+      "rules": [
+        [
+          "status",
+          "invisible"
+        ],
+        [
+          "grants",
+          "disadvantage",
+          {
+            "sight": true
+          }
+        ],
+        [
+          "attackAdvantage"
+        ],
+        [
+          "endOn",
+          [
+            "attack",
+            "spell",
+            "move"
+          ]
+        ]
+      ]
+    }
+  }
+}

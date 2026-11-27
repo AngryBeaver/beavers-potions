@@ -1,0 +1,85 @@
+{
+  "_id": "mEjNxXozN4eKsb98",
+  "_key": "!items!mEjNxXozN4eKsb98",
+  "name": "Liquid Knowledge",
+  "type": "consumable",
+  "img": "icons/consumables/potions/bottle-round-ring-teal.webp",
+  "system": {
+    "subType": "potion",
+    "description": {
+      "value": "<p>For 1 hour, when you see a type of enemy you instantly know one thing about it: its highest or lowest ability, a vulnerability, immunity or resistance, or a special attack.</p>",
+      "instructions": "",
+      "unidentified": ""
+    },
+    "quantity": 1,
+    "weight": {
+      "value": 0.1
+    },
+    "price": 250,
+    "identified": true,
+    "cl": 1,
+    "uses": {
+      "value": null,
+      "per": "single",
+      "autoDeductChargesCost": "",
+      "maxFormula": "",
+      "rechargeFormula": ""
+    },
+    "actions": [
+      {
+        "_id": "bpactmEjNxXoDrin",
+        "name": "Drink",
+        "activation": {
+          "type": "standard",
+          "unchained": {
+            "type": "action",
+            "cost": 2
+          }
+        },
+        "duration": {
+          "units": "inst"
+        }
+      }
+    ]
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "beavers-potions": {
+      "potion": true,
+      "buffs": [
+        {
+          "name": "Liquid Knowledge",
+          "type": "buff",
+          "img": "icons/consumables/potions/bottle-round-ring-teal.webp",
+          "system": {
+            "subType": "temp",
+            "active": true,
+            "level": 1,
+            "duration": {
+              "value": "1",
+              "units": "hour",
+              "end": "turnStart"
+            },
+            "changes": [],
+            "conditions": [],
+            "description": {
+              "value": "<p>For 1 hour, when you see a type of enemy you instantly know one thing about it: its highest or lowest ability, a vulnerability, immunity or resistance, or a special attack.</p>"
+            }
+          },
+          "flags": {
+            "beavers-potions": {
+              "source": "liquid-knowledge.buff"
+            }
+          }
+        }
+      ],
+      "rarity": "uncommon",
+      "rules": []
+    }
+  }
+}

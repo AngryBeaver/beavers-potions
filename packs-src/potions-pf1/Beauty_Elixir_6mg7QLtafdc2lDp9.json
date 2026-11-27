@@ -1,0 +1,97 @@
+{
+  "_id": "6mg7QLtafdc2lDp9",
+  "_key": "!items!6mg7QLtafdc2lDp9",
+  "name": "Beauty Elixir",
+  "type": "consumable",
+  "img": "icons/consumables/potions/bottle-bulb-corked-glowing-red.webp",
+  "system": {
+    "subType": "potion",
+    "description": {
+      "value": "<p>Makes you significantly more attractive for 5 hours: you have advantage on Charisma (Persuasion) checks.</p>",
+      "instructions": "",
+      "unidentified": ""
+    },
+    "quantity": 1,
+    "weight": {
+      "value": 0.1
+    },
+    "price": 50,
+    "identified": true,
+    "cl": 1,
+    "uses": {
+      "value": null,
+      "per": "single",
+      "autoDeductChargesCost": "",
+      "maxFormula": "",
+      "rechargeFormula": ""
+    },
+    "actions": [
+      {
+        "_id": "bpact6mg7QLtDrin",
+        "name": "Drink",
+        "activation": {
+          "type": "standard",
+          "unchained": {
+            "type": "action",
+            "cost": 2
+          }
+        },
+        "duration": {
+          "units": "inst"
+        }
+      }
+    ]
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "beavers-potions": {
+      "potion": true,
+      "buffs": [
+        {
+          "name": "Beauty Elixir",
+          "type": "buff",
+          "img": "icons/consumables/potions/bottle-bulb-corked-glowing-red.webp",
+          "system": {
+            "subType": "temp",
+            "active": true,
+            "level": 1,
+            "duration": {
+              "value": "5",
+              "units": "hour",
+              "end": "turnStart"
+            },
+            "changes": [
+              {
+                "_id": "bpc6mg7Q",
+                "formula": "4",
+                "target": "skill.dip",
+                "type": "circumstance"
+              }
+            ],
+            "conditions": [],
+            "description": {
+              "value": "<p>Makes you significantly more attractive for 5 hours: you have advantage on Charisma (Persuasion) checks.</p>"
+            }
+          },
+          "flags": {
+            "beavers-potions": {
+              "source": "beauty-elixir.buff"
+            }
+          }
+        }
+      ],
+      "rarity": "common",
+      "rules": [
+        [
+          "skillAdvantage",
+          "persuasion"
+        ]
+      ]
+    }
+  }
+}

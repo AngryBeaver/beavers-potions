@@ -1,0 +1,85 @@
+{
+  "_id": "XShdKZEf6oqbyIOh",
+  "_key": "!items!XShdKZEf6oqbyIOh",
+  "name": "Clone Army",
+  "type": "consumable",
+  "img": "icons/consumables/potions/bottle-round-flask-fumes-purple.webp",
+  "system": {
+    "subType": "potion",
+    "description": {
+      "value": "<p>You create a clone of yourself, then you immediately begin to hate each other. You both know only one can survive when the time is up, and you are the original while the other is the clone… obviously. When the other you is still alive when the hour ends, both of you drop dead.</p>",
+      "instructions": "",
+      "unidentified": ""
+    },
+    "quantity": 1,
+    "weight": {
+      "value": 0.1
+    },
+    "price": 5000,
+    "identified": true,
+    "cl": 1,
+    "uses": {
+      "value": null,
+      "per": "single",
+      "autoDeductChargesCost": "",
+      "maxFormula": "",
+      "rechargeFormula": ""
+    },
+    "actions": [
+      {
+        "_id": "bpactXShdKZEDrin",
+        "name": "Drink",
+        "activation": {
+          "type": "standard",
+          "unchained": {
+            "type": "action",
+            "cost": 2
+          }
+        },
+        "duration": {
+          "units": "inst"
+        }
+      }
+    ]
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "beavers-potions": {
+      "potion": true,
+      "buffs": [
+        {
+          "name": "Clone Army",
+          "type": "buff",
+          "img": "icons/consumables/potions/bottle-round-flask-fumes-purple.webp",
+          "system": {
+            "subType": "temp",
+            "active": true,
+            "level": 1,
+            "duration": {
+              "value": "1",
+              "units": "hour",
+              "end": "turnStart"
+            },
+            "changes": [],
+            "conditions": [],
+            "description": {
+              "value": "<p>You create a clone of yourself, then you immediately begin to hate each other. You both know only one can survive when the time is up, and you are the original while the other is the clone… obviously. When the other you is still alive when the hour ends, both of you drop dead.</p>"
+            }
+          },
+          "flags": {
+            "beavers-potions": {
+              "source": "clone-army.buff"
+            }
+          }
+        }
+      ],
+      "rarity": "legendary",
+      "rules": []
+    }
+  }
+}

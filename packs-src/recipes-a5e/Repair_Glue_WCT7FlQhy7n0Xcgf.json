@@ -1,0 +1,85 @@
+{
+  "_id": "WCT7FlQhy7n0Xcgf",
+  "_key": "!items!WCT7FlQhy7n0Xcgf",
+  "name": "Repair Glue",
+  "type": "object",
+  "img": "icons/sundries/scrolls/scroll-worn-tan.webp",
+  "system": {
+    "description": "<p>A recipe of Beaver's Potions, it needs the module Beaver's Crafting.</p><p>Brewing: Nature check DC 8.</p>",
+    "objectType": "miscellaneous",
+    "price": {
+      "value": 0,
+      "denomination": "gp",
+      "special": ""
+    },
+    "quantity": 1,
+    "weight": 0,
+    "actions": {}
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "beavers-crafting": {
+      "subtype": "Recipe",
+      "recipe": {
+        "required": {},
+        "input": {
+          "1": {
+            "Compendium-beavers-potions-ingredients-a5e-Item-NHWQ6levQ3apHpN2": {
+              "id": "NHWQ6levQ3apHpN2",
+              "uuid": "Compendium.beavers-potions.ingredients-a5e.Item.NHWQ6levQ3apHpN2",
+              "img": "icons/consumables/mushrooms/ovate-thin-blue.webp",
+              "name": "Silver Dart",
+              "type": "Item",
+              "itemType": "object",
+              "quantity": 5
+            }
+          }
+        },
+        "output": {
+          "1": {
+            "Compendium-beavers-potions-potions-a5e-Item-SUJ0FsFU1YlW8Ail": {
+              "id": "SUJ0FsFU1YlW8Ail",
+              "uuid": "Compendium.beavers-potions.potions-a5e.Item.SUJ0FsFU1YlW8Ail",
+              "img": "icons/consumables/potions/bottle-conical-corked-purple.webp",
+              "name": "Repair Glue",
+              "type": "Item",
+              "itemType": "object",
+              "quantity": 1
+            }
+          }
+        },
+        "currency": {
+          "name": "gp",
+          "value": 5
+        },
+        "beaversTests": {
+          "fails": 1,
+          "consume": true,
+          "failsInARow": false,
+          "ands": {
+            "1": {
+              "hits": 1,
+              "ors": {
+                "1": {
+                  "type": "SkillTest",
+                  "data": {
+                    "dc": 8,
+                    "skill": "nat"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "macro": "",
+        "folder": "Beaver's Potions",
+        "kind": "recipe"
+      }
+    }
+  }
+}

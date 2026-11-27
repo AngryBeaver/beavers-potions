@@ -1,0 +1,352 @@
+{
+  "dnd5e": {
+    "Aid Greater": [],
+    "Batman": [],
+    "Beauty Elixir": [],
+    "Blur": [],
+    "Bug Shield": [],
+    "Casters Overtime": [],
+    "Casters Overtime Greater": [],
+    "Casters Overtime Superior": [],
+    "Casters Overtime Supreme": [],
+    "Clone Army": [],
+    "Cobra Kai": [],
+    "Comfort": [],
+    "Comprehend Languages": [],
+    "Cure Disease": [],
+    "Cure Undead": [],
+    "Detect Magic": [],
+    "Distortion": [],
+    "Feral Instinct": [],
+    "Frost Armor": [],
+    "Frost Armor Greater": [],
+    "Glimpse of Future": [],
+    "Gold Rush": [],
+    "Ice Devil": [],
+    "Keen Sense": [],
+    "Life Shell": [],
+    "Life Shell Greater": [],
+    "Liquid Knowledge": [],
+    "Live Essence": [],
+    "Messenger's Potion": [],
+    "Minor Invisibility": [],
+    "Overconfident": [],
+    "Overload Attunement": [],
+    "Pass Without Trace": [],
+    "Plant Nourishment": [],
+    "Protection From Death": [],
+    "Radio Activity": [],
+    "Reflect Damage": [],
+    "Regeneration": [],
+    "Repair Glue": [],
+    "Restoration Greater": [],
+    "Restoration Lesser": [],
+    "Shield of Energy": [],
+    "Speak Language": [],
+    "Specialist (Mage)": [],
+    "Specialist (Melee)": [],
+    "Specialist (Ranged)": [],
+    "Time Stop": [],
+    "Time Travel": [],
+    "Tree Friend": [],
+    "Weightless": []
+  },
+  "a5e": {
+    "Aid Greater": [],
+    "Batman": [
+      "status silenced"
+    ],
+    "Beauty Elixir": [],
+    "Blur": [],
+    "Bug Shield": [],
+    "Casters Overtime": [
+      "grants critical"
+    ],
+    "Casters Overtime Greater": [
+      "grants critical"
+    ],
+    "Casters Overtime Superior": [
+      "grants critical"
+    ],
+    "Casters Overtime Supreme": [
+      "grants critical"
+    ],
+    "Clone Army": [],
+    "Cobra Kai": [
+      "transform"
+    ],
+    "Comfort": [],
+    "Comprehend Languages": [],
+    "Cure Disease": [
+      "cure diseased"
+    ],
+    "Cure Undead": [],
+    "Detect Magic": [],
+    "Distortion": [],
+    "Feral Instinct": [],
+    "Frost Armor": [],
+    "Frost Armor Greater": [],
+    "Glimpse of Future": [],
+    "Gold Rush": [],
+    "Ice Devil": [
+      "transform"
+    ],
+    "Keen Sense": [],
+    "Life Shell": [],
+    "Life Shell Greater": [],
+    "Liquid Knowledge": [],
+    "Live Essence": [],
+    "Messenger's Potion": [],
+    "Minor Invisibility": [],
+    "Overconfident": [],
+    "Overload Attunement": [],
+    "Pass Without Trace": [],
+    "Plant Nourishment": [],
+    "Protection From Death": [],
+    "Radio Activity": [],
+    "Reflect Damage": [
+      "reflectDamage"
+    ],
+    "Regeneration": [],
+    "Repair Glue": [],
+    "Restoration Greater": [],
+    "Restoration Lesser": [],
+    "Shield of Energy": [],
+    "Speak Language": [],
+    "Specialist (Mage)": [],
+    "Specialist (Melee)": [],
+    "Specialist (Ranged)": [],
+    "Time Stop": [],
+    "Time Travel": [],
+    "Tree Friend": [],
+    "Weightless": []
+  },
+  "pf1": {
+    "Aid Greater": [],
+    "Batman": [
+      "sense",
+      "status silenced"
+    ],
+    "Beauty Elixir": [],
+    "Blur": [],
+    "Bug Shield": [],
+    "Casters Overtime": [
+      "grants critical"
+    ],
+    "Casters Overtime Greater": [
+      "grants critical"
+    ],
+    "Casters Overtime Superior": [
+      "grants critical"
+    ],
+    "Casters Overtime Supreme": [
+      "grants critical"
+    ],
+    "Clone Army": [],
+    "Cobra Kai": [
+      "transform"
+    ],
+    "Comfort": [],
+    "Comprehend Languages": [],
+    "Cure Disease": [
+      "cure diseased"
+    ],
+    "Cure Undead": [],
+    "Detect Magic": [],
+    "Distortion": [],
+    "Feral Instinct": [],
+    "Frost Armor": [],
+    "Frost Armor Greater": [],
+    "Glimpse of Future": [],
+    "Gold Rush": [],
+    "Ice Devil": [
+      "transform"
+    ],
+    "Keen Sense": [],
+    "Life Shell": [],
+    "Life Shell Greater": [],
+    "Liquid Knowledge": [],
+    "Live Essence": [],
+    "Messenger's Potion": [],
+    "Minor Invisibility": [],
+    "Overconfident": [
+      "conditionImmunity"
+    ],
+    "Overload Attunement": [
+      "attunement"
+    ],
+    "Pass Without Trace": [],
+    "Plant Nourishment": [],
+    "Protection From Death": [],
+    "Radio Activity": [],
+    "Reflect Damage": [
+      "reflectDamage"
+    ],
+    "Regeneration": [],
+    "Repair Glue": [],
+    "Restoration Greater": [],
+    "Restoration Lesser": [],
+    "Shield of Energy": [],
+    "Speak Language": [],
+    "Specialist (Mage)": [],
+    "Specialist (Melee)": [],
+    "Specialist (Ranged)": [],
+    "Time Stop": [],
+    "Time Travel": [],
+    "Tree Friend": [],
+    "Weightless": [
+      "status hovering"
+    ]
+  },
+  "pf2e": {
+    "Aid Greater": [],
+    "Batman": [
+      "status silenced"
+    ],
+    "Beauty Elixir": [],
+    "Blur": [],
+    "Bug Shield": [],
+    "Casters Overtime": [
+      "grants critical"
+    ],
+    "Casters Overtime Greater": [
+      "grants critical"
+    ],
+    "Casters Overtime Superior": [
+      "grants critical"
+    ],
+    "Casters Overtime Supreme": [
+      "grants critical"
+    ],
+    "Clone Army": [],
+    "Cobra Kai": [
+      "transform"
+    ],
+    "Comfort": [],
+    "Comprehend Languages": [],
+    "Cure Disease": [
+      "cure diseased"
+    ],
+    "Cure Undead": [],
+    "Detect Magic": [],
+    "Distortion": [],
+    "Feral Instinct": [],
+    "Frost Armor": [],
+    "Frost Armor Greater": [],
+    "Glimpse of Future": [],
+    "Gold Rush": [],
+    "Ice Devil": [
+      "transform"
+    ],
+    "Keen Sense": [],
+    "Life Shell": [],
+    "Life Shell Greater": [],
+    "Liquid Knowledge": [],
+    "Live Essence": [],
+    "Messenger's Potion": [],
+    "Minor Invisibility": [],
+    "Overconfident": [],
+    "Overload Attunement": [
+      "attunement"
+    ],
+    "Pass Without Trace": [],
+    "Plant Nourishment": [],
+    "Protection From Death": [],
+    "Radio Activity": [],
+    "Reflect Damage": [
+      "reflectDamage"
+    ],
+    "Regeneration": [],
+    "Repair Glue": [],
+    "Restoration Greater": [],
+    "Restoration Lesser": [],
+    "Shield of Energy": [],
+    "Speak Language": [],
+    "Specialist (Mage)": [],
+    "Specialist (Melee)": [],
+    "Specialist (Ranged)": [],
+    "Time Stop": [],
+    "Time Travel": [],
+    "Tree Friend": [],
+    "Weightless": [
+      "status hovering"
+    ]
+  },
+  "D35E": {
+    "Aid Greater": [],
+    "Batman": [
+      "sense",
+      "status silenced"
+    ],
+    "Beauty Elixir": [],
+    "Blur": [],
+    "Bug Shield": [],
+    "Casters Overtime": [
+      "grants critical"
+    ],
+    "Casters Overtime Greater": [
+      "grants critical"
+    ],
+    "Casters Overtime Superior": [
+      "grants critical"
+    ],
+    "Casters Overtime Supreme": [
+      "grants critical"
+    ],
+    "Clone Army": [],
+    "Cobra Kai": [
+      "transform"
+    ],
+    "Comfort": [],
+    "Comprehend Languages": [],
+    "Cure Disease": [
+      "cure diseased"
+    ],
+    "Cure Undead": [],
+    "Detect Magic": [],
+    "Distortion": [],
+    "Feral Instinct": [],
+    "Frost Armor": [],
+    "Frost Armor Greater": [],
+    "Glimpse of Future": [],
+    "Gold Rush": [],
+    "Ice Devil": [
+      "transform"
+    ],
+    "Keen Sense": [],
+    "Life Shell": [],
+    "Life Shell Greater": [],
+    "Liquid Knowledge": [],
+    "Live Essence": [],
+    "Messenger's Potion": [],
+    "Minor Invisibility": [],
+    "Overconfident": [
+      "conditionImmunity"
+    ],
+    "Overload Attunement": [
+      "attunement"
+    ],
+    "Pass Without Trace": [],
+    "Plant Nourishment": [],
+    "Protection From Death": [],
+    "Radio Activity": [],
+    "Reflect Damage": [
+      "reflectDamage"
+    ],
+    "Regeneration": [],
+    "Repair Glue": [],
+    "Restoration Greater": [],
+    "Restoration Lesser": [],
+    "Shield of Energy": [],
+    "Speak Language": [],
+    "Specialist (Mage)": [],
+    "Specialist (Melee)": [],
+    "Specialist (Ranged)": [],
+    "Time Stop": [],
+    "Time Travel": [],
+    "Tree Friend": [],
+    "Weightless": [
+      "status hovering"
+    ]
+  }
+}

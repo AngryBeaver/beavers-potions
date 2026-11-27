@@ -1,0 +1,115 @@
+{
+  "_id": "yDfNPSQ296iityij",
+  "_key": "!items!yDfNPSQ296iityij",
+  "name": "Pass Without Trace",
+  "type": "object",
+  "img": "icons/consumables/potions/bottle-round-corked-yellow.webp",
+  "system": {
+    "description": "<p>For 1 hour you can move through any type of terrain and leave neither footprints nor scent: you have a +10 bonus to Dexterity (Stealth) checks and you cannot be tracked except by magical means.</p>",
+    "actions": {
+      "bpactyDfNPSQDrin": {
+        "name": "Drink",
+        "img": "icons/consumables/potions/bottle-round-corked-yellow.webp",
+        "activation": {
+          "type": "action",
+          "cost": 1,
+          "reactionTrigger": ""
+        },
+        "duration": {
+          "unit": "hours",
+          "value": "1"
+        },
+        "target": {
+          "quantity": "",
+          "type": "self"
+        },
+        "consumers": {
+          "bpconyDfNPSQDrin": {
+            "type": "quantity",
+            "default": true,
+            "itemId": "",
+            "quantity": 1,
+            "deleteOnZero": true,
+            "label": ""
+          }
+        },
+        "rolls": {},
+        "prompts": {},
+        "effects": [
+          "bpfxyDfNPSQ20000"
+        ],
+        "macro": ""
+      }
+    },
+    "objectType": "consumable",
+    "price": {
+      "value": 250,
+      "denomination": "gp",
+      "special": ""
+    },
+    "quantity": 1,
+    "rarity": "uncommon",
+    "weight": 0.5,
+    "source": "",
+    "requiresAttunement": false,
+    "unidentified": false
+  },
+  "effects": [
+    {
+      "_id": "bpfxyDfNPSQ20000",
+      "_key": "!items.effects!yDfNPSQ296iityij.bpfxyDfNPSQ20000",
+      "name": "Pass Without Trace",
+      "img": "icons/consumables/potions/bottle-round-corked-yellow.webp",
+      "type": "base",
+      "description": "<p>For 1 hour you can move through any type of terrain and leave neither footprints nor scent: you have a +10 bonus to Dexterity (Stealth) checks and you cannot be tracked except by magical means.</p>",
+      "system": {
+        "changes": [
+          {
+            "_id": "bpfxyDfNPSQ2c000",
+            "key": "system.skills.ste.bonuses.check",
+            "type": "add",
+            "value": "10",
+            "phase": "initial",
+            "priority": null
+          }
+        ],
+        "magical": true,
+        "applyToSelf": false,
+        "effectType": "onUse"
+      },
+      "disabled": false,
+      "transfer": false,
+      "duration": {
+        "value": 1,
+        "units": "hours",
+        "expiry": "turnStart",
+        "expired": false
+      },
+      "statuses": [],
+      "flags": {},
+      "tint": "#ffffff",
+      "showIcon": 1,
+      "origin": null,
+      "start": null,
+      "sort": 0
+    }
+  ],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "beavers-potions": {
+      "potion": true,
+      "rarity": "uncommon",
+      "rules": [
+        [
+          "skillBonus",
+          "stealth",
+          10
+        ]
+      ]
+    }
+  }
+}

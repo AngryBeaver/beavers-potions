@@ -145,7 +145,18 @@
       "potion": true,
       "use": {
         "onlyType": "undead"
-      }
+      },
+      "rarity": "common",
+      "rules": [
+        [
+          "heal",
+          "2d4 + 2"
+        ],
+        [
+          "onlyCreatureType",
+          "undead"
+        ]
+      ]
     }
   }
 }

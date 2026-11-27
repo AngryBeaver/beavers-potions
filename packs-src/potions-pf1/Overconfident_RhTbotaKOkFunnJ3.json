@@ -1,0 +1,93 @@
+{
+  "_id": "RhTbotaKOkFunnJ3",
+  "_key": "!items!RhTbotaKOkFunnJ3",
+  "name": "Overconfident",
+  "type": "consumable",
+  "img": "icons/consumables/potions/bottle-pear-corked-labeled-ornamental-purple.webp",
+  "system": {
+    "subType": "potion",
+    "description": {
+      "value": "<p>You are confident that you can do almost everything. For the next 10 minutes you are immune to being frightened, while you are also willing to take more risks.</p>",
+      "instructions": "",
+      "unidentified": ""
+    },
+    "quantity": 1,
+    "weight": {
+      "value": 0.1
+    },
+    "price": 250,
+    "identified": true,
+    "cl": 1,
+    "uses": {
+      "value": null,
+      "per": "single",
+      "autoDeductChargesCost": "",
+      "maxFormula": "",
+      "rechargeFormula": ""
+    },
+    "actions": [
+      {
+        "_id": "bpactRhTbotaDrin",
+        "name": "Drink",
+        "activation": {
+          "type": "standard",
+          "unchained": {
+            "type": "action",
+            "cost": 2
+          }
+        },
+        "duration": {
+          "units": "inst"
+        }
+      }
+    ]
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "beavers-potions": {
+      "potion": true,
+      "buffs": [
+        {
+          "name": "Overconfident",
+          "type": "buff",
+          "img": "icons/consumables/potions/bottle-pear-corked-labeled-ornamental-purple.webp",
+          "system": {
+            "subType": "temp",
+            "active": true,
+            "level": 1,
+            "duration": {
+              "value": "10",
+              "units": "minute",
+              "end": "turnStart"
+            },
+            "changes": [],
+            "conditions": [],
+            "description": {
+              "value": "<p>You are confident that you can do almost everything. For the next 10 minutes you are immune to being frightened, while you are also willing to take more risks.</p>"
+            }
+          },
+          "flags": {
+            "beavers-potions": {
+              "source": "overconfident.buff"
+            }
+          }
+        }
+      ],
+      "rarity": "uncommon",
+      "rules": [
+        [
+          "conditionImmunity",
+          "frightened"
+        ]
+      ],
+      "unsupported": [
+        "conditionImmunity"
+      ]
+    }
+  }
+}

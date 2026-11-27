@@ -1,0 +1,112 @@
+{
+  "_id": "NRltRDCfJCTu6frt",
+  "_key": "!items!NRltRDCfJCTu6frt",
+  "name": "Plant Nourishment",
+  "type": "consumable",
+  "img": "icons/consumables/potions/bottle-conical-bubbling-blue.webp",
+  "system": {
+    "subType": "potion",
+    "description": {
+      "value": "<p>Makes plants grow 10 times faster than normal over the course of a year, and cures any blights or wounds the plants have suffered. 1 dose poured on the ground affects all plants in a 40 ft. radius.</p><p>If drunk by a person it results in the permanent loss of 1 Wisdom.</p>",
+      "instructions": "",
+      "unidentified": ""
+    },
+    "quantity": 1,
+    "weight": {
+      "value": 0.1
+    },
+    "price": 50,
+    "identified": true,
+    "cl": 1,
+    "uses": {
+      "value": null,
+      "per": "single",
+      "autoDeductChargesCost": "",
+      "maxFormula": "",
+      "rechargeFormula": ""
+    },
+    "actions": [
+      {
+        "_id": "bpactNRltRDCDrin",
+        "name": "Drink",
+        "activation": {
+          "type": "standard",
+          "unchained": {
+            "type": "action",
+            "cost": 2
+          }
+        },
+        "duration": {
+          "units": "inst"
+        }
+      },
+      {
+        "_id": "bpactNRltRDCPour",
+        "name": "Pour",
+        "activation": {
+          "type": "standard",
+          "unchained": {
+            "type": "action",
+            "cost": 2
+          }
+        },
+        "duration": {
+          "units": "inst"
+        }
+      }
+    ]
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "beavers-potions": {
+      "potion": true,
+      "buffs": [
+        {
+          "name": "Plant Nourishment (drunk)",
+          "type": "buff",
+          "img": "icons/consumables/potions/bottle-conical-bubbling-blue.webp",
+          "system": {
+            "subType": "temp",
+            "active": true,
+            "level": 1,
+            "duration": {
+              "value": null,
+              "units": "perm",
+              "end": ""
+            },
+            "changes": [
+              {
+                "_id": "bpcNRltR",
+                "formula": "-1",
+                "target": "wis",
+                "type": "untyped"
+              }
+            ],
+            "conditions": [],
+            "description": {
+              "value": "<p>Makes plants grow 10 times faster than normal over the course of a year, and cures any blights or wounds the plants have suffered. 1 dose poured on the ground affects all plants in a 40 ft. radius.</p><p>If drunk by a person it results in the permanent loss of 1 Wisdom.</p>"
+            }
+          },
+          "flags": {
+            "beavers-potions": {
+              "source": "plant-nourishment.buff"
+            }
+          }
+        }
+      ],
+      "rarity": "common",
+      "rules": [
+        [
+          "ability",
+          "wis",
+          -1
+        ]
+      ]
+    }
+  }
+}

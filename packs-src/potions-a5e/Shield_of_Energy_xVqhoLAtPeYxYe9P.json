@@ -1,0 +1,123 @@
+{
+  "_id": "xVqhoLAtPeYxYe9P",
+  "_key": "!items!xVqhoLAtPeYxYe9P",
+  "name": "Shield of Energy",
+  "type": "object",
+  "img": "icons/consumables/potions/bottle-round-empty-glass.webp",
+  "system": {
+    "description": "<p>You create a gleaming sphere of energy with a 10 ft. radius centered on you. For 1 minute everyone within it when it forms (you included) gets a +2 bonus to AC.</p>",
+    "actions": {
+      "bpactxVqhoLADrin": {
+        "name": "Drink",
+        "img": "icons/consumables/potions/bottle-round-empty-glass.webp",
+        "activation": {
+          "type": "action",
+          "cost": 1,
+          "reactionTrigger": ""
+        },
+        "duration": {
+          "unit": "minutes",
+          "value": "1"
+        },
+        "target": {
+          "quantity": "",
+          "type": "self"
+        },
+        "consumers": {
+          "bpconxVqhoLADrin": {
+            "type": "quantity",
+            "default": true,
+            "itemId": "",
+            "quantity": 1,
+            "deleteOnZero": true,
+            "label": ""
+          }
+        },
+        "rolls": {},
+        "prompts": {},
+        "effects": [
+          "bpfxxVqhoLAt0000"
+        ],
+        "macro": ""
+      }
+    },
+    "objectType": "consumable",
+    "price": {
+      "value": 750,
+      "denomination": "gp",
+      "special": ""
+    },
+    "quantity": 1,
+    "rarity": "rare",
+    "weight": 0.5,
+    "source": "",
+    "requiresAttunement": false,
+    "unidentified": false
+  },
+  "effects": [
+    {
+      "_id": "bpfxxVqhoLAt0000",
+      "_key": "!items.effects!xVqhoLAtPeYxYe9P.bpfxxVqhoLAt0000",
+      "name": "Shield of Energy",
+      "img": "icons/consumables/potions/bottle-round-empty-glass.webp",
+      "type": "base",
+      "description": "<p>You create a gleaming sphere of energy with a 10 ft. radius centered on you. For 1 minute everyone within it when it forms (you included) gets a +2 bonus to AC.</p>",
+      "system": {
+        "changes": [
+          {
+            "_id": "bpfxxVqhoLAtc000",
+            "key": "system.attributes.ac.changes.bonuses.value",
+            "type": "add",
+            "value": "2",
+            "phase": "initial",
+            "priority": null
+          }
+        ],
+        "magical": true,
+        "applyToSelf": false,
+        "effectType": "onUse"
+      },
+      "disabled": false,
+      "transfer": false,
+      "duration": {
+        "value": 1,
+        "units": "minutes",
+        "expiry": "turnStart",
+        "expired": false
+      },
+      "statuses": [],
+      "flags": {},
+      "tint": "#ffffff",
+      "showIcon": 1,
+      "origin": null,
+      "start": null,
+      "sort": 0
+    }
+  ],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "beavers-potions": {
+      "potion": true,
+      "use": {
+        "area": {
+          "radius": 10
+        }
+      },
+      "rarity": "rare",
+      "rules": [
+        [
+          "ac",
+          2
+        ],
+        [
+          "area",
+          10
+        ]
+      ]
+    }
+  }
+}

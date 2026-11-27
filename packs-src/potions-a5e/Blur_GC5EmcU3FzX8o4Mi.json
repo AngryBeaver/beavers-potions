@@ -1,0 +1,117 @@
+{
+  "_id": "GC5EmcU3FzX8o4Mi",
+  "_key": "!items!GC5EmcU3FzX8o4Mi",
+  "name": "Blur",
+  "type": "object",
+  "img": "icons/consumables/potions/bottle-round-label-cork-blue.webp",
+  "system": {
+    "description": "<p>Your body becomes blurred, shifting and wavering to all who can see you. For 1 minute any creature has disadvantage on attack rolls against you. An attacker is immune to this effect if it doesn't rely on sight, as with blindsight, or can see through illusions, as with truesight.</p>",
+    "actions": {
+      "bpactGC5EmcUDrin": {
+        "name": "Drink",
+        "img": "icons/consumables/potions/bottle-round-label-cork-blue.webp",
+        "activation": {
+          "type": "action",
+          "cost": 1,
+          "reactionTrigger": ""
+        },
+        "duration": {
+          "unit": "minutes",
+          "value": "1"
+        },
+        "target": {
+          "quantity": "",
+          "type": "self"
+        },
+        "consumers": {
+          "bpconGC5EmcUDrin": {
+            "type": "quantity",
+            "default": true,
+            "itemId": "",
+            "quantity": 1,
+            "deleteOnZero": true,
+            "label": ""
+          }
+        },
+        "rolls": {},
+        "prompts": {},
+        "effects": [
+          "bpfxGC5EmcU30000"
+        ],
+        "macro": ""
+      }
+    },
+    "objectType": "consumable",
+    "price": {
+      "value": 750,
+      "denomination": "gp",
+      "special": ""
+    },
+    "quantity": 1,
+    "rarity": "rare",
+    "weight": 0.5,
+    "source": "",
+    "requiresAttunement": false,
+    "unidentified": false
+  },
+  "effects": [
+    {
+      "_id": "bpfxGC5EmcU30000",
+      "_key": "!items.effects!GC5EmcU3FzX8o4Mi.bpfxGC5EmcU30000",
+      "name": "Blur",
+      "img": "icons/consumables/potions/bottle-round-label-cork-blue.webp",
+      "type": "base",
+      "description": "<p>Your body becomes blurred, shifting and wavering to all who can see you. For 1 minute any creature has disadvantage on attack rolls against you. An attacker is immune to this effect if it doesn't rely on sight, as with blindsight, or can see through illusions, as with truesight.</p>",
+      "system": {
+        "changes": [
+          {
+            "_id": "bpfxGC5EmcU3c000",
+            "key": "flags.a5e.effects.grants.rollMode.attack.all",
+            "type": "override",
+            "value": -1,
+            "phase": "initial",
+            "priority": null
+          }
+        ],
+        "magical": true,
+        "applyToSelf": false,
+        "effectType": "onUse"
+      },
+      "disabled": false,
+      "transfer": false,
+      "duration": {
+        "value": 1,
+        "units": "minutes",
+        "expiry": "turnStart",
+        "expired": false
+      },
+      "statuses": [],
+      "flags": {},
+      "tint": "#ffffff",
+      "showIcon": 1,
+      "origin": null,
+      "start": null,
+      "sort": 0
+    }
+  ],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "beavers-potions": {
+      "potion": true,
+      "rarity": "rare",
+      "rules": [
+        [
+          "grants",
+          "disadvantage",
+          {
+            "sight": true
+          }
+        ]
+      ]
+    }
+  }
+}

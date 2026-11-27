@@ -1,0 +1,59 @@
+{
+  "_id": "0aHuyVIccJtLDbtq",
+  "_key": "!items!0aHuyVIccJtLDbtq",
+  "name": "Glimpse of Future",
+  "type": "consumable",
+  "img": "icons/consumables/potions/bottle-corked-empty.webp",
+  "system": {
+    "subType": "potion",
+    "description": {
+      "value": "<p>You glimpse into your possible near future where you see yourself in a single snapshot moment. E.g. it shows you standing in front of a specific building, maybe this is the hideout you are searching for? Or it shows you freezing in cold snow while wearing shorts, maybe you should pack better clothes?</p>",
+      "instructions": "",
+      "unidentified": ""
+    },
+    "quantity": 1,
+    "weight": {
+      "value": 0.1
+    },
+    "price": 250,
+    "identified": true,
+    "cl": 1,
+    "uses": {
+      "value": null,
+      "per": "single",
+      "autoDeductChargesCost": "",
+      "maxFormula": "",
+      "rechargeFormula": ""
+    },
+    "actions": [
+      {
+        "_id": "bpact0aHuyVIDrin",
+        "name": "Drink",
+        "activation": {
+          "type": "standard",
+          "unchained": {
+            "type": "action",
+            "cost": 2
+          }
+        },
+        "duration": {
+          "units": "inst"
+        }
+      }
+    ]
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "beavers-potions": {
+      "potion": true,
+      "buffs": [],
+      "rarity": "uncommon",
+      "rules": []
+    }
+  }
+}

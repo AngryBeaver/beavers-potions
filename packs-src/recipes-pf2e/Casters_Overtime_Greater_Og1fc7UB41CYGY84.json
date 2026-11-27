@@ -1,0 +1,126 @@
+{
+  "_id": "Og1fc7UB41CYGY84",
+  "_key": "!items!Og1fc7UB41CYGY84",
+  "name": "Casters Overtime Greater",
+  "type": "treasure",
+  "img": "icons/sundries/scrolls/scroll-worn-tan.webp",
+  "system": {
+    "description": {
+      "value": "<p>A recipe of Beaver's Potions, it needs the module Beaver's Crafting.</p><p>Brewing: Arcana check DC 17.</p>"
+    },
+    "level": {
+      "value": 0
+    },
+    "price": {
+      "value": {}
+    },
+    "quantity": 1,
+    "bulk": {
+      "value": 0
+    },
+    "traits": {
+      "value": [],
+      "rarity": "common"
+    },
+    "slug": "recipe-casters-overtime-greater"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "beavers-crafting": {
+      "subtype": "Recipe",
+      "recipe": {
+        "required": {},
+        "input": {
+          "1": {
+            "Compendium-beavers-potions-ingredients-pf2e-Item-EBn04GlzYZdMi23m": {
+              "id": "EBn04GlzYZdMi23m",
+              "uuid": "Compendium.beavers-potions.ingredients-pf2e.Item.EBn04GlzYZdMi23m",
+              "img": "icons/consumables/mushrooms/helm-purple-shiny.webp",
+              "name": "Astrid Lindworm",
+              "type": "Item",
+              "itemType": "treasure",
+              "quantity": 5
+            }
+          },
+          "2": {
+            "Compendium-beavers-potions-ingredients-pf2e-Item-MNUTlx4UjXSRzW25": {
+              "id": "MNUTlx4UjXSRzW25",
+              "uuid": "Compendium.beavers-potions.ingredients-pf2e.Item.MNUTlx4UjXSRzW25",
+              "img": "icons/consumables/mushrooms/conical-bell-orange-white.webp",
+              "name": "Guepinia",
+              "type": "Item",
+              "itemType": "treasure",
+              "quantity": 5
+            }
+          },
+          "3": {
+            "Compendium-beavers-potions-ingredients-pf2e-Item-rG0lI6sHUR8b2xvD": {
+              "id": "rG0lI6sHUR8b2xvD",
+              "uuid": "Compendium.beavers-potions.ingredients-pf2e.Item.rG0lI6sHUR8b2xvD",
+              "img": "icons/consumables/mushrooms/campanulate-bell-shiny-bumpy-red.webp",
+              "name": "Manticore Drops",
+              "type": "Item",
+              "itemType": "treasure",
+              "quantity": 5
+            }
+          },
+          "4": {
+            "Compendium-beavers-potions-ingredients-pf2e-Item-dozjFH55CR4npT6F": {
+              "id": "dozjFH55CR4npT6F",
+              "uuid": "Compendium.beavers-potions.ingredients-pf2e.Item.dozjFH55CR4npT6F",
+              "img": "icons/tools/laboratory/bowl-powder-purple.webp",
+              "name": "Magical Essence",
+              "type": "Item",
+              "itemType": "treasure",
+              "quantity": 2
+            }
+          }
+        },
+        "output": {
+          "1": {
+            "Compendium-beavers-potions-potions-pf2e-Item-TPY2dFuG7d6kXgXx": {
+              "id": "TPY2dFuG7d6kXgXx",
+              "uuid": "Compendium.beavers-potions.potions-pf2e.Item.TPY2dFuG7d6kXgXx",
+              "img": "icons/consumables/potions/bottle-metal-yellow-gray.webp",
+              "name": "Casters Overtime Greater",
+              "type": "Item",
+              "itemType": "consumable",
+              "quantity": 1
+            }
+          }
+        },
+        "currency": {
+          "name": "gp",
+          "value": 250
+        },
+        "beaversTests": {
+          "fails": 1,
+          "consume": true,
+          "failsInARow": false,
+          "ands": {
+            "1": {
+              "hits": 1,
+              "ors": {
+                "1": {
+                  "type": "SkillTest",
+                  "data": {
+                    "dc": 17,
+                    "skill": "arcana"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "macro": "",
+        "folder": "Beaver's Potions",
+        "kind": "recipe"
+      }
+    }
+  }
+}

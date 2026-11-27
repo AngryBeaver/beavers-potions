@@ -1,0 +1,112 @@
+{
+  "_id": "SUJ0FsFU1YlW8Ail",
+  "_key": "!items!SUJ0FsFU1YlW8Ail",
+  "name": "Repair Glue",
+  "type": "consumable",
+  "img": "icons/consumables/potions/bottle-conical-corked-purple.webp",
+  "system": {
+    "subType": "potion",
+    "description": {
+      "value": "<p>Repairs small breaks or tears in objects. 1 dose poured on objects weighing 10 lb. in total.</p><p>If drunk by a person it results in the permanent loss of 1 Wisdom.</p>",
+      "instructions": "",
+      "unidentified": ""
+    },
+    "quantity": 1,
+    "weight": {
+      "value": 0.1
+    },
+    "price": 50,
+    "identified": true,
+    "cl": 1,
+    "uses": {
+      "value": null,
+      "per": "single",
+      "autoDeductChargesCost": "",
+      "maxFormula": "",
+      "rechargeFormula": ""
+    },
+    "actions": [
+      {
+        "_id": "bpactSUJ0FsFDrin",
+        "name": "Drink",
+        "activation": {
+          "type": "standard",
+          "unchained": {
+            "type": "action",
+            "cost": 2
+          }
+        },
+        "duration": {
+          "units": "inst"
+        }
+      },
+      {
+        "_id": "bpactSUJ0FsFPour",
+        "name": "Pour",
+        "activation": {
+          "type": "standard",
+          "unchained": {
+            "type": "action",
+            "cost": 2
+          }
+        },
+        "duration": {
+          "units": "inst"
+        }
+      }
+    ]
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "beavers-potions": {
+      "potion": true,
+      "buffs": [
+        {
+          "name": "Repair Glue (drunk)",
+          "type": "buff",
+          "img": "icons/consumables/potions/bottle-conical-corked-purple.webp",
+          "system": {
+            "subType": "temp",
+            "active": true,
+            "level": 1,
+            "duration": {
+              "value": null,
+              "units": "perm",
+              "end": ""
+            },
+            "changes": [
+              {
+                "_id": "bpcSUJ0F",
+                "formula": "-1",
+                "target": "wis",
+                "type": "untyped"
+              }
+            ],
+            "conditions": [],
+            "description": {
+              "value": "<p>Repairs small breaks or tears in objects. 1 dose poured on objects weighing 10 lb. in total.</p><p>If drunk by a person it results in the permanent loss of 1 Wisdom.</p>"
+            }
+          },
+          "flags": {
+            "beavers-potions": {
+              "source": "repair-glue.buff"
+            }
+          }
+        }
+      ],
+      "rarity": "common",
+      "rules": [
+        [
+          "ability",
+          "wis",
+          -1
+        ]
+      ]
+    }
+  }
+}

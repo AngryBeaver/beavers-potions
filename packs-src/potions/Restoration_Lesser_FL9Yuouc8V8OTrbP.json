@@ -128,7 +128,14 @@
       "potion": true,
       "use": {
         "restoration": "lesser"
-      }
+      },
+      "rarity": "uncommon",
+      "rules": [
+        [
+          "restoration",
+          "lesser"
+        ]
+      ]
     }
   }
 }

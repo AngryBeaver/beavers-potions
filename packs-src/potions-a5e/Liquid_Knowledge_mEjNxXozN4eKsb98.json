@@ -1,0 +1,100 @@
+{
+  "_id": "mEjNxXozN4eKsb98",
+  "_key": "!items!mEjNxXozN4eKsb98",
+  "name": "Liquid Knowledge",
+  "type": "object",
+  "img": "icons/consumables/potions/bottle-round-ring-teal.webp",
+  "system": {
+    "description": "<p>For 1 hour, when you see a type of enemy you instantly know one thing about it: its highest or lowest ability, a vulnerability, immunity or resistance, or a special attack.</p>",
+    "actions": {
+      "bpactmEjNxXoDrin": {
+        "name": "Drink",
+        "img": "icons/consumables/potions/bottle-round-ring-teal.webp",
+        "activation": {
+          "type": "action",
+          "cost": 1,
+          "reactionTrigger": ""
+        },
+        "duration": {
+          "unit": "hours",
+          "value": "1"
+        },
+        "target": {
+          "quantity": "",
+          "type": "self"
+        },
+        "consumers": {
+          "bpconmEjNxXoDrin": {
+            "type": "quantity",
+            "default": true,
+            "itemId": "",
+            "quantity": 1,
+            "deleteOnZero": true,
+            "label": ""
+          }
+        },
+        "rolls": {},
+        "prompts": {},
+        "effects": [
+          "bpfxmEjNxXoz0000"
+        ],
+        "macro": ""
+      }
+    },
+    "objectType": "consumable",
+    "price": {
+      "value": 250,
+      "denomination": "gp",
+      "special": ""
+    },
+    "quantity": 1,
+    "rarity": "uncommon",
+    "weight": 0.5,
+    "source": "",
+    "requiresAttunement": false,
+    "unidentified": false
+  },
+  "effects": [
+    {
+      "_id": "bpfxmEjNxXoz0000",
+      "_key": "!items.effects!mEjNxXozN4eKsb98.bpfxmEjNxXoz0000",
+      "name": "Liquid Knowledge",
+      "img": "icons/consumables/potions/bottle-round-ring-teal.webp",
+      "type": "base",
+      "description": "<p>For 1 hour, when you see a type of enemy you instantly know one thing about it: its highest or lowest ability, a vulnerability, immunity or resistance, or a special attack.</p>",
+      "system": {
+        "changes": [],
+        "magical": true,
+        "applyToSelf": false,
+        "effectType": "onUse"
+      },
+      "disabled": false,
+      "transfer": false,
+      "duration": {
+        "value": 1,
+        "units": "hours",
+        "expiry": "turnStart",
+        "expired": false
+      },
+      "statuses": [],
+      "flags": {},
+      "tint": "#ffffff",
+      "showIcon": 1,
+      "origin": null,
+      "start": null,
+      "sort": 0
+    }
+  ],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "beavers-potions": {
+      "potion": true,
+      "rarity": "uncommon",
+      "rules": []
+    }
+  }
+}

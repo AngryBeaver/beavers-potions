@@ -1,0 +1,105 @@
+{
+  "_id": "abmTcsGnJaHZxNDU",
+  "_key": "!items!abmTcsGnJaHZxNDU",
+  "name": "Weightless",
+  "type": "consumable",
+  "img": "icons/consumables/potions/bottle-bulb-empty-glass.webp",
+  "system": {
+    "category": "potion",
+    "description": {
+      "value": "<p>Your body becomes weightless for 1 minute. As long as you do not carry anything (including clothes) you are no longer pulled down to earth: you hover.</p>"
+    },
+    "level": {
+      "value": 1
+    },
+    "price": {
+      "value": {
+        "gp": 50
+      }
+    },
+    "quantity": 1,
+    "bulk": {
+      "value": 0.1
+    },
+    "uses": {
+      "value": 1,
+      "max": 1,
+      "autoDestroy": true
+    },
+    "traits": {
+      "value": [
+        "consumable",
+        "magical",
+        "potion"
+      ],
+      "rarity": "common"
+    },
+    "usage": {
+      "value": "held-in-one-hand"
+    },
+    "rules": [],
+    "slug": "weightless",
+    "publication": {
+      "title": "Beaver's Potions",
+      "authors": "",
+      "license": "OGL",
+      "remaster": false
+    }
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "beavers-potions": {
+      "potion": true,
+      "effects": [
+        {
+          "name": "Effect: Weightless",
+          "type": "effect",
+          "img": "icons/consumables/potions/bottle-bulb-empty-glass.webp",
+          "system": {
+            "description": {
+              "value": "<p>Your body becomes weightless for 1 minute. As long as you do not carry anything (including clothes) you are no longer pulled down to earth: you hover.</p>"
+            },
+            "duration": {
+              "value": 1,
+              "unit": "minutes",
+              "expiry": "turn-start",
+              "sustained": false
+            },
+            "rules": [],
+            "tokenIcon": {
+              "show": true
+            },
+            "level": {
+              "value": 1
+            },
+            "traits": {
+              "value": [],
+              "rarity": "common"
+            },
+            "slug": "effect-weightless"
+          },
+          "flags": {
+            "beavers-potions": {
+              "source": "weightless.effect"
+            }
+          }
+        }
+      ],
+      "rarity": "common",
+      "rules": [
+        [
+          "status",
+          "hovering"
+        ]
+      ],
+      "unsupported": [
+        "status hovering"
+      ]
+    }
+  }
+}

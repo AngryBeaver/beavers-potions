@@ -1,0 +1,42 @@
+{
+  "_id": "EBn04GlzYZdMi23m",
+  "_key": "!items!EBn04GlzYZdMi23m",
+  "name": "Astrid Lindworm",
+  "type": "treasure",
+  "img": "icons/consumables/mushrooms/helm-purple-shiny.webp",
+  "system": {
+    "description": {
+      "value": "<p>A mushroom, an ingredient of Beaver's Potions.</p>"
+    },
+    "level": {
+      "value": 0
+    },
+    "price": {
+      "value": {
+        "sp": 1
+      }
+    },
+    "quantity": 1,
+    "bulk": {
+      "value": 0.1
+    },
+    "traits": {
+      "value": [],
+      "rarity": "common"
+    },
+    "category": "",
+    "stackGroup": null,
+    "slug": "astrid-lindworm"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "beavers-potions": {
+      "ingredient": "mushroom"
+    }
+  }
+}

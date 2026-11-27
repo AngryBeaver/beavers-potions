@@ -1,0 +1,85 @@
+{
+  "_id": "4ZYLH0NembGidYfo",
+  "_key": "!items!4ZYLH0NembGidYfo",
+  "name": "Weightless",
+  "type": "object",
+  "img": "icons/sundries/scrolls/scroll-worn-tan.webp",
+  "system": {
+    "description": "<p>A recipe of Beaver's Potions, it needs the module Beaver's Crafting.</p><p>Brewing: Nature check DC 8.</p>",
+    "objectType": "miscellaneous",
+    "price": {
+      "value": 0,
+      "denomination": "gp",
+      "special": ""
+    },
+    "quantity": 1,
+    "weight": 0,
+    "actions": {}
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "beavers-crafting": {
+      "subtype": "Recipe",
+      "recipe": {
+        "required": {},
+        "input": {
+          "1": {
+            "Compendium-beavers-potions-ingredients-a5e-Item-Q2IL3nSljRbVrhnt": {
+              "id": "Q2IL3nSljRbVrhnt",
+              "uuid": "Compendium.beavers-potions.ingredients-a5e.Item.Q2IL3nSljRbVrhnt",
+              "img": "icons/consumables/mushrooms/alien-spotted-blue.webp",
+              "name": "Star Dip",
+              "type": "Item",
+              "itemType": "object",
+              "quantity": 5
+            }
+          }
+        },
+        "output": {
+          "1": {
+            "Compendium-beavers-potions-potions-a5e-Item-abmTcsGnJaHZxNDU": {
+              "id": "abmTcsGnJaHZxNDU",
+              "uuid": "Compendium.beavers-potions.potions-a5e.Item.abmTcsGnJaHZxNDU",
+              "img": "icons/consumables/potions/bottle-bulb-empty-glass.webp",
+              "name": "Weightless",
+              "type": "Item",
+              "itemType": "object",
+              "quantity": 1
+            }
+          }
+        },
+        "currency": {
+          "name": "gp",
+          "value": 5
+        },
+        "beaversTests": {
+          "fails": 1,
+          "consume": true,
+          "failsInARow": false,
+          "ands": {
+            "1": {
+              "hits": 1,
+              "ors": {
+                "1": {
+                  "type": "SkillTest",
+                  "data": {
+                    "dc": 8,
+                    "skill": "nat"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "macro": "",
+        "folder": "Beaver's Potions",
+        "kind": "recipe"
+      }
+    }
+  }
+}

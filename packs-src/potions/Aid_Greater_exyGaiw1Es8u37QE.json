@@ -188,7 +188,18 @@
   },
   "flags": {
     "beavers-potions": {
-      "potion": true
+      "potion": true,
+      "rarity": "rare",
+      "rules": [
+        [
+          "heal",
+          "10"
+        ],
+        [
+          "hpMax",
+          10
+        ]
+      ]
     }
   }
 }

@@ -1,0 +1,84 @@
+{
+  "_id": "pVCnbESlMZsDDjEj",
+  "_key": "!items!pVCnbESlMZsDDjEj",
+  "name": "Gather Essence",
+  "type": "loot",
+  "img": "icons/sundries/scrolls/scroll-worn-tan.webp",
+  "system": {
+    "subType": "misc",
+    "description": {
+      "value": "<p>A recipe of Beaver's Potions, it needs the module Beaver's Crafting.</p><p>Brewing: Knowledge (arcana) check DC 12.</p>"
+    },
+    "quantity": 1,
+    "weight": 0,
+    "price": 0,
+    "identified": true,
+    "identifiedName": "Gather Essence"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "beavers-crafting": {
+      "subtype": "Recipe",
+      "recipe": {
+        "required": {},
+        "input": {
+          "1": {
+            "Compendium-beavers-potions-ingredients-D35E-Item-iluiCHKksYVhsxwk": {
+              "id": "iluiCHKksYVhsxwk",
+              "uuid": "Compendium.beavers-potions.ingredients-D35E.Item.iluiCHKksYVhsxwk",
+              "img": "modules/beavers-crafting/icons/anyOf.png",
+              "name": "Any Potion",
+              "type": "AnyOf",
+              "itemType": "loot",
+              "quantity": 1
+            }
+          }
+        },
+        "output": {
+          "1": {
+            "Compendium-beavers-potions-ingredients-D35E-Item-dozjFH55CR4npT6F": {
+              "id": "dozjFH55CR4npT6F",
+              "uuid": "Compendium.beavers-potions.ingredients-D35E.Item.dozjFH55CR4npT6F",
+              "img": "icons/tools/laboratory/bowl-powder-purple.webp",
+              "name": "Magical Essence",
+              "type": "Item",
+              "itemType": "loot",
+              "quantity": 1
+            }
+          }
+        },
+        "currency": {
+          "name": "gp",
+          "value": 5
+        },
+        "beaversTests": {
+          "fails": 1,
+          "consume": true,
+          "failsInARow": false,
+          "ands": {
+            "1": {
+              "hits": 1,
+              "ors": {
+                "1": {
+                  "type": "SkillTest",
+                  "data": {
+                    "dc": 12,
+                    "skill": "kar"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "macro": "const essence = {\n  id: \"dozjFH55CR4npT6F\",\n  uuid: \"Compendium.beavers-potions.ingredients-D35E.Item.dozjFH55CR4npT6F\",\n  type: \"Item\",\n  itemType: \"loot\",\n  name: \"Magical Essence\",\n  img: \"icons/tools/laboratory/bowl-powder-purple.webp\",\n  quantity: 1\n};\nconst perRarity = { common: 0, uncommon: 2, rare: 4, veryRare: 8, legendary: 16, artifact: 32 };\nfor (const ingredient of Object.values(recipeData.input[1] ?? {})) {\n  const item = await ingredient.getEntity();\n  const rarity = item?.flags?.[\"beavers-potions\"]?.rarity ?? item?.system?.rarity;\n  // one essence is in the recipe's result already: add what the rarity gives on top of it\n  essence.quantity = (perRarity[rarity] ?? 1) - 1;\n  if (essence.quantity !== 0) result.updateComponent(\"produced\", essence);\n  break;\n}",
+        "folder": "Beaver's Potions",
+        "kind": "recipe"
+      }
+    }
+  }
+}

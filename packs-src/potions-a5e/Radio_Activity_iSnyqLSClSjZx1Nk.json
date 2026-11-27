@@ -1,0 +1,156 @@
+{
+  "_id": "iSnyqLSClSjZx1Nk",
+  "_key": "!items!iSnyqLSClSjZx1Nk",
+  "name": "Radio Activity",
+  "type": "object",
+  "img": "icons/consumables/potions/bottle-conical-fumes-green.webp",
+  "system": {
+    "description": "<p>You begin to glow for 5 rounds creating a 25 ft. aura of green light around you. Each creature, including yourself, must make a DC 14 Constitution saving throw when it starts its turn within 25 ft. of you. A target takes 3d6 radiant damage on a failed save, or half as much on a successful one.</p>",
+    "actions": {
+      "bpactiSnyqLSDrin": {
+        "name": "Drink",
+        "img": "icons/consumables/potions/bottle-conical-fumes-green.webp",
+        "activation": {
+          "type": "action",
+          "cost": 1,
+          "reactionTrigger": ""
+        },
+        "duration": {
+          "unit": "rounds",
+          "value": "5"
+        },
+        "target": {
+          "quantity": "",
+          "type": "self"
+        },
+        "consumers": {
+          "bpconiSnyqLSDrin": {
+            "type": "quantity",
+            "default": true,
+            "itemId": "",
+            "quantity": 1,
+            "deleteOnZero": true,
+            "label": ""
+          }
+        },
+        "rolls": {},
+        "prompts": {},
+        "effects": [
+          "bpfxiSnyqLSC0000"
+        ],
+        "macro": ""
+      }
+    },
+    "objectType": "consumable",
+    "price": {
+      "value": 750,
+      "denomination": "gp",
+      "special": ""
+    },
+    "quantity": 1,
+    "rarity": "rare",
+    "weight": 0.5,
+    "source": "",
+    "requiresAttunement": false,
+    "unidentified": false
+  },
+  "effects": [
+    {
+      "_id": "bpfxiSnyqLSC0000",
+      "_key": "!items.effects!iSnyqLSClSjZx1Nk.bpfxiSnyqLSC0000",
+      "name": "Radio Activity",
+      "img": "icons/consumables/potions/bottle-conical-fumes-green.webp",
+      "type": "base",
+      "description": "<p>You begin to glow for 5 rounds creating a 25 ft. aura of green light around you. Each creature, including yourself, must make a DC 14 Constitution saving throw when it starts its turn within 25 ft. of you. A target takes 3d6 radiant damage on a failed save, or half as much on a successful one.</p>",
+      "system": {
+        "changes": [],
+        "magical": true,
+        "applyToSelf": false,
+        "effectType": "onUse"
+      },
+      "disabled": false,
+      "transfer": false,
+      "duration": {
+        "value": 5,
+        "units": "rounds",
+        "expiry": "turnStart",
+        "expired": false
+      },
+      "statuses": [],
+      "flags": {
+        "beavers-potions": {
+          "aura": {
+            "radius": 25,
+            "includeSelf": true,
+            "save": {
+              "ability": "con",
+              "dc": 14
+            },
+            "damage": {
+              "formula": "3d6",
+              "type": "radiant"
+            }
+          },
+          "light": {
+            "dim": 25,
+            "bright": 5,
+            "color": "#4dff4d",
+            "alpha": 0.4,
+            "animation": {
+              "type": "pulse",
+              "speed": 3,
+              "intensity": 3
+            }
+          }
+        }
+      },
+      "tint": "#ffffff",
+      "showIcon": 1,
+      "origin": null,
+      "start": null,
+      "sort": 0
+    }
+  ],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "beavers-potions": {
+      "potion": true,
+      "rarity": "rare",
+      "rules": [
+        [
+          "aura",
+          {
+            "radius": 25,
+            "includeSelf": true,
+            "save": {
+              "ability": "con",
+              "dc": 14
+            },
+            "damage": {
+              "formula": "3d6",
+              "type": "radiant"
+            }
+          }
+        ],
+        [
+          "light",
+          {
+            "dim": 25,
+            "bright": 5,
+            "color": "#4dff4d",
+            "alpha": 0.4,
+            "animation": {
+              "type": "pulse",
+              "speed": 3,
+              "intensity": 3
+            }
+          }
+        ]
+      ]
+    }
+  }
+}

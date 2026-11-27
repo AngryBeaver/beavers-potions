@@ -1,0 +1,76 @@
+{
+  "_id": "FL9Yuouc8V8OTrbP",
+  "_key": "!items!FL9Yuouc8V8OTrbP",
+  "name": "Restoration Lesser",
+  "type": "object",
+  "img": "icons/consumables/potions/bottle-round-label-cork-green.webp",
+  "system": {
+    "description": "<p>Ends one disease or one of the following conditions afflicting you: blinded, deafened, paralyzed or poisoned.</p>",
+    "actions": {
+      "bpactFL9YuouDrin": {
+        "name": "Drink",
+        "img": "icons/consumables/potions/bottle-round-label-cork-green.webp",
+        "activation": {
+          "type": "action",
+          "cost": 1,
+          "reactionTrigger": ""
+        },
+        "duration": {
+          "unit": "instantaneous",
+          "value": ""
+        },
+        "target": {
+          "quantity": "",
+          "type": "self"
+        },
+        "consumers": {
+          "bpconFL9YuouDrin": {
+            "type": "quantity",
+            "default": true,
+            "itemId": "",
+            "quantity": 1,
+            "deleteOnZero": true,
+            "label": ""
+          }
+        },
+        "rolls": {},
+        "prompts": {},
+        "effects": [],
+        "macro": ""
+      }
+    },
+    "objectType": "consumable",
+    "price": {
+      "value": 250,
+      "denomination": "gp",
+      "special": ""
+    },
+    "quantity": 1,
+    "rarity": "uncommon",
+    "weight": 0.5,
+    "source": "",
+    "requiresAttunement": false,
+    "unidentified": false
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "beavers-potions": {
+      "potion": true,
+      "use": {
+        "restoration": "lesser"
+      },
+      "rarity": "uncommon",
+      "rules": [
+        [
+          "restoration",
+          "lesser"
+        ]
+      ]
+    }
+  }
+}

@@ -168,7 +168,16 @@
   },
   "flags": {
     "beavers-potions": {
-      "potion": true
+      "potion": true,
+      "rarity": "veryRare",
+      "rules": [
+        [
+          "turnStart",
+          {
+            "heal": "10"
+          }
+        ]
+      ]
     }
   }
 }

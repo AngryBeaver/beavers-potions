@@ -1,0 +1,98 @@
+{
+  "_id": "79j5pXceUZYl7bFu",
+  "_key": "!tables!79j5pXceUZYl7bFu",
+  "name": "Legendary Potions",
+  "img": "icons/tools/laboratory/vials-blue-pink.webp",
+  "description": "<p>A random legendary potion.</p>",
+  "formula": "1d5",
+  "replacement": true,
+  "displayRoll": true,
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "results": [
+    {
+      "_id": "bptr79j5pXce0000",
+      "_key": "!tables.results!79j5pXceUZYl7bFu.bptr79j5pXce0000",
+      "type": "document",
+      "name": "Casters Overtime Supreme",
+      "img": "icons/consumables/potions/bottle-metal-yellow-gray.webp",
+      "description": "",
+      "documentUuid": "Compendium.beavers-potions.potions-pf1.Item.E1oLiNET3axMz3B1",
+      "weight": 1,
+      "range": [
+        1,
+        1
+      ],
+      "drawn": false,
+      "flags": {}
+    },
+    {
+      "_id": "bptr79j5pXce0100",
+      "_key": "!tables.results!79j5pXceUZYl7bFu.bptr79j5pXce0100",
+      "type": "document",
+      "name": "Clone Army",
+      "img": "icons/consumables/potions/bottle-round-flask-fumes-purple.webp",
+      "description": "",
+      "documentUuid": "Compendium.beavers-potions.potions-pf1.Item.XShdKZEf6oqbyIOh",
+      "weight": 1,
+      "range": [
+        2,
+        2
+      ],
+      "drawn": false,
+      "flags": {}
+    },
+    {
+      "_id": "bptr79j5pXce0200",
+      "_key": "!tables.results!79j5pXceUZYl7bFu.bptr79j5pXce0200",
+      "type": "document",
+      "name": "Ice Devil",
+      "img": "icons/consumables/potions/bottle-ornate-bat-teal.webp",
+      "description": "",
+      "documentUuid": "Compendium.beavers-potions.potions-pf1.Item.VnjrJ7YTYshlbm01",
+      "weight": 1,
+      "range": [
+        3,
+        3
+      ],
+      "drawn": false,
+      "flags": {}
+    },
+    {
+      "_id": "bptr79j5pXce0300",
+      "_key": "!tables.results!79j5pXceUZYl7bFu.bptr79j5pXce0300",
+      "type": "document",
+      "name": "Overload Attunement",
+      "img": "icons/consumables/potions/bottle-corked-red.webp",
+      "description": "",
+      "documentUuid": "Compendium.beavers-potions.potions-pf1.Item.tr3gjUhvmWpYrGJ0",
+      "weight": 1,
+      "range": [
+        4,
+        4
+      ],
+      "drawn": false,
+      "flags": {}
+    },
+    {
+      "_id": "bptr79j5pXce0400",
+      "_key": "!tables.results!79j5pXceUZYl7bFu.bptr79j5pXce0400",
+      "type": "document",
+      "name": "Time Travel",
+      "img": "icons/consumables/potions/bottle-conical-corked-yellow.webp",
+      "description": "",
+      "documentUuid": "Compendium.beavers-potions.potions-pf1.Item.WQ0Sfdnn0c5sQI2Q",
+      "weight": 1,
+      "range": [
+        5,
+        5
+      ],
+      "drawn": false,
+      "flags": {}
+    }
+  ]
+}

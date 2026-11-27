@@ -1,0 +1,178 @@
+{
+  "_id": "rYKKOSkRoX5zmgJ3",
+  "_key": "!tables!rYKKOSkRoX5zmgJ3",
+  "name": "Rare Potions",
+  "img": "icons/tools/laboratory/vials-blue-pink.webp",
+  "description": "<p>A random rare potion.</p>",
+  "formula": "1d10",
+  "replacement": true,
+  "displayRoll": true,
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {},
+  "results": [
+    {
+      "_id": "bptrrYKKOSkR0000",
+      "_key": "!tables.results!rYKKOSkRoX5zmgJ3.bptrrYKKOSkR0000",
+      "type": "document",
+      "name": "Aid Greater",
+      "img": "icons/consumables/potions/bottle-round-label-cork-red.webp",
+      "description": "",
+      "documentUuid": "Compendium.beavers-potions.potions-pf1.Item.exyGaiw1Es8u37QE",
+      "weight": 1,
+      "range": [
+        1,
+        1
+      ],
+      "drawn": false,
+      "flags": {}
+    },
+    {
+      "_id": "bptrrYKKOSkR0100",
+      "_key": "!tables.results!rYKKOSkRoX5zmgJ3.bptrrYKKOSkR0100",
+      "type": "document",
+      "name": "Batman",
+      "img": "icons/consumables/potions/bottle-conical-corked-tied-blue.webp",
+      "description": "",
+      "documentUuid": "Compendium.beavers-potions.potions-pf1.Item.UOYRzlUw2HSELs9u",
+      "weight": 1,
+      "range": [
+        2,
+        2
+      ],
+      "drawn": false,
+      "flags": {}
+    },
+    {
+      "_id": "bptrrYKKOSkR0200",
+      "_key": "!tables.results!rYKKOSkRoX5zmgJ3.bptrrYKKOSkR0200",
+      "type": "document",
+      "name": "Blur",
+      "img": "icons/consumables/potions/bottle-round-label-cork-blue.webp",
+      "description": "",
+      "documentUuid": "Compendium.beavers-potions.potions-pf1.Item.GC5EmcU3FzX8o4Mi",
+      "weight": 1,
+      "range": [
+        3,
+        3
+      ],
+      "drawn": false,
+      "flags": {}
+    },
+    {
+      "_id": "bptrrYKKOSkR0300",
+      "_key": "!tables.results!rYKKOSkRoX5zmgJ3.bptrrYKKOSkR0300",
+      "type": "document",
+      "name": "Casters Overtime Greater",
+      "img": "icons/consumables/potions/bottle-metal-yellow-gray.webp",
+      "description": "",
+      "documentUuid": "Compendium.beavers-potions.potions-pf1.Item.TPY2dFuG7d6kXgXx",
+      "weight": 1,
+      "range": [
+        4,
+        4
+      ],
+      "drawn": false,
+      "flags": {}
+    },
+    {
+      "_id": "bptrrYKKOSkR0400",
+      "_key": "!tables.results!rYKKOSkRoX5zmgJ3.bptrrYKKOSkR0400",
+      "type": "document",
+      "name": "Frost Armor Greater",
+      "img": "icons/consumables/potions/bottle-corked-blue.webp",
+      "description": "",
+      "documentUuid": "Compendium.beavers-potions.potions-pf1.Item.YywpTHDQ09DN7aLd",
+      "weight": 1,
+      "range": [
+        5,
+        5
+      ],
+      "drawn": false,
+      "flags": {}
+    },
+    {
+      "_id": "bptrrYKKOSkR0500",
+      "_key": "!tables.results!rYKKOSkRoX5zmgJ3.bptrrYKKOSkR0500",
+      "type": "document",
+      "name": "Life Shell Greater",
+      "img": "icons/consumables/potions/flask-corked-green.webp",
+      "description": "",
+      "documentUuid": "Compendium.beavers-potions.potions-pf1.Item.xtDv7zBzlF30hSGU",
+      "weight": 1,
+      "range": [
+        6,
+        6
+      ],
+      "drawn": false,
+      "flags": {}
+    },
+    {
+      "_id": "bptrrYKKOSkR0600",
+      "_key": "!tables.results!rYKKOSkRoX5zmgJ3.bptrrYKKOSkR0600",
+      "type": "document",
+      "name": "Live Essence",
+      "img": "icons/consumables/potions/bottle-round-corked-orante-red.webp",
+      "description": "",
+      "documentUuid": "Compendium.beavers-potions.potions-pf1.Item.IGqhyVesOoWIt6Tg",
+      "weight": 1,
+      "range": [
+        7,
+        7
+      ],
+      "drawn": false,
+      "flags": {}
+    },
+    {
+      "_id": "bptrrYKKOSkR0700",
+      "_key": "!tables.results!rYKKOSkRoX5zmgJ3.bptrrYKKOSkR0700",
+      "type": "document",
+      "name": "Radio Activity",
+      "img": "icons/consumables/potions/bottle-conical-fumes-green.webp",
+      "description": "",
+      "documentUuid": "Compendium.beavers-potions.potions-pf1.Item.iSnyqLSClSjZx1Nk",
+      "weight": 1,
+      "range": [
+        8,
+        8
+      ],
+      "drawn": false,
+      "flags": {}
+    },
+    {
+      "_id": "bptrrYKKOSkR0800",
+      "_key": "!tables.results!rYKKOSkRoX5zmgJ3.bptrrYKKOSkR0800",
+      "type": "document",
+      "name": "Shield of Energy",
+      "img": "icons/consumables/potions/bottle-round-empty-glass.webp",
+      "description": "",
+      "documentUuid": "Compendium.beavers-potions.potions-pf1.Item.xVqhoLAtPeYxYe9P",
+      "weight": 1,
+      "range": [
+        9,
+        9
+      ],
+      "drawn": false,
+      "flags": {}
+    },
+    {
+      "_id": "bptrrYKKOSkR0900",
+      "_key": "!tables.results!rYKKOSkRoX5zmgJ3.bptrrYKKOSkR0900",
+      "type": "document",
+      "name": "Time Stop",
+      "img": "icons/consumables/potions/bottle-conical-corked-yellow.webp",
+      "description": "",
+      "documentUuid": "Compendium.beavers-potions.potions-pf1.Item.nUgpaHq1LHC9QGLu",
+      "weight": 1,
+      "range": [
+        10,
+        10
+      ],
+      "drawn": false,
+      "flags": {}
+    }
+  ]
+}

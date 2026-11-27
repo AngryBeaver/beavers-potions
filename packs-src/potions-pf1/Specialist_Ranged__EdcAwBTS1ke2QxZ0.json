@@ -1,0 +1,119 @@
+{
+  "_id": "EdcAwBTS1ke2QxZ0",
+  "_key": "!items!EdcAwBTS1ke2QxZ0",
+  "name": "Specialist (Ranged)",
+  "type": "consumable",
+  "img": "icons/consumables/potions/bottle-pear-corked-labeled-green.webp",
+  "system": {
+    "subType": "potion",
+    "description": {
+      "value": "<p>For the next minute you gain +2 on ranged weapon attacks and +2 on ranged weapon damage, while your AC is lowered by 2.</p>",
+      "instructions": "",
+      "unidentified": ""
+    },
+    "quantity": 1,
+    "weight": {
+      "value": 0.1
+    },
+    "price": 250,
+    "identified": true,
+    "cl": 1,
+    "uses": {
+      "value": null,
+      "per": "single",
+      "autoDeductChargesCost": "",
+      "maxFormula": "",
+      "rechargeFormula": ""
+    },
+    "actions": [
+      {
+        "_id": "bpactEdcAwBTDrin",
+        "name": "Drink",
+        "activation": {
+          "type": "standard",
+          "unchained": {
+            "type": "action",
+            "cost": 2
+          }
+        },
+        "duration": {
+          "units": "inst"
+        }
+      }
+    ]
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "beavers-potions": {
+      "potion": true,
+      "buffs": [
+        {
+          "name": "Specialist (Ranged)",
+          "type": "buff",
+          "img": "icons/consumables/potions/bottle-pear-corked-labeled-green.webp",
+          "system": {
+            "subType": "temp",
+            "active": true,
+            "level": 1,
+            "duration": {
+              "value": "1",
+              "units": "minute",
+              "end": "turnStart"
+            },
+            "changes": [
+              {
+                "_id": "bpcEdcAw",
+                "formula": "2",
+                "target": "rattack",
+                "type": "untyped"
+              },
+              {
+                "_id": "bpcEdcAw",
+                "formula": "2",
+                "target": "rwdamage",
+                "type": "untyped"
+              },
+              {
+                "_id": "bpcEdcAw",
+                "formula": "-2",
+                "target": "ac",
+                "type": "untyped"
+              }
+            ],
+            "conditions": [],
+            "description": {
+              "value": "<p>For the next minute you gain +2 on ranged weapon attacks and +2 on ranged weapon damage, while your AC is lowered by 2.</p>"
+            }
+          },
+          "flags": {
+            "beavers-potions": {
+              "source": "specialist-ranged.buff"
+            }
+          }
+        }
+      ],
+      "rarity": "uncommon",
+      "rules": [
+        [
+          "attackBonus",
+          "ranged",
+          2
+        ],
+        [
+          "damageBonus",
+          "ranged",
+          2
+        ],
+        [
+          "ac",
+          -2
+        ]
+      ]
+    }
+  }
+}

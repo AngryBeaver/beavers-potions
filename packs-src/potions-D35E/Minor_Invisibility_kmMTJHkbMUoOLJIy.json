@@ -1,0 +1,106 @@
+{
+  "_id": "kmMTJHkbMUoOLJIy",
+  "_key": "!items!kmMTJHkbMUoOLJIy",
+  "name": "Minor Invisibility",
+  "type": "consumable",
+  "img": "icons/consumables/potions/bottle-conical-corked-blue.webp",
+  "system": {
+    "consumableType": "potion",
+    "description": {
+      "value": "<p>You have the invisible condition for 1 minute or until you move, make an attack or cast a spell: attacks against you have disadvantage, your attacks have advantage.</p>"
+    },
+    "quantity": 1,
+    "weight": 0.1,
+    "price": 50,
+    "identified": true,
+    "identifiedName": "Minor Invisibility",
+    "uses": {
+      "value": 0,
+      "max": 0,
+      "per": "single"
+    }
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "beavers-potions": {
+      "potion": true,
+      "buffs": [
+        {
+          "name": "Minor Invisibility",
+          "type": "buff",
+          "img": "icons/consumables/potions/bottle-conical-corked-blue.webp",
+          "system": {
+            "buffType": "temp",
+            "active": true,
+            "level": 1,
+            "duration": {
+              "value": "1",
+              "units": "minute"
+            },
+            "changes": [
+              [
+                "20",
+                "misc",
+                "concealment",
+                "untyped"
+              ],
+              [
+                "2",
+                "attack",
+                "attack",
+                "untyped"
+              ]
+            ],
+            "description": {
+              "value": "<p>You have the invisible condition for 1 minute or until you move, make an attack or cast a spell: attacks against you have disadvantage, your attacks have advantage.</p>"
+            }
+          },
+          "flags": {
+            "beavers-potions": {
+              "endOn": [
+                "attack",
+                "spell",
+                "move"
+              ],
+              "conditions": [
+                "invisible"
+              ],
+              "source": "minor-invisibility.buff"
+            }
+          }
+        }
+      ],
+      "pour": false,
+      "rarity": "common",
+      "rules": [
+        [
+          "status",
+          "invisible"
+        ],
+        [
+          "grants",
+          "disadvantage",
+          {
+            "sight": true
+          }
+        ],
+        [
+          "attackAdvantage"
+        ],
+        [
+          "endOn",
+          [
+            "attack",
+            "spell",
+            "move"
+          ]
+        ]
+      ]
+    }
+  }
+}

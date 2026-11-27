@@ -1,0 +1,29 @@
+{
+  "_id": "WTpNWej9PSN8A4G8",
+  "_key": "!items!WTpNWej9PSN8A4G8",
+  "name": "Tiny Maw",
+  "type": "loot",
+  "img": "icons/consumables/mushrooms/helm-red-white.webp",
+  "system": {
+    "subType": "tradeGoods",
+    "description": {
+      "value": "<p>A mushroom, an ingredient of Beaver's Potions.</p>"
+    },
+    "quantity": 1,
+    "weight": 0.1,
+    "price": 0,
+    "identified": true,
+    "identifiedName": "Tiny Maw"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "beavers-potions": {
+      "ingredient": "mushroom"
+    }
+  }
+}

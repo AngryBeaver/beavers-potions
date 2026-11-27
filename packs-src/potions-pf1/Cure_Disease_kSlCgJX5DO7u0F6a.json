@@ -1,0 +1,72 @@
+{
+  "_id": "kSlCgJX5DO7u0F6a",
+  "_key": "!items!kSlCgJX5DO7u0F6a",
+  "name": "Cure Disease",
+  "type": "consumable",
+  "img": "icons/consumables/potions/bottle-circular-corked-labeled-green.webp",
+  "system": {
+    "subType": "potion",
+    "description": {
+      "value": "<p>Cures one natural disease affecting you that you know of: ends the diseased condition.</p>",
+      "instructions": "",
+      "unidentified": ""
+    },
+    "quantity": 1,
+    "weight": {
+      "value": 0.1
+    },
+    "price": 50,
+    "identified": true,
+    "cl": 1,
+    "uses": {
+      "value": null,
+      "per": "single",
+      "autoDeductChargesCost": "",
+      "maxFormula": "",
+      "rechargeFormula": ""
+    },
+    "actions": [
+      {
+        "_id": "bpactkSlCgJXDrin",
+        "name": "Drink",
+        "activation": {
+          "type": "standard",
+          "unchained": {
+            "type": "action",
+            "cost": 2
+          }
+        },
+        "duration": {
+          "units": "inst"
+        }
+      }
+    ]
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "beavers-potions": {
+      "potion": true,
+      "buffs": [],
+      "use": {
+        "cure": [
+          "diseased"
+        ]
+      },
+      "rarity": "common",
+      "rules": [
+        [
+          "cure",
+          "diseased"
+        ]
+      ],
+      "unsupported": [
+        "cure diseased"
+      ]
+    }
+  }
+}

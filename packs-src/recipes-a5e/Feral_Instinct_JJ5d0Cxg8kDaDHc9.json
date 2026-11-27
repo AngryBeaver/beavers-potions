@@ -1,0 +1,107 @@
+{
+  "_id": "JJ5d0Cxg8kDaDHc9",
+  "_key": "!items!JJ5d0Cxg8kDaDHc9",
+  "name": "Feral Instinct",
+  "type": "object",
+  "img": "icons/sundries/scrolls/scroll-worn-tan.webp",
+  "system": {
+    "description": "<p>A recipe of Beaver's Potions, it needs the module Beaver's Crafting.</p><p>Brewing: Nature check DC 10.</p>",
+    "objectType": "miscellaneous",
+    "price": {
+      "value": 0,
+      "denomination": "gp",
+      "special": ""
+    },
+    "quantity": 1,
+    "weight": 0,
+    "actions": {}
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "beavers-crafting": {
+      "subtype": "Recipe",
+      "recipe": {
+        "required": {},
+        "input": {
+          "1": {
+            "Compendium-beavers-potions-ingredients-a5e-Item-XFwqSg3NggqCvxlu": {
+              "id": "XFwqSg3NggqCvxlu",
+              "uuid": "Compendium.beavers-potions.ingredients-a5e.Item.XFwqSg3NggqCvxlu",
+              "img": "icons/consumables/mushrooms/mushroom-spotted-red.webp",
+              "name": "Fly Agaric",
+              "type": "Item",
+              "itemType": "object",
+              "quantity": 5
+            }
+          },
+          "2": {
+            "Compendium-beavers-potions-ingredients-a5e-Item-F1SSWiF1VvLWDvoK": {
+              "id": "F1SSWiF1VvLWDvoK",
+              "uuid": "Compendium.beavers-potions.ingredients-a5e.Item.F1SSWiF1VvLWDvoK",
+              "img": "icons/consumables/mushrooms/ovate-blue.webp",
+              "name": "Blue Bill",
+              "type": "Item",
+              "itemType": "object",
+              "quantity": 5
+            }
+          },
+          "3": {
+            "Compendium-beavers-potions-ingredients-a5e-Item-dozjFH55CR4npT6F": {
+              "id": "dozjFH55CR4npT6F",
+              "uuid": "Compendium.beavers-potions.ingredients-a5e.Item.dozjFH55CR4npT6F",
+              "img": "icons/tools/laboratory/bowl-powder-purple.webp",
+              "name": "Magical Essence",
+              "type": "Item",
+              "itemType": "object",
+              "quantity": 1
+            }
+          }
+        },
+        "output": {
+          "1": {
+            "Compendium-beavers-potions-potions-a5e-Item-kr0avi5meoADT9lu": {
+              "id": "kr0avi5meoADT9lu",
+              "uuid": "Compendium.beavers-potions.potions-a5e.Item.kr0avi5meoADT9lu",
+              "img": "icons/consumables/potions/bottle-round-label-cork-purple.webp",
+              "name": "Feral Instinct",
+              "type": "Item",
+              "itemType": "object",
+              "quantity": 1
+            }
+          }
+        },
+        "currency": {
+          "name": "gp",
+          "value": 50
+        },
+        "beaversTests": {
+          "fails": 1,
+          "consume": true,
+          "failsInARow": false,
+          "ands": {
+            "1": {
+              "hits": 1,
+              "ors": {
+                "1": {
+                  "type": "SkillTest",
+                  "data": {
+                    "dc": 10,
+                    "skill": "nat"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "macro": "",
+        "folder": "Beaver's Potions",
+        "kind": "recipe"
+      }
+    }
+  }
+}

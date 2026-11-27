@@ -1,0 +1,96 @@
+{
+  "_id": "kr0avi5meoADT9lu",
+  "_key": "!items!kr0avi5meoADT9lu",
+  "name": "Feral Instinct",
+  "type": "consumable",
+  "img": "icons/consumables/potions/bottle-round-label-cork-purple.webp",
+  "system": {
+    "subType": "potion",
+    "description": {
+      "value": "<p>You have advantage on initiative rolls for 8 hours.</p>",
+      "instructions": "",
+      "unidentified": ""
+    },
+    "quantity": 1,
+    "weight": {
+      "value": 0.1
+    },
+    "price": 250,
+    "identified": true,
+    "cl": 1,
+    "uses": {
+      "value": null,
+      "per": "single",
+      "autoDeductChargesCost": "",
+      "maxFormula": "",
+      "rechargeFormula": ""
+    },
+    "actions": [
+      {
+        "_id": "bpactkr0avi5Drin",
+        "name": "Drink",
+        "activation": {
+          "type": "standard",
+          "unchained": {
+            "type": "action",
+            "cost": 2
+          }
+        },
+        "duration": {
+          "units": "inst"
+        }
+      }
+    ]
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "beavers-potions": {
+      "potion": true,
+      "buffs": [
+        {
+          "name": "Feral Instinct",
+          "type": "buff",
+          "img": "icons/consumables/potions/bottle-round-label-cork-purple.webp",
+          "system": {
+            "subType": "temp",
+            "active": true,
+            "level": 1,
+            "duration": {
+              "value": "8",
+              "units": "hour",
+              "end": "turnStart"
+            },
+            "changes": [
+              {
+                "_id": "bpckr0av",
+                "formula": "4",
+                "target": "init",
+                "type": "circumstance"
+              }
+            ],
+            "conditions": [],
+            "description": {
+              "value": "<p>You have advantage on initiative rolls for 8 hours.</p>"
+            }
+          },
+          "flags": {
+            "beavers-potions": {
+              "source": "feral-instinct.buff"
+            }
+          }
+        }
+      ],
+      "rarity": "uncommon",
+      "rules": [
+        [
+          "initiativeAdvantage"
+        ]
+      ]
+    }
+  }
+}

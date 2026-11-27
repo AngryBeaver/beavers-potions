@@ -1,0 +1,106 @@
+{
+  "_id": "icKX3MnIej8vPtsV",
+  "_key": "!items!icKX3MnIej8vPtsV",
+  "name": "Restoration Lesser",
+  "type": "loot",
+  "img": "icons/sundries/scrolls/scroll-worn-tan.webp",
+  "system": {
+    "subType": "misc",
+    "description": {
+      "value": "<p>A recipe of Beaver's Potions, it needs the module Beaver's Crafting.</p><p>Brewing: Heal check DC 10.</p>"
+    },
+    "quantity": 1,
+    "weight": 0,
+    "price": 0,
+    "identified": true,
+    "identifiedName": "Restoration Lesser"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "beavers-crafting": {
+      "subtype": "Recipe",
+      "recipe": {
+        "required": {},
+        "input": {
+          "1": {
+            "Compendium-beavers-potions-ingredients-D35E-Item-nrssiAqJHHCV1vyv": {
+              "id": "nrssiAqJHHCV1vyv",
+              "uuid": "Compendium.beavers-potions.ingredients-D35E.Item.nrssiAqJHHCV1vyv",
+              "img": "icons/consumables/mushrooms/conical-bell-yellow.webp",
+              "name": "Yellow Stoned",
+              "type": "Item",
+              "itemType": "loot",
+              "quantity": 5
+            }
+          },
+          "2": {
+            "Compendium-beavers-potions-ingredients-D35E-Item-yaAARBHnqhZCn3kG": {
+              "id": "yaAARBHnqhZCn3kG",
+              "uuid": "Compendium.beavers-potions.ingredients-D35E.Item.yaAARBHnqhZCn3kG",
+              "img": "icons/consumables/mushrooms/cluster-red-brown.webp",
+              "name": "Bongo Wombo",
+              "type": "Item",
+              "itemType": "loot",
+              "quantity": 5
+            }
+          },
+          "3": {
+            "Compendium-beavers-potions-ingredients-D35E-Item-dozjFH55CR4npT6F": {
+              "id": "dozjFH55CR4npT6F",
+              "uuid": "Compendium.beavers-potions.ingredients-D35E.Item.dozjFH55CR4npT6F",
+              "img": "icons/tools/laboratory/bowl-powder-purple.webp",
+              "name": "Magical Essence",
+              "type": "Item",
+              "itemType": "loot",
+              "quantity": 1
+            }
+          }
+        },
+        "output": {
+          "1": {
+            "Compendium-beavers-potions-potions-D35E-Item-FL9Yuouc8V8OTrbP": {
+              "id": "FL9Yuouc8V8OTrbP",
+              "uuid": "Compendium.beavers-potions.potions-D35E.Item.FL9Yuouc8V8OTrbP",
+              "img": "icons/consumables/potions/bottle-round-label-cork-green.webp",
+              "name": "Restoration Lesser",
+              "type": "Item",
+              "itemType": "consumable",
+              "quantity": 1
+            }
+          }
+        },
+        "currency": {
+          "name": "gp",
+          "value": 50
+        },
+        "beaversTests": {
+          "fails": 1,
+          "consume": true,
+          "failsInARow": false,
+          "ands": {
+            "1": {
+              "hits": 1,
+              "ors": {
+                "1": {
+                  "type": "SkillTest",
+                  "data": {
+                    "dc": 10,
+                    "skill": "hea"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "macro": "",
+        "folder": "Beaver's Potions",
+        "kind": "recipe"
+      }
+    }
+  }
+}

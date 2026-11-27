@@ -1,0 +1,100 @@
+{
+  "_id": "U8wGkjLGinM5L54q",
+  "_key": "!items!U8wGkjLGinM5L54q",
+  "name": "Speak Language",
+  "type": "object",
+  "img": "icons/consumables/potions/bottle-pear-corked-pink.webp",
+  "system": {
+    "description": "<p>For 24 hours, you can speak, read and understand one additional language.</p>",
+    "actions": {
+      "bpactU8wGkjLDrin": {
+        "name": "Drink",
+        "img": "icons/consumables/potions/bottle-pear-corked-pink.webp",
+        "activation": {
+          "type": "action",
+          "cost": 1,
+          "reactionTrigger": ""
+        },
+        "duration": {
+          "unit": "hours",
+          "value": "24"
+        },
+        "target": {
+          "quantity": "",
+          "type": "self"
+        },
+        "consumers": {
+          "bpconU8wGkjLDrin": {
+            "type": "quantity",
+            "default": true,
+            "itemId": "",
+            "quantity": 1,
+            "deleteOnZero": true,
+            "label": ""
+          }
+        },
+        "rolls": {},
+        "prompts": {},
+        "effects": [
+          "bpfxU8wGkjLG0000"
+        ],
+        "macro": ""
+      }
+    },
+    "objectType": "consumable",
+    "price": {
+      "value": 250,
+      "denomination": "gp",
+      "special": ""
+    },
+    "quantity": 1,
+    "rarity": "uncommon",
+    "weight": 0.5,
+    "source": "",
+    "requiresAttunement": false,
+    "unidentified": false
+  },
+  "effects": [
+    {
+      "_id": "bpfxU8wGkjLG0000",
+      "_key": "!items.effects!U8wGkjLGinM5L54q.bpfxU8wGkjLG0000",
+      "name": "Speak Language",
+      "img": "icons/consumables/potions/bottle-pear-corked-pink.webp",
+      "type": "base",
+      "description": "<p>For 24 hours, you can speak, read and understand one additional language.</p>",
+      "system": {
+        "changes": [],
+        "magical": true,
+        "applyToSelf": false,
+        "effectType": "onUse"
+      },
+      "disabled": false,
+      "transfer": false,
+      "duration": {
+        "value": 24,
+        "units": "hours",
+        "expiry": "turnStart",
+        "expired": false
+      },
+      "statuses": [],
+      "flags": {},
+      "tint": "#ffffff",
+      "showIcon": 1,
+      "origin": null,
+      "start": null,
+      "sort": 0
+    }
+  ],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "beavers-potions": {
+      "potion": true,
+      "rarity": "uncommon",
+      "rules": []
+    }
+  }
+}

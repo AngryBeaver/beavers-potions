@@ -1,0 +1,71 @@
+{
+  "_id": "OaJjAk4crpXHRTPv",
+  "_key": "!items!OaJjAk4crpXHRTPv",
+  "name": "Restoration Greater",
+  "type": "consumable",
+  "img": "icons/consumables/potions/bottle-round-label-cork-green.webp",
+  "system": {
+    "category": "potion",
+    "description": {
+      "value": "<p>Positive energy undoes a debilitating effect. You can reduce your exhaustion level by one, or end one of the following effects: charmed, petrified, cursed, a reduction of your hit point maximum.</p>"
+    },
+    "level": {
+      "value": 12
+    },
+    "price": {
+      "value": {
+        "gp": 2500
+      }
+    },
+    "quantity": 1,
+    "bulk": {
+      "value": 0.1
+    },
+    "uses": {
+      "value": 1,
+      "max": 1,
+      "autoDestroy": true
+    },
+    "traits": {
+      "value": [
+        "consumable",
+        "magical",
+        "potion"
+      ],
+      "rarity": "rare"
+    },
+    "usage": {
+      "value": "held-in-one-hand"
+    },
+    "rules": [],
+    "slug": "restoration-greater",
+    "publication": {
+      "title": "Beaver's Potions",
+      "authors": "",
+      "license": "OGL",
+      "remaster": false
+    }
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "beavers-potions": {
+      "potion": true,
+      "effects": [],
+      "use": {
+        "restoration": "greater"
+      },
+      "rarity": "veryRare",
+      "rules": [
+        [
+          "restoration",
+          "greater"
+        ]
+      ]
+    }
+  }
+}

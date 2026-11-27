@@ -203,7 +203,24 @@
   },
   "flags": {
     "beavers-potions": {
-      "potion": true
+      "potion": true,
+      "rarity": "uncommon",
+      "rules": [
+        [
+          "attackBonus",
+          "spell",
+          2
+        ],
+        [
+          "damageBonus",
+          "spell",
+          2
+        ],
+        [
+          "speed",
+          0.5
+        ]
+      ]
     }
   }
 }

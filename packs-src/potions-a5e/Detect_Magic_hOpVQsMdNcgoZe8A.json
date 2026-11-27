@@ -1,0 +1,100 @@
+{
+  "_id": "hOpVQsMdNcgoZe8A",
+  "_key": "!items!hOpVQsMdNcgoZe8A",
+  "name": "Detect Magic",
+  "type": "object",
+  "img": "icons/consumables/potions/bottle-bulb-corked-purple.webp",
+  "system": {
+    "description": "<p>Gives the effect of a <em>Detect Magic</em> spell for 10 minutes (no concentration required).</p>",
+    "actions": {
+      "bpacthOpVQsMDrin": {
+        "name": "Drink",
+        "img": "icons/consumables/potions/bottle-bulb-corked-purple.webp",
+        "activation": {
+          "type": "action",
+          "cost": 1,
+          "reactionTrigger": ""
+        },
+        "duration": {
+          "unit": "minutes",
+          "value": "10"
+        },
+        "target": {
+          "quantity": "",
+          "type": "self"
+        },
+        "consumers": {
+          "bpconhOpVQsMDrin": {
+            "type": "quantity",
+            "default": true,
+            "itemId": "",
+            "quantity": 1,
+            "deleteOnZero": true,
+            "label": ""
+          }
+        },
+        "rolls": {},
+        "prompts": {},
+        "effects": [
+          "bpfxhOpVQsMd0000"
+        ],
+        "macro": ""
+      }
+    },
+    "objectType": "consumable",
+    "price": {
+      "value": 50,
+      "denomination": "gp",
+      "special": ""
+    },
+    "quantity": 1,
+    "rarity": "common",
+    "weight": 0.5,
+    "source": "",
+    "requiresAttunement": false,
+    "unidentified": false
+  },
+  "effects": [
+    {
+      "_id": "bpfxhOpVQsMd0000",
+      "_key": "!items.effects!hOpVQsMdNcgoZe8A.bpfxhOpVQsMd0000",
+      "name": "Detect Magic",
+      "img": "icons/consumables/potions/bottle-bulb-corked-purple.webp",
+      "type": "base",
+      "description": "<p>Gives the effect of a <em>Detect Magic</em> spell for 10 minutes (no concentration required).</p>",
+      "system": {
+        "changes": [],
+        "magical": true,
+        "applyToSelf": false,
+        "effectType": "onUse"
+      },
+      "disabled": false,
+      "transfer": false,
+      "duration": {
+        "value": 10,
+        "units": "minutes",
+        "expiry": "turnStart",
+        "expired": false
+      },
+      "statuses": [],
+      "flags": {},
+      "tint": "#ffffff",
+      "showIcon": 1,
+      "origin": null,
+      "start": null,
+      "sort": 0
+    }
+  ],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "beavers-potions": {
+      "potion": true,
+      "rarity": "common",
+      "rules": []
+    }
+  }
+}

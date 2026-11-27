@@ -1,0 +1,104 @@
+{
+  "_id": "Sp3E9go1b56yNnBX",
+  "_key": "!items!Sp3E9go1b56yNnBX",
+  "name": "Messenger's Potion",
+  "type": "consumable",
+  "img": "icons/consumables/potions/bottle-conical-corked-labeled-shell-cyan.webp",
+  "system": {
+    "subType": "potion",
+    "description": {
+      "value": "<p>Doubles your speed for 3 hours, afterwards you gain two levels of exhaustion.</p>",
+      "instructions": "",
+      "unidentified": ""
+    },
+    "quantity": 1,
+    "weight": {
+      "value": 0.1
+    },
+    "price": 250,
+    "identified": true,
+    "cl": 1,
+    "uses": {
+      "value": null,
+      "per": "single",
+      "autoDeductChargesCost": "",
+      "maxFormula": "",
+      "rechargeFormula": ""
+    },
+    "actions": [
+      {
+        "_id": "bpactSp3E9goDrin",
+        "name": "Drink",
+        "activation": {
+          "type": "standard",
+          "unchained": {
+            "type": "action",
+            "cost": 2
+          }
+        },
+        "duration": {
+          "units": "inst"
+        }
+      }
+    ]
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "beavers-potions": {
+      "potion": true,
+      "buffs": [
+        {
+          "name": "Messenger's Potion",
+          "type": "buff",
+          "img": "icons/consumables/potions/bottle-conical-corked-labeled-shell-cyan.webp",
+          "system": {
+            "subType": "temp",
+            "active": true,
+            "level": 1,
+            "duration": {
+              "value": "3",
+              "units": "hour",
+              "end": "turnStart"
+            },
+            "changes": [
+              {
+                "_id": "bpcSp3E9",
+                "formula": "@attributes.speed.land.base * 1",
+                "target": "landSpeed",
+                "type": "untyped"
+              }
+            ],
+            "conditions": [],
+            "description": {
+              "value": "<p>Doubles your speed for 3 hours, afterwards you gain two levels of exhaustion.</p>"
+            }
+          },
+          "flags": {
+            "beavers-potions": {
+              "onEnd": {
+                "exhaustion": 2
+              },
+              "source": "messenger-s-potion.buff"
+            }
+          }
+        }
+      ],
+      "rarity": "uncommon",
+      "rules": [
+        [
+          "speed",
+          2
+        ],
+        [
+          "exhaustionAtEnd",
+          2
+        ]
+      ]
+    }
+  }
+}

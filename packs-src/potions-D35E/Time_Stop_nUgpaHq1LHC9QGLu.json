@@ -1,0 +1,85 @@
+{
+  "_id": "nUgpaHq1LHC9QGLu",
+  "_key": "!items!nUgpaHq1LHC9QGLu",
+  "name": "Time Stop",
+  "type": "consumable",
+  "img": "icons/consumables/potions/bottle-conical-corked-yellow.webp",
+  "system": {
+    "consumableType": "potion",
+    "description": {
+      "value": "<p>You stop the time affecting you for 5 rounds. For the rest of the world you freeze in place: you cannot be moved or changed in any way (including damage and healing), and you cannot act. For yourself no time has passed, you just happen to be 5 rounds further in the future.</p>"
+    },
+    "quantity": 1,
+    "weight": 0.1,
+    "price": 750,
+    "identified": true,
+    "identifiedName": "Time Stop",
+    "uses": {
+      "value": 0,
+      "max": 0,
+      "per": "single"
+    }
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "beavers-potions": {
+      "potion": true,
+      "buffs": [
+        {
+          "name": "Timeless",
+          "type": "buff",
+          "img": "icons/consumables/potions/bottle-conical-corked-yellow.webp",
+          "system": {
+            "buffType": "temp",
+            "active": true,
+            "level": 1,
+            "duration": {
+              "value": "5",
+              "units": "round"
+            },
+            "changes": [
+              [
+                "-@attributes.speed.land.base",
+                "speed",
+                "landSpeed",
+                "untyped"
+              ]
+            ],
+            "description": {
+              "value": "<p>You stop the time affecting you for 5 rounds. For the rest of the world you freeze in place: you cannot be moved or changed in any way (including damage and healing), and you cannot act. For yourself no time has passed, you just happen to be 5 rounds further in the future.</p>"
+            }
+          },
+          "flags": {
+            "beavers-potions": {
+              "invulnerable": true,
+              "conditions": [
+                "helpless"
+              ],
+              "source": "time-stop.buff"
+            }
+          }
+        }
+      ],
+      "pour": false,
+      "rarity": "rare",
+      "rules": [
+        [
+          "speed",
+          0
+        ],
+        [
+          "status",
+          "incapacitated"
+        ],
+        [
+          "invulnerable"
+        ]
+      ]
+    }
+  }
+}

@@ -1,0 +1,106 @@
+{
+  "_id": "DqcuNZtAfICawMFn",
+  "_key": "!items!DqcuNZtAfICawMFn",
+  "name": "Pass Without Trace",
+  "type": "loot",
+  "img": "icons/sundries/scrolls/scroll-worn-tan.webp",
+  "system": {
+    "subType": "misc",
+    "description": {
+      "value": "<p>A recipe of Beaver's Potions, it needs the module Beaver's Crafting.</p><p>Brewing: Survival check DC 10.</p>"
+    },
+    "quantity": 1,
+    "weight": 0,
+    "price": 0,
+    "identified": true,
+    "identifiedName": "Pass Without Trace"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "beavers-crafting": {
+      "subtype": "Recipe",
+      "recipe": {
+        "required": {},
+        "input": {
+          "1": {
+            "Compendium-beavers-potions-ingredients-D35E-Item-iw2D0a2gXp3lu7iJ": {
+              "id": "iw2D0a2gXp3lu7iJ",
+              "uuid": "Compendium.beavers-potions.ingredients-D35E.Item.iw2D0a2gXp3lu7iJ",
+              "img": "icons/consumables/mushrooms/convex-green-brown.webp",
+              "name": "Ghoule Groats",
+              "type": "Item",
+              "itemType": "loot",
+              "quantity": 5
+            }
+          },
+          "2": {
+            "Compendium-beavers-potions-ingredients-D35E-Item-Q2IL3nSljRbVrhnt": {
+              "id": "Q2IL3nSljRbVrhnt",
+              "uuid": "Compendium.beavers-potions.ingredients-D35E.Item.Q2IL3nSljRbVrhnt",
+              "img": "icons/consumables/mushrooms/alien-spotted-blue.webp",
+              "name": "Star Dip",
+              "type": "Item",
+              "itemType": "loot",
+              "quantity": 5
+            }
+          },
+          "3": {
+            "Compendium-beavers-potions-ingredients-D35E-Item-dozjFH55CR4npT6F": {
+              "id": "dozjFH55CR4npT6F",
+              "uuid": "Compendium.beavers-potions.ingredients-D35E.Item.dozjFH55CR4npT6F",
+              "img": "icons/tools/laboratory/bowl-powder-purple.webp",
+              "name": "Magical Essence",
+              "type": "Item",
+              "itemType": "loot",
+              "quantity": 1
+            }
+          }
+        },
+        "output": {
+          "1": {
+            "Compendium-beavers-potions-potions-D35E-Item-yDfNPSQ296iityij": {
+              "id": "yDfNPSQ296iityij",
+              "uuid": "Compendium.beavers-potions.potions-D35E.Item.yDfNPSQ296iityij",
+              "img": "icons/consumables/potions/bottle-round-corked-yellow.webp",
+              "name": "Pass Without Trace",
+              "type": "Item",
+              "itemType": "consumable",
+              "quantity": 1
+            }
+          }
+        },
+        "currency": {
+          "name": "gp",
+          "value": 50
+        },
+        "beaversTests": {
+          "fails": 1,
+          "consume": true,
+          "failsInARow": false,
+          "ands": {
+            "1": {
+              "hits": 1,
+              "ors": {
+                "1": {
+                  "type": "SkillTest",
+                  "data": {
+                    "dc": 10,
+                    "skill": "sur"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "macro": "",
+        "folder": "Beaver's Potions",
+        "kind": "recipe"
+      }
+    }
+  }
+}

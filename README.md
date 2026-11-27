@@ -1,14 +1,14 @@
 # Beaver's Potions
 50 additional magical potions for dnd5e, the mushrooms to brew them and recipes for [Beaver's Crafting](https://github.com/AngryBeaver/beavers-crafting).
 
-The potions work with dnd5e alone: no midi-qol, DAE, item macro, Active Auras or Token Magic needed.
+For D&D 5e, Level Up A5E, Pathfinder 1e, Pathfinder 2e and D&D 3.5 SRD.
+
+The potions work with the game system alone: no midi-qol, DAE, item macro, Active Auras or Token Magic needed.
 Most of them do what they describe when they are drunk; the others put a reminder effect with the right duration on you.
 
 ![Foundry Core Compatible Version](https://img.shields.io/endpoint?url=https%3A%2F%2Ffoundryshields.com%2Fversion%3Fstyle%3Dflat%26url%3Dhttps%3A%2F%2Fgithub.com%2FAngryBeaver%2Fbeavers-potions%2Freleases%2Flatest%2Fdownload%2Fmodule.json)
 ![Foundry System](https://img.shields.io/endpoint?url=https%3A%2F%2Ffoundryshields.com%2Fsystem%3FnameType%3Draw%26showVersion%3D1%26style%3Dflat%26url%3Dhttps%3A%2F%2Fraw.githubusercontent.com%2FAngryBeaver%2Fbeavers-potions%2Fmain%2Fmodule.json)
 ![Download Count](https://img.shields.io/github/downloads/AngryBeaver/beavers-potions/total?color=bright-green)
-
-Needs Foundry 14 and dnd5e 6.
 
 ## Screenshots
 | Frost Armor | Batman | Cure Undead |
@@ -22,8 +22,25 @@ Needs Foundry 14 and dnd5e 6.
   the rarer the potion the more essence) and random potions by rarity (needs Beaver's Crafting)
 - **Random Potions**: a roll table per rarity
 
+## Compatibility
+| System | Foundry | Compendiums | How the potions work there |
+|---|---|---|---|
+| D&D 5e (dnd5e 6) | 14 | Potions, Ingredients, Recipes, Random Potions | activities and active effects |
+| Level Up A5E (a5e 1.5) | 14 | the same| actions and active effects with a5e's keys |
+| D&D 3.5 SRD (D35E 3) | 14 | the same| a buff on the drinker |
+| Pathfinder 1e (pf1 11) | 13 | the same| a buff on the drinker |
+| Pathfinder 2e (pf2e 7) | 13 | the same| an effect with rule elements on the drinker |
+
+The potions are written for 5e. In the other systems their rules are translated: advantage becomes +4 (pf1, D35E) or
+"roll twice, keep the higher" (pf2e); attacks against you with advantage -4 AC (pf1, D35E) or off-guard (pf2e), with
+disadvantage a 20% miss chance (pf1, D35E) or concealed (pf2e); exhaustion becomes fatigued / exhausted (pf1, D35E),
+drained (pf2e) or fatigue (a5e). What a system has nothing for (e.g. polymorph outside dnd5e, conditions it does not
+know) is left to the Gamemaster: the potion's text says what it does. Which rule works in which system is checked by
+
+
+
 ## How the potions work
-Drink a potion (its "Drink" activity): its effects are put on you right away, healing is rolled and applied.
+Drink a potion (its "Drink" activity or action, in pf2e "Use"): its effects are put on you right away, healing is rolled and applied.
 The setting "Apply potion effects automatically" turns this off; then use the buttons of the chat card.
 Effects end by themselves when their time is up (Foundry's effect durations: in combat at the start of your turn).
 
@@ -79,7 +96,9 @@ The icons are the ones that come with Foundry VTT.
 - the compendiums are generated: `pnpm packs:generate` writes `packs-src/` from `tools/potions.mjs` (the potions and
   their rules) and `tools/recipes.mjs` (ingredients, recipes, tables). The build compiles `packs-src/` into LevelDB packs.
   `pnpm packs:extract` pulls compendiums edited in Foundry back into `packs-src/` (they are overwritten by the next generate).
-- the rules dnd5e has no effect for are in `src/`, driven by `flags["beavers-potions"]` on the potions and their effects:
+- `tools/systems/<system>.mjs` translates the potions' rules for a system (`tools/support.json`: what it cannot do);
+  `src/systems/<system>.js` is the system's part of the runtime (use hook, damage, healing, saves, conditions)
+- the rules a system has no effect for are in `src/`, driven by `flags["beavers-potions"]` on the potions and their effects (or buffs):
 
 | Flag | On | |
 |---|---|---|

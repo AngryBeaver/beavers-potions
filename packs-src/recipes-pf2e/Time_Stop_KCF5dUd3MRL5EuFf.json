@@ -1,0 +1,126 @@
+{
+  "_id": "KCF5dUd3MRL5EuFf",
+  "_key": "!items!KCF5dUd3MRL5EuFf",
+  "name": "Time Stop",
+  "type": "treasure",
+  "img": "icons/sundries/scrolls/scroll-worn-tan.webp",
+  "system": {
+    "description": {
+      "value": "<p>A recipe of Beaver's Potions, it needs the module Beaver's Crafting.</p><p>Brewing: Arcana check DC 17.</p>"
+    },
+    "level": {
+      "value": 0
+    },
+    "price": {
+      "value": {}
+    },
+    "quantity": 1,
+    "bulk": {
+      "value": 0
+    },
+    "traits": {
+      "value": [],
+      "rarity": "common"
+    },
+    "slug": "recipe-time-stop"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "beavers-crafting": {
+      "subtype": "Recipe",
+      "recipe": {
+        "required": {},
+        "input": {
+          "1": {
+            "Compendium-beavers-potions-ingredients-pf2e-Item-OOFUAGixSqsgyT29": {
+              "id": "OOFUAGixSqsgyT29",
+              "uuid": "Compendium.beavers-potions.ingredients-pf2e.Item.OOFUAGixSqsgyT29",
+              "img": "icons/consumables/mushrooms/campanulate-bell-red-white.webp",
+              "name": "Hansel and Gretel",
+              "type": "Item",
+              "itemType": "treasure",
+              "quantity": 5
+            }
+          },
+          "2": {
+            "Compendium-beavers-potions-ingredients-pf2e-Item-WTpNWej9PSN8A4G8": {
+              "id": "WTpNWej9PSN8A4G8",
+              "uuid": "Compendium.beavers-potions.ingredients-pf2e.Item.WTpNWej9PSN8A4G8",
+              "img": "icons/consumables/mushrooms/helm-red-white.webp",
+              "name": "Tiny Maw",
+              "type": "Item",
+              "itemType": "treasure",
+              "quantity": 5
+            }
+          },
+          "3": {
+            "Compendium-beavers-potions-ingredients-pf2e-Item-dw4rYedscUjl6tp6": {
+              "id": "dw4rYedscUjl6tp6",
+              "uuid": "Compendium.beavers-potions.ingredients-pf2e.Item.dw4rYedscUjl6tp6",
+              "img": "icons/consumables/mushrooms/umbonate-brown.webp",
+              "name": "Earth Tongue",
+              "type": "Item",
+              "itemType": "treasure",
+              "quantity": 5
+            }
+          },
+          "4": {
+            "Compendium-beavers-potions-ingredients-pf2e-Item-dozjFH55CR4npT6F": {
+              "id": "dozjFH55CR4npT6F",
+              "uuid": "Compendium.beavers-potions.ingredients-pf2e.Item.dozjFH55CR4npT6F",
+              "img": "icons/tools/laboratory/bowl-powder-purple.webp",
+              "name": "Magical Essence",
+              "type": "Item",
+              "itemType": "treasure",
+              "quantity": 2
+            }
+          }
+        },
+        "output": {
+          "1": {
+            "Compendium-beavers-potions-potions-pf2e-Item-nUgpaHq1LHC9QGLu": {
+              "id": "nUgpaHq1LHC9QGLu",
+              "uuid": "Compendium.beavers-potions.potions-pf2e.Item.nUgpaHq1LHC9QGLu",
+              "img": "icons/consumables/potions/bottle-conical-corked-yellow.webp",
+              "name": "Time Stop",
+              "type": "Item",
+              "itemType": "consumable",
+              "quantity": 1
+            }
+          }
+        },
+        "currency": {
+          "name": "gp",
+          "value": 250
+        },
+        "beaversTests": {
+          "fails": 1,
+          "consume": true,
+          "failsInARow": false,
+          "ands": {
+            "1": {
+              "hits": 1,
+              "ors": {
+                "1": {
+                  "type": "SkillTest",
+                  "data": {
+                    "dc": 17,
+                    "skill": "arcana"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "macro": "",
+        "folder": "Beaver's Potions",
+        "kind": "recipe"
+      }
+    }
+  }
+}

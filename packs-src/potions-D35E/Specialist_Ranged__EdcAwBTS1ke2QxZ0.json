@@ -1,0 +1,97 @@
+{
+  "_id": "EdcAwBTS1ke2QxZ0",
+  "_key": "!items!EdcAwBTS1ke2QxZ0",
+  "name": "Specialist (Ranged)",
+  "type": "consumable",
+  "img": "icons/consumables/potions/bottle-pear-corked-labeled-green.webp",
+  "system": {
+    "consumableType": "potion",
+    "description": {
+      "value": "<p>For the next minute you gain +2 on ranged weapon attacks and +2 on ranged weapon damage, while your AC is lowered by 2.</p>"
+    },
+    "quantity": 1,
+    "weight": 0.1,
+    "price": 250,
+    "identified": true,
+    "identifiedName": "Specialist (Ranged)",
+    "uses": {
+      "value": 0,
+      "max": 0,
+      "per": "single"
+    }
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "beavers-potions": {
+      "potion": true,
+      "buffs": [
+        {
+          "name": "Specialist (Ranged)",
+          "type": "buff",
+          "img": "icons/consumables/potions/bottle-pear-corked-labeled-green.webp",
+          "system": {
+            "buffType": "temp",
+            "active": true,
+            "level": 1,
+            "duration": {
+              "value": "1",
+              "units": "minute"
+            },
+            "changes": [
+              [
+                "2",
+                "attack",
+                "rattack",
+                "untyped"
+              ],
+              [
+                "2",
+                "damage",
+                "wdamage",
+                "untyped"
+              ],
+              [
+                "-2",
+                "ac",
+                "ac",
+                "untyped"
+              ]
+            ],
+            "description": {
+              "value": "<p>For the next minute you gain +2 on ranged weapon attacks and +2 on ranged weapon damage, while your AC is lowered by 2.</p>"
+            }
+          },
+          "flags": {
+            "beavers-potions": {
+              "conditions": [],
+              "source": "specialist-ranged.buff"
+            }
+          }
+        }
+      ],
+      "pour": false,
+      "rarity": "uncommon",
+      "rules": [
+        [
+          "attackBonus",
+          "ranged",
+          2
+        ],
+        [
+          "damageBonus",
+          "ranged",
+          2
+        ],
+        [
+          "ac",
+          -2
+        ]
+      ]
+    }
+  }
+}

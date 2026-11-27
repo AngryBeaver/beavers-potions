@@ -171,7 +171,15 @@
   },
   "flags": {
     "beavers-potions": {
-      "potion": true
+      "potion": true,
+      "rarity": "uncommon",
+      "rules": [
+        [
+          "skillBonus",
+          "stealth",
+          10
+        ]
+      ]
     }
   }
 }

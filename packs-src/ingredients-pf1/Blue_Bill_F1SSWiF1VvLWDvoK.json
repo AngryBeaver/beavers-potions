@@ -1,0 +1,30 @@
+{
+  "_id": "F1SSWiF1VvLWDvoK",
+  "_key": "!items!F1SSWiF1VvLWDvoK",
+  "name": "Blue Bill",
+  "type": "loot",
+  "img": "icons/consumables/mushrooms/ovate-blue.webp",
+  "system": {
+    "subType": "tradeGoods",
+    "description": {
+      "value": "<p>A mushroom, an ingredient of Beaver's Potions.</p>"
+    },
+    "quantity": 1,
+    "weight": {
+      "value": 0.1
+    },
+    "price": 0,
+    "identified": true
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "beavers-potions": {
+      "ingredient": "mushroom"
+    }
+  }
+}

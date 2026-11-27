@@ -1,0 +1,42 @@
+{
+  "_id": "Q2IL3nSljRbVrhnt",
+  "_key": "!items!Q2IL3nSljRbVrhnt",
+  "name": "Star Dip",
+  "type": "treasure",
+  "img": "icons/consumables/mushrooms/alien-spotted-blue.webp",
+  "system": {
+    "description": {
+      "value": "<p>A mushroom, an ingredient of Beaver's Potions.</p>"
+    },
+    "level": {
+      "value": 0
+    },
+    "price": {
+      "value": {
+        "sp": 1
+      }
+    },
+    "quantity": 1,
+    "bulk": {
+      "value": 0.1
+    },
+    "traits": {
+      "value": [],
+      "rarity": "common"
+    },
+    "category": "",
+    "stackGroup": null,
+    "slug": "star-dip"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "beavers-potions": {
+      "ingredient": "mushroom"
+    }
+  }
+}

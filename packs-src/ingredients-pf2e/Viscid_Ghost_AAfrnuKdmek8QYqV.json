@@ -1,0 +1,42 @@
+{
+  "_id": "AAfrnuKdmek8QYqV",
+  "_key": "!items!AAfrnuKdmek8QYqV",
+  "name": "Viscid Ghost",
+  "type": "treasure",
+  "img": "icons/consumables/mushrooms/umbontae-bumpy-purple.webp",
+  "system": {
+    "description": {
+      "value": "<p>A mushroom, an ingredient of Beaver's Potions.</p>"
+    },
+    "level": {
+      "value": 0
+    },
+    "price": {
+      "value": {
+        "sp": 1
+      }
+    },
+    "quantity": 1,
+    "bulk": {
+      "value": 0.1
+    },
+    "traits": {
+      "value": [],
+      "rarity": "common"
+    },
+    "category": "",
+    "stackGroup": null,
+    "slug": "viscid-ghost"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "beavers-potions": {
+      "ingredient": "mushroom"
+    }
+  }
+}

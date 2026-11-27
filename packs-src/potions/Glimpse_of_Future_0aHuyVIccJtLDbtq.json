@@ -125,7 +125,9 @@
   },
   "flags": {
     "beavers-potions": {
-      "potion": true
+      "potion": true,
+      "rarity": "uncommon",
+      "rules": []
     }
   }
 }

@@ -1,0 +1,84 @@
+{
+  "_id": "xVqhoLAtPeYxYe9P",
+  "_key": "!items!xVqhoLAtPeYxYe9P",
+  "name": "Shield of Energy",
+  "type": "consumable",
+  "img": "icons/consumables/potions/bottle-round-empty-glass.webp",
+  "system": {
+    "consumableType": "potion",
+    "description": {
+      "value": "<p>You create a gleaming sphere of energy with a 10 ft. radius centered on you. For 1 minute everyone within it when it forms (you included) gets a +2 bonus to AC.</p>"
+    },
+    "quantity": 1,
+    "weight": 0.1,
+    "price": 750,
+    "identified": true,
+    "identifiedName": "Shield of Energy",
+    "uses": {
+      "value": 0,
+      "max": 0,
+      "per": "single"
+    }
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "beavers-potions": {
+      "potion": true,
+      "buffs": [
+        {
+          "name": "Shield of Energy",
+          "type": "buff",
+          "img": "icons/consumables/potions/bottle-round-empty-glass.webp",
+          "system": {
+            "buffType": "temp",
+            "active": true,
+            "level": 1,
+            "duration": {
+              "value": "1",
+              "units": "minute"
+            },
+            "changes": [
+              [
+                "2",
+                "ac",
+                "ac",
+                "untyped"
+              ]
+            ],
+            "description": {
+              "value": "<p>You create a gleaming sphere of energy with a 10 ft. radius centered on you. For 1 minute everyone within it when it forms (you included) gets a +2 bonus to AC.</p>"
+            }
+          },
+          "flags": {
+            "beavers-potions": {
+              "conditions": [],
+              "source": "shield-of-energy.buff"
+            }
+          }
+        }
+      ],
+      "pour": false,
+      "use": {
+        "area": {
+          "radius": 10
+        }
+      },
+      "rarity": "rare",
+      "rules": [
+        [
+          "ac",
+          2
+        ],
+        [
+          "area",
+          10
+        ]
+      ]
+    }
+  }
+}

@@ -1,116 +1,98 @@
-import { endOnAction } from "./use.js";
-import { chat, effectsWith, hasEffect, NS, potionFlag, registerGMAction, runAsGM } from "./util.js";
+import { sys } from "./system.js";
+import { chat, deleteEffect, effectsWith, hasEffect, NS, potionFlag, runAsGM } from "./util.js";
 
 /**
- * Attack and damage rules of the potions:
- * - grantsAdvantage / grantsDisadvantage / grantsCritical: attacks against the creature (Casters Overtime, Blur, Minor Invisibility)
- * - attackAdvantage: the creature's own attacks (Minor Invisibility)
- * - distortion: a chance that an attack against the creature misses (Distortion)
- * - reflectDamage: damage from an attack goes back to the attacker (Reflect Damage)
+ * Damage and attack rules of the potions. The parts that work on the hit points are the same in every system:
  * - invulnerable: no damage and no healing (Time Stop)
  * - protectionFromDeath: the first time the creature would drop to 0 hit points it keeps 1 (Protection From Death)
+ * The system adapters call the attack helpers from their roll hooks:
+ * - attackModes(attacker, targets): advantage / disadvantage / critical from grantsAdvantage, grantsDisadvantage,
+ *   grantsCritical (attacks against the creature) and attackAdvantage (its own attacks)
+ * - distortion(attacker, targets): a chance that an attack against the creature misses (Distortion)
+ * - reflect(actor, amount, attacker): damage goes back to the attacker (Reflect Damage)
  */
 
 const loc = (key, data) => (data ? game.i18n.format(`${NS}.${key}`, data) : game.i18n.localize(`${NS}.${key}`));
 
-const targetActors = () => [...game.user.targets].map((t) => t.actor).filter((a) => a);
+export const targetActors = () => [...game.user.targets].map((t) => t.actor).filter((a) => a);
 
-/** an attacker with blindsight or truesight is not fooled by what relies on sight */
-function seesThrough(attacker) {
-  const ranges = attacker?.system.attributes?.senses?.ranges ?? attacker?.system.attributes?.senses ?? {};
-  return (ranges.blindsight ?? 0) > 0 || (ranges.truesight ?? 0) > 0;
-}
-
-Hooks.on("dnd5e.preRollAttackV2", (config) => {
-  const attacker = config.subject?.actor;
+export function attackModes(attacker, targets = targetActors()) {
   let advantage = hasEffect(attacker, "attackAdvantage");
   let disadvantage = false;
-  for (const target of targetActors()) {
+  let critical = false;
+  for (const target of targets) {
     if (hasEffect(target, "grantsAdvantage")) advantage = true;
+    if (hasEffect(target, "grantsCritical")) critical = true;
     for (const effect of effectsWith(target, "grantsDisadvantage")) {
-      if (potionFlag(effect, "grantsDisadvantage") === "sight" && seesThrough(attacker)) continue;
+      if (potionFlag(effect, "grantsDisadvantage") === "sight" && sys.seesThrough?.(attacker)) continue;
       disadvantage = true;
     }
   }
-  if (advantage) config.advantage = true;
-  if (disadvantage) config.disadvantage = true;
-});
+  return { advantage, disadvantage, critical };
+}
 
-/** the healing of a potion is rolled without dialog and applied to the drinker */
-const potionHeal = (activity) =>
-  activity?.type === "heal" && potionFlag(activity.item, "potion") && game.settings.get(NS, "automate") && activity.actor?.isOwner;
-
-Hooks.on("dnd5e.preRollDamageV2", (config, dialog) => {
-  if (potionHeal(config.subject)) dialog.configure = false;
-});
-
-Hooks.on("dnd5e.rollDamageV2", async (rolls, { subject } = {}) => {
-  if (!potionHeal(subject) || !rolls?.length) return;
-  const actor = subject.actor;
-  const onlyType = potionFlag(subject.item, "use")?.onlyType;
-  if (onlyType && actor.system.details?.type?.value !== onlyType) {
-    await chat(actor, loc("noEffect"), subject.item.name);
-    return;
-  }
-  const total = rolls.reduce((sum, r) => sum + r.total, 0);
-  if (rolls[0].options?.type === "temphp") {
-    if ((actor.system.attributes.hp.temp ?? 0) < total) await actor.update({ "system.attributes.hp.temp": total });
-  } else {
-    await actor.applyDamage([{ value: total, type: "healing" }]);
-  }
-});
-
-Hooks.on("dnd5e.preRollDamageV2", (config) => {
-  if (config.subject?.type !== "attack") return;
-  if (targetActors().some((t) => hasEffect(t, "grantsCritical"))) config.isCritical = true;
-});
-
-Hooks.on("dnd5e.rollAttackV2", async (rolls, { subject } = {}) => {
-  if (!subject) return;
-  // an attack roll ends Minor Invisibility, also when the attack was rolled without using the activity
-  if (subject.actor) await endOnAction(subject.actor, subject);
-  for (const target of targetActors()) {
+export async function distortion(attacker, targets = targetActors()) {
+  for (const target of targets) {
     for (const effect of effectsWith(target, "distortion")) {
       const chance = Number(potionFlag(effect, "distortion")) || 20;
       const roll = await new Roll("1d100").evaluate();
       const missed = roll.total <= chance;
-      await chat(target, loc(missed ? "distortionMiss" : "distortionHit", { attacker: subject.actor?.name ?? "", roll: roll.total, chance }), effect.name);
+      await chat(target, loc(missed ? "distortionMiss" : "distortionHit", { attacker: attacker?.name ?? "", roll: roll.total, chance }), effect.name);
     }
   }
-});
+}
 
-/* -------------------------------------------- */
-
-Hooks.on("dnd5e.preApplyDamage", (actor, amount, updates, options) => {
-  if (hasEffect(actor, "invulnerable")) {
-    void chat(actor, loc("invulnerable"));
-    return false;
-  }
-  if (amount > 0 && hasEffect(actor, "reflectDamage")) {
-    const attacker = options?.originatingMessage?.getAssociatedActor?.();
-    if (attacker && attacker !== actor) {
-      void runAsGM("damage", { uuid: attacker.uuid, amount });
-      void chat(actor, loc("reflected", { amount, attacker: attacker.name }));
-      return false;
-    }
-  }
+/** returns true when the damage was reflected (and must not be applied to the actor) */
+export function reflect(actor, amount, attacker, type) {
+  if (!(amount > 0) || !hasEffect(actor, "reflectDamage") || !attacker || attacker === actor) return false;
+  void runAsGM("damage", { uuid: attacker.uuid, amount, type });
+  void chat(actor, loc("reflected", { amount, attacker: attacker.name }));
   return true;
-});
+}
 
-registerGMAction("damage", async ({ uuid, amount }) => {
-  const actor = await fromUuid(uuid);
-  await actor?.applyDamage(amount);
-});
+export const invulnerable = (actor) => hasEffect(actor, "invulnerable");
 
-Hooks.on("preUpdateActor", (actor, changes, options, userId) => {
-  const hp = foundry.utils.getProperty(changes, "system.attributes.hp.value");
-  if (hp === undefined || hp > 0) return;
+/** the hit points an update would set (the adapter may store them differently, pf1: offset from the maximum) */
+function nextHp(actor, changes) {
+  if (sys.nextHp) return sys.nextHp(actor, changes);
+  const { value: valuePath, temp: tempPath } = sys.hpPaths ?? {};
+  if (!valuePath) return {};
+  return { value: foundry.utils.getProperty(changes, valuePath), temp: tempPath ? foundry.utils.getProperty(changes, tempPath) : undefined };
+}
+
+function setHp(actor, changes, hp) {
+  if (sys.setHp) return sys.setHp(actor, changes, hp);
+  const { value: valuePath, temp: tempPath } = sys.hpPaths;
+  if (hp.value !== undefined) foundry.utils.setProperty(changes, valuePath, hp.value);
+  if (hp.temp !== undefined && tempPath) foundry.utils.setProperty(changes, tempPath, hp.temp);
+}
+
+Hooks.on("preUpdateActor", (actor, changes) => {
+  if (!sys.hp) return;
+  const { value, temp } = nextHp(actor, changes);
+  if (value === undefined && temp === undefined) return;
+
+  // Time Stop: hit points do not change at all
+  if (invulnerable(actor)) {
+    const hp = sys.hp(actor);
+    const keep = {};
+    if (value !== undefined && value !== hp.value) keep.value = hp.value;
+    if (temp !== undefined && temp !== (hp.temp ?? 0)) keep.temp = hp.temp ?? 0;
+    if (Object.keys(keep).length) {
+      setHp(actor, changes, keep);
+      void chat(actor, loc("invulnerable"));
+    }
+    return;
+  }
+
+  // Protection From Death
+  if (value === undefined || value > 0) return;
   const effect = effectsWith(actor, "protectionFromDeath")[0];
   if (!effect) return;
-  foundry.utils.setProperty(changes, "system.attributes.hp.value", 1);
+  setHp(actor, changes, { value: 1 });
   // after the update: the protection is used up
   setTimeout(async () => {
-    await effect.delete();
+    await deleteEffect(effect);
     await chat(actor, loc("protectedFromDeath"), effect.name);
   }, 0);
 });

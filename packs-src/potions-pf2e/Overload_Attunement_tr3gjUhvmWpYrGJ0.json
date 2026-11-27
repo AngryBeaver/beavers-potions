@@ -1,0 +1,105 @@
+{
+  "_id": "tr3gjUhvmWpYrGJ0",
+  "_key": "!items!tr3gjUhvmWpYrGJ0",
+  "name": "Overload Attunement",
+  "type": "consumable",
+  "img": "icons/consumables/potions/bottle-corked-red.webp",
+  "system": {
+    "category": "potion",
+    "description": {
+      "value": "<p>Within this potion slumbers a tiny parasite. When you drink it, the parasite awakes. For the following 4 hours you painfully feel how something is eating your internals while slowly growing and moving upwards towards your brain. At its destination it attaches to your brain stem and usually stops growing. There it lives for the next 5 days until it dies. During this time it grants you the ability to attune to one additional magic item.</p>"
+    },
+    "level": {
+      "value": 16
+    },
+    "price": {
+      "value": {
+        "gp": 5000
+      }
+    },
+    "quantity": 1,
+    "bulk": {
+      "value": 0.1
+    },
+    "uses": {
+      "value": 1,
+      "max": 1,
+      "autoDestroy": true
+    },
+    "traits": {
+      "value": [
+        "consumable",
+        "magical",
+        "potion"
+      ],
+      "rarity": "unique"
+    },
+    "usage": {
+      "value": "held-in-one-hand"
+    },
+    "rules": [],
+    "slug": "overload-attunement",
+    "publication": {
+      "title": "Beaver's Potions",
+      "authors": "",
+      "license": "OGL",
+      "remaster": false
+    }
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "beavers-potions": {
+      "potion": true,
+      "effects": [
+        {
+          "name": "Effect: Overload Attunement",
+          "type": "effect",
+          "img": "icons/consumables/potions/bottle-corked-red.webp",
+          "system": {
+            "description": {
+              "value": "<p>Within this potion slumbers a tiny parasite. When you drink it, the parasite awakes. For the following 4 hours you painfully feel how something is eating your internals while slowly growing and moving upwards towards your brain. At its destination it attaches to your brain stem and usually stops growing. There it lives for the next 5 days until it dies. During this time it grants you the ability to attune to one additional magic item.</p>"
+            },
+            "duration": {
+              "value": 5,
+              "unit": "days",
+              "expiry": "turn-start",
+              "sustained": false
+            },
+            "rules": [],
+            "tokenIcon": {
+              "show": true
+            },
+            "level": {
+              "value": 16
+            },
+            "traits": {
+              "value": [],
+              "rarity": "common"
+            },
+            "slug": "effect-overload-attunement"
+          },
+          "flags": {
+            "beavers-potions": {
+              "source": "overload-attunement.effect"
+            }
+          }
+        }
+      ],
+      "rarity": "legendary",
+      "rules": [
+        [
+          "attunement",
+          1
+        ]
+      ],
+      "unsupported": [
+        "attunement"
+      ]
+    }
+  }
+}

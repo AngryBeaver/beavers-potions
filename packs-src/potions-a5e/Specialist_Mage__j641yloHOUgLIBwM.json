@@ -1,0 +1,194 @@
+{
+  "_id": "j641yloHOUgLIBwM",
+  "_key": "!items!j641yloHOUgLIBwM",
+  "name": "Specialist (Mage)",
+  "type": "object",
+  "img": "icons/consumables/potions/bottle-pear-corked-labeled-green.webp",
+  "system": {
+    "description": "<p>For the next minute you gain +2 on spell attacks and +2 on spell damage, while your speed is halved.</p>",
+    "actions": {
+      "bpactj641yloDrin": {
+        "name": "Drink",
+        "img": "icons/consumables/potions/bottle-pear-corked-labeled-green.webp",
+        "activation": {
+          "type": "action",
+          "cost": 1,
+          "reactionTrigger": ""
+        },
+        "duration": {
+          "unit": "minutes",
+          "value": "1"
+        },
+        "target": {
+          "quantity": "",
+          "type": "self"
+        },
+        "consumers": {
+          "bpconj641yloDrin": {
+            "type": "quantity",
+            "default": true,
+            "itemId": "",
+            "quantity": 1,
+            "deleteOnZero": true,
+            "label": ""
+          }
+        },
+        "rolls": {},
+        "prompts": {},
+        "effects": [
+          "bpfxj641yloH0000"
+        ],
+        "macro": ""
+      }
+    },
+    "objectType": "consumable",
+    "price": {
+      "value": 250,
+      "denomination": "gp",
+      "special": ""
+    },
+    "quantity": 1,
+    "rarity": "uncommon",
+    "weight": 0.5,
+    "source": "",
+    "requiresAttunement": false,
+    "unidentified": false
+  },
+  "effects": [
+    {
+      "_id": "bpfxj641yloH0000",
+      "_key": "!items.effects!j641yloHOUgLIBwM.bpfxj641yloH0000",
+      "name": "Specialist (Mage)",
+      "img": "icons/consumables/potions/bottle-pear-corked-labeled-green.webp",
+      "type": "base",
+      "description": "<p>For the next minute you gain +2 on spell attacks and +2 on spell damage, while your speed is halved.</p>",
+      "system": {
+        "changes": [
+          {
+            "_id": "bpfxj641yloHc000",
+            "key": "flags.a5e.effects.bonuses.attacks",
+            "type": "custom",
+            "value": {
+              "label": "Specialist (Mage)",
+              "formula": "2",
+              "context": {
+                "attackTypes": [
+                  "meleeSpellAttack",
+                  "rangedSpellAttack"
+                ],
+                "spellLevels": []
+              }
+            },
+            "phase": "initial",
+            "priority": null
+          },
+          {
+            "_id": "bpfxj641yloHc100",
+            "key": "flags.a5e.effects.bonuses.damage",
+            "type": "custom",
+            "value": {
+              "label": "Specialist (Mage)",
+              "formula": "2",
+              "damageType": "",
+              "context": {
+                "attackTypes": [
+                  "meleeSpellAttack",
+                  "rangedSpellAttack"
+                ],
+                "spellLevels": [],
+                "damageTypes": []
+              }
+            },
+            "phase": "initial",
+            "priority": null
+          },
+          {
+            "_id": "bpfxj641yloHc200",
+            "key": "system.attributes.movement.walk.distance",
+            "type": "multiply",
+            "value": 0.5,
+            "phase": "initial",
+            "priority": null
+          },
+          {
+            "_id": "bpfxj641yloHc300",
+            "key": "system.attributes.movement.fly.distance",
+            "type": "multiply",
+            "value": 0.5,
+            "phase": "initial",
+            "priority": null
+          },
+          {
+            "_id": "bpfxj641yloHc400",
+            "key": "system.attributes.movement.swim.distance",
+            "type": "multiply",
+            "value": 0.5,
+            "phase": "initial",
+            "priority": null
+          },
+          {
+            "_id": "bpfxj641yloHc500",
+            "key": "system.attributes.movement.climb.distance",
+            "type": "multiply",
+            "value": 0.5,
+            "phase": "initial",
+            "priority": null
+          },
+          {
+            "_id": "bpfxj641yloHc600",
+            "key": "system.attributes.movement.burrow.distance",
+            "type": "multiply",
+            "value": 0.5,
+            "phase": "initial",
+            "priority": null
+          }
+        ],
+        "magical": true,
+        "applyToSelf": false,
+        "effectType": "onUse"
+      },
+      "disabled": false,
+      "transfer": false,
+      "duration": {
+        "value": 1,
+        "units": "minutes",
+        "expiry": "turnStart",
+        "expired": false
+      },
+      "statuses": [],
+      "flags": {},
+      "tint": "#ffffff",
+      "showIcon": 1,
+      "origin": null,
+      "start": null,
+      "sort": 0
+    }
+  ],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "beavers-potions": {
+      "potion": true,
+      "rarity": "uncommon",
+      "rules": [
+        [
+          "attackBonus",
+          "spell",
+          2
+        ],
+        [
+          "damageBonus",
+          "spell",
+          2
+        ],
+        [
+          "speed",
+          0.5
+        ]
+      ]
+    }
+  }
+}

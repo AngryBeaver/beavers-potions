@@ -1,0 +1,114 @@
+{
+  "_id": "exyGaiw1Es8u37QE",
+  "_key": "!items!exyGaiw1Es8u37QE",
+  "name": "Aid Greater",
+  "type": "consumable",
+  "img": "icons/consumables/potions/bottle-round-label-cork-red.webp",
+  "system": {
+    "category": "potion",
+    "description": {
+      "value": "<p>Your hit point maximum and your current hit points increase by 10 for 8 hours.</p>"
+    },
+    "level": {
+      "value": 8
+    },
+    "price": {
+      "value": {
+        "gp": 750
+      }
+    },
+    "quantity": 1,
+    "bulk": {
+      "value": 0.1
+    },
+    "uses": {
+      "value": 1,
+      "max": 1,
+      "autoDestroy": true
+    },
+    "traits": {
+      "value": [
+        "consumable",
+        "magical",
+        "potion"
+      ],
+      "rarity": "rare"
+    },
+    "usage": {
+      "value": "held-in-one-hand"
+    },
+    "rules": [],
+    "slug": "aid-greater",
+    "publication": {
+      "title": "Beaver's Potions",
+      "authors": "",
+      "license": "OGL",
+      "remaster": false
+    }
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "beavers-potions": {
+      "potion": true,
+      "effects": [
+        {
+          "name": "Effect: Aid Greater",
+          "type": "effect",
+          "img": "icons/consumables/potions/bottle-round-label-cork-red.webp",
+          "system": {
+            "description": {
+              "value": "<p>Your hit point maximum and your current hit points increase by 10 for 8 hours.</p>"
+            },
+            "duration": {
+              "value": 8,
+              "unit": "hours",
+              "expiry": "turn-start",
+              "sustained": false
+            },
+            "rules": [
+              {
+                "key": "FlatModifier",
+                "selector": "hp",
+                "value": 10,
+                "type": "untyped",
+                "label": "Beaver's Potions"
+              }
+            ],
+            "tokenIcon": {
+              "show": true
+            },
+            "level": {
+              "value": 8
+            },
+            "traits": {
+              "value": [],
+              "rarity": "common"
+            },
+            "slug": "effect-aid-greater"
+          },
+          "flags": {
+            "beavers-potions": {
+              "source": "aid-greater.effect"
+            }
+          }
+        }
+      ],
+      "rarity": "rare",
+      "rules": [
+        [
+          "heal",
+          "10"
+        ],
+        [
+          "hpMax",
+          10
+        ]
+      ]
+    }
+  }
+}

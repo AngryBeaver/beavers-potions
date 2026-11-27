@@ -177,7 +177,21 @@
   },
   "flags": {
     "beavers-potions": {
-      "potion": true
+      "potion": true,
+      "rarity": "rare",
+      "rules": [
+        [
+          "speed",
+          0
+        ],
+        [
+          "status",
+          "incapacitated"
+        ],
+        [
+          "invulnerable"
+        ]
+      ]
     }
   }
 }

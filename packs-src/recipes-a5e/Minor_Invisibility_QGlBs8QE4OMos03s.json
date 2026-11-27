@@ -1,0 +1,85 @@
+{
+  "_id": "QGlBs8QE4OMos03s",
+  "_key": "!items!QGlBs8QE4OMos03s",
+  "name": "Minor Invisibility",
+  "type": "object",
+  "img": "icons/sundries/scrolls/scroll-worn-tan.webp",
+  "system": {
+    "description": "<p>A recipe of Beaver's Potions, it needs the module Beaver's Crafting.</p><p>Brewing: Arcana check DC 8.</p>",
+    "objectType": "miscellaneous",
+    "price": {
+      "value": 0,
+      "denomination": "gp",
+      "special": ""
+    },
+    "quantity": 1,
+    "weight": 0,
+    "actions": {}
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "beavers-crafting": {
+      "subtype": "Recipe",
+      "recipe": {
+        "required": {},
+        "input": {
+          "1": {
+            "Compendium-beavers-potions-ingredients-a5e-Item-AAfrnuKdmek8QYqV": {
+              "id": "AAfrnuKdmek8QYqV",
+              "uuid": "Compendium.beavers-potions.ingredients-a5e.Item.AAfrnuKdmek8QYqV",
+              "img": "icons/consumables/mushrooms/umbontae-bumpy-purple.webp",
+              "name": "Viscid Ghost",
+              "type": "Item",
+              "itemType": "object",
+              "quantity": 5
+            }
+          }
+        },
+        "output": {
+          "1": {
+            "Compendium-beavers-potions-potions-a5e-Item-kmMTJHkbMUoOLJIy": {
+              "id": "kmMTJHkbMUoOLJIy",
+              "uuid": "Compendium.beavers-potions.potions-a5e.Item.kmMTJHkbMUoOLJIy",
+              "img": "icons/consumables/potions/bottle-conical-corked-blue.webp",
+              "name": "Minor Invisibility",
+              "type": "Item",
+              "itemType": "object",
+              "quantity": 1
+            }
+          }
+        },
+        "currency": {
+          "name": "gp",
+          "value": 5
+        },
+        "beaversTests": {
+          "fails": 1,
+          "consume": true,
+          "failsInARow": false,
+          "ands": {
+            "1": {
+              "hits": 1,
+              "ors": {
+                "1": {
+                  "type": "SkillTest",
+                  "data": {
+                    "dc": 8,
+                    "skill": "arc"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "macro": "",
+        "folder": "Beaver's Potions",
+        "kind": "recipe"
+      }
+    }
+  }
+}

@@ -176,7 +176,18 @@
         "area": {
           "radius": 10
         }
-      }
+      },
+      "rarity": "rare",
+      "rules": [
+        [
+          "ac",
+          2
+        ],
+        [
+          "area",
+          10
+        ]
+      ]
     }
   }
 }

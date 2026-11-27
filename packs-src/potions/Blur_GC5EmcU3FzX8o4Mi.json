@@ -166,7 +166,17 @@
   },
   "flags": {
     "beavers-potions": {
-      "potion": true
+      "potion": true,
+      "rarity": "rare",
+      "rules": [
+        [
+          "grants",
+          "disadvantage",
+          {
+            "sight": true
+          }
+        ]
+      ]
     }
   }
 }

@@ -112,12 +112,12 @@ export const RECIPES = [
   ["4ZYLH0NembGidYfo", "Weightless", 5, "nat", 8, [[5, "Star Dip"]], "Weightless"],
 ];
 
-/** Gather Essence: the essence it yields depends on the rarity of the potion given up */
-export const GATHER_ESSENCE_MACRO = `const essence = {
+/** Gather Essence: the essence it yields depends on the rarity of the potion given up (our potions carry it as a flag) */
+export const GATHER_ESSENCE_MACRO = (essenceUuid, itemType) => `const essence = {
   id: "${ESSENCE[0]}",
-  uuid: "Compendium.beavers-potions.ingredients.Item.${ESSENCE[0]}",
+  uuid: "${essenceUuid}",
   type: "Item",
-  itemType: "loot",
+  itemType: "${itemType}",
   name: "${ESSENCE[1]}",
   img: "${ESSENCE[2]}",
   quantity: 1
@@ -125,8 +125,9 @@ export const GATHER_ESSENCE_MACRO = `const essence = {
 const perRarity = { common: 0, uncommon: 2, rare: 4, veryRare: 8, legendary: 16, artifact: 32 };
 for (const ingredient of Object.values(recipeData.input[1] ?? {})) {
   const item = await ingredient.getEntity();
+  const rarity = item?.flags?.["beavers-potions"]?.rarity ?? item?.system?.rarity;
   // one essence is in the recipe's result already: add what the rarity gives on top of it
-  essence.quantity = (perRarity[item?.system?.rarity] ?? 1) - 1;
+  essence.quantity = (perRarity[rarity] ?? 1) - 1;
   if (essence.quantity !== 0) result.updateComponent("produced", essence);
   break;
 }`;

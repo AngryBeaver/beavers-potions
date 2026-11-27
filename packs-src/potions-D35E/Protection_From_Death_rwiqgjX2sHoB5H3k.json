@@ -1,0 +1,68 @@
+{
+  "_id": "rwiqgjX2sHoB5H3k",
+  "_key": "!items!rwiqgjX2sHoB5H3k",
+  "name": "Protection From Death",
+  "type": "consumable",
+  "img": "icons/consumables/potions/flask-corked-red-glow.webp",
+  "system": {
+    "consumableType": "potion",
+    "description": {
+      "value": "<p>For one hour: the first time any effect would reduce you to 0 hit points you are reduced to 1 hit point instead.</p>"
+    },
+    "quantity": 1,
+    "weight": 0.1,
+    "price": 2500,
+    "identified": true,
+    "identifiedName": "Protection From Death",
+    "uses": {
+      "value": 0,
+      "max": 0,
+      "per": "single"
+    }
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "beavers-potions": {
+      "potion": true,
+      "buffs": [
+        {
+          "name": "Protection From Death",
+          "type": "buff",
+          "img": "icons/consumables/potions/flask-corked-red-glow.webp",
+          "system": {
+            "buffType": "temp",
+            "active": true,
+            "level": 1,
+            "duration": {
+              "value": "1",
+              "units": "hour"
+            },
+            "changes": [],
+            "description": {
+              "value": "<p>For one hour: the first time any effect would reduce you to 0 hit points you are reduced to 1 hit point instead.</p>"
+            }
+          },
+          "flags": {
+            "beavers-potions": {
+              "protectionFromDeath": true,
+              "conditions": [],
+              "source": "protection-from-death.buff"
+            }
+          }
+        }
+      ],
+      "pour": false,
+      "rarity": "veryRare",
+      "rules": [
+        [
+          "protectionFromDeath"
+        ]
+      ]
+    }
+  }
+}

@@ -175,7 +175,30 @@
           "maxLevel": 4,
           "exhaustion": 3
         }
-      }
+      },
+      "rarity": "veryRare",
+      "rules": [
+        [
+          "status",
+          "incapacitated"
+        ],
+        [
+          "grants",
+          "advantage"
+        ],
+        [
+          "grants",
+          "critical"
+        ],
+        [
+          "restoreSlots",
+          4
+        ],
+        [
+          "exhaustion",
+          3
+        ]
+      ]
     }
   }
 }

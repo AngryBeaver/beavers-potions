@@ -1,0 +1,97 @@
+{
+  "_id": "aqkjbUe15A5ivk39",
+  "_key": "!items!aqkjbUe15A5ivk39",
+  "name": "Keen Sense",
+  "type": "consumable",
+  "img": "icons/consumables/potions/bottle-round-corked-pink.webp",
+  "system": {
+    "subType": "potion",
+    "description": {
+      "value": "<p>You gain expertise in Perception for 1 hour.</p>",
+      "instructions": "",
+      "unidentified": ""
+    },
+    "quantity": 1,
+    "weight": {
+      "value": 0.1
+    },
+    "price": 250,
+    "identified": true,
+    "cl": 1,
+    "uses": {
+      "value": null,
+      "per": "single",
+      "autoDeductChargesCost": "",
+      "maxFormula": "",
+      "rechargeFormula": ""
+    },
+    "actions": [
+      {
+        "_id": "bpactaqkjbUeDrin",
+        "name": "Drink",
+        "activation": {
+          "type": "standard",
+          "unchained": {
+            "type": "action",
+            "cost": 2
+          }
+        },
+        "duration": {
+          "units": "inst"
+        }
+      }
+    ]
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "beavers-potions": {
+      "potion": true,
+      "buffs": [
+        {
+          "name": "Keen Sense",
+          "type": "buff",
+          "img": "icons/consumables/potions/bottle-round-corked-pink.webp",
+          "system": {
+            "subType": "temp",
+            "active": true,
+            "level": 1,
+            "duration": {
+              "value": "1",
+              "units": "hour",
+              "end": "turnStart"
+            },
+            "changes": [
+              {
+                "_id": "bpcaqkjb",
+                "formula": "4",
+                "target": "skill.per",
+                "type": "competence"
+              }
+            ],
+            "conditions": [],
+            "description": {
+              "value": "<p>You gain expertise in Perception for 1 hour.</p>"
+            }
+          },
+          "flags": {
+            "beavers-potions": {
+              "source": "keen-sense.buff"
+            }
+          }
+        }
+      ],
+      "rarity": "uncommon",
+      "rules": [
+        [
+          "skillExpertise",
+          "perception"
+        ]
+      ]
+    }
+  }
+}

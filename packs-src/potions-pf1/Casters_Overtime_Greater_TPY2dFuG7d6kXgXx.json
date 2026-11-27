@@ -1,0 +1,125 @@
+{
+  "_id": "TPY2dFuG7d6kXgXx",
+  "_key": "!items!TPY2dFuG7d6kXgXx",
+  "name": "Casters Overtime Greater",
+  "type": "consumable",
+  "img": "icons/consumables/potions/bottle-metal-yellow-gray.webp",
+  "system": {
+    "subType": "potion",
+    "description": {
+      "value": "<p>You spend one round doing nothing else than concentrating. During this time you cannot defend yourself: you are incapacitated, everyone attacking you has advantage and hits critically.</p><p>You replenish all your spell slots of the first to third level while you gain 2 levels of exhaustion, which cannot be healed magically.</p>",
+      "instructions": "",
+      "unidentified": ""
+    },
+    "quantity": 1,
+    "weight": {
+      "value": 0.1
+    },
+    "price": 750,
+    "identified": true,
+    "cl": 1,
+    "uses": {
+      "value": null,
+      "per": "single",
+      "autoDeductChargesCost": "",
+      "maxFormula": "",
+      "rechargeFormula": ""
+    },
+    "actions": [
+      {
+        "_id": "bpactTPY2dFuDrin",
+        "name": "Drink",
+        "activation": {
+          "type": "standard",
+          "unchained": {
+            "type": "action",
+            "cost": 2
+          }
+        },
+        "duration": {
+          "units": "inst"
+        }
+      }
+    ]
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "beavers-potions": {
+      "potion": true,
+      "buffs": [
+        {
+          "name": "Out of Mind",
+          "type": "buff",
+          "img": "icons/consumables/potions/bottle-metal-yellow-gray.webp",
+          "system": {
+            "subType": "temp",
+            "active": true,
+            "level": 1,
+            "duration": {
+              "value": "1",
+              "units": "round",
+              "end": "turnStart"
+            },
+            "changes": [
+              {
+                "_id": "bpcTPY2d",
+                "formula": "-4",
+                "target": "ac",
+                "type": "untyped"
+              }
+            ],
+            "conditions": [
+              "dazed"
+            ],
+            "description": {
+              "value": "<p>You spend one round doing nothing else than concentrating. During this time you cannot defend yourself: you are incapacitated, everyone attacking you has advantage and hits critically.</p><p>You replenish all your spell slots of the first to third level while you gain 2 levels of exhaustion, which cannot be healed magically.</p>"
+            }
+          },
+          "flags": {
+            "beavers-potions": {
+              "grantsCritical": true,
+              "source": "casters-overtime-greater.buff"
+            }
+          }
+        }
+      ],
+      "use": {
+        "restoreSlots": {
+          "maxLevel": 3,
+          "exhaustion": 2
+        }
+      },
+      "rarity": "rare",
+      "rules": [
+        [
+          "status",
+          "incapacitated"
+        ],
+        [
+          "grants",
+          "advantage"
+        ],
+        [
+          "grants",
+          "critical"
+        ],
+        [
+          "restoreSlots",
+          3
+        ],
+        [
+          "exhaustion",
+          2
+        ]
+      ],
+      "unsupported": [
+        "grants critical"
+      ]
+    }
+  }
+}

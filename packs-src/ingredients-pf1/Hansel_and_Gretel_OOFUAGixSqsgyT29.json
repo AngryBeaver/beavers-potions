@@ -1,0 +1,30 @@
+{
+  "_id": "OOFUAGixSqsgyT29",
+  "_key": "!items!OOFUAGixSqsgyT29",
+  "name": "Hansel and Gretel",
+  "type": "loot",
+  "img": "icons/consumables/mushrooms/campanulate-bell-red-white.webp",
+  "system": {
+    "subType": "tradeGoods",
+    "description": {
+      "value": "<p>A mushroom, an ingredient of Beaver's Potions.</p>"
+    },
+    "quantity": 1,
+    "weight": {
+      "value": 0.1
+    },
+    "price": 0,
+    "identified": true
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "beavers-potions": {
+      "ingredient": "mushroom"
+    }
+  }
+}

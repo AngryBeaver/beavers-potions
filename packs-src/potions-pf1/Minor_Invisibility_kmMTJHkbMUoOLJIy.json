@@ -1,0 +1,123 @@
+{
+  "_id": "kmMTJHkbMUoOLJIy",
+  "_key": "!items!kmMTJHkbMUoOLJIy",
+  "name": "Minor Invisibility",
+  "type": "consumable",
+  "img": "icons/consumables/potions/bottle-conical-corked-blue.webp",
+  "system": {
+    "subType": "potion",
+    "description": {
+      "value": "<p>You have the invisible condition for 1 minute or until you move, make an attack or cast a spell: attacks against you have disadvantage, your attacks have advantage.</p>",
+      "instructions": "",
+      "unidentified": ""
+    },
+    "quantity": 1,
+    "weight": {
+      "value": 0.1
+    },
+    "price": 50,
+    "identified": true,
+    "cl": 1,
+    "uses": {
+      "value": null,
+      "per": "single",
+      "autoDeductChargesCost": "",
+      "maxFormula": "",
+      "rechargeFormula": ""
+    },
+    "actions": [
+      {
+        "_id": "bpactkmMTJHkDrin",
+        "name": "Drink",
+        "activation": {
+          "type": "standard",
+          "unchained": {
+            "type": "action",
+            "cost": 2
+          }
+        },
+        "duration": {
+          "units": "inst"
+        }
+      }
+    ]
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "beavers-potions": {
+      "potion": true,
+      "buffs": [
+        {
+          "name": "Minor Invisibility",
+          "type": "buff",
+          "img": "icons/consumables/potions/bottle-conical-corked-blue.webp",
+          "system": {
+            "subType": "temp",
+            "active": true,
+            "level": 1,
+            "duration": {
+              "value": "1",
+              "units": "minute",
+              "end": "turnStart"
+            },
+            "changes": [
+              {
+                "_id": "bpckmMTJ",
+                "formula": "2",
+                "target": "attack",
+                "type": "untyped"
+              }
+            ],
+            "conditions": [
+              "invisible"
+            ],
+            "description": {
+              "value": "<p>You have the invisible condition for 1 minute or until you move, make an attack or cast a spell: attacks against you have disadvantage, your attacks have advantage.</p>"
+            }
+          },
+          "flags": {
+            "beavers-potions": {
+              "endOn": [
+                "attack",
+                "spell",
+                "move"
+              ],
+              "distortion": 20,
+              "source": "minor-invisibility.buff"
+            }
+          }
+        }
+      ],
+      "rarity": "common",
+      "rules": [
+        [
+          "status",
+          "invisible"
+        ],
+        [
+          "grants",
+          "disadvantage",
+          {
+            "sight": true
+          }
+        ],
+        [
+          "attackAdvantage"
+        ],
+        [
+          "endOn",
+          [
+            "attack",
+            "spell",
+            "move"
+          ]
+        ]
+      ]
+    }
+  }
+}

@@ -1,0 +1,116 @@
+{
+  "_id": "iSnyqLSClSjZx1Nk",
+  "_key": "!items!iSnyqLSClSjZx1Nk",
+  "name": "Radio Activity",
+  "type": "consumable",
+  "img": "icons/consumables/potions/bottle-conical-fumes-green.webp",
+  "system": {
+    "consumableType": "potion",
+    "description": {
+      "value": "<p>You begin to glow for 5 rounds creating a 25 ft. aura of green light around you. Each creature, including yourself, must make a DC 14 Constitution saving throw when it starts its turn within 25 ft. of you. A target takes 3d6 radiant damage on a failed save, or half as much on a successful one.</p>"
+    },
+    "quantity": 1,
+    "weight": 0.1,
+    "price": 750,
+    "identified": true,
+    "identifiedName": "Radio Activity",
+    "uses": {
+      "value": 0,
+      "max": 0,
+      "per": "single"
+    }
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "beavers-potions": {
+      "potion": true,
+      "buffs": [
+        {
+          "name": "Radio Activity",
+          "type": "buff",
+          "img": "icons/consumables/potions/bottle-conical-fumes-green.webp",
+          "system": {
+            "buffType": "temp",
+            "active": true,
+            "level": 1,
+            "duration": {
+              "value": "5",
+              "units": "round"
+            },
+            "changes": [],
+            "light": {
+              "emitLight": true,
+              "dimRadius": 25,
+              "radius": 5,
+              "color": "#4dff4d",
+              "alpha": 0.4,
+              "type": "pulse",
+              "animationSpeed": 3,
+              "animationIntensity": 3,
+              "lightAngle": 360
+            },
+            "description": {
+              "value": "<p>You begin to glow for 5 rounds creating a 25 ft. aura of green light around you. Each creature, including yourself, must make a DC 14 Constitution saving throw when it starts its turn within 25 ft. of you. A target takes 3d6 radiant damage on a failed save, or half as much on a successful one.</p>"
+            }
+          },
+          "flags": {
+            "beavers-potions": {
+              "aura": {
+                "radius": 25,
+                "includeSelf": true,
+                "save": {
+                  "ability": "con",
+                  "dc": 14
+                },
+                "damage": {
+                  "formula": "3d6",
+                  "type": "radiant"
+                }
+              },
+              "conditions": [],
+              "source": "radio-activity.buff"
+            }
+          }
+        }
+      ],
+      "pour": false,
+      "rarity": "rare",
+      "rules": [
+        [
+          "aura",
+          {
+            "radius": 25,
+            "includeSelf": true,
+            "save": {
+              "ability": "con",
+              "dc": 14
+            },
+            "damage": {
+              "formula": "3d6",
+              "type": "radiant"
+            }
+          }
+        ],
+        [
+          "light",
+          {
+            "dim": 25,
+            "bright": 5,
+            "color": "#4dff4d",
+            "alpha": 0.4,
+            "animation": {
+              "type": "pulse",
+              "speed": 3,
+              "intensity": 3
+            }
+          }
+        ]
+      ]
+    }
+  }
+}

@@ -1,0 +1,129 @@
+{
+  "_id": "8yD1yiMGeL6TwqXs",
+  "_key": "!items!8yD1yiMGeL6TwqXs",
+  "name": "Healing Supreme",
+  "type": "object",
+  "img": "icons/sundries/scrolls/scroll-worn-tan.webp",
+  "system": {
+    "description": "<p>A recipe of Beaver's Potions, it needs the module Beaver's Crafting.</p><p>Brewing: Medicine check DC 13.</p>",
+    "objectType": "miscellaneous",
+    "price": {
+      "value": 0,
+      "denomination": "gp",
+      "special": ""
+    },
+    "quantity": 1,
+    "weight": 0,
+    "actions": {}
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "beavers-crafting": {
+      "subtype": "Recipe",
+      "recipe": {
+        "required": {},
+        "input": {
+          "1": {
+            "Compendium-beavers-potions-ingredients-a5e-Item-90BJIBWtxLN3SMHn": {
+              "id": "90BJIBWtxLN3SMHn",
+              "uuid": "Compendium.beavers-potions.ingredients-a5e.Item.90BJIBWtxLN3SMHn",
+              "img": "icons/consumables/mushrooms/convex-bolete-brown.webp",
+              "name": "Penny Bun",
+              "type": "Item",
+              "itemType": "object",
+              "quantity": 5
+            }
+          },
+          "2": {
+            "Compendium-beavers-potions-ingredients-a5e-Item-MNUTlx4UjXSRzW25": {
+              "id": "MNUTlx4UjXSRzW25",
+              "uuid": "Compendium.beavers-potions.ingredients-a5e.Item.MNUTlx4UjXSRzW25",
+              "img": "icons/consumables/mushrooms/conical-bell-orange-white.webp",
+              "name": "Guepinia",
+              "type": "Item",
+              "itemType": "object",
+              "quantity": 5
+            }
+          },
+          "3": {
+            "Compendium-beavers-potions-ingredients-a5e-Item-nrssiAqJHHCV1vyv": {
+              "id": "nrssiAqJHHCV1vyv",
+              "uuid": "Compendium.beavers-potions.ingredients-a5e.Item.nrssiAqJHHCV1vyv",
+              "img": "icons/consumables/mushrooms/conical-bell-yellow.webp",
+              "name": "Yellow Stoned",
+              "type": "Item",
+              "itemType": "object",
+              "quantity": 5
+            }
+          },
+          "4": {
+            "Compendium-beavers-potions-ingredients-a5e-Item-qK9o4MD82WmUgXP8": {
+              "id": "qK9o4MD82WmUgXP8",
+              "uuid": "Compendium.beavers-potions.ingredients-a5e.Item.qK9o4MD82WmUgXP8",
+              "img": "icons/consumables/mushrooms/bell-shiitake-brown.webp",
+              "name": "Vanilla Mob",
+              "type": "Item",
+              "itemType": "object",
+              "quantity": 5
+            }
+          },
+          "5": {
+            "Compendium-beavers-potions-ingredients-a5e-Item-dozjFH55CR4npT6F": {
+              "id": "dozjFH55CR4npT6F",
+              "uuid": "Compendium.beavers-potions.ingredients-a5e.Item.dozjFH55CR4npT6F",
+              "img": "icons/tools/laboratory/bowl-powder-purple.webp",
+              "name": "Magical Essence",
+              "type": "Item",
+              "itemType": "object",
+              "quantity": 3
+            }
+          }
+        },
+        "output": {
+          "1": {
+            "Compendium-a5e-a5e-adventuring-gear-Item-wrvoldjxwhogx3ea": {
+              "id": "wrvoldjxwhogx3ea",
+              "uuid": "Compendium.a5e.a5e-adventuring-gear.Item.wrvoldjxwhogx3ea",
+              "img": "icons/consumables/potions/bottle-round-label-cork-red.webp",
+              "name": "Healing Potion (Supreme)",
+              "type": "Item",
+              "itemType": "object",
+              "quantity": 1
+            }
+          }
+        },
+        "currency": {
+          "name": "gp",
+          "value": 500
+        },
+        "beaversTests": {
+          "fails": 1,
+          "consume": true,
+          "failsInARow": false,
+          "ands": {
+            "1": {
+              "hits": 1,
+              "ors": {
+                "1": {
+                  "type": "SkillTest",
+                  "data": {
+                    "dc": 13,
+                    "skill": "med"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "macro": "",
+        "folder": "Beaver's Potions",
+        "kind": "recipe"
+      }
+    }
+  }
+}

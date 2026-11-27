@@ -133,7 +133,19 @@
           "ability": "con",
           "dc": 14
         }
-      }
+      },
+      "rarity": "rare",
+      "rules": [
+        [
+          "drain",
+          {
+            "formula": "3d6 + 3",
+            "type": "necrotic",
+            "ability": "con",
+            "dc": 14
+          }
+        ]
+      ]
     }
   }
 }

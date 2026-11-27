@@ -1,0 +1,71 @@
+{
+  "_id": "MChWuF8FTz5vOntg",
+  "_key": "!items!MChWuF8FTz5vOntg",
+  "name": "Cobra Kai",
+  "type": "consumable",
+  "img": "icons/consumables/potions/bottle-conical-corked-cyan.webp",
+  "system": {
+    "subType": "potion",
+    "description": {
+      "value": "<p>Polymorphs you into a venomous snake for 6 hours.</p>",
+      "instructions": "",
+      "unidentified": ""
+    },
+    "quantity": 1,
+    "weight": {
+      "value": 0.1
+    },
+    "price": 50,
+    "identified": true,
+    "cl": 1,
+    "uses": {
+      "value": null,
+      "per": "single",
+      "autoDeductChargesCost": "",
+      "maxFormula": "",
+      "rechargeFormula": ""
+    },
+    "actions": [
+      {
+        "_id": "bpactMChWuF8Drin",
+        "name": "Drink",
+        "activation": {
+          "type": "standard",
+          "unchained": {
+            "type": "action",
+            "cost": 2
+          }
+        },
+        "duration": {
+          "units": "inst"
+        }
+      }
+    ]
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "beavers-potions": {
+      "potion": true,
+      "buffs": [],
+      "rarity": "common",
+      "rules": [
+        [
+          "transform",
+          {
+            "dnd5e": "Compendium.dnd5e.actors24.Actor.mmVenomousSnake0"
+          },
+          "Venomous Snake",
+          21600
+        ]
+      ],
+      "unsupported": [
+        "transform"
+      ]
+    }
+  }
+}

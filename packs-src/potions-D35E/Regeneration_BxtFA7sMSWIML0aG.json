@@ -1,0 +1,73 @@
+{
+  "_id": "BxtFA7sMSWIML0aG",
+  "_key": "!items!BxtFA7sMSWIML0aG",
+  "name": "Regeneration",
+  "type": "consumable",
+  "img": "icons/consumables/potions/conical-ornate-purple.webp",
+  "system": {
+    "consumableType": "potion",
+    "description": {
+      "value": "<p>You regenerate 10 hit points at the start of each of your turns for one minute.</p>"
+    },
+    "quantity": 1,
+    "weight": 0.1,
+    "price": 2500,
+    "identified": true,
+    "identifiedName": "Regeneration",
+    "uses": {
+      "value": 0,
+      "max": 0,
+      "per": "single"
+    }
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "beavers-potions": {
+      "potion": true,
+      "buffs": [
+        {
+          "name": "Regeneration",
+          "type": "buff",
+          "img": "icons/consumables/potions/conical-ornate-purple.webp",
+          "system": {
+            "buffType": "temp",
+            "active": true,
+            "level": 1,
+            "duration": {
+              "value": "10",
+              "units": "round"
+            },
+            "changes": [],
+            "description": {
+              "value": "<p>You regenerate 10 hit points at the start of each of your turns for one minute.</p>"
+            }
+          },
+          "flags": {
+            "beavers-potions": {
+              "turnStart": {
+                "heal": "10"
+              },
+              "conditions": [],
+              "source": "regeneration.buff"
+            }
+          }
+        }
+      ],
+      "pour": false,
+      "rarity": "veryRare",
+      "rules": [
+        [
+          "turnStart",
+          {
+            "heal": "10"
+          }
+        ]
+      ]
+    }
+  }
+}

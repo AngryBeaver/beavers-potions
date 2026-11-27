@@ -1,0 +1,82 @@
+{
+  "_id": "Sp3E9go1b56yNnBX",
+  "_key": "!items!Sp3E9go1b56yNnBX",
+  "name": "Messenger's Potion",
+  "type": "consumable",
+  "img": "icons/consumables/potions/bottle-conical-corked-labeled-shell-cyan.webp",
+  "system": {
+    "consumableType": "potion",
+    "description": {
+      "value": "<p>Doubles your speed for 3 hours, afterwards you gain two levels of exhaustion.</p>"
+    },
+    "quantity": 1,
+    "weight": 0.1,
+    "price": 250,
+    "identified": true,
+    "identifiedName": "Messenger's Potion",
+    "uses": {
+      "value": 0,
+      "max": 0,
+      "per": "single"
+    }
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "beavers-potions": {
+      "potion": true,
+      "buffs": [
+        {
+          "name": "Messenger's Potion",
+          "type": "buff",
+          "img": "icons/consumables/potions/bottle-conical-corked-labeled-shell-cyan.webp",
+          "system": {
+            "buffType": "temp",
+            "active": true,
+            "level": 1,
+            "duration": {
+              "value": "3",
+              "units": "hour"
+            },
+            "changes": [
+              [
+                "@attributes.speed.land.base * 1",
+                "speed",
+                "landSpeed",
+                "untyped"
+              ]
+            ],
+            "description": {
+              "value": "<p>Doubles your speed for 3 hours, afterwards you gain two levels of exhaustion.</p>"
+            }
+          },
+          "flags": {
+            "beavers-potions": {
+              "onEnd": {
+                "exhaustion": 2
+              },
+              "conditions": [],
+              "source": "messenger-s-potion.buff"
+            }
+          }
+        }
+      ],
+      "pour": false,
+      "rarity": "uncommon",
+      "rules": [
+        [
+          "speed",
+          2
+        ],
+        [
+          "exhaustionAtEnd",
+          2
+        ]
+      ]
+    }
+  }
+}

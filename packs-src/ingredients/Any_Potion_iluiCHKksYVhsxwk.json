@@ -47,7 +47,7 @@
     "beavers-crafting": {
       "subtype": "AnyOf",
       "anyOf": {
-        "macro": "// beavers-crafting passes an item or a component of the actor\nconst doc = item?.system ? item : await item?.getEntity?.();\nreturn doc?.type === \"consumable\" && doc.system.type?.value === \"potion\";"
+        "macro": "// beavers-crafting passes an item or a component of the actor\nconst doc = item?.system ? item : await item?.getEntity?.();\nreturn doc?.flags?.[\"beavers-potions\"]?.potion === true || (doc?.type === \"consumable\" && doc.system.type?.value === \"potion\");"
       }
     }
   }

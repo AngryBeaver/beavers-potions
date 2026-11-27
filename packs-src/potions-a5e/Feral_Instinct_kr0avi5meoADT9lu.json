@@ -1,0 +1,113 @@
+{
+  "_id": "kr0avi5meoADT9lu",
+  "_key": "!items!kr0avi5meoADT9lu",
+  "name": "Feral Instinct",
+  "type": "object",
+  "img": "icons/consumables/potions/bottle-round-label-cork-purple.webp",
+  "system": {
+    "description": "<p>You have advantage on initiative rolls for 8 hours.</p>",
+    "actions": {
+      "bpactkr0avi5Drin": {
+        "name": "Drink",
+        "img": "icons/consumables/potions/bottle-round-label-cork-purple.webp",
+        "activation": {
+          "type": "action",
+          "cost": 1,
+          "reactionTrigger": ""
+        },
+        "duration": {
+          "unit": "hours",
+          "value": "8"
+        },
+        "target": {
+          "quantity": "",
+          "type": "self"
+        },
+        "consumers": {
+          "bpconkr0avi5Drin": {
+            "type": "quantity",
+            "default": true,
+            "itemId": "",
+            "quantity": 1,
+            "deleteOnZero": true,
+            "label": ""
+          }
+        },
+        "rolls": {},
+        "prompts": {},
+        "effects": [
+          "bpfxkr0avi5m0000"
+        ],
+        "macro": ""
+      }
+    },
+    "objectType": "consumable",
+    "price": {
+      "value": 250,
+      "denomination": "gp",
+      "special": ""
+    },
+    "quantity": 1,
+    "rarity": "uncommon",
+    "weight": 0.5,
+    "source": "",
+    "requiresAttunement": false,
+    "unidentified": false
+  },
+  "effects": [
+    {
+      "_id": "bpfxkr0avi5m0000",
+      "_key": "!items.effects!kr0avi5meoADT9lu.bpfxkr0avi5m0000",
+      "name": "Feral Instinct",
+      "img": "icons/consumables/potions/bottle-round-label-cork-purple.webp",
+      "type": "base",
+      "description": "<p>You have advantage on initiative rolls for 8 hours.</p>",
+      "system": {
+        "changes": [
+          {
+            "_id": "bpfxkr0avi5mc000",
+            "key": "system.attributes.initiative.rollMode",
+            "type": "override",
+            "value": 1,
+            "phase": "initial",
+            "priority": null
+          }
+        ],
+        "magical": true,
+        "applyToSelf": false,
+        "effectType": "onUse"
+      },
+      "disabled": false,
+      "transfer": false,
+      "duration": {
+        "value": 8,
+        "units": "hours",
+        "expiry": "turnStart",
+        "expired": false
+      },
+      "statuses": [],
+      "flags": {},
+      "tint": "#ffffff",
+      "showIcon": 1,
+      "origin": null,
+      "start": null,
+      "sort": 0
+    }
+  ],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "beavers-potions": {
+      "potion": true,
+      "rarity": "uncommon",
+      "rules": [
+        [
+          "initiativeAdvantage"
+        ]
+      ]
+    }
+  }
+}

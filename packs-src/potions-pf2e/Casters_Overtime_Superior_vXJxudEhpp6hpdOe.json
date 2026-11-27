@@ -1,0 +1,143 @@
+{
+  "_id": "vXJxudEhpp6hpdOe",
+  "_key": "!items!vXJxudEhpp6hpdOe",
+  "name": "Casters Overtime Superior",
+  "type": "consumable",
+  "img": "icons/consumables/potions/bottle-metal-yellow-gray.webp",
+  "system": {
+    "category": "potion",
+    "description": {
+      "value": "<p>You spend one round doing nothing else than concentrating. During this time you cannot defend yourself: you are incapacitated, everyone attacking you has advantage and hits critically.</p><p>You replenish all your spell slots of the first to fourth level while you gain 3 levels of exhaustion, which cannot be healed magically.</p>"
+    },
+    "level": {
+      "value": 12
+    },
+    "price": {
+      "value": {
+        "gp": 2500
+      }
+    },
+    "quantity": 1,
+    "bulk": {
+      "value": 0.1
+    },
+    "uses": {
+      "value": 1,
+      "max": 1,
+      "autoDestroy": true
+    },
+    "traits": {
+      "value": [
+        "consumable",
+        "magical",
+        "potion"
+      ],
+      "rarity": "rare"
+    },
+    "usage": {
+      "value": "held-in-one-hand"
+    },
+    "rules": [],
+    "slug": "casters-overtime-superior",
+    "publication": {
+      "title": "Beaver's Potions",
+      "authors": "",
+      "license": "OGL",
+      "remaster": false
+    }
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "beavers-potions": {
+      "potion": true,
+      "effects": [
+        {
+          "name": "Effect: Out of Mind",
+          "type": "effect",
+          "img": "icons/consumables/potions/bottle-metal-yellow-gray.webp",
+          "system": {
+            "description": {
+              "value": "<p>You spend one round doing nothing else than concentrating. During this time you cannot defend yourself: you are incapacitated, everyone attacking you has advantage and hits critically.</p><p>You replenish all your spell slots of the first to fourth level while you gain 3 levels of exhaustion, which cannot be healed magically.</p>"
+            },
+            "duration": {
+              "value": 1,
+              "unit": "rounds",
+              "expiry": "turn-start",
+              "sustained": false
+            },
+            "rules": [
+              {
+                "key": "GrantItem",
+                "uuid": "Compendium.pf2e.conditionitems.Item.6uEgoh53GbXuHpTF",
+                "onDeleteActions": {
+                  "grantee": "restrict"
+                }
+              },
+              {
+                "key": "GrantItem",
+                "uuid": "Compendium.pf2e.conditionitems.Item.AJh5ex99aV6VTggg",
+                "onDeleteActions": {
+                  "grantee": "restrict"
+                }
+              }
+            ],
+            "tokenIcon": {
+              "show": true
+            },
+            "level": {
+              "value": 12
+            },
+            "traits": {
+              "value": [],
+              "rarity": "common"
+            },
+            "slug": "effect-casters-overtime-superior"
+          },
+          "flags": {
+            "beavers-potions": {
+              "grantsCritical": true,
+              "source": "casters-overtime-superior.effect"
+            }
+          }
+        }
+      ],
+      "use": {
+        "restoreSlots": {
+          "maxLevel": 4,
+          "exhaustion": 3
+        }
+      },
+      "rarity": "veryRare",
+      "rules": [
+        [
+          "status",
+          "incapacitated"
+        ],
+        [
+          "grants",
+          "advantage"
+        ],
+        [
+          "grants",
+          "critical"
+        ],
+        [
+          "restoreSlots",
+          4
+        ],
+        [
+          "exhaustion",
+          3
+        ]
+      ],
+      "unsupported": [
+        "grants critical"
+      ]
+    }
+  }
+}

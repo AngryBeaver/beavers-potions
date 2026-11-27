@@ -15,20 +15,12 @@ export function effectData(item, effect) {
   data.origin = item.uuid;
   data.transfer = false;
   data.disabled = false;
-  data.start = ActiveEffect.implementation.getEffectStart?.() ?? data.start;
+  // Foundry 14: start now (older cores set it on creation)
+  if (ActiveEffect.implementation.getEffectStart) data.start = ActiveEffect.implementation.getEffectStart();
   if (data.duration) data.duration.expired = false;
   data._stats = { ...(data._stats ?? {}), compendiumSource: null, duplicateSource: effect.uuid };
   foundry.utils.setProperty(data, `flags.${NS}.source`, sourceKey(item, effect));
   return data;
-}
-
-/** the effects an activity applies, as data */
-export function activityEffects(activity) {
-  const item = activity.item;
-  return (activity.effects ?? [])
-    .map((e) => item.effects.get(e._id))
-    .filter((e) => e)
-    .map((e) => effectData(item, e));
 }
 
 /** creates the effects on the actor, an effect of the same potion that is already there is replaced */
@@ -60,11 +52,4 @@ export async function removeStatus(actor, statusId) {
   const ids = actor.effects.filter((e) => e.statuses?.has(statusId)).map((e) => e.id);
   if (ids.length) await actor.deleteEmbeddedDocuments("ActiveEffect", ids);
   if (actor.statuses?.has(statusId)) await actor.toggleStatusEffect(statusId, { active: false });
-}
-
-export async function addExhaustion(actor, levels) {
-  if (!levels || actor.system.attributes?.exhaustion === undefined) return;
-  const max = CONFIG.DND5E.conditionTypes.exhaustion?.levels ?? 6;
-  const value = Math.clamp((actor.system.attributes.exhaustion ?? 0) + levels, 0, max);
-  await actor.update({ "system.attributes.exhaustion": value });
 }

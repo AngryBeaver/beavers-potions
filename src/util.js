@@ -4,9 +4,37 @@ export const NS = "beavers-potions";
 export const potionFlag = (doc, key) => doc?.flags?.[NS]?.[key];
 
 /** the active (not disabled / not suppressed) effects of the actor that carry the given potion flag */
-export function effectsWith(actor, key) {
+/** item types that are effects in some systems (pf1 / D35E buffs, pf2e effects) */
+const EFFECT_ITEMS = new Set(["buff", "effect"]);
+export const isEffectItem = (doc) => doc instanceof Item && EFFECT_ITEMS.has(doc.type);
+
+/** the potion effects of the actor: active effects and active effect items (buffs) with a potion flag */
+export function potionEffectsOf(actor) {
   if (!actor) return [];
-  return [...(actor.appliedEffects ?? actor.effects ?? [])].filter((e) => potionFlag(e, key) !== undefined && e.active !== false);
+  const effects = [...(actor.appliedEffects ?? actor.effects ?? [])].filter((e) => e.flags?.[NS] && e.active !== false);
+  const items = actor.items.filter((i) => isEffectItem(i) && i.flags?.[NS] && i.system?.active !== false);
+  return [...effects, ...items];
+}
+
+/** deletes an effect or effect item that is still there (another hook or the system may have removed it already) */
+const deleting = new Set();
+export async function deleteEffect(e) {
+  const parent = e?.parent;
+  const there = e instanceof Item ? parent?.items?.has(e.id) : parent?.effects?.has(e.id);
+  if (!there || deleting.has(e.uuid)) return;
+  deleting.add(e.uuid);
+  try {
+    await e.delete();
+  } catch {
+    // gone already
+  } finally {
+    deleting.delete(e.uuid);
+  }
+}
+
+/** the active effects (or effect items) of the actor that carry the given potion flag */
+export function effectsWith(actor, key) {
+  return potionEffectsOf(actor).filter((e) => potionFlag(e, key) !== undefined);
 }
 
 export const hasEffect = (actor, key) => effectsWith(actor, key).length > 0;

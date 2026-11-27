@@ -1,0 +1,99 @@
+{
+  "_id": "UOYRzlUw2HSELs9u",
+  "_key": "!items!UOYRzlUw2HSELs9u",
+  "name": "Batman",
+  "type": "consumable",
+  "img": "icons/consumables/potions/bottle-conical-corked-tied-blue.webp",
+  "system": {
+    "subType": "potion",
+    "description": {
+      "value": "<p>You lose the ability to speak for 10 minutes. Instead you can release high-frequency squeaks for echolocation: you have blindsight 60 ft. as long as the surroundings are on the material plane.</p>",
+      "instructions": "",
+      "unidentified": ""
+    },
+    "quantity": 1,
+    "weight": {
+      "value": 0.1
+    },
+    "price": 750,
+    "identified": true,
+    "cl": 1,
+    "uses": {
+      "value": null,
+      "per": "single",
+      "autoDeductChargesCost": "",
+      "maxFormula": "",
+      "rechargeFormula": ""
+    },
+    "actions": [
+      {
+        "_id": "bpactUOYRzlUDrin",
+        "name": "Drink",
+        "activation": {
+          "type": "standard",
+          "unchained": {
+            "type": "action",
+            "cost": 2
+          }
+        },
+        "duration": {
+          "units": "inst"
+        }
+      }
+    ]
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "beavers-potions": {
+      "potion": true,
+      "buffs": [
+        {
+          "name": "Batman",
+          "type": "buff",
+          "img": "icons/consumables/potions/bottle-conical-corked-tied-blue.webp",
+          "system": {
+            "subType": "temp",
+            "active": true,
+            "level": 1,
+            "duration": {
+              "value": "10",
+              "units": "minute",
+              "end": "turnStart"
+            },
+            "changes": [],
+            "conditions": [],
+            "description": {
+              "value": "<p>You lose the ability to speak for 10 minutes. Instead you can release high-frequency squeaks for echolocation: you have blindsight 60 ft. as long as the surroundings are on the material plane.</p>"
+            }
+          },
+          "flags": {
+            "beavers-potions": {
+              "source": "batman.buff"
+            }
+          }
+        }
+      ],
+      "rarity": "rare",
+      "rules": [
+        [
+          "sense",
+          "blindsight",
+          60
+        ],
+        [
+          "status",
+          "silenced"
+        ]
+      ],
+      "unsupported": [
+        "sense",
+        "status silenced"
+      ]
+    }
+  }
+}

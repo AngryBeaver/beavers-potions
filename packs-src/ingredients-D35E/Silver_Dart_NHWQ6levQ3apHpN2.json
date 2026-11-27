@@ -1,0 +1,29 @@
+{
+  "_id": "NHWQ6levQ3apHpN2",
+  "_key": "!items!NHWQ6levQ3apHpN2",
+  "name": "Silver Dart",
+  "type": "loot",
+  "img": "icons/consumables/mushrooms/ovate-thin-blue.webp",
+  "system": {
+    "subType": "tradeGoods",
+    "description": {
+      "value": "<p>A mushroom, an ingredient of Beaver's Potions.</p>"
+    },
+    "quantity": 1,
+    "weight": 0.1,
+    "price": 0,
+    "identified": true,
+    "identifiedName": "Silver Dart"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "beavers-potions": {
+      "ingredient": "mushroom"
+    }
+  }
+}

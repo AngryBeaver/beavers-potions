@@ -1,0 +1,107 @@
+{
+  "_id": "A8jxxQJwwPSbDOQc",
+  "_key": "!items!A8jxxQJwwPSbDOQc",
+  "name": "Messenger's Potion",
+  "type": "loot",
+  "img": "icons/sundries/scrolls/scroll-worn-tan.webp",
+  "system": {
+    "subType": "misc",
+    "description": {
+      "value": "<p>A recipe of Beaver's Potions, it needs the module Beaver's Crafting.</p><p>Brewing: Survival check DC 10.</p>"
+    },
+    "quantity": 1,
+    "weight": {
+      "value": 0
+    },
+    "price": 0,
+    "identified": true
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "beavers-crafting": {
+      "subtype": "Recipe",
+      "recipe": {
+        "required": {},
+        "input": {
+          "1": {
+            "Compendium-beavers-potions-ingredients-pf1-Item-EBn04GlzYZdMi23m": {
+              "id": "EBn04GlzYZdMi23m",
+              "uuid": "Compendium.beavers-potions.ingredients-pf1.Item.EBn04GlzYZdMi23m",
+              "img": "icons/consumables/mushrooms/helm-purple-shiny.webp",
+              "name": "Astrid Lindworm",
+              "type": "Item",
+              "itemType": "loot",
+              "quantity": 5
+            }
+          },
+          "2": {
+            "Compendium-beavers-potions-ingredients-pf1-Item-MNUTlx4UjXSRzW25": {
+              "id": "MNUTlx4UjXSRzW25",
+              "uuid": "Compendium.beavers-potions.ingredients-pf1.Item.MNUTlx4UjXSRzW25",
+              "img": "icons/consumables/mushrooms/conical-bell-orange-white.webp",
+              "name": "Guepinia",
+              "type": "Item",
+              "itemType": "loot",
+              "quantity": 5
+            }
+          },
+          "3": {
+            "Compendium-beavers-potions-ingredients-pf1-Item-dozjFH55CR4npT6F": {
+              "id": "dozjFH55CR4npT6F",
+              "uuid": "Compendium.beavers-potions.ingredients-pf1.Item.dozjFH55CR4npT6F",
+              "img": "icons/tools/laboratory/bowl-powder-purple.webp",
+              "name": "Magical Essence",
+              "type": "Item",
+              "itemType": "loot",
+              "quantity": 1
+            }
+          }
+        },
+        "output": {
+          "1": {
+            "Compendium-beavers-potions-potions-pf1-Item-Sp3E9go1b56yNnBX": {
+              "id": "Sp3E9go1b56yNnBX",
+              "uuid": "Compendium.beavers-potions.potions-pf1.Item.Sp3E9go1b56yNnBX",
+              "img": "icons/consumables/potions/bottle-conical-corked-labeled-shell-cyan.webp",
+              "name": "Messenger's Potion",
+              "type": "Item",
+              "itemType": "consumable",
+              "quantity": 1
+            }
+          }
+        },
+        "currency": {
+          "name": "gp",
+          "value": 50
+        },
+        "beaversTests": {
+          "fails": 1,
+          "consume": true,
+          "failsInARow": false,
+          "ands": {
+            "1": {
+              "hits": 1,
+              "ors": {
+                "1": {
+                  "type": "SkillTest",
+                  "data": {
+                    "dc": 10,
+                    "skill": "sur"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "macro": "",
+        "folder": "Beaver's Potions",
+        "kind": "recipe"
+      }
+    }
+  }
+}

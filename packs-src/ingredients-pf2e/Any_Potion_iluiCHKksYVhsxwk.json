@@ -1,0 +1,45 @@
+{
+  "_id": "iluiCHKksYVhsxwk",
+  "_key": "!items!iluiCHKksYVhsxwk",
+  "name": "Any Potion",
+  "type": "treasure",
+  "img": "modules/beavers-crafting/icons/anyOf.png",
+  "system": {
+    "description": {
+      "value": "<p>Any potion.</p>"
+    },
+    "level": {
+      "value": 0
+    },
+    "price": {
+      "value": {
+        "sp": 1
+      }
+    },
+    "quantity": 1,
+    "bulk": {
+      "value": 0
+    },
+    "traits": {
+      "value": [],
+      "rarity": "common"
+    },
+    "category": "",
+    "stackGroup": null,
+    "slug": "any-potion"
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "beavers-crafting": {
+      "subtype": "AnyOf",
+      "anyOf": {
+        "macro": "// beavers-crafting passes an item or a component of the actor\nconst doc = item?.system ? item : await item?.getEntity?.();\nreturn doc?.flags?.[\"beavers-potions\"]?.potion === true || (doc?.type === \"consumable\" && doc.system.category === \"potion\");"
+      }
+    }
+  }
+}

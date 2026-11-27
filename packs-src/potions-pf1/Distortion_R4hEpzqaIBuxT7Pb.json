@@ -1,0 +1,91 @@
+{
+  "_id": "R4hEpzqaIBuxT7Pb",
+  "_key": "!items!R4hEpzqaIBuxT7Pb",
+  "name": "Distortion",
+  "type": "consumable",
+  "img": "icons/consumables/potions/bottle-round-label-cork-yellow.webp",
+  "system": {
+    "subType": "potion",
+    "description": {
+      "value": "<p>You vanish out of existence and back again within the blink of an eye. Your outline appears blurred, shifting and wavering. For 1 minute every attack against you has a 20% chance to miss: it appears as if you had not been targeted at all.</p>",
+      "instructions": "",
+      "unidentified": ""
+    },
+    "quantity": 1,
+    "weight": {
+      "value": 0.1
+    },
+    "price": 2500,
+    "identified": true,
+    "cl": 1,
+    "uses": {
+      "value": null,
+      "per": "single",
+      "autoDeductChargesCost": "",
+      "maxFormula": "",
+      "rechargeFormula": ""
+    },
+    "actions": [
+      {
+        "_id": "bpactR4hEpzqDrin",
+        "name": "Drink",
+        "activation": {
+          "type": "standard",
+          "unchained": {
+            "type": "action",
+            "cost": 2
+          }
+        },
+        "duration": {
+          "units": "inst"
+        }
+      }
+    ]
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "beavers-potions": {
+      "potion": true,
+      "buffs": [
+        {
+          "name": "Distortion",
+          "type": "buff",
+          "img": "icons/consumables/potions/bottle-round-label-cork-yellow.webp",
+          "system": {
+            "subType": "temp",
+            "active": true,
+            "level": 1,
+            "duration": {
+              "value": "1",
+              "units": "minute",
+              "end": "turnStart"
+            },
+            "changes": [],
+            "conditions": [],
+            "description": {
+              "value": "<p>You vanish out of existence and back again within the blink of an eye. Your outline appears blurred, shifting and wavering. For 1 minute every attack against you has a 20% chance to miss: it appears as if you had not been targeted at all.</p>"
+            }
+          },
+          "flags": {
+            "beavers-potions": {
+              "distortion": 20,
+              "source": "distortion.buff"
+            }
+          }
+        }
+      ],
+      "rarity": "veryRare",
+      "rules": [
+        [
+          "distortion",
+          20
+        ]
+      ]
+    }
+  }
+}

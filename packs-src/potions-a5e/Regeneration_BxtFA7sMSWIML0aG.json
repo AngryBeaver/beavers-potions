@@ -1,0 +1,113 @@
+{
+  "_id": "BxtFA7sMSWIML0aG",
+  "_key": "!items!BxtFA7sMSWIML0aG",
+  "name": "Regeneration",
+  "type": "object",
+  "img": "icons/consumables/potions/conical-ornate-purple.webp",
+  "system": {
+    "description": "<p>You regenerate 10 hit points at the start of each of your turns for one minute.</p>",
+    "actions": {
+      "bpactBxtFA7sDrin": {
+        "name": "Drink",
+        "img": "icons/consumables/potions/conical-ornate-purple.webp",
+        "activation": {
+          "type": "action",
+          "cost": 1,
+          "reactionTrigger": ""
+        },
+        "duration": {
+          "unit": "rounds",
+          "value": "10"
+        },
+        "target": {
+          "quantity": "",
+          "type": "self"
+        },
+        "consumers": {
+          "bpconBxtFA7sDrin": {
+            "type": "quantity",
+            "default": true,
+            "itemId": "",
+            "quantity": 1,
+            "deleteOnZero": true,
+            "label": ""
+          }
+        },
+        "rolls": {},
+        "prompts": {},
+        "effects": [
+          "bpfxBxtFA7sM0000"
+        ],
+        "macro": ""
+      }
+    },
+    "objectType": "consumable",
+    "price": {
+      "value": 2500,
+      "denomination": "gp",
+      "special": ""
+    },
+    "quantity": 1,
+    "rarity": "veryRare",
+    "weight": 0.5,
+    "source": "",
+    "requiresAttunement": false,
+    "unidentified": false
+  },
+  "effects": [
+    {
+      "_id": "bpfxBxtFA7sM0000",
+      "_key": "!items.effects!BxtFA7sMSWIML0aG.bpfxBxtFA7sM0000",
+      "name": "Regeneration",
+      "img": "icons/consumables/potions/conical-ornate-purple.webp",
+      "type": "base",
+      "description": "<p>You regenerate 10 hit points at the start of each of your turns for one minute.</p>",
+      "system": {
+        "changes": [],
+        "magical": true,
+        "applyToSelf": false,
+        "effectType": "onUse"
+      },
+      "disabled": false,
+      "transfer": false,
+      "duration": {
+        "value": 10,
+        "units": "rounds",
+        "expiry": "turnStart",
+        "expired": false
+      },
+      "statuses": [],
+      "flags": {
+        "beavers-potions": {
+          "turnStart": {
+            "heal": "10"
+          }
+        }
+      },
+      "tint": "#ffffff",
+      "showIcon": 1,
+      "origin": null,
+      "start": null,
+      "sort": 0
+    }
+  ],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "beavers-potions": {
+      "potion": true,
+      "rarity": "veryRare",
+      "rules": [
+        [
+          "turnStart",
+          {
+            "heal": "10"
+          }
+        ]
+      ]
+    }
+  }
+}

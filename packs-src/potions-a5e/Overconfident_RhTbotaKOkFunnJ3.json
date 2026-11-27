@@ -1,0 +1,116 @@
+{
+  "_id": "RhTbotaKOkFunnJ3",
+  "_key": "!items!RhTbotaKOkFunnJ3",
+  "name": "Overconfident",
+  "type": "object",
+  "img": "icons/consumables/potions/bottle-pear-corked-labeled-ornamental-purple.webp",
+  "system": {
+    "description": "<p>You are confident that you can do almost everything. For the next 10 minutes you are immune to being frightened, while you are also willing to take more risks.</p>",
+    "actions": {
+      "bpactRhTbotaDrin": {
+        "name": "Drink",
+        "img": "icons/consumables/potions/bottle-pear-corked-labeled-ornamental-purple.webp",
+        "activation": {
+          "type": "action",
+          "cost": 1,
+          "reactionTrigger": ""
+        },
+        "duration": {
+          "unit": "minutes",
+          "value": "10"
+        },
+        "target": {
+          "quantity": "",
+          "type": "self"
+        },
+        "consumers": {
+          "bpconRhTbotaDrin": {
+            "type": "quantity",
+            "default": true,
+            "itemId": "",
+            "quantity": 1,
+            "deleteOnZero": true,
+            "label": ""
+          }
+        },
+        "rolls": {},
+        "prompts": {},
+        "effects": [
+          "bpfxRhTbotaK0000"
+        ],
+        "macro": ""
+      }
+    },
+    "objectType": "consumable",
+    "price": {
+      "value": 250,
+      "denomination": "gp",
+      "special": ""
+    },
+    "quantity": 1,
+    "rarity": "uncommon",
+    "weight": 0.5,
+    "source": "",
+    "requiresAttunement": false,
+    "unidentified": false
+  },
+  "effects": [
+    {
+      "_id": "bpfxRhTbotaK0000",
+      "_key": "!items.effects!RhTbotaKOkFunnJ3.bpfxRhTbotaK0000",
+      "name": "Overconfident",
+      "img": "icons/consumables/potions/bottle-pear-corked-labeled-ornamental-purple.webp",
+      "type": "base",
+      "description": "<p>You are confident that you can do almost everything. For the next 10 minutes you are immune to being frightened, while you are also willing to take more risks.</p>",
+      "system": {
+        "changes": [
+          {
+            "_id": "bpfxRhTbotaKc000",
+            "key": "system.traits.conditionImmunities",
+            "type": "add",
+            "value": [
+              "frightened"
+            ],
+            "phase": "initial",
+            "priority": null
+          }
+        ],
+        "magical": true,
+        "applyToSelf": false,
+        "effectType": "onUse"
+      },
+      "disabled": false,
+      "transfer": false,
+      "duration": {
+        "value": 10,
+        "units": "minutes",
+        "expiry": "turnStart",
+        "expired": false
+      },
+      "statuses": [],
+      "flags": {},
+      "tint": "#ffffff",
+      "showIcon": 1,
+      "origin": null,
+      "start": null,
+      "sort": 0
+    }
+  ],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "beavers-potions": {
+      "potion": true,
+      "rarity": "uncommon",
+      "rules": [
+        [
+          "conditionImmunity",
+          "frightened"
+        ]
+      ]
+    }
+  }
+}

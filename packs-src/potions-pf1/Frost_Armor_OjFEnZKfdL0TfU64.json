@@ -1,0 +1,126 @@
+{
+  "_id": "OjFEnZKfdL0TfU64",
+  "_key": "!items!OjFEnZKfdL0TfU64",
+  "name": "Frost Armor",
+  "type": "consumable",
+  "img": "icons/consumables/potions/bottle-corked-blue.webp",
+  "system": {
+    "subType": "potion",
+    "description": {
+      "value": "<p>A protective magical force surrounds you, manifesting as a spectral frost that covers you and your gear for 5 rounds. At the start of each of your turns you regain temporary hit points up to 2. Anyone starting its turn next to you takes 1d4 cold damage (Wisdom saving throw DC 11 for half).</p>",
+      "instructions": "",
+      "unidentified": ""
+    },
+    "quantity": 1,
+    "weight": {
+      "value": 0.1
+    },
+    "price": 250,
+    "identified": true,
+    "cl": 1,
+    "uses": {
+      "value": null,
+      "per": "single",
+      "autoDeductChargesCost": "",
+      "maxFormula": "",
+      "rechargeFormula": ""
+    },
+    "actions": [
+      {
+        "_id": "bpactOjFEnZKDrin",
+        "name": "Drink",
+        "activation": {
+          "type": "standard",
+          "unchained": {
+            "type": "action",
+            "cost": 2
+          }
+        },
+        "duration": {
+          "units": "inst"
+        }
+      }
+    ]
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "beavers-potions": {
+      "potion": true,
+      "buffs": [
+        {
+          "name": "Frost Armor",
+          "type": "buff",
+          "img": "icons/consumables/potions/bottle-corked-blue.webp",
+          "system": {
+            "subType": "temp",
+            "active": true,
+            "level": 1,
+            "duration": {
+              "value": "5",
+              "units": "round",
+              "end": "turnStart"
+            },
+            "changes": [],
+            "conditions": [],
+            "description": {
+              "value": "<p>A protective magical force surrounds you, manifesting as a spectral frost that covers you and your gear for 5 rounds. At the start of each of your turns you regain temporary hit points up to 2. Anyone starting its turn next to you takes 1d4 cold damage (Wisdom saving throw DC 11 for half).</p>"
+            }
+          },
+          "flags": {
+            "beavers-potions": {
+              "turnStart": {
+                "temp": 2
+              },
+              "aura": {
+                "radius": 5,
+                "includeSelf": false,
+                "save": {
+                  "ability": "wis",
+                  "dc": 11
+                },
+                "damage": {
+                  "formula": "1d4",
+                  "type": "cold"
+                }
+              },
+              "source": "frost-armor.buff"
+            }
+          }
+        }
+      ],
+      "rarity": "uncommon",
+      "rules": [
+        [
+          "temp",
+          2
+        ],
+        [
+          "turnStart",
+          {
+            "temp": 2
+          }
+        ],
+        [
+          "aura",
+          {
+            "radius": 5,
+            "includeSelf": false,
+            "save": {
+              "ability": "wis",
+              "dc": 11
+            },
+            "damage": {
+              "formula": "1d4",
+              "type": "cold"
+            }
+          }
+        ]
+      ]
+    }
+  }
+}

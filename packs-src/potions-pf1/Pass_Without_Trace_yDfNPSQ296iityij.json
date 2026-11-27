@@ -1,0 +1,98 @@
+{
+  "_id": "yDfNPSQ296iityij",
+  "_key": "!items!yDfNPSQ296iityij",
+  "name": "Pass Without Trace",
+  "type": "consumable",
+  "img": "icons/consumables/potions/bottle-round-corked-yellow.webp",
+  "system": {
+    "subType": "potion",
+    "description": {
+      "value": "<p>For 1 hour you can move through any type of terrain and leave neither footprints nor scent: you have a +10 bonus to Dexterity (Stealth) checks and you cannot be tracked except by magical means.</p>",
+      "instructions": "",
+      "unidentified": ""
+    },
+    "quantity": 1,
+    "weight": {
+      "value": 0.1
+    },
+    "price": 250,
+    "identified": true,
+    "cl": 1,
+    "uses": {
+      "value": null,
+      "per": "single",
+      "autoDeductChargesCost": "",
+      "maxFormula": "",
+      "rechargeFormula": ""
+    },
+    "actions": [
+      {
+        "_id": "bpactyDfNPSQDrin",
+        "name": "Drink",
+        "activation": {
+          "type": "standard",
+          "unchained": {
+            "type": "action",
+            "cost": 2
+          }
+        },
+        "duration": {
+          "units": "inst"
+        }
+      }
+    ]
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "beavers-potions": {
+      "potion": true,
+      "buffs": [
+        {
+          "name": "Pass Without Trace",
+          "type": "buff",
+          "img": "icons/consumables/potions/bottle-round-corked-yellow.webp",
+          "system": {
+            "subType": "temp",
+            "active": true,
+            "level": 1,
+            "duration": {
+              "value": "1",
+              "units": "hour",
+              "end": "turnStart"
+            },
+            "changes": [
+              {
+                "_id": "bpcyDfNP",
+                "formula": "10",
+                "target": "skill.ste",
+                "type": "untyped"
+              }
+            ],
+            "conditions": [],
+            "description": {
+              "value": "<p>For 1 hour you can move through any type of terrain and leave neither footprints nor scent: you have a +10 bonus to Dexterity (Stealth) checks and you cannot be tracked except by magical means.</p>"
+            }
+          },
+          "flags": {
+            "beavers-potions": {
+              "source": "pass-without-trace.buff"
+            }
+          }
+        }
+      ],
+      "rarity": "uncommon",
+      "rules": [
+        [
+          "skillBonus",
+          "stealth",
+          10
+        ]
+      ]
+    }
+  }
+}

@@ -1,0 +1,76 @@
+{
+  "_id": "NRltRDCfJCTu6frt",
+  "_key": "!items!NRltRDCfJCTu6frt",
+  "name": "Plant Nourishment",
+  "type": "consumable",
+  "img": "icons/consumables/potions/bottle-conical-bubbling-blue.webp",
+  "system": {
+    "consumableType": "potion",
+    "description": {
+      "value": "<p>Makes plants grow 10 times faster than normal over the course of a year, and cures any blights or wounds the plants have suffered. 1 dose poured on the ground affects all plants in a 40 ft. radius.</p><p>If drunk by a person it results in the permanent loss of 1 Wisdom.</p>"
+    },
+    "quantity": 1,
+    "weight": 0.1,
+    "price": 50,
+    "identified": true,
+    "identifiedName": "Plant Nourishment",
+    "uses": {
+      "value": 0,
+      "max": 0,
+      "per": "single"
+    }
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "beavers-potions": {
+      "potion": true,
+      "buffs": [
+        {
+          "name": "Plant Nourishment (drunk)",
+          "type": "buff",
+          "img": "icons/consumables/potions/bottle-conical-bubbling-blue.webp",
+          "system": {
+            "buffType": "temp",
+            "active": true,
+            "level": 1,
+            "duration": {
+              "value": null,
+              "units": ""
+            },
+            "changes": [
+              [
+                "-1",
+                "ability",
+                "wis",
+                "untyped"
+              ]
+            ],
+            "description": {
+              "value": "<p>Makes plants grow 10 times faster than normal over the course of a year, and cures any blights or wounds the plants have suffered. 1 dose poured on the ground affects all plants in a 40 ft. radius.</p><p>If drunk by a person it results in the permanent loss of 1 Wisdom.</p>"
+            }
+          },
+          "flags": {
+            "beavers-potions": {
+              "conditions": [],
+              "source": "plant-nourishment.buff"
+            }
+          }
+        }
+      ],
+      "pour": true,
+      "rarity": "common",
+      "rules": [
+        [
+          "ability",
+          "wis",
+          -1
+        ]
+      ]
+    }
+  }
+}

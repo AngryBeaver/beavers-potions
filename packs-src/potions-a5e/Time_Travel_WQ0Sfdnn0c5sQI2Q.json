@@ -1,0 +1,100 @@
+{
+  "_id": "WQ0Sfdnn0c5sQI2Q",
+  "_key": "!items!WQ0Sfdnn0c5sQI2Q",
+  "name": "Time Travel",
+  "type": "object",
+  "img": "icons/consumables/potions/bottle-conical-corked-yellow.webp",
+  "system": {
+    "description": "<p>You travel back in time for exactly 30 minutes. You do not change! The world around you does: you coexist with your past self. You start your existence in the past at the exact same spot you are currently in, with exactly the same stats and equipment.</p><p><strong>Rules of time travel:</strong> you cannot change anything affecting your personal perspective of history! Your past self is not aware of your help and does exactly the same as before. If you violate the rules, your time travel ends immediately and you return to your timeline where everything happened as before. (In reality you just opened a new parallel timeline, sadly your mind is bonded to this one.)</p><p>When your time is up or after you violate the rules, your existence vanishes while your past self is simultaneously struck down to 0 hit points. When it survives, its mind is the mind of the traveller.</p><p>But wait, why should you then drink this potion? Be creative! The changes you make could change the future thereafter. E.g. you have been chased by an angry mob and ended up in front of a locked door. If only someone had left a key below that doormat.</p>",
+    "actions": {
+      "bpactWQ0SfdnDrin": {
+        "name": "Drink",
+        "img": "icons/consumables/potions/bottle-conical-corked-yellow.webp",
+        "activation": {
+          "type": "action",
+          "cost": 1,
+          "reactionTrigger": ""
+        },
+        "duration": {
+          "unit": "minutes",
+          "value": "30"
+        },
+        "target": {
+          "quantity": "",
+          "type": "self"
+        },
+        "consumers": {
+          "bpconWQ0SfdnDrin": {
+            "type": "quantity",
+            "default": true,
+            "itemId": "",
+            "quantity": 1,
+            "deleteOnZero": true,
+            "label": ""
+          }
+        },
+        "rolls": {},
+        "prompts": {},
+        "effects": [
+          "bpfxWQ0Sfdnn0000"
+        ],
+        "macro": ""
+      }
+    },
+    "objectType": "consumable",
+    "price": {
+      "value": 5000,
+      "denomination": "gp",
+      "special": ""
+    },
+    "quantity": 1,
+    "rarity": "legendary",
+    "weight": 0.5,
+    "source": "",
+    "requiresAttunement": false,
+    "unidentified": false
+  },
+  "effects": [
+    {
+      "_id": "bpfxWQ0Sfdnn0000",
+      "_key": "!items.effects!WQ0Sfdnn0c5sQI2Q.bpfxWQ0Sfdnn0000",
+      "name": "Timeless",
+      "img": "icons/consumables/potions/bottle-conical-corked-yellow.webp",
+      "type": "base",
+      "description": "<p>You travel back in time for exactly 30 minutes. You do not change! The world around you does: you coexist with your past self. You start your existence in the past at the exact same spot you are currently in, with exactly the same stats and equipment.</p><p><strong>Rules of time travel:</strong> you cannot change anything affecting your personal perspective of history! Your past self is not aware of your help and does exactly the same as before. If you violate the rules, your time travel ends immediately and you return to your timeline where everything happened as before. (In reality you just opened a new parallel timeline, sadly your mind is bonded to this one.)</p><p>When your time is up or after you violate the rules, your existence vanishes while your past self is simultaneously struck down to 0 hit points. When it survives, its mind is the mind of the traveller.</p><p>But wait, why should you then drink this potion? Be creative! The changes you make could change the future thereafter. E.g. you have been chased by an angry mob and ended up in front of a locked door. If only someone had left a key below that doormat.</p>",
+      "system": {
+        "changes": [],
+        "magical": true,
+        "applyToSelf": false,
+        "effectType": "onUse"
+      },
+      "disabled": false,
+      "transfer": false,
+      "duration": {
+        "value": 30,
+        "units": "minutes",
+        "expiry": "turnStart",
+        "expired": false
+      },
+      "statuses": [],
+      "flags": {},
+      "tint": "#ffffff",
+      "showIcon": 1,
+      "origin": null,
+      "start": null,
+      "sort": 0
+    }
+  ],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "beavers-potions": {
+      "potion": true,
+      "rarity": "legendary",
+      "rules": []
+    }
+  }
+}

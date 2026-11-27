@@ -197,7 +197,35 @@
   },
   "flags": {
     "beavers-potions": {
-      "potion": true
+      "potion": true,
+      "rarity": "uncommon",
+      "rules": [
+        [
+          "temp",
+          2
+        ],
+        [
+          "turnStart",
+          {
+            "temp": 2
+          }
+        ],
+        [
+          "aura",
+          {
+            "radius": 5,
+            "includeSelf": false,
+            "save": {
+              "ability": "wis",
+              "dc": 11
+            },
+            "damage": {
+              "formula": "1d4",
+              "type": "cold"
+            }
+          }
+        ]
+      ]
     }
   }
 }

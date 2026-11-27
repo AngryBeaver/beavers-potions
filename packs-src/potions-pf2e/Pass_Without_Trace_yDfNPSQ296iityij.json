@@ -1,0 +1,111 @@
+{
+  "_id": "yDfNPSQ296iityij",
+  "_key": "!items!yDfNPSQ296iityij",
+  "name": "Pass Without Trace",
+  "type": "consumable",
+  "img": "icons/consumables/potions/bottle-round-corked-yellow.webp",
+  "system": {
+    "category": "potion",
+    "description": {
+      "value": "<p>For 1 hour you can move through any type of terrain and leave neither footprints nor scent: you have a +10 bonus to Dexterity (Stealth) checks and you cannot be tracked except by magical means.</p>"
+    },
+    "level": {
+      "value": 4
+    },
+    "price": {
+      "value": {
+        "gp": 250
+      }
+    },
+    "quantity": 1,
+    "bulk": {
+      "value": 0.1
+    },
+    "uses": {
+      "value": 1,
+      "max": 1,
+      "autoDestroy": true
+    },
+    "traits": {
+      "value": [
+        "consumable",
+        "magical",
+        "potion"
+      ],
+      "rarity": "uncommon"
+    },
+    "usage": {
+      "value": "held-in-one-hand"
+    },
+    "rules": [],
+    "slug": "pass-without-trace",
+    "publication": {
+      "title": "Beaver's Potions",
+      "authors": "",
+      "license": "OGL",
+      "remaster": false
+    }
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "beavers-potions": {
+      "potion": true,
+      "effects": [
+        {
+          "name": "Effect: Pass Without Trace",
+          "type": "effect",
+          "img": "icons/consumables/potions/bottle-round-corked-yellow.webp",
+          "system": {
+            "description": {
+              "value": "<p>For 1 hour you can move through any type of terrain and leave neither footprints nor scent: you have a +10 bonus to Dexterity (Stealth) checks and you cannot be tracked except by magical means.</p>"
+            },
+            "duration": {
+              "value": 1,
+              "unit": "hours",
+              "expiry": "turn-start",
+              "sustained": false
+            },
+            "rules": [
+              {
+                "key": "FlatModifier",
+                "selector": "stealth",
+                "value": 10,
+                "type": "untyped",
+                "label": "Beaver's Potions"
+              }
+            ],
+            "tokenIcon": {
+              "show": true
+            },
+            "level": {
+              "value": 4
+            },
+            "traits": {
+              "value": [],
+              "rarity": "common"
+            },
+            "slug": "effect-pass-without-trace"
+          },
+          "flags": {
+            "beavers-potions": {
+              "source": "pass-without-trace.effect"
+            }
+          }
+        }
+      ],
+      "rarity": "uncommon",
+      "rules": [
+        [
+          "skillBonus",
+          "stealth",
+          10
+        ]
+      ]
+    }
+  }
+}

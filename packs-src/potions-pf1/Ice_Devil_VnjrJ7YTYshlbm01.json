@@ -1,0 +1,71 @@
+{
+  "_id": "VnjrJ7YTYshlbm01",
+  "_key": "!items!VnjrJ7YTYshlbm01",
+  "name": "Ice Devil",
+  "type": "consumable",
+  "img": "icons/consumables/potions/bottle-ornate-bat-teal.webp",
+  "system": {
+    "subType": "potion",
+    "description": {
+      "value": "<p>You become an ice devil for 1 minute. You do not just polymorph into one, you actually become one. You cannot willingly dismiss the effect. Afterwards your mind is corrupted for a couple of days while the effect wears off.</p><p><strong>Ice Devil:</strong> You are self-centered and egoistic, you have no sense of empathy. You see your companions as slaves, lesser fools that might be useful to you; if not, you are willing to sacrifice them. Your main motivation is to get promoted by slaughtering enemies and claiming as many souls as possible.</p><p><strong>Corrupted Mind:</strong> You do not remember what happened. You feel like you have lost some great power and someone is to blame for it. You have the feeling everyone is lying to you and your companions are only selfish and do not want the best for you.</p>",
+      "instructions": "",
+      "unidentified": ""
+    },
+    "quantity": 1,
+    "weight": {
+      "value": 0.1
+    },
+    "price": 5000,
+    "identified": true,
+    "cl": 1,
+    "uses": {
+      "value": null,
+      "per": "single",
+      "autoDeductChargesCost": "",
+      "maxFormula": "",
+      "rechargeFormula": ""
+    },
+    "actions": [
+      {
+        "_id": "bpactVnjrJ7YDrin",
+        "name": "Drink",
+        "activation": {
+          "type": "standard",
+          "unchained": {
+            "type": "action",
+            "cost": 2
+          }
+        },
+        "duration": {
+          "units": "inst"
+        }
+      }
+    ]
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "beavers-potions": {
+      "potion": true,
+      "buffs": [],
+      "rarity": "legendary",
+      "rules": [
+        [
+          "transform",
+          {
+            "dnd5e": "Compendium.dnd5e.actors24.Actor.mmIceDevil000000"
+          },
+          "Ice Devil",
+          60
+        ]
+      ],
+      "unsupported": [
+        "transform"
+      ]
+    }
+  }
+}

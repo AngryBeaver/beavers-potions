@@ -1,0 +1,94 @@
+{
+  "_id": "GC5EmcU3FzX8o4Mi",
+  "_key": "!items!GC5EmcU3FzX8o4Mi",
+  "name": "Blur",
+  "type": "consumable",
+  "img": "icons/consumables/potions/bottle-round-label-cork-blue.webp",
+  "system": {
+    "subType": "potion",
+    "description": {
+      "value": "<p>Your body becomes blurred, shifting and wavering to all who can see you. For 1 minute any creature has disadvantage on attack rolls against you. An attacker is immune to this effect if it doesn't rely on sight, as with blindsight, or can see through illusions, as with truesight.</p>",
+      "instructions": "",
+      "unidentified": ""
+    },
+    "quantity": 1,
+    "weight": {
+      "value": 0.1
+    },
+    "price": 750,
+    "identified": true,
+    "cl": 1,
+    "uses": {
+      "value": null,
+      "per": "single",
+      "autoDeductChargesCost": "",
+      "maxFormula": "",
+      "rechargeFormula": ""
+    },
+    "actions": [
+      {
+        "_id": "bpactGC5EmcUDrin",
+        "name": "Drink",
+        "activation": {
+          "type": "standard",
+          "unchained": {
+            "type": "action",
+            "cost": 2
+          }
+        },
+        "duration": {
+          "units": "inst"
+        }
+      }
+    ]
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "beavers-potions": {
+      "potion": true,
+      "buffs": [
+        {
+          "name": "Blur",
+          "type": "buff",
+          "img": "icons/consumables/potions/bottle-round-label-cork-blue.webp",
+          "system": {
+            "subType": "temp",
+            "active": true,
+            "level": 1,
+            "duration": {
+              "value": "1",
+              "units": "minute",
+              "end": "turnStart"
+            },
+            "changes": [],
+            "conditions": [],
+            "description": {
+              "value": "<p>Your body becomes blurred, shifting and wavering to all who can see you. For 1 minute any creature has disadvantage on attack rolls against you. An attacker is immune to this effect if it doesn't rely on sight, as with blindsight, or can see through illusions, as with truesight.</p>"
+            }
+          },
+          "flags": {
+            "beavers-potions": {
+              "distortion": 20,
+              "source": "blur.buff"
+            }
+          }
+        }
+      ],
+      "rarity": "rare",
+      "rules": [
+        [
+          "grants",
+          "disadvantage",
+          {
+            "sight": true
+          }
+        ]
+      ]
+    }
+  }
+}

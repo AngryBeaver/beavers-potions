@@ -1,0 +1,114 @@
+{
+  "_id": "abmTcsGnJaHZxNDU",
+  "_key": "!items!abmTcsGnJaHZxNDU",
+  "name": "Weightless",
+  "type": "object",
+  "img": "icons/consumables/potions/bottle-bulb-empty-glass.webp",
+  "system": {
+    "description": "<p>Your body becomes weightless for 1 minute. As long as you do not carry anything (including clothes) you are no longer pulled down to earth: you hover.</p>",
+    "actions": {
+      "bpactabmTcsGDrin": {
+        "name": "Drink",
+        "img": "icons/consumables/potions/bottle-bulb-empty-glass.webp",
+        "activation": {
+          "type": "action",
+          "cost": 1,
+          "reactionTrigger": ""
+        },
+        "duration": {
+          "unit": "minutes",
+          "value": "1"
+        },
+        "target": {
+          "quantity": "",
+          "type": "self"
+        },
+        "consumers": {
+          "bpconabmTcsGDrin": {
+            "type": "quantity",
+            "default": true,
+            "itemId": "",
+            "quantity": 1,
+            "deleteOnZero": true,
+            "label": ""
+          }
+        },
+        "rolls": {},
+        "prompts": {},
+        "effects": [
+          "bpfxabmTcsGn0000"
+        ],
+        "macro": ""
+      }
+    },
+    "objectType": "consumable",
+    "price": {
+      "value": 50,
+      "denomination": "gp",
+      "special": ""
+    },
+    "quantity": 1,
+    "rarity": "common",
+    "weight": 0.5,
+    "source": "",
+    "requiresAttunement": false,
+    "unidentified": false
+  },
+  "effects": [
+    {
+      "_id": "bpfxabmTcsGn0000",
+      "_key": "!items.effects!abmTcsGnJaHZxNDU.bpfxabmTcsGn0000",
+      "name": "Weightless",
+      "img": "icons/consumables/potions/bottle-bulb-empty-glass.webp",
+      "type": "base",
+      "description": "<p>Your body becomes weightless for 1 minute. As long as you do not carry anything (including clothes) you are no longer pulled down to earth: you hover.</p>",
+      "system": {
+        "changes": [
+          {
+            "_id": "bpfxabmTcsGnc000",
+            "key": "system.attributes.movement.traits.hover",
+            "type": "override",
+            "value": true,
+            "phase": "initial",
+            "priority": null
+          }
+        ],
+        "magical": true,
+        "applyToSelf": false,
+        "effectType": "onUse"
+      },
+      "disabled": false,
+      "transfer": false,
+      "duration": {
+        "value": 1,
+        "units": "minutes",
+        "expiry": "turnStart",
+        "expired": false
+      },
+      "statuses": [],
+      "flags": {},
+      "tint": "#ffffff",
+      "showIcon": 1,
+      "origin": null,
+      "start": null,
+      "sort": 0
+    }
+  ],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "beavers-potions": {
+      "potion": true,
+      "rarity": "common",
+      "rules": [
+        [
+          "status",
+          "hovering"
+        ]
+      ]
+    }
+  }
+}

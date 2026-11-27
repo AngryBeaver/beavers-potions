@@ -1,0 +1,43 @@
+{
+  "_id": "YK67se6j7hfPVd6Q",
+  "_key": "!items!YK67se6j7hfPVd6Q",
+  "name": "Life Shell",
+  "type": "consumable",
+  "img": "icons/consumables/potions/flask-corked-green.webp",
+  "system": {
+    "consumableType": "potion",
+    "description": {
+      "value": "<p>You gain 10 temporary hit points.</p>"
+    },
+    "quantity": 1,
+    "weight": 0.1,
+    "price": 250,
+    "identified": true,
+    "identifiedName": "Life Shell",
+    "uses": {
+      "value": 0,
+      "max": 0,
+      "per": "single"
+    }
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "beavers-potions": {
+      "potion": true,
+      "buffs": [],
+      "pour": false,
+      "rarity": "uncommon",
+      "rules": [
+        [
+          "temp",
+          10
+        ]
+      ]
+    }
+  }
+}

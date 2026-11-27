@@ -1,0 +1,46 @@
+{
+  "_id": "FL9Yuouc8V8OTrbP",
+  "_key": "!items!FL9Yuouc8V8OTrbP",
+  "name": "Restoration Lesser",
+  "type": "consumable",
+  "img": "icons/consumables/potions/bottle-round-label-cork-green.webp",
+  "system": {
+    "consumableType": "potion",
+    "description": {
+      "value": "<p>Ends one disease or one of the following conditions afflicting you: blinded, deafened, paralyzed or poisoned.</p>"
+    },
+    "quantity": 1,
+    "weight": 0.1,
+    "price": 250,
+    "identified": true,
+    "identifiedName": "Restoration Lesser",
+    "uses": {
+      "value": 0,
+      "max": 0,
+      "per": "single"
+    }
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "beavers-potions": {
+      "potion": true,
+      "buffs": [],
+      "pour": false,
+      "use": {
+        "restoration": "lesser"
+      },
+      "rarity": "uncommon",
+      "rules": [
+        [
+          "restoration",
+          "lesser"
+        ]
+      ]
+    }
+  }
+}

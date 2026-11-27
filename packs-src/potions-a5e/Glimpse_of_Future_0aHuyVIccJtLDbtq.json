@@ -1,0 +1,68 @@
+{
+  "_id": "0aHuyVIccJtLDbtq",
+  "_key": "!items!0aHuyVIccJtLDbtq",
+  "name": "Glimpse of Future",
+  "type": "object",
+  "img": "icons/consumables/potions/bottle-corked-empty.webp",
+  "system": {
+    "description": "<p>You glimpse into your possible near future where you see yourself in a single snapshot moment. E.g. it shows you standing in front of a specific building, maybe this is the hideout you are searching for? Or it shows you freezing in cold snow while wearing shorts, maybe you should pack better clothes?</p>",
+    "actions": {
+      "bpact0aHuyVIDrin": {
+        "name": "Drink",
+        "img": "icons/consumables/potions/bottle-corked-empty.webp",
+        "activation": {
+          "type": "action",
+          "cost": 1,
+          "reactionTrigger": ""
+        },
+        "duration": {
+          "unit": "instantaneous",
+          "value": ""
+        },
+        "target": {
+          "quantity": "",
+          "type": "self"
+        },
+        "consumers": {
+          "bpcon0aHuyVIDrin": {
+            "type": "quantity",
+            "default": true,
+            "itemId": "",
+            "quantity": 1,
+            "deleteOnZero": true,
+            "label": ""
+          }
+        },
+        "rolls": {},
+        "prompts": {},
+        "effects": [],
+        "macro": ""
+      }
+    },
+    "objectType": "consumable",
+    "price": {
+      "value": 250,
+      "denomination": "gp",
+      "special": ""
+    },
+    "quantity": 1,
+    "rarity": "uncommon",
+    "weight": 0.5,
+    "source": "",
+    "requiresAttunement": false,
+    "unidentified": false
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "beavers-potions": {
+      "potion": true,
+      "rarity": "uncommon",
+      "rules": []
+    }
+  }
+}

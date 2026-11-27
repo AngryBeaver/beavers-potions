@@ -1,0 +1,97 @@
+{
+  "_id": "KHCZLpOKIl9Kjy84",
+  "_key": "!items!KHCZLpOKIl9Kjy84",
+  "name": "Comfort",
+  "type": "consumable",
+  "img": "icons/consumables/potions/bottle-conical-corked-green.webp",
+  "system": {
+    "category": "potion",
+    "description": {
+      "value": "<p>This potion lets you remain comfortable in extreme temperatures. For 8 hours you can ignore natural extremes in temperature and humidity.</p>"
+    },
+    "level": {
+      "value": 1
+    },
+    "price": {
+      "value": {
+        "gp": 50
+      }
+    },
+    "quantity": 1,
+    "bulk": {
+      "value": 0.1
+    },
+    "uses": {
+      "value": 1,
+      "max": 1,
+      "autoDestroy": true
+    },
+    "traits": {
+      "value": [
+        "consumable",
+        "magical",
+        "potion"
+      ],
+      "rarity": "common"
+    },
+    "usage": {
+      "value": "held-in-one-hand"
+    },
+    "rules": [],
+    "slug": "comfort",
+    "publication": {
+      "title": "Beaver's Potions",
+      "authors": "",
+      "license": "OGL",
+      "remaster": false
+    }
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "beavers-potions": {
+      "potion": true,
+      "effects": [
+        {
+          "name": "Effect: Comfort",
+          "type": "effect",
+          "img": "icons/consumables/potions/bottle-conical-corked-green.webp",
+          "system": {
+            "description": {
+              "value": "<p>This potion lets you remain comfortable in extreme temperatures. For 8 hours you can ignore natural extremes in temperature and humidity.</p>"
+            },
+            "duration": {
+              "value": 8,
+              "unit": "hours",
+              "expiry": "turn-start",
+              "sustained": false
+            },
+            "rules": [],
+            "tokenIcon": {
+              "show": true
+            },
+            "level": {
+              "value": 1
+            },
+            "traits": {
+              "value": [],
+              "rarity": "common"
+            },
+            "slug": "effect-comfort"
+          },
+          "flags": {
+            "beavers-potions": {
+              "source": "comfort.effect"
+            }
+          }
+        }
+      ],
+      "rarity": "common",
+      "rules": []
+    }
+  }
+}

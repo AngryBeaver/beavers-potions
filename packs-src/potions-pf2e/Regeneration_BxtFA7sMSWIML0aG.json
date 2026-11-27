@@ -1,0 +1,107 @@
+{
+  "_id": "BxtFA7sMSWIML0aG",
+  "_key": "!items!BxtFA7sMSWIML0aG",
+  "name": "Regeneration",
+  "type": "consumable",
+  "img": "icons/consumables/potions/conical-ornate-purple.webp",
+  "system": {
+    "category": "potion",
+    "description": {
+      "value": "<p>You regenerate 10 hit points at the start of each of your turns for one minute.</p>"
+    },
+    "level": {
+      "value": 12
+    },
+    "price": {
+      "value": {
+        "gp": 2500
+      }
+    },
+    "quantity": 1,
+    "bulk": {
+      "value": 0.1
+    },
+    "uses": {
+      "value": 1,
+      "max": 1,
+      "autoDestroy": true
+    },
+    "traits": {
+      "value": [
+        "consumable",
+        "magical",
+        "potion"
+      ],
+      "rarity": "rare"
+    },
+    "usage": {
+      "value": "held-in-one-hand"
+    },
+    "rules": [],
+    "slug": "regeneration",
+    "publication": {
+      "title": "Beaver's Potions",
+      "authors": "",
+      "license": "OGL",
+      "remaster": false
+    }
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "beavers-potions": {
+      "potion": true,
+      "effects": [
+        {
+          "name": "Effect: Regeneration",
+          "type": "effect",
+          "img": "icons/consumables/potions/conical-ornate-purple.webp",
+          "system": {
+            "description": {
+              "value": "<p>You regenerate 10 hit points at the start of each of your turns for one minute.</p>"
+            },
+            "duration": {
+              "value": 10,
+              "unit": "rounds",
+              "expiry": "turn-start",
+              "sustained": false
+            },
+            "rules": [],
+            "tokenIcon": {
+              "show": true
+            },
+            "level": {
+              "value": 12
+            },
+            "traits": {
+              "value": [],
+              "rarity": "common"
+            },
+            "slug": "effect-regeneration"
+          },
+          "flags": {
+            "beavers-potions": {
+              "turnStart": {
+                "heal": "10"
+              },
+              "source": "regeneration.effect"
+            }
+          }
+        }
+      ],
+      "rarity": "veryRare",
+      "rules": [
+        [
+          "turnStart",
+          {
+            "heal": "10"
+          }
+        ]
+      ]
+    }
+  }
+}

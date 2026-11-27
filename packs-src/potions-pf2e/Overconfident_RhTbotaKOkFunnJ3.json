@@ -1,0 +1,107 @@
+{
+  "_id": "RhTbotaKOkFunnJ3",
+  "_key": "!items!RhTbotaKOkFunnJ3",
+  "name": "Overconfident",
+  "type": "consumable",
+  "img": "icons/consumables/potions/bottle-pear-corked-labeled-ornamental-purple.webp",
+  "system": {
+    "category": "potion",
+    "description": {
+      "value": "<p>You are confident that you can do almost everything. For the next 10 minutes you are immune to being frightened, while you are also willing to take more risks.</p>"
+    },
+    "level": {
+      "value": 4
+    },
+    "price": {
+      "value": {
+        "gp": 250
+      }
+    },
+    "quantity": 1,
+    "bulk": {
+      "value": 0.1
+    },
+    "uses": {
+      "value": 1,
+      "max": 1,
+      "autoDestroy": true
+    },
+    "traits": {
+      "value": [
+        "consumable",
+        "magical",
+        "potion"
+      ],
+      "rarity": "uncommon"
+    },
+    "usage": {
+      "value": "held-in-one-hand"
+    },
+    "rules": [],
+    "slug": "overconfident",
+    "publication": {
+      "title": "Beaver's Potions",
+      "authors": "",
+      "license": "OGL",
+      "remaster": false
+    }
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "beavers-potions": {
+      "potion": true,
+      "effects": [
+        {
+          "name": "Effect: Overconfident",
+          "type": "effect",
+          "img": "icons/consumables/potions/bottle-pear-corked-labeled-ornamental-purple.webp",
+          "system": {
+            "description": {
+              "value": "<p>You are confident that you can do almost everything. For the next 10 minutes you are immune to being frightened, while you are also willing to take more risks.</p>"
+            },
+            "duration": {
+              "value": 10,
+              "unit": "minutes",
+              "expiry": "turn-start",
+              "sustained": false
+            },
+            "rules": [
+              {
+                "key": "Immunity",
+                "type": "frightened"
+              }
+            ],
+            "tokenIcon": {
+              "show": true
+            },
+            "level": {
+              "value": 4
+            },
+            "traits": {
+              "value": [],
+              "rarity": "common"
+            },
+            "slug": "effect-overconfident"
+          },
+          "flags": {
+            "beavers-potions": {
+              "source": "overconfident.effect"
+            }
+          }
+        }
+      ],
+      "rarity": "uncommon",
+      "rules": [
+        [
+          "conditionImmunity",
+          "frightened"
+        ]
+      ]
+    }
+  }
+}

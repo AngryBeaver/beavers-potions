@@ -1,0 +1,93 @@
+{
+  "_id": "y6zSFJYIKPOiZnI7",
+  "_key": "!items!y6zSFJYIKPOiZnI7",
+  "name": "Reflect Damage",
+  "type": "consumable",
+  "img": "icons/consumables/potions/bottle-round-corked-red.webp",
+  "system": {
+    "subType": "potion",
+    "description": {
+      "value": "<p>Until the start of your next turn, all damage you would receive from an attacker is dealt to the attacker instead.</p>",
+      "instructions": "",
+      "unidentified": ""
+    },
+    "quantity": 1,
+    "weight": {
+      "value": 0.1
+    },
+    "price": 2500,
+    "identified": true,
+    "cl": 1,
+    "uses": {
+      "value": null,
+      "per": "single",
+      "autoDeductChargesCost": "",
+      "maxFormula": "",
+      "rechargeFormula": ""
+    },
+    "actions": [
+      {
+        "_id": "bpacty6zSFJYDrin",
+        "name": "Drink",
+        "activation": {
+          "type": "standard",
+          "unchained": {
+            "type": "action",
+            "cost": 2
+          }
+        },
+        "duration": {
+          "units": "inst"
+        }
+      }
+    ]
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "beavers-potions": {
+      "potion": true,
+      "buffs": [
+        {
+          "name": "Reflect Damage",
+          "type": "buff",
+          "img": "icons/consumables/potions/bottle-round-corked-red.webp",
+          "system": {
+            "subType": "temp",
+            "active": true,
+            "level": 1,
+            "duration": {
+              "value": "1",
+              "units": "round",
+              "end": "turnStart"
+            },
+            "changes": [],
+            "conditions": [],
+            "description": {
+              "value": "<p>Until the start of your next turn, all damage you would receive from an attacker is dealt to the attacker instead.</p>"
+            }
+          },
+          "flags": {
+            "beavers-potions": {
+              "reflectDamage": true,
+              "source": "reflect-damage.buff"
+            }
+          }
+        }
+      ],
+      "rarity": "veryRare",
+      "rules": [
+        [
+          "reflectDamage"
+        ]
+      ],
+      "unsupported": [
+        "reflectDamage"
+      ]
+    }
+  }
+}

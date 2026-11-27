@@ -1,0 +1,118 @@
+{
+  "_id": "F6OhvQrbAYAt8yH1",
+  "_key": "!items!F6OhvQrbAYAt8yH1",
+  "name": "Frost Armor Greater",
+  "type": "object",
+  "img": "icons/sundries/scrolls/scroll-worn-tan.webp",
+  "system": {
+    "description": "<p>A recipe of Beaver's Potions, it needs the module Beaver's Crafting.</p><p>Brewing: Arcana check DC 12.</p>",
+    "objectType": "miscellaneous",
+    "price": {
+      "value": 0,
+      "denomination": "gp",
+      "special": ""
+    },
+    "quantity": 1,
+    "weight": 0,
+    "actions": {}
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "beavers-crafting": {
+      "subtype": "Recipe",
+      "recipe": {
+        "required": {},
+        "input": {
+          "1": {
+            "Compendium-beavers-potions-ingredients-a5e-Item-qK9o4MD82WmUgXP8": {
+              "id": "qK9o4MD82WmUgXP8",
+              "uuid": "Compendium.beavers-potions.ingredients-a5e.Item.qK9o4MD82WmUgXP8",
+              "img": "icons/consumables/mushrooms/bell-shiitake-brown.webp",
+              "name": "Vanilla Mob",
+              "type": "Item",
+              "itemType": "object",
+              "quantity": 5
+            }
+          },
+          "2": {
+            "Compendium-beavers-potions-ingredients-a5e-Item-1GPYa56eLe6yUgoU": {
+              "id": "1GPYa56eLe6yUgoU",
+              "uuid": "Compendium.beavers-potions.ingredients-a5e.Item.1GPYa56eLe6yUgoU",
+              "img": "icons/consumables/mushrooms/conical-bell-pink.webp",
+              "name": "Shrimp Brain",
+              "type": "Item",
+              "itemType": "object",
+              "quantity": 5
+            }
+          },
+          "3": {
+            "Compendium-beavers-potions-ingredients-a5e-Item-OOFUAGixSqsgyT29": {
+              "id": "OOFUAGixSqsgyT29",
+              "uuid": "Compendium.beavers-potions.ingredients-a5e.Item.OOFUAGixSqsgyT29",
+              "img": "icons/consumables/mushrooms/campanulate-bell-red-white.webp",
+              "name": "Hansel and Gretel",
+              "type": "Item",
+              "itemType": "object",
+              "quantity": 5
+            }
+          },
+          "4": {
+            "Compendium-beavers-potions-ingredients-a5e-Item-dozjFH55CR4npT6F": {
+              "id": "dozjFH55CR4npT6F",
+              "uuid": "Compendium.beavers-potions.ingredients-a5e.Item.dozjFH55CR4npT6F",
+              "img": "icons/tools/laboratory/bowl-powder-purple.webp",
+              "name": "Magical Essence",
+              "type": "Item",
+              "itemType": "object",
+              "quantity": 2
+            }
+          }
+        },
+        "output": {
+          "1": {
+            "Compendium-beavers-potions-potions-a5e-Item-YywpTHDQ09DN7aLd": {
+              "id": "YywpTHDQ09DN7aLd",
+              "uuid": "Compendium.beavers-potions.potions-a5e.Item.YywpTHDQ09DN7aLd",
+              "img": "icons/consumables/potions/bottle-corked-blue.webp",
+              "name": "Frost Armor Greater",
+              "type": "Item",
+              "itemType": "object",
+              "quantity": 1
+            }
+          }
+        },
+        "currency": {
+          "name": "gp",
+          "value": 250
+        },
+        "beaversTests": {
+          "fails": 1,
+          "consume": true,
+          "failsInARow": false,
+          "ands": {
+            "1": {
+              "hits": 1,
+              "ors": {
+                "1": {
+                  "type": "SkillTest",
+                  "data": {
+                    "dc": 12,
+                    "skill": "arc"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "macro": "",
+        "folder": "Beaver's Potions",
+        "kind": "recipe"
+      }
+    }
+  }
+}

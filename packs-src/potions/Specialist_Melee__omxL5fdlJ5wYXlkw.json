@@ -195,7 +195,30 @@
   },
   "flags": {
     "beavers-potions": {
-      "potion": true
+      "potion": true,
+      "rarity": "uncommon",
+      "rules": [
+        [
+          "attackBonus",
+          "melee",
+          2
+        ],
+        [
+          "damageBonus",
+          "melee",
+          2
+        ],
+        [
+          "saveBonus",
+          "dex",
+          -2
+        ],
+        [
+          "saveBonus",
+          "wis",
+          -2
+        ]
+      ]
     }
   }
 }

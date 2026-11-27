@@ -1,0 +1,93 @@
+{
+  "_id": "tr3gjUhvmWpYrGJ0",
+  "_key": "!items!tr3gjUhvmWpYrGJ0",
+  "name": "Overload Attunement",
+  "type": "consumable",
+  "img": "icons/consumables/potions/bottle-corked-red.webp",
+  "system": {
+    "subType": "potion",
+    "description": {
+      "value": "<p>Within this potion slumbers a tiny parasite. When you drink it, the parasite awakes. For the following 4 hours you painfully feel how something is eating your internals while slowly growing and moving upwards towards your brain. At its destination it attaches to your brain stem and usually stops growing. There it lives for the next 5 days until it dies. During this time it grants you the ability to attune to one additional magic item.</p>",
+      "instructions": "",
+      "unidentified": ""
+    },
+    "quantity": 1,
+    "weight": {
+      "value": 0.1
+    },
+    "price": 5000,
+    "identified": true,
+    "cl": 1,
+    "uses": {
+      "value": null,
+      "per": "single",
+      "autoDeductChargesCost": "",
+      "maxFormula": "",
+      "rechargeFormula": ""
+    },
+    "actions": [
+      {
+        "_id": "bpacttr3gjUhDrin",
+        "name": "Drink",
+        "activation": {
+          "type": "standard",
+          "unchained": {
+            "type": "action",
+            "cost": 2
+          }
+        },
+        "duration": {
+          "units": "inst"
+        }
+      }
+    ]
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "beavers-potions": {
+      "potion": true,
+      "buffs": [
+        {
+          "name": "Overload Attunement",
+          "type": "buff",
+          "img": "icons/consumables/potions/bottle-corked-red.webp",
+          "system": {
+            "subType": "temp",
+            "active": true,
+            "level": 1,
+            "duration": {
+              "value": "5",
+              "units": "day",
+              "end": "turnStart"
+            },
+            "changes": [],
+            "conditions": [],
+            "description": {
+              "value": "<p>Within this potion slumbers a tiny parasite. When you drink it, the parasite awakes. For the following 4 hours you painfully feel how something is eating your internals while slowly growing and moving upwards towards your brain. At its destination it attaches to your brain stem and usually stops growing. There it lives for the next 5 days until it dies. During this time it grants you the ability to attune to one additional magic item.</p>"
+            }
+          },
+          "flags": {
+            "beavers-potions": {
+              "source": "overload-attunement.buff"
+            }
+          }
+        }
+      ],
+      "rarity": "legendary",
+      "rules": [
+        [
+          "attunement",
+          1
+        ]
+      ],
+      "unsupported": [
+        "attunement"
+      ]
+    }
+  }
+}

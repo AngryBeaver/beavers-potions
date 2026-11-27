@@ -1,0 +1,50 @@
+{
+  "_id": "MChWuF8FTz5vOntg",
+  "_key": "!items!MChWuF8FTz5vOntg",
+  "name": "Cobra Kai",
+  "type": "consumable",
+  "img": "icons/consumables/potions/bottle-conical-corked-cyan.webp",
+  "system": {
+    "consumableType": "potion",
+    "description": {
+      "value": "<p>Polymorphs you into a venomous snake for 6 hours.</p>"
+    },
+    "quantity": 1,
+    "weight": 0.1,
+    "price": 50,
+    "identified": true,
+    "identifiedName": "Cobra Kai",
+    "uses": {
+      "value": 0,
+      "max": 0,
+      "per": "single"
+    }
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {
+    "beavers-potions": {
+      "potion": true,
+      "buffs": [],
+      "pour": false,
+      "rarity": "common",
+      "rules": [
+        [
+          "transform",
+          {
+            "dnd5e": "Compendium.dnd5e.actors24.Actor.mmVenomousSnake0"
+          },
+          "Venomous Snake",
+          21600
+        ]
+      ],
+      "unsupported": [
+        "transform"
+      ]
+    }
+  }
+}
