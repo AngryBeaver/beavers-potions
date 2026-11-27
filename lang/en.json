@@ -27,6 +27,11 @@
     "noEffect": "The potion has no effect.",
     "drinkOrPour": "Drink it or pour it out?",
     "drink": "Drink",
-    "pour": "Pour"
+    "pour": "Pour",
+    "silenced": "Silenced",
+    "becomes": "Becomes {form}.",
+    "formEnds": "Is no longer {form}.",
+    "immune": "Immune to {what}.",
+    "criticalAgainst": "Every hit against {target} is a critical hit ({name}): if the attack of {attacker} hits, roll its damage as a critical hit."
   }
 }

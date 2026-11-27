@@ -70,7 +70,13 @@
               "expiry": "turn-start",
               "sustained": false
             },
-            "rules": [],
+            "rules": [
+              {
+                "key": "BaseSpeed",
+                "selector": "fly",
+                "value": "@actor.system.attributes.speed.value"
+              }
+            ],
             "tokenIcon": {
               "show": true
             },
@@ -96,9 +102,6 @@
           "status",
           "hovering"
         ]
-      ],
-      "unsupported": [
-        "status hovering"
       ]
     }
   }

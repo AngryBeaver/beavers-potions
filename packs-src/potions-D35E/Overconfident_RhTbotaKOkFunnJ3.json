@@ -49,6 +49,9 @@
           },
           "flags": {
             "beavers-potions": {
+              "immune": [
+                "fear"
+              ],
               "conditions": [],
               "source": "overconfident.buff"
             }
@@ -62,9 +65,6 @@
           "conditionImmunity",
           "frightened"
         ]
-      ],
-      "unsupported": [
-        "conditionImmunity"
       ]
     }
   }

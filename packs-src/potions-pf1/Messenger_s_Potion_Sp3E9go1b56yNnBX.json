@@ -67,7 +67,7 @@
             },
             "changes": [
               {
-                "_id": "bpcSp3E9",
+                "_id": "bpc0Sp3E",
                 "formula": "@attributes.speed.land.base * 1",
                 "target": "landSpeed",
                 "type": "untyped"

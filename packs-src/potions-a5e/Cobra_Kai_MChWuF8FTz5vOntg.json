@@ -35,7 +35,9 @@
         },
         "rolls": {},
         "prompts": {},
-        "effects": [],
+        "effects": [
+          "bpfxMChWuF8F0000"
+        ],
         "macro": ""
       }
     },
@@ -52,7 +54,149 @@
     "requiresAttunement": false,
     "unidentified": false
   },
-  "effects": [],
+  "effects": [
+    {
+      "_id": "bpfxMChWuF8F0000",
+      "_key": "!items.effects!MChWuF8FTz5vOntg.bpfxMChWuF8F0000",
+      "name": "Cobra Kai: Venomous Snake",
+      "img": "icons/consumables/potions/bottle-conical-corked-cyan.webp",
+      "type": "base",
+      "description": "<p>Polymorphs you into a venomous snake for 6 hours.</p><p><strong>Venomous Snake:</strong> AC 12, 5 hit points (temporary), speed walk 30 ft., swim 30 ft., blindsight 10 ft.; Bite +4 (1d4 + 2 piercing + 1d6 poison).</p>",
+      "system": {
+        "changes": [
+          {
+            "_id": "bpfxMChWuF8Fc000",
+            "key": "system.attributes.ac.baseFormula",
+            "type": "override",
+            "value": "12",
+            "phase": "initial",
+            "priority": null
+          },
+          {
+            "_id": "bpfxMChWuF8Fc100",
+            "key": "system.attributes.movement.walk.distance",
+            "type": "override",
+            "value": 30,
+            "phase": "initial",
+            "priority": null
+          },
+          {
+            "_id": "bpfxMChWuF8Fc200",
+            "key": "system.attributes.movement.swim.distance",
+            "type": "override",
+            "value": 30,
+            "phase": "initial",
+            "priority": null
+          },
+          {
+            "_id": "bpfxMChWuF8Fc300",
+            "key": "system.attributes.senses.blindsight.distance",
+            "type": "upgrade",
+            "value": 10,
+            "phase": "initial",
+            "priority": null
+          },
+          {
+            "_id": "bpfxMChWuF8Fc400",
+            "key": "system.traits.size",
+            "type": "override",
+            "value": "tiny",
+            "phase": "initial",
+            "priority": null
+          }
+        ],
+        "magical": true,
+        "applyToSelf": false,
+        "effectType": "onUse"
+      },
+      "disabled": false,
+      "transfer": false,
+      "duration": {
+        "value": 6,
+        "units": "hours",
+        "expiry": "turnStart",
+        "expired": false
+      },
+      "statuses": [],
+      "flags": {
+        "beavers-potions": {
+          "form": {
+            "name": "Venomous Snake",
+            "img": "icons/creatures/reptiles/snake-poised-white.webp",
+            "size": 0.5,
+            "hp": 5,
+            "attacks": [
+              {
+                "name": "Bite",
+                "type": "feature",
+                "img": "icons/creatures/reptiles/snake-poised-white.webp",
+                "system": {
+                  "description": "<p>Venomous Snake</p>",
+                  "actions": {
+                    "bpactMChWuF00000": {
+                      "name": "Bite",
+                      "activation": {
+                        "type": "action",
+                        "cost": 1,
+                        "reactionTrigger": ""
+                      },
+                      "target": {
+                        "quantity": 1,
+                        "type": "creature"
+                      },
+                      "ranges": {
+                        "bprngMChWuF00000": {
+                          "range": "short"
+                        }
+                      },
+                      "rolls": {
+                        "bpatkMChWuF0a000": {
+                          "type": "attack",
+                          "attackType": "meleeWeaponAttack",
+                          "ability": "none",
+                          "proficient": false,
+                          "bonus": "4",
+                          "critThreshold": 20,
+                          "default": true,
+                          "label": ""
+                        },
+                        "bpdmgMChWuF00000": {
+                          "type": "damage",
+                          "formula": "1d4 + 2",
+                          "damageType": "piercing",
+                          "canCrit": true,
+                          "critBonus": "",
+                          "default": true,
+                          "label": ""
+                        },
+                        "bpdmgMChWuF01000": {
+                          "type": "damage",
+                          "formula": "1d6",
+                          "damageType": "poison",
+                          "canCrit": true,
+                          "critBonus": "",
+                          "default": true,
+                          "label": ""
+                        }
+                      },
+                      "prompts": {},
+                      "consumers": {},
+                      "effects": []
+                    }
+                  }
+                }
+              }
+            ]
+          }
+        }
+      },
+      "tint": "#ffffff",
+      "showIcon": 1,
+      "origin": null,
+      "start": null,
+      "sort": 0
+    }
+  ],
   "folder": null,
   "sort": 0,
   "ownership": {
@@ -71,9 +215,6 @@
           "Venomous Snake",
           21600
         ]
-      ],
-      "unsupported": [
-        "transform"
       ]
     }
   }

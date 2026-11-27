@@ -104,6 +104,70 @@
               "source": "casters-overtime-greater.effect"
             }
           }
+        },
+        {
+          "name": "Effect: Out of Mind (critical hits against you)",
+          "type": "effect",
+          "img": "icons/consumables/potions/bottle-metal-yellow-gray.webp",
+          "system": {
+            "description": {
+              "value": "<p>Every hit against you is a critical hit.</p>"
+            },
+            "duration": {
+              "value": -1,
+              "unit": "unlimited",
+              "expiry": null,
+              "sustained": false
+            },
+            "rules": [
+              {
+                "key": "EphemeralEffect",
+                "affects": "origin",
+                "selectors": [
+                  "strike-attack-roll",
+                  "spell-attack-roll"
+                ],
+                "uuid": "{item|uuid}"
+              },
+              {
+                "key": "AdjustDegreeOfSuccess",
+                "selector": "strike-attack-roll",
+                "adjustment": {
+                  "success": "to-critical-success"
+                },
+                "predicate": [
+                  "target:effect:casters-overtime-greater-critical"
+                ]
+              },
+              {
+                "key": "AdjustDegreeOfSuccess",
+                "selector": "spell-attack-roll",
+                "adjustment": {
+                  "success": "to-critical-success"
+                },
+                "predicate": [
+                  "target:effect:casters-overtime-greater-critical"
+                ]
+              }
+            ],
+            "tokenIcon": {
+              "show": true
+            },
+            "level": {
+              "value": 8
+            },
+            "traits": {
+              "value": [],
+              "rarity": "common"
+            },
+            "slug": "effect-casters-overtime-greater-critical"
+          },
+          "flags": {
+            "beavers-potions": {
+              "endsWith": "casters-overtime-greater.effect",
+              "source": "casters-overtime-greater.critical"
+            }
+          }
         }
       ],
       "use": {
@@ -134,9 +198,6 @@
           "exhaustion",
           2
         ]
-      ],
-      "unsupported": [
-        "grants critical"
       ]
     }
   }

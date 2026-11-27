@@ -30,3 +30,10 @@ Hooks.once("init", () => {
   game.modules.get(NS).api = { drink, system: game.system.id };
   sys.register({ drink, endOnAction });
 });
+
+// Batman's "silenced" where the system has no such status (a5e, pf1, D35E): a status of Foundry's core
+// (pf2e only takes its own conditions)
+Hooks.once("ready", () => {
+  if (!sys.id || sys.id === "pf2e" || CONFIG.statusEffects.some((s) => s.id === "silenced")) return;
+  CONFIG.statusEffects.push({ id: "silenced", name: `${NS}.silenced`, img: "icons/svg/silenced.svg" });
+});

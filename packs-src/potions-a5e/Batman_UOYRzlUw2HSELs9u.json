@@ -85,7 +85,9 @@
         "expiry": "turnStart",
         "expired": false
       },
-      "statuses": [],
+      "statuses": [
+        "silenced"
+      ],
       "flags": {},
       "tint": "#ffffff",
       "showIcon": 1,
@@ -113,9 +115,6 @@
           "status",
           "silenced"
         ]
-      ],
-      "unsupported": [
-        "status silenced"
       ]
     }
   }

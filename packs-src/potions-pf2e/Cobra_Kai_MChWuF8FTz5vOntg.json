@@ -55,7 +55,83 @@
   "flags": {
     "beavers-potions": {
       "potion": true,
-      "effects": [],
+      "effects": [
+        {
+          "name": "Effect: Cobra Kai: Venomous Snake",
+          "type": "effect",
+          "img": "icons/consumables/potions/bottle-conical-corked-cyan.webp",
+          "system": {
+            "description": {
+              "value": "<p>Polymorphs you into a venomous snake for 6 hours.</p><p><strong>Venomous Snake:</strong> AC 12, 5 hit points (temporary), speed walk 30 ft., swim 30 ft., blindsight 10 ft.; Bite +4 (1d4 + 2 piercing + 1d6 poison).</p>"
+            },
+            "duration": {
+              "value": 6,
+              "unit": "hours",
+              "expiry": "turn-start",
+              "sustained": false
+            },
+            "rules": [
+              {
+                "key": "BattleForm",
+                "overrides": {
+                  "armorClass": {
+                    "modifier": 12
+                  },
+                  "size": "tiny",
+                  "speeds": {
+                    "land": 30,
+                    "swim": 30
+                  },
+                  "strikes": {
+                    "bite": {
+                      "label": "Bite",
+                      "img": "icons/creatures/reptiles/snake-poised-white.webp",
+                      "category": "unarmed",
+                      "damage": {
+                        "dice": 1,
+                        "die": "d4",
+                        "damageType": "piercing",
+                        "modifier": 2
+                      },
+                      "modifier": 4,
+                      "traits": [],
+                      "ownIfHigher": false
+                    }
+                  }
+                }
+              },
+              {
+                "key": "Sense",
+                "selector": "echolocation",
+                "acuity": "precise",
+                "range": 10
+              }
+            ],
+            "tokenIcon": {
+              "show": true
+            },
+            "level": {
+              "value": 1
+            },
+            "traits": {
+              "value": [],
+              "rarity": "common"
+            },
+            "slug": "effect-cobra-kai"
+          },
+          "flags": {
+            "beavers-potions": {
+              "form": {
+                "name": "Venomous Snake",
+                "img": "icons/creatures/reptiles/snake-poised-white.webp",
+                "hp": 5,
+                "attacks": []
+              },
+              "source": "cobra-kai.effect"
+            }
+          }
+        }
+      ],
       "rarity": "common",
       "rules": [
         [
@@ -66,9 +142,6 @@
           "Venomous Snake",
           21600
         ]
-      ],
-      "unsupported": [
-        "transform"
       ]
     }
   }

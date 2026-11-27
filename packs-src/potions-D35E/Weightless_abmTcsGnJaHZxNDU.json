@@ -42,7 +42,14 @@
               "value": "1",
               "units": "minute"
             },
-            "changes": [],
+            "changes": [
+              [
+                "@attributes.speed.land.base",
+                "speed",
+                "flySpeed",
+                "untyped"
+              ]
+            ],
             "description": {
               "value": "<p>Your body becomes weightless for 1 minute. As long as you do not carry anything (including clothes) you are no longer pulled down to earth: you hover.</p>"
             }
@@ -62,9 +69,6 @@
           "status",
           "hovering"
         ]
-      ],
-      "unsupported": [
-        "status hovering"
       ]
     }
   }

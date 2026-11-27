@@ -6,6 +6,9 @@
 //   effectName    name of the effect (default: the potion's name)
 //   pour          a second activity "Pour" without effect
 //   after         effect after a transformation ends: { name, duration, description }
+//   form          the creature of a transformation for the systems without dnd5e's transformInto (SRD 5.2 values):
+//                 { name, img (token), tint, size, ac, hp, speed: { walk, swim, fly, climb }, blindsight,
+//                   attacks: [{ name, bonus, damage: [[formula, type], ...] }] }
 //   rules         what it does, a list of [rule, ...arguments]:
 //     heal formula | temp n | hpMax n                       hit points
 //     sense name range | status id | conditionImmunity id   senses, conditions (dnd5e status ids)
@@ -154,6 +157,11 @@ export const POTIONS = [
     img: "icons/consumables/potions/bottle-conical-corked-cyan.webp",
     rarity: "common",
     description: "<p>Polymorphs you into a venomous snake for 6 hours.</p>",
+    form: {
+      name: "Venomous Snake", img: "icons/creatures/reptiles/snake-poised-white.webp", size: "tiny", ac: 12, hp: 5,
+      speed: { walk: 30, swim: 30 }, blindsight: 10,
+      attacks: [{ name: "Bite", bonus: 4, damage: [["1d4 + 2", "piercing"], ["1d6", "poison"]] }],
+    },
     rules: [
       ["transform",{"dnd5e":"Compendium.dnd5e.actors24.Actor.mmVenomousSnake0"},"Venomous Snake",21600],
     ],
@@ -277,6 +285,14 @@ export const POTIONS = [
     img: "icons/consumables/potions/bottle-ornate-bat-teal.webp",
     rarity: "legendary",
     description: "<p>You become an ice devil for 1 minute. You do not just polymorph into one, you actually become one. You cannot willingly dismiss the effect. Afterwards your mind is corrupted for a couple of days while the effect wears off.</p><p><strong>Ice Devil:</strong> You are self-centered and egoistic, you have no sense of empathy. You see your companions as slaves, lesser fools that might be useful to you; if not, you are willing to sacrifice them. Your main motivation is to get promoted by slaughtering enemies and claiming as many souls as possible.</p><p><strong>Corrupted Mind:</strong> You do not remember what happened. You feel like you have lost some great power and someone is to blame for it. You have the feeling everyone is lying to you and your companions are only selfish and do not want the best for you.</p>",
+    form: {
+      name: "Ice Devil", img: "icons/creatures/unholy/demon-horned-black-yellow.webp", tint: "#9fd3ff", size: "large", ac: 18, hp: 228,
+      speed: { walk: 40 }, blindsight: 120,
+      attacks: [
+        { name: "Ice Spear", bonus: 10, damage: [["2d8 + 5", "piercing"], ["3d6", "cold"]] },
+        { name: "Tail", bonus: 10, damage: [["3d6 + 5", "bludgeoning"], ["4d8", "cold"]] },
+      ],
+    },
     after: {"name":"Corrupted Mind","duration":[3,"days"],"description":"<p>You do not remember what happened. You feel like you have lost some great power and someone is to blame for it. You have the feeling everyone is lying to you.</p>"},
     rules: [
       ["transform",{"dnd5e":"Compendium.dnd5e.actors24.Actor.mmIceDevil000000"},"Ice Devil",60],

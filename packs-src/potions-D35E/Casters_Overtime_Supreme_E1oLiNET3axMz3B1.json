@@ -58,6 +58,7 @@
             "beavers-potions": {
               "grantsCritical": true,
               "conditions": [
+                "helpless",
                 "helpless"
               ],
               "source": "casters-overtime-supreme.buff"
@@ -94,9 +95,6 @@
           "exhaustion",
           4
         ]
-      ],
-      "unsupported": [
-        "grants critical"
       ]
     }
   }

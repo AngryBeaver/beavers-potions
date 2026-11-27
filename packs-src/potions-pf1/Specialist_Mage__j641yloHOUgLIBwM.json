@@ -67,19 +67,19 @@
             },
             "changes": [
               {
-                "_id": "bpcj641y",
+                "_id": "bpc0j641",
                 "formula": "2",
                 "target": "sattack",
                 "type": "untyped"
               },
               {
-                "_id": "bpcj641y",
+                "_id": "bpc1j641",
                 "formula": "2",
                 "target": "sdamage",
                 "type": "untyped"
               },
               {
-                "_id": "bpcj641y",
+                "_id": "bpc2j641",
                 "formula": "-floor(@attributes.speed.land.base * 0.5)",
                 "target": "landSpeed",
                 "type": "untyped"

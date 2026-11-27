@@ -102,9 +102,6 @@
         [
           "reflectDamage"
         ]
-      ],
-      "unsupported": [
-        "reflectDamage"
       ]
     }
   }

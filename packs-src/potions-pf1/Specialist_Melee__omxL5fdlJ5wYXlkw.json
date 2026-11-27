@@ -67,25 +67,25 @@
             },
             "changes": [
               {
-                "_id": "bpcomxL5",
+                "_id": "bpc0omxL",
                 "formula": "2",
                 "target": "mattack",
                 "type": "untyped"
               },
               {
-                "_id": "bpcomxL5",
+                "_id": "bpc1omxL",
                 "formula": "2",
                 "target": "mwdamage",
                 "type": "untyped"
               },
               {
-                "_id": "bpcomxL5",
+                "_id": "bpc2omxL",
                 "formula": "-2",
                 "target": "ref",
                 "type": "untyped"
               },
               {
-                "_id": "bpcomxL5",
+                "_id": "bpc3omxL",
                 "formula": "-2",
                 "target": "will",
                 "type": "untyped"

@@ -10,6 +10,8 @@ const automate = () => game.settings.get(NS, "automate");
 export default {
   id: "dnd5e",
   rollsHealing: true,
+  /** dnd5e.preApplyDamage knows the attacker */
+  reflectsDamage: true,
   hpPaths: { value: "system.attributes.hp.value", temp: "system.attributes.hp.temp" },
   hp: (actor) => actor.system.attributes.hp,
   heal: (actor, amount) => actor.applyDamage([{ value: amount, type: "healing" }]),

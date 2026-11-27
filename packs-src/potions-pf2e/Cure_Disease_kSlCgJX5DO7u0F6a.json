@@ -67,9 +67,6 @@
           "cure",
           "diseased"
         ]
-      ],
-      "unsupported": [
-        "cure diseased"
       ]
     }
   }

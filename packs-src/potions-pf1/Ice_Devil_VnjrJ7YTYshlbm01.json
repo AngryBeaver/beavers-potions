@@ -51,7 +51,201 @@
   "flags": {
     "beavers-potions": {
       "potion": true,
-      "buffs": [],
+      "buffs": [
+        {
+          "name": "Ice Devil: Ice Devil",
+          "type": "buff",
+          "img": "icons/consumables/potions/bottle-ornate-bat-teal.webp",
+          "system": {
+            "subType": "temp",
+            "active": true,
+            "level": 1,
+            "duration": {
+              "value": "1",
+              "units": "minute",
+              "end": "turnStart"
+            },
+            "changes": [
+              {
+                "_id": "bpc0Vnjr",
+                "formula": "18",
+                "target": "ac",
+                "type": "base",
+                "operator": "set"
+              },
+              {
+                "_id": "bpc1Vnjr",
+                "formula": "40",
+                "target": "landSpeed",
+                "type": "untyped",
+                "operator": "set"
+              },
+              {
+                "_id": "bpc2Vnjr",
+                "formula": "120",
+                "target": "sensebs",
+                "type": "untyped"
+              },
+              {
+                "_id": "bpc3Vnjr",
+                "formula": "1",
+                "target": "size",
+                "type": "untyped"
+              }
+            ],
+            "conditions": [],
+            "description": {
+              "value": "<p>You become an ice devil for 1 minute. You do not just polymorph into one, you actually become one. You cannot willingly dismiss the effect. Afterwards your mind is corrupted for a couple of days while the effect wears off.</p><p><strong>Ice Devil:</strong> You are self-centered and egoistic, you have no sense of empathy. You see your companions as slaves, lesser fools that might be useful to you; if not, you are willing to sacrifice them. Your main motivation is to get promoted by slaughtering enemies and claiming as many souls as possible.</p><p><strong>Corrupted Mind:</strong> You do not remember what happened. You feel like you have lost some great power and someone is to blame for it. You have the feeling everyone is lying to you and your companions are only selfish and do not want the best for you.</p><p><strong>Ice Devil:</strong> AC 18, 228 hit points (temporary), speed walk 40 ft., blindsight 120 ft.; Ice Spear +10 (2d8 + 5 piercing + 3d6 cold), Tail +10 (3d6 + 5 bludgeoning + 4d8 cold).</p>"
+            }
+          },
+          "flags": {
+            "beavers-potions": {
+              "form": {
+                "name": "Ice Devil",
+                "img": "icons/creatures/unholy/demon-horned-black-yellow.webp",
+                "tint": "#9fd3ff",
+                "hp": 228,
+                "attacks": [
+                  {
+                    "name": "Ice Spear",
+                    "type": "attack",
+                    "img": "icons/creatures/unholy/demon-horned-black-yellow.webp",
+                    "system": {
+                      "subType": "natural",
+                      "description": {
+                        "value": "<p>Ice Devil</p>"
+                      },
+                      "actions": [
+                        {
+                          "_id": "bpatkVnjrJ700000",
+                          "name": "Ice Spear",
+                          "actionType": "mwak",
+                          "activation": {
+                            "type": "attack",
+                            "unchained": {
+                              "type": "attack"
+                            }
+                          },
+                          "ability": {
+                            "attack": "",
+                            "damage": "",
+                            "critRange": 20
+                          },
+                          "attackBonus": "10",
+                          "damage": {
+                            "parts": [
+                              {
+                                "formula": "2d8 + 5",
+                                "types": [
+                                  "piercing"
+                                ]
+                              },
+                              {
+                                "formula": "3d6",
+                                "types": [
+                                  "cold"
+                                ]
+                              }
+                            ]
+                          },
+                          "range": {
+                            "units": "melee"
+                          },
+                          "duration": {
+                            "units": "inst"
+                          }
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "name": "Tail",
+                    "type": "attack",
+                    "img": "icons/creatures/unholy/demon-horned-black-yellow.webp",
+                    "system": {
+                      "subType": "natural",
+                      "description": {
+                        "value": "<p>Ice Devil</p>"
+                      },
+                      "actions": [
+                        {
+                          "_id": "bpatkVnjrJ710000",
+                          "name": "Tail",
+                          "actionType": "mwak",
+                          "activation": {
+                            "type": "attack",
+                            "unchained": {
+                              "type": "attack"
+                            }
+                          },
+                          "ability": {
+                            "attack": "",
+                            "damage": "",
+                            "critRange": 20
+                          },
+                          "attackBonus": "10",
+                          "damage": {
+                            "parts": [
+                              {
+                                "formula": "3d6 + 5",
+                                "types": [
+                                  "bludgeoning"
+                                ]
+                              },
+                              {
+                                "formula": "4d8",
+                                "types": [
+                                  "cold"
+                                ]
+                              }
+                            ]
+                          },
+                          "range": {
+                            "units": "melee"
+                          },
+                          "duration": {
+                            "units": "inst"
+                          }
+                        }
+                      ]
+                    }
+                  }
+                ]
+              },
+              "onEnd": {
+                "createData": [
+                  {
+                    "name": "Corrupted Mind",
+                    "type": "buff",
+                    "img": "icons/consumables/potions/bottle-ornate-bat-teal.webp",
+                    "system": {
+                      "subType": "temp",
+                      "active": true,
+                      "level": 1,
+                      "duration": {
+                        "value": "3",
+                        "units": "day",
+                        "end": "turnStart"
+                      },
+                      "changes": [],
+                      "conditions": [],
+                      "description": {
+                        "value": "<p>You do not remember what happened. You feel like you have lost some great power and someone is to blame for it. You have the feeling everyone is lying to you.</p>"
+                      }
+                    },
+                    "flags": {
+                      "beavers-potions": {
+                        "source": "ice-devil.after"
+                      }
+                    }
+                  }
+                ]
+              },
+              "source": "ice-devil.buff"
+            }
+          }
+        }
+      ],
       "rarity": "legendary",
       "rules": [
         [
@@ -62,9 +256,6 @@
           "Ice Devil",
           60
         ]
-      ],
-      "unsupported": [
-        "transform"
       ]
     }
   }

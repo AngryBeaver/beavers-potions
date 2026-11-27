@@ -9,7 +9,9 @@ import { chat, deleteEffect, effectsWith, hasEffect, NS, potionFlag, runAsGM } f
  * - attackModes(attacker, targets): advantage / disadvantage / critical from grantsAdvantage, grantsDisadvantage,
  *   grantsCritical (attacks against the creature) and attackAdvantage (its own attacks)
  * - distortion(attacker, targets): a chance that an attack against the creature misses (Distortion)
- * - reflect(actor, amount, attacker): damage goes back to the attacker (Reflect Damage)
+ * - reflect(actor, amount, attacker): damage goes back to the attacker (Reflect Damage); systems that apply damage
+ *   without its source get it from the hit point update and the latest roll in the chat
+ * - immune: [status] statuses that cannot be put on the creature (Overconfident in pf1, D35E)
  */
 
 const loc = (key, data) => (data ? game.i18n.format(`${NS}.${key}`, data) : game.i18n.localize(`${NS}.${key}`));
@@ -50,6 +52,36 @@ export function reflect(actor, amount, attacker, type) {
   return true;
 }
 
+/**
+ * The attacker of damage the system does not tell (a5e, pf1, pf2e, D35E apply damage without a source): the speaker
+ * of the latest roll in the chat (of the last minute) that is not the damaged creature itself. pf1 and D35E keep the
+ * rolls of their attack cards in their own data: a message with the system's flags counts as well.
+ */
+function lastAttacker(actor) {
+  const since = Date.now() - 60_000;
+  for (const message of game.messages.contents.slice(-10).reverse()) {
+    if (message.timestamp < since) break;
+    if (message.content?.includes(`class="${NS}"`)) continue;
+    if (!message.rolls?.length && !message.flags?.[game.system.id]) continue;
+    const speaker = ChatMessage.getSpeakerActor(message.speaker);
+    if (speaker && speaker !== actor) return speaker;
+  }
+  return null;
+}
+
+/** the statuses the actor's potions keep off (pf1, D35E: flags["beavers-potions"].immune) */
+const immunities = (actor) => new Set(effectsWith(actor, "immune").flatMap((e) => potionFlag(e, "immune")));
+
+Hooks.on("preCreateActiveEffect", (effect) => {
+  const actor = effect.parent;
+  if (!(actor instanceof Actor) || !effect.statuses?.size) return;
+  const immune = immunities(actor);
+  const kept = [...effect.statuses].filter((s) => immune.has(s));
+  if (!kept.length) return;
+  void chat(actor, loc("immune", { what: kept.map((s) => sys.statusLabel?.(s) ?? s).join(", ") }));
+  return false;
+});
+
 export const invulnerable = (actor) => hasEffect(actor, "invulnerable");
 
 /** the hit points an update would set (the adapter may store them differently, pf1: offset from the maximum) */
@@ -68,6 +100,11 @@ function setHp(actor, changes, hp) {
 }
 
 Hooks.on("preUpdateActor", (actor, changes) => {
+  // D35E: conditions are actor data
+  if (sys.blockStatuses) {
+    const kept = sys.blockStatuses(actor, changes, immunities(actor));
+    if (kept.length) void chat(actor, loc("immune", { what: kept.map((s) => sys.statusLabel?.(s) ?? s).join(", ") }));
+  }
   if (!sys.hp) return;
   const { value, temp } = nextHp(actor, changes);
   if (value === undefined && temp === undefined) return;
@@ -83,6 +120,16 @@ Hooks.on("preUpdateActor", (actor, changes) => {
       void chat(actor, loc("invulnerable"));
     }
     return;
+  }
+
+  // Reflect Damage, where the system does not do it itself (dnd5e: dnd5e.preApplyDamage)
+  if (!sys.reflectsDamage && hasEffect(actor, "reflectDamage")) {
+    const hp = sys.hp(actor);
+    const lost = hp.value + (hp.temp ?? 0) - ((value ?? hp.value) + (temp ?? hp.temp ?? 0));
+    if (lost > 0 && reflect(actor, lost, lastAttacker(actor))) {
+      setHp(actor, changes, { value: hp.value, temp: hp.temp ?? 0 });
+      return;
+    }
   }
 
   // Protection From Death

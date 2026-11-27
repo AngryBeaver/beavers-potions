@@ -9,6 +9,44 @@ export const componentKey = (uuid) => uuid.replace(/\./g, "-");
 
 export const SECONDS = { rounds: 6, minutes: 60, hours: 3600, days: 86400 };
 export const toSeconds = ([value, units]) => value * SECONDS[units];
+/** seconds as [value, units] in the largest unit that fits: 21600 -> [6, "hours"] */
+export const fromSeconds = (seconds) => {
+  const [units, s] = Object.entries(SECONDS).reverse().find(([, s]) => seconds % s === 0) ?? ["rounds", 6];
+  return [seconds / s, units];
+};
+
+/** token size (grid squares) of a creature size */
+const GRID = { tiny: 0.5, small: 1, medium: 1, large: 2, huge: 3, gargantuan: 4 };
+
+/**
+ * The transformation of a potion in the systems without dnd5e's transformInto: an effect (buff) with the form's
+ * stats; the runtime (src/lifecycle.js, flags["beavers-potions"].form) changes the token, gives the form's hit points
+ * as temporary hit points and its attacks as items while the effect lasts.
+ * @returns {{ transform, form, duration }} the rule, the form and the effect duration; null without a form
+ */
+export function transformOf(potion) {
+  const transform = potion.rules.find(([r]) => r === "transform");
+  if (!transform || !potion.form) return null;
+  return { transform, form: potion.form, duration: fromSeconds(transform[3]) };
+}
+
+/**
+ * The runtime flag of a form: attacks are the system's item data. img / size: false where the system sets the
+ * token itself (pf1 sizes tokens by the actor's size, D35E shows system.shapechangeImg).
+ */
+export function formFlag(form, attacks, { size = true, img = true } = {}) {
+  return {
+    name: form.name,
+    ...(img ? { img: form.img, ...(form.tint ? { tint: form.tint } : {}) } : {}),
+    ...(size ? { size: GRID[form.size] ?? 1 } : {}),
+    hp: form.hp,
+    attacks,
+  };
+}
+
+/** the description of the form for its effect */
+export const formDescription = (potion) =>
+  `${potion.description}<p><strong>${potion.form.name}:</strong> AC ${potion.form.ac}, ${potion.form.hp} hit points (temporary), speed ${Object.entries(potion.form.speed).map(([k, v]) => `${k} ${v} ft.`).join(", ")}${potion.form.blindsight ? `, blindsight ${potion.form.blindsight} ft.` : ""}; ${potion.form.attacks.map((a) => `${a.name} +${a.bonus} (${a.damage.map(([f, t]) => `${f} ${t}`).join(" + ")})`).join(", ")}.</p>`;
 
 /** the rules the runtime (src/) acts on, as flags of an effect: the same on every system */
 export function runtimeEffectFlags(rules) {

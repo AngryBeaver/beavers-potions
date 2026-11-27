@@ -67,19 +67,19 @@
             },
             "changes": [
               {
-                "_id": "bpcEdcAw",
+                "_id": "bpc0EdcA",
                 "formula": "2",
                 "target": "rattack",
                 "type": "untyped"
               },
               {
-                "_id": "bpcEdcAw",
+                "_id": "bpc1EdcA",
                 "formula": "2",
                 "target": "rwdamage",
                 "type": "untyped"
               },
               {
-                "_id": "bpcEdcAw",
+                "_id": "bpc2EdcA",
                 "formula": "-2",
                 "target": "ac",
                 "type": "untyped"

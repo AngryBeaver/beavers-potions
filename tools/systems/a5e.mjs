@@ -1,6 +1,6 @@
 // Level Up: Advanced 5th Edition (a5e, Foundry 14): "object" items (consumable) with a "Drink" action,
 // active effects in the Foundry 14 format with a5e's keys ("grants" roll modes, bonus objects, expertise dice).
-import { effectV14, id16, NS, runtimeEffectFlags, runtimeUseFlags, slug } from "./common.mjs";
+import { effectV14, formDescription, formFlag, id16, NS, runtimeEffectFlags, runtimeUseFlags, slug, transformOf } from "./common.mjs";
 
 const SKILLS = { persuasion: "per", perception: "prc", stealth: "ste" };
 const ATTACK_TYPES = {
@@ -8,8 +8,57 @@ const ATTACK_TYPES = {
   ranged: ["rangedWeaponAttack"],
   spell: ["meleeSpellAttack", "rangedSpellAttack"],
 };
-const STATUSES = new Set(["blinded", "charmed", "deafened", "frightened", "grappled", "incapacitated", "invisible", "paralyzed", "petrified", "poisoned", "prone", "restrained", "stunned", "unconscious", "slowed", "confused", "dazzled", "rattled"]);
+// silenced: a status of the runtime (src/main.js registers it where the system has none)
+const STATUSES = new Set(["blinded", "charmed", "deafened", "frightened", "grappled", "incapacitated", "invisible", "paralyzed", "petrified", "poisoned", "prone", "restrained", "stunned", "unconscious", "slowed", "confused", "dazzled", "rattled", "silenced"]);
+const SIZES = { tiny: "tiny", small: "sm", medium: "med", large: "lg", huge: "huge", gargantuan: "grg" };
 const label = (potion) => `${potion.name}`;
+
+/** an attack of a form: a feature with an attack action (fixed bonus, the form's damage) */
+function attackItem(potion, attack, i) {
+  const rolls = {
+    [id16(`bpatk${potion.id.slice(0, 6)}${i}a`)]: { type: "attack", attackType: "meleeWeaponAttack", ability: "none", proficient: false, bonus: String(attack.bonus), critThreshold: 20, default: true, label: "" },
+  };
+  attack.damage.forEach(([formula, damageType], j) => {
+    rolls[id16(`bpdmg${potion.id.slice(0, 6)}${i}${j}`)] = { type: "damage", formula, damageType, canCrit: true, critBonus: "", default: true, label: "" };
+  });
+  return {
+    name: attack.name,
+    type: "feature",
+    img: potion.form.img,
+    system: {
+      description: `<p>${potion.form.name}</p>`,
+      actions: {
+        [id16(`bpact${potion.id.slice(0, 6)}${i}`)]: {
+          name: attack.name,
+          activation: { type: "action", cost: 1, reactionTrigger: "" },
+          target: { quantity: 1, type: "creature" },
+          ranges: { [id16(`bprng${potion.id.slice(0, 6)}${i}`)]: { range: "short" } },
+          rolls,
+          prompts: {},
+          consumers: {},
+          effects: [],
+        },
+      },
+    },
+  };
+}
+
+/** a transformation: the form's AC, speed, senses and size; its token, hit points and attacks through the runtime */
+function formEffect(potion, { form, duration }) {
+  const changes = [
+    ["system.attributes.ac.baseFormula", "override", String(form.ac)],
+    ...Object.entries(form.speed).map(([m, v]) => [`system.attributes.movement.${m}.distance`, "override", v]),
+    ...(form.blindsight ? [["system.attributes.senses.blindsight.distance", "upgrade", form.blindsight]] : []),
+    ["system.traits.size", "override", SIZES[form.size] ?? "med"],
+  ];
+  const after = potion.after ? effectV14(potion.id, potion, potion.after, 9) : null;
+  if (after) delete after._key;
+  const flags = {
+    form: formFlag(form, form.attacks.map((a, i) => attackItem(potion, a, i))),
+    ...(after ? { onEnd: { createEffect: after } } : {}),
+  };
+  return effectV14(potion.id, potion, { name: `${potion.name}: ${form.name}`, img: potion.img, description: formDescription(potion), duration, changes, flags, system: { applyToSelf: false, effectType: "onUse" } }, 0);
+}
 
 /** rule -> { changes, statuses } ; unsupported: null */
 function translate(potion, [rule, a, b]) {
@@ -36,14 +85,15 @@ function translate(potion, [rule, a, b]) {
     case "grants":
       if (a === "disadvantage") return { changes: [["flags.a5e.effects.grants.rollMode.attack.all", "override", -1]] };
       if (a === "advantage") return { changes: [["flags.a5e.effects.grants.rollMode.attack.all", "override", 1]] };
-      return null; // no critical hits against: a5e has no hook for its attack rolls
+      // a5e has no hook before its attack rolls: the runtime says in the chat that a hit is critical
+      return {};
     case "attackAdvantage": return { changes: [["flags.a5e.effects.rollMode.attack.all", "override", 1]] };
     // the runtime does these, through a5e's damage, healing, saves and spell slots
     case "heal": case "temp": case "restoreSlots": case "exhaustion": case "exhaustionAtEnd": case "restoration":
     case "drain": case "area": case "onlyCreatureType": case "turnStart": case "aura": case "light": case "endOn":
-    case "protectionFromDeath": case "invulnerable": case "distortion":
+    case "protectionFromDeath": case "invulnerable": case "distortion": case "reflectDamage":
       return {};
-    // not possible: no damage source (reflect), no disease, no polymorph in a5e
+    // a5e has no diseases
     default: return null;
   }
 }
@@ -70,7 +120,9 @@ export default {
     const changes = [];
     const statuses = [];
     const unsupported = [];
+    const transform = transformOf(potion);
     for (const rule of potion.rules) {
+      if (rule[0] === "transform" && transform) continue;
       const t = translate(potion, rule);
       if (t === null) unsupported.push(rule[0] === "status" || rule[0] === "grants" || rule[0] === "cure" ? `${rule[0]} ${rule[1]}` : rule[0]);
       else {
@@ -84,7 +136,8 @@ export default {
     delete flags.grantsDisadvantage;
     delete flags.attackAdvantage;
     const effects = [];
-    if (changes.length || statuses.length || Object.keys(flags).length || potion.duration) {
+    if (transform) effects.push(formEffect(potion, transform));
+    else if (changes.length || statuses.length || Object.keys(flags).length || potion.duration) {
       effects.push(effectV14(_id, potion, { duration: potion.duration, changes, statuses, flags, system: { applyToSelf: false, effectType: "onUse" } }, 0));
     }
     const actions = {};

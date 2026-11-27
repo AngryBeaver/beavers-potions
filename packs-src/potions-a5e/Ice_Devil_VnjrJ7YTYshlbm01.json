@@ -35,7 +35,9 @@
         },
         "rolls": {},
         "prompts": {},
-        "effects": [],
+        "effects": [
+          "bpfxVnjrJ7YT0000"
+        ],
         "macro": ""
       }
     },
@@ -52,7 +54,230 @@
     "requiresAttunement": false,
     "unidentified": false
   },
-  "effects": [],
+  "effects": [
+    {
+      "_id": "bpfxVnjrJ7YT0000",
+      "_key": "!items.effects!VnjrJ7YTYshlbm01.bpfxVnjrJ7YT0000",
+      "name": "Ice Devil: Ice Devil",
+      "img": "icons/consumables/potions/bottle-ornate-bat-teal.webp",
+      "type": "base",
+      "description": "<p>You become an ice devil for 1 minute. You do not just polymorph into one, you actually become one. You cannot willingly dismiss the effect. Afterwards your mind is corrupted for a couple of days while the effect wears off.</p><p><strong>Ice Devil:</strong> You are self-centered and egoistic, you have no sense of empathy. You see your companions as slaves, lesser fools that might be useful to you; if not, you are willing to sacrifice them. Your main motivation is to get promoted by slaughtering enemies and claiming as many souls as possible.</p><p><strong>Corrupted Mind:</strong> You do not remember what happened. You feel like you have lost some great power and someone is to blame for it. You have the feeling everyone is lying to you and your companions are only selfish and do not want the best for you.</p><p><strong>Ice Devil:</strong> AC 18, 228 hit points (temporary), speed walk 40 ft., blindsight 120 ft.; Ice Spear +10 (2d8 + 5 piercing + 3d6 cold), Tail +10 (3d6 + 5 bludgeoning + 4d8 cold).</p>",
+      "system": {
+        "changes": [
+          {
+            "_id": "bpfxVnjrJ7YTc000",
+            "key": "system.attributes.ac.baseFormula",
+            "type": "override",
+            "value": "18",
+            "phase": "initial",
+            "priority": null
+          },
+          {
+            "_id": "bpfxVnjrJ7YTc100",
+            "key": "system.attributes.movement.walk.distance",
+            "type": "override",
+            "value": 40,
+            "phase": "initial",
+            "priority": null
+          },
+          {
+            "_id": "bpfxVnjrJ7YTc200",
+            "key": "system.attributes.senses.blindsight.distance",
+            "type": "upgrade",
+            "value": 120,
+            "phase": "initial",
+            "priority": null
+          },
+          {
+            "_id": "bpfxVnjrJ7YTc300",
+            "key": "system.traits.size",
+            "type": "override",
+            "value": "lg",
+            "phase": "initial",
+            "priority": null
+          }
+        ],
+        "magical": true,
+        "applyToSelf": false,
+        "effectType": "onUse"
+      },
+      "disabled": false,
+      "transfer": false,
+      "duration": {
+        "value": 1,
+        "units": "minutes",
+        "expiry": "turnStart",
+        "expired": false
+      },
+      "statuses": [],
+      "flags": {
+        "beavers-potions": {
+          "form": {
+            "name": "Ice Devil",
+            "img": "icons/creatures/unholy/demon-horned-black-yellow.webp",
+            "tint": "#9fd3ff",
+            "size": 2,
+            "hp": 228,
+            "attacks": [
+              {
+                "name": "Ice Spear",
+                "type": "feature",
+                "img": "icons/creatures/unholy/demon-horned-black-yellow.webp",
+                "system": {
+                  "description": "<p>Ice Devil</p>",
+                  "actions": {
+                    "bpactVnjrJ700000": {
+                      "name": "Ice Spear",
+                      "activation": {
+                        "type": "action",
+                        "cost": 1,
+                        "reactionTrigger": ""
+                      },
+                      "target": {
+                        "quantity": 1,
+                        "type": "creature"
+                      },
+                      "ranges": {
+                        "bprngVnjrJ700000": {
+                          "range": "short"
+                        }
+                      },
+                      "rolls": {
+                        "bpatkVnjrJ70a000": {
+                          "type": "attack",
+                          "attackType": "meleeWeaponAttack",
+                          "ability": "none",
+                          "proficient": false,
+                          "bonus": "10",
+                          "critThreshold": 20,
+                          "default": true,
+                          "label": ""
+                        },
+                        "bpdmgVnjrJ700000": {
+                          "type": "damage",
+                          "formula": "2d8 + 5",
+                          "damageType": "piercing",
+                          "canCrit": true,
+                          "critBonus": "",
+                          "default": true,
+                          "label": ""
+                        },
+                        "bpdmgVnjrJ701000": {
+                          "type": "damage",
+                          "formula": "3d6",
+                          "damageType": "cold",
+                          "canCrit": true,
+                          "critBonus": "",
+                          "default": true,
+                          "label": ""
+                        }
+                      },
+                      "prompts": {},
+                      "consumers": {},
+                      "effects": []
+                    }
+                  }
+                }
+              },
+              {
+                "name": "Tail",
+                "type": "feature",
+                "img": "icons/creatures/unholy/demon-horned-black-yellow.webp",
+                "system": {
+                  "description": "<p>Ice Devil</p>",
+                  "actions": {
+                    "bpactVnjrJ710000": {
+                      "name": "Tail",
+                      "activation": {
+                        "type": "action",
+                        "cost": 1,
+                        "reactionTrigger": ""
+                      },
+                      "target": {
+                        "quantity": 1,
+                        "type": "creature"
+                      },
+                      "ranges": {
+                        "bprngVnjrJ710000": {
+                          "range": "short"
+                        }
+                      },
+                      "rolls": {
+                        "bpatkVnjrJ71a000": {
+                          "type": "attack",
+                          "attackType": "meleeWeaponAttack",
+                          "ability": "none",
+                          "proficient": false,
+                          "bonus": "10",
+                          "critThreshold": 20,
+                          "default": true,
+                          "label": ""
+                        },
+                        "bpdmgVnjrJ710000": {
+                          "type": "damage",
+                          "formula": "3d6 + 5",
+                          "damageType": "bludgeoning",
+                          "canCrit": true,
+                          "critBonus": "",
+                          "default": true,
+                          "label": ""
+                        },
+                        "bpdmgVnjrJ711000": {
+                          "type": "damage",
+                          "formula": "4d8",
+                          "damageType": "cold",
+                          "canCrit": true,
+                          "critBonus": "",
+                          "default": true,
+                          "label": ""
+                        }
+                      },
+                      "prompts": {},
+                      "consumers": {},
+                      "effects": []
+                    }
+                  }
+                }
+              }
+            ]
+          },
+          "onEnd": {
+            "createEffect": {
+              "_id": "bpfxVnjrJ7YT9000",
+              "name": "Corrupted Mind",
+              "img": "icons/consumables/potions/bottle-ornate-bat-teal.webp",
+              "type": "base",
+              "description": "<p>You do not remember what happened. You feel like you have lost some great power and someone is to blame for it. You have the feeling everyone is lying to you.</p>",
+              "system": {
+                "changes": [],
+                "magical": true
+              },
+              "disabled": false,
+              "transfer": false,
+              "duration": {
+                "value": 3,
+                "units": "days",
+                "expiry": "turnStart",
+                "expired": false
+              },
+              "statuses": [],
+              "flags": {},
+              "tint": "#ffffff",
+              "showIcon": 1,
+              "origin": null,
+              "start": null,
+              "sort": 0
+            }
+          }
+        }
+      },
+      "tint": "#ffffff",
+      "showIcon": 1,
+      "origin": null,
+      "start": null,
+      "sort": 0
+    }
+  ],
   "folder": null,
   "sort": 0,
   "ownership": {
@@ -71,9 +296,6 @@
           "Ice Devil",
           60
         ]
-      ],
-      "unsupported": [
-        "transform"
       ]
     }
   }

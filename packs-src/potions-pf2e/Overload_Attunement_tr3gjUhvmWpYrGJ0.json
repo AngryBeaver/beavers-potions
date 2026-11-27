@@ -70,7 +70,14 @@
               "expiry": "turn-start",
               "sustained": false
             },
-            "rules": [],
+            "rules": [
+              {
+                "key": "ActiveEffectLike",
+                "path": "system.resources.investiture.max",
+                "mode": "add",
+                "value": 1
+              }
+            ],
             "tokenIcon": {
               "show": true
             },
@@ -96,9 +103,6 @@
           "attunement",
           1
         ]
-      ],
-      "unsupported": [
-        "attunement"
       ]
     }
   }

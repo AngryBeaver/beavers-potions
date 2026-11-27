@@ -8,6 +8,7 @@ import { effectsWith, NS, potionFlag } from "../util.js";
  */
 
 const SAVES = { str: "fortitude", con: "fortitude", dex: "reflex", int: "will", wis: "will", cha: "will" };
+const diseases = (actor) => actor.items.filter((i) => ["affliction", "effect"].includes(i.type) && (i.system.traits?.value ?? []).includes("disease"));
 const CONDITIONS = { invisible: "invisible", incapacitated: "paralyzed", blinded: "blinded", deafened: "deafened", paralyzed: "paralyzed", poisoned: "sickened", frightened: "frightened", prone: "prone" };
 
 export default {
@@ -57,10 +58,14 @@ export default {
     return [...restored].sort();
   },
   creatureType: (actor) => (actor.system.traits?.value ?? []).find((t) => t === "undead") ?? actor.system.traits?.value?.[0],
-  statusId: (id) => CONDITIONS[id] ?? (["drained", "sickened", "off-guard", "concealed"].includes(id) ? id : null),
-  hasStatus: (actor, id) => !!id && !!actor.hasCondition?.(id),
-  removeStatus: (actor, id) => (id ? actor.decreaseCondition(id, { forceRemove: true }) : undefined),
-  statusLabel: (id) => game.i18n.localize(CONFIG.PF2E?.conditionTypes?.[CONDITIONS[id] ?? id] ?? id),
+  statusId: (id) => CONDITIONS[id] ?? (["drained", "sickened", "off-guard", "concealed", "diseased"].includes(id) ? id : null),
+  /** diseased: an affliction or effect with the disease trait */
+  hasStatus: (actor, id) => (id === "diseased" ? diseases(actor).length > 0 : !!id && !!actor.hasCondition?.(id)),
+  removeStatus(actor, id) {
+    if (id === "diseased") return actor.deleteEmbeddedDocuments("Item", diseases(actor).map((i) => i.id));
+    return id ? actor.decreaseCondition(id, { forceRemove: true }) : undefined;
+  },
+  statusLabel: (id) => game.i18n.localize(id === "diseased" ? "PF2E.TraitDisease" : CONFIG.PF2E?.conditionTypes?.[CONDITIONS[id] ?? id] ?? id),
   seesThrough: (actor) => (actor?.system.perception?.senses ?? []).some((s) => ["truesight", "echolocation", "tremorsense"].includes(s.type)),
 
   potionData: (item) => potionFlag(item, "effects") ?? [],

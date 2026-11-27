@@ -1,5 +1,13 @@
 import { distortion, targetActors } from "../rolls.js";
-import { NS, potionFlag } from "../util.js";
+import { chat, effectsWith, NS, potionFlag } from "../util.js";
+
+/** attacks against a creature with grantsCritical are critical: a5e has no hook before its attack rolls, the chat says it */
+async function criticalNotice(attacker, targets) {
+  for (const target of targets) {
+    const effect = effectsWith(target, "grantsCritical")[0];
+    if (effect) await chat(target, game.i18n.format(`${NS}.criticalAgainst`, { target: target.name, attacker: attacker.name, name: effect.name }), effect.name);
+  }
+}
 
 /**
  * Level Up: Advanced 5th Edition. Potions are "object" items with a "Drink" action; a5e fires a5e.itemActivate after
@@ -56,6 +64,7 @@ export default {
       if (attack) {
         void endOnAction(actor, "attack");
         void distortion(actor, targetActors());
+        void criticalNotice(actor, targetActors());
       }
       if (item.type === "spell") void endOnAction(actor, "spell");
       if (!isPotion(item)) return;

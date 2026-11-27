@@ -51,7 +51,126 @@
   "flags": {
     "beavers-potions": {
       "potion": true,
-      "buffs": [],
+      "buffs": [
+        {
+          "name": "Cobra Kai: Venomous Snake",
+          "type": "buff",
+          "img": "icons/consumables/potions/bottle-conical-corked-cyan.webp",
+          "system": {
+            "subType": "temp",
+            "active": true,
+            "level": 1,
+            "duration": {
+              "value": "6",
+              "units": "hour",
+              "end": "turnStart"
+            },
+            "changes": [
+              {
+                "_id": "bpc0MChW",
+                "formula": "12",
+                "target": "ac",
+                "type": "base",
+                "operator": "set"
+              },
+              {
+                "_id": "bpc1MChW",
+                "formula": "30",
+                "target": "landSpeed",
+                "type": "untyped",
+                "operator": "set"
+              },
+              {
+                "_id": "bpc2MChW",
+                "formula": "30",
+                "target": "swimSpeed",
+                "type": "untyped",
+                "operator": "set"
+              },
+              {
+                "_id": "bpc3MChW",
+                "formula": "10",
+                "target": "sensebs",
+                "type": "untyped"
+              },
+              {
+                "_id": "bpc4MChW",
+                "formula": "-2",
+                "target": "size",
+                "type": "untyped"
+              }
+            ],
+            "conditions": [],
+            "description": {
+              "value": "<p>Polymorphs you into a venomous snake for 6 hours.</p><p><strong>Venomous Snake:</strong> AC 12, 5 hit points (temporary), speed walk 30 ft., swim 30 ft., blindsight 10 ft.; Bite +4 (1d4 + 2 piercing + 1d6 poison).</p>"
+            }
+          },
+          "flags": {
+            "beavers-potions": {
+              "form": {
+                "name": "Venomous Snake",
+                "img": "icons/creatures/reptiles/snake-poised-white.webp",
+                "hp": 5,
+                "attacks": [
+                  {
+                    "name": "Bite",
+                    "type": "attack",
+                    "img": "icons/creatures/reptiles/snake-poised-white.webp",
+                    "system": {
+                      "subType": "natural",
+                      "description": {
+                        "value": "<p>Venomous Snake</p>"
+                      },
+                      "actions": [
+                        {
+                          "_id": "bpatkMChWuF00000",
+                          "name": "Bite",
+                          "actionType": "mwak",
+                          "activation": {
+                            "type": "attack",
+                            "unchained": {
+                              "type": "attack"
+                            }
+                          },
+                          "ability": {
+                            "attack": "",
+                            "damage": "",
+                            "critRange": 20
+                          },
+                          "attackBonus": "4",
+                          "damage": {
+                            "parts": [
+                              {
+                                "formula": "1d4 + 2",
+                                "types": [
+                                  "piercing"
+                                ]
+                              },
+                              {
+                                "formula": "1d6",
+                                "types": [
+                                  "poison"
+                                ]
+                              }
+                            ]
+                          },
+                          "range": {
+                            "units": "melee"
+                          },
+                          "duration": {
+                            "units": "inst"
+                          }
+                        }
+                      ]
+                    }
+                  }
+                ]
+              },
+              "source": "cobra-kai.buff"
+            }
+          }
+        }
+      ],
       "rarity": "common",
       "rules": [
         [
@@ -62,9 +181,6 @@
           "Venomous Snake",
           21600
         ]
-      ],
-      "unsupported": [
-        "transform"
       ]
     }
   }

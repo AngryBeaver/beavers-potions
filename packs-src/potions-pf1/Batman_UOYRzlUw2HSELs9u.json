@@ -65,7 +65,14 @@
               "units": "minute",
               "end": "turnStart"
             },
-            "changes": [],
+            "changes": [
+              {
+                "_id": "bpc0UOYR",
+                "formula": "60",
+                "target": "sensebs",
+                "type": "untyped"
+              }
+            ],
             "conditions": [],
             "description": {
               "value": "<p>You lose the ability to speak for 10 minutes. Instead you can release high-frequency squeaks for echolocation: you have blindsight 60 ft. as long as the surroundings are on the material plane.</p>"
@@ -73,6 +80,9 @@
           },
           "flags": {
             "beavers-potions": {
+              "statuses": [
+                "silenced"
+              ],
               "source": "batman.buff"
             }
           }
@@ -89,10 +99,6 @@
           "status",
           "silenced"
         ]
-      ],
-      "unsupported": [
-        "sense",
-        "status silenced"
       ]
     }
   }

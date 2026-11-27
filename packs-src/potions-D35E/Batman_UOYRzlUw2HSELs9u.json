@@ -49,6 +49,12 @@
           },
           "flags": {
             "beavers-potions": {
+              "hold": {
+                "system.traits.senses": "Blindsight 60 ft."
+              },
+              "statuses": [
+                "silenced"
+              ],
               "conditions": [],
               "source": "batman.buff"
             }
@@ -67,10 +73,6 @@
           "status",
           "silenced"
         ]
-      ],
-      "unsupported": [
-        "sense",
-        "status silenced"
       ]
     }
   }

@@ -136,9 +136,6 @@
           "exhaustion",
           2
         ]
-      ],
-      "unsupported": [
-        "grants critical"
       ]
     }
   }

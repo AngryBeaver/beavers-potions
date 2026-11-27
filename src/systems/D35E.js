@@ -100,6 +100,16 @@ export default {
     const conditions = buffs.flatMap((b) => b.flags?.[NS]?.conditions ?? []);
     if (conditions.length) await actor.update(Object.fromEntries(conditions.map((c) => [condPath(c), true])));
   },
+  /** conditions the drinker is immune to stay off: returns the ones kept off */
+  blockStatuses(actor, changes, immune) {
+    const kept = [];
+    for (const id of immune) {
+      if (foundry.utils.getProperty(changes, condPath(id)) !== true) continue;
+      foundry.utils.setProperty(changes, condPath(id), false);
+      kept.push(id);
+    }
+    return kept;
+  },
   /** a buff of a potion ended: its conditions end too */
   async effectEnded(actor, effect) {
     const conditions = effect.flags?.[NS]?.conditions ?? [];

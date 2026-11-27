@@ -33,11 +33,14 @@ Most of them do what they describe when they are drunk; the others put a reminde
 
 The potions are written for 5e. In the other systems their rules are translated: advantage becomes +4 (pf1, D35E) or
 "roll twice, keep the higher" (pf2e); attacks against you with advantage -4 AC (pf1, D35E) or off-guard (pf2e), with
-disadvantage a 20% miss chance (pf1, D35E) or concealed (pf2e); exhaustion becomes fatigued / exhausted (pf1, D35E),
-drained (pf2e) or fatigue (a5e). What a system has nothing for (e.g. polymorph outside dnd5e, conditions it does not
-know) is left to the Gamemaster: the potion's text says what it does. Which rule works in which system is checked by
-
-
+disadvantage a 20% miss chance (pf1, D35E) or concealed (pf2e); critical hits against you helpless (pf1, D35E), a
+critical hit for every hit (pf2e) or a chat message (a5e); exhaustion becomes fatigued / exhausted (pf1, D35E),
+drained (pf2e) or fatigue (a5e); hovering a fly speed as fast as you walk (pf2e, D35E). A transformation (Cobra Kai,
+Ice Devil) is dnd5e's own polymorph in dnd5e and an effect with the creature's AC, speed, size, blindsight, hit points
+(temporary) and attacks elsewhere (pf2e: a battle form); the token shows the creature while it lasts. What a system
+has nothing for is left to the Gamemaster, the potion's text says what it does: Cure Disease in a5e, pf1 and D35E
+(no diseases), Overload Attunement in pf1 and D35E (no attunement), silenced in pf2e. Which rule works in which system
+is checked by the end-to-end test in beavers-testing.
 
 ## How the potions work
 Drink a potion (its "Drink" activity or action, in pf2e "Use"): its effects are put on you right away, healing is rolled and applied.
@@ -110,8 +113,11 @@ The icons are the ones that come with Foundry VTT.
 | `use.transform` `{seconds, after}`, `use.onlyType` | item | turn back after the time; heal only that creature type |
 | `grantsAdvantage`, `grantsDisadvantage` (`"sight"`), `grantsCritical`, `attackAdvantage`, `distortion` | effect | attack rules |
 | `reflectDamage`, `invulnerable`, `protectionFromDeath` | effect | damage rules |
+| `immune` `[status]` | effect | statuses that stay off (pf1, D35E) |
 | `turnStart` `{heal, temp}`, `aura` `{radius, includeSelf, save, damage}` | effect | start of turn |
-| `light`, `endOn` `["attack","spell","move"]`, `onEnd` `{exhaustion, revert, createEffect}` | effect | begin / end |
+| `form` `{name, img, tint, size, hp, attacks}` | effect | a transformation outside dnd5e: token image / size, temporary hit points, attack items while it lasts |
+| `statuses` `[status]`, `hold` `{path: value}` | effect | statuses / actor data while it lasts (silenced; D35E's senses and shapechange image) |
+| `light`, `endOn` `["attack","spell","move"]`, `onEnd` `{exhaustion, revert, createEffect, createData}` | effect | begin / end (`createData`: buffs or effect items) |
 
 - end-to-end test: `node potions/run.mjs` in beavers-testing (every potion is drunk and checked in Foundry)
 

@@ -67,14 +67,15 @@
             },
             "changes": [
               {
-                "_id": "bpcvXJxu",
+                "_id": "bpc0vXJx",
                 "formula": "-4",
                 "target": "ac",
                 "type": "untyped"
               }
             ],
             "conditions": [
-              "dazed"
+              "dazed",
+              "helpless"
             ],
             "description": {
               "value": "<p>You spend one round doing nothing else than concentrating. During this time you cannot defend yourself: you are incapacitated, everyone attacking you has advantage and hits critically.</p><p>You replenish all your spell slots of the first to fourth level while you gain 3 levels of exhaustion, which cannot be healed magically.</p>"
@@ -116,9 +117,6 @@
           "exhaustion",
           3
         ]
-      ],
-      "unsupported": [
-        "grants critical"
       ]
     }
   }
